@@ -1,0 +1,37 @@
+# Stage 4a — Duty and its correlative Claim, from the closure.
+#
+# Fires on norma:entailsObligatory, which ONLY obligations and prohibitions
+# produce: a Permission never entails it, and a Prohibition already entails it
+# over the NEGATED action. The closure does the discrimination and the
+# inversion, so this rule need not look at the norm type and the content of
+# the duty comes out right in both cases:
+#   O(x) -> Duty(A->B, x)      F(x) ≡ O(¬x) -> Duty(A->B, ¬x)
+#
+# The Claim is minted ONLY if the norm names a counterparty. If it does not,
+# none is invented: a duty without a materialised correlative is visible and
+# fixable; an invented legal party is not. The correlative's IRI includes the
+# counterparty, so without it the variable stays unbound and the whole
+# position is omitted rather than created without a holder.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?n norma:confersLegalPosition ?duty, ?claim .
+  ?duty a norma:Duty ;
+      rdfs:label ?dutyLabel ;
+      norma:hasPositionHolder ?A ;
+      norma:concernsLegalAction ?y ;
+      norma:isCorrelativeOf ?claim .
+  ?claim a norma:Claim ;
+      norma:hasPositionHolder ?B ;
+      norma:isCorrelativeOf ?duty .
+}
+WHERE {
+  ?n norma:entailsObligatory ?y ;
+     norma:hasLegalAgent ?A .
+  OPTIONAL { ?n norma:hasCounterparty ?B }
+  BIND(REPLACE(STR(?y), "^.*[#/]", "") AS ?yl)
+  BIND(IRI(CONCAT(STR(?n), "_duty_",  ?yl)) AS ?duty)
+  BIND(REPLACE(STR(?B), "^.*[#/]", "") AS ?bl)
+  BIND(IRI(CONCAT(STR(?n), "_claim_", ?yl, "_", ?bl)) AS ?claim)
+  BIND(STRLANG(CONCAT("duty concerning ", ?yl), "en") AS ?dutyLabel)
+}

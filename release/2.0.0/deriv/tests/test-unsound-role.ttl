@@ -1,0 +1,18 @@
+@prefix norma: <https://w3id.org/def/norma-o#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <https://example.org/ur#> .
+<https://example.org/ur> a owl:Ontology ; owl:imports <https://w3id.org/def/norma-o> .
+:Provider a owl:NamedIndividual, norma:LegalRole .
+:Acme a owl:NamedIndividual, norma:LegalParty .
+:c a owl:NamedIndividual, norma:LegalCondition ;
+    norma:conditionStatement "substantial modification?" ; norma:hasTrigger :te .
+:te a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:TrueOutcome ; norma:activatesNorm :fct25 .
+:fct25 a owl:NamedIndividual, norma:ConstitutiveRule ;
+    norma:deonticId "fct25" ; norma:factStatement "counts as provider" ;
+    norma:confersRole :Provider .
+:RA a owl:NamedIndividual, norma:RoleAssignment ;
+    norma:hasAssignedParty :Acme ; norma:hasAssignedRole :Provider ;
+    norma:assignedUnderRule :fct25 .
+# the case does NOT hold :te, so fct25 is NotActivated, yet it asserts the assignment
+:C a owl:NamedIndividual, norma:FactPattern ; norma:holdsRoleAssignment :RA .

@@ -1,0 +1,47 @@
+# Stage 5a — isDeonticallyEquivalentTo between norms.
+#
+# With the closure in place, equivalence is a join: two norms are deontically
+# equivalent if they have the same agent, do not disagree on the counterparty,
+# are activated in the same circumstances and their CLOSURES MATCH point by
+# point. So a Prohibition of ¬x and an Obligation of x come out equivalent
+# without mentioning operators: their closures are the same set.
+#
+# Set equality is expressed by double negation, in both directions. No UNION:
+# the branches of a UNION do not see the variables of the outer group. Only
+# one direction is emitted (STR(?n1) < STR(?n2)); the property is symmetric,
+# and the generator materialises the other.
+#
+# Declared reading: an unnamed counterparty is treated as non-conflicting.
+# Requiring both norms to name one would leave a real regulation pack without
+# any equivalence.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+SELECT DISTINCT ?n1 ?n2 WHERE {
+  ?n1 norma:hasLegalAgent ?a .
+  ?n2 norma:hasLegalAgent ?a .
+  FILTER(STR(?n1) < STR(?n2))
+  # non-empty closure: a constitutive rule does not qualify
+  ?n1 ?pe ?ye . FILTER(STRSTARTS(STR(?pe), "https://w3id.org/def/norma-o#entails"))
+  # no disagreement on the counterparty
+  FILTER NOT EXISTS {
+    ?n1 norma:hasCounterparty ?b1 . ?n2 norma:hasCounterparty ?b2 . FILTER(?b1 != ?b2)
+  }
+  # closure of n1 contained in that of n2, and vice versa
+  FILTER NOT EXISTS {
+    ?n1 ?p ?y . FILTER(STRSTARTS(STR(?p), "https://w3id.org/def/norma-o#entails"))
+    FILTER NOT EXISTS { ?n2 ?p ?y }
+  }
+  FILTER NOT EXISTS {
+    ?n2 ?q ?z . FILTER(STRSTARTS(STR(?q), "https://w3id.org/def/norma-o#entails"))
+    FILTER NOT EXISTS { ?n1 ?q ?z }
+  }
+  # same circumstances: every (condition, outcome) pair that activates one
+  # also activates the other, in both directions
+  FILTER NOT EXISTS {
+    ?t1 norma:activatesNorm ?n1 . ?c norma:hasTrigger ?t1 . ?t1 norma:hasOutcome ?o .
+    FILTER NOT EXISTS { ?t2 norma:activatesNorm ?n2 . ?c norma:hasTrigger ?t2 . ?t2 norma:hasOutcome ?o }
+  }
+  FILTER NOT EXISTS {
+    ?u1 norma:activatesNorm ?n2 . ?d norma:hasTrigger ?u1 . ?u1 norma:hasOutcome ?v .
+    FILTER NOT EXISTS { ?u2 norma:activatesNorm ?n1 . ?d norma:hasTrigger ?u2 . ?u2 norma:hasOutcome ?v }
+  }
+}

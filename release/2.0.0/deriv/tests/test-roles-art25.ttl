@@ -1,0 +1,140 @@
+# EXPERIMENT: is the NORMA-O v2 vocabulary enough to represent Article 25 of
+# Regulation (EU) 2024/1689, or does it need extending?
+#
+# Article 25(1) reads: "Any distributor, importer, deployer or
+# other third party shall be considered to be a provider of a high-risk AI
+# system [...] in any of the following circumstances: (a) they put their name or
+# trademark on a high-risk AI system already placed on the market [...];
+# (b) they make a substantial modification [...]; (c) they modify the intended
+# purpose [...]". And Article 25(2): the original provider "is no longer
+# considered to be a provider of that specific AI system".
+#
+# It is Searle's "X counts as Y in context C", conditional and revocable:
+# exactly what norma:ConstitutiveRule names.
+#
+# The question this file measures: annotated this way, does the Article 16
+# obligation, which is addressed to the PROVIDER, reach Acme?
+#
+# With only norma:LegalAgent the answer was NO: the constitutive rule came out
+# applicable and produced nothing. That gap is what norma:LegalRole,
+# norma:LegalParty and norma:RoleAssignment were introduced for. With them the
+# answer is YES in the modified case and NO in the control case.
+
+@prefix norma: <https://w3id.org/def/norma-o#> .
+@prefix :      <https://w3id.org/norma-abox/art25#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/norma-abox/art25> a owl:Ontology ;
+    owl:imports <https://w3id.org/def/norma-o> .
+
+:Regulation_AIA a owl:NamedIndividual, norma:LegalSource ;
+    norma:regulationName "Regulation (EU) 2024/1689 (AI Act)"^^xsd:string ;
+    norma:hasRank norma:LegislativeRank .
+:Annotator a owl:NamedIndividual, norma:AnnotatorAgent ;
+    rdfs:label "hand annotation for the Art. 25 experiment"@en .
+
+# ── The roles of Article 3. Note that they are ROLES, not concrete parties:
+#    no real norm names a company. Role_AuthRep is left as a plain
+#    LegalAgent on purpose: legacy annotations that commit to neither
+#    subclass remain valid.
+:Role_Provider    a owl:NamedIndividual, norma:LegalRole ; rdfs:label "provider (Art. 3(3))"@en .
+:Role_Deployer    a owl:NamedIndividual, norma:LegalRole ; rdfs:label "deployer (Art. 3(4))"@en .
+:Role_Distributor a owl:NamedIndividual, norma:LegalRole ; rdfs:label "distributor (Art. 3(7))"@en .
+:Role_Importer    a owl:NamedIndividual, norma:LegalRole ; rdfs:label "importer (Art. 3(6))"@en .
+:Role_AuthRep     a owl:NamedIndividual, norma:LegalAgent ; rdfs:label "authorised representative (Art. 3(5))"@en .
+:Role_Operator    a owl:NamedIndividual, norma:LegalRole ; rdfs:label "operator (Art. 3(8))"@en .
+
+# ── The concrete PARTY of the case.
+:Party_Acme a owl:NamedIndividual, norma:LegalParty ; rdfs:label "Acme GmbH"@en .
+
+:Action_comply_art16 a owl:NamedIndividual, norma:LegalAction ;
+    rdfs:label "comply with the provider obligations of Article 16"@en .
+:System_X a owl:NamedIndividual, norma:LegalObject ; rdfs:label "high-risk AI system X"@en .
+
+# ── Art. 3(8): definition of "operator". Classificatory constitutive rule.
+:FCT_Art3_8_operator a owl:NamedIndividual, norma:ConstitutiveRule ;
+    norma:deonticId "FCT_Art3_8_operator" ;
+    norma:factStatement "'operator' means a provider, product manufacturer, deployer, authorised representative, importer or distributor."^^xsd:string ;
+    norma:hasLegalSource :Regulation_AIA ;
+    norma:fromArticle "3"^^xsd:string ; norma:fromParagraph "8"^^xsd:string ;
+    norma:confersRole :Role_Operator ;
+    norma:hasNormStatus norma:Active ;
+    norma:hasExtractionMethod norma:ManualLawyer ;
+    norma:wasAttributedToAnnotator :Annotator .
+
+# ── Art. 25(1): conditional reclassification. Role-conferring constitutive
+#    rule, with three alternative circumstances.
+:FCT_Art25_1_counts_as_provider a owl:NamedIndividual, norma:ConstitutiveRule ;
+    norma:deonticId "FCT_Art25_1_counts_as_provider" ;
+    norma:factStatement "Any distributor, importer, deployer or other third party shall be considered to be a provider of a high-risk AI system in any of the circumstances of Art. 25(1)(a) to (c)."^^xsd:string ;
+    norma:hasLegalSource :Regulation_AIA ;
+    norma:fromArticle "25"^^xsd:string ; norma:fromParagraph "1"^^xsd:string ;
+    norma:confersRole :Role_Provider ;
+    norma:hasNormStatus norma:Active ;
+    norma:hasExtractionMethod norma:ManualLawyer ;
+    norma:wasAttributedToAnnotator :Annotator .
+
+:Cond_art25_1b a owl:NamedIndividual, norma:LegalCondition ;
+    norma:conditionStatement "Has the party made a substantial modification to the high-risk AI system after it was placed on the market?"^^xsd:string ;
+    norma:hasTrigger :TE_art25_1b .
+:TE_art25_1b a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:TrueOutcome ;
+    norma:activatesNorm :FCT_Art25_1_counts_as_provider .
+
+# ── Art. 16: the substantive obligation, addressed TO THE ROLE of provider.
+:OBL_Art16_provider a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "OBL_Art16_provider" ;
+    norma:normStatement "Providers of high-risk AI systems shall comply with the obligations of Article 16."^^xsd:string ;
+    norma:hasLegalAgent :Role_Provider ;
+    norma:hasLegalAction :Action_comply_art16 ;
+    norma:hasLegalObject :System_X ;
+    norma:hasLegalSource :Regulation_AIA ;
+    norma:fromArticle "16"^^xsd:string ;
+    norma:hasBindingForce norma:HardLaw ;
+    norma:hasNormStatus norma:Active ;
+    norma:hasExtractionMethod norma:ManualLawyer ;
+    norma:wasAttributedToAnnotator :Annotator .
+
+# ── The case: Acme is the deployer and has made a substantial modification
+#    to system X. Under Article 25(1)(b) it counts as provider, and the
+#    Article 16 obligation should therefore reach it.
+:Case_acme_modified a owl:NamedIndividual, norma:FactPattern ;
+    rdfs:label "Acme, deployer, substantially modified system X"@en ;
+    norma:holdsTrigger :TE_art25_1b ;
+    norma:holdsRoleAssignment :RA_acme_deployer, :RA_acme_provider .
+
+# Acme's original capacity: stated by the facts, not conferred by any rule.
+:RA_acme_deployer a owl:NamedIndividual, norma:RoleAssignment ;
+    norma:hasAssignedParty :Party_Acme ;
+    norma:hasAssignedRole :Role_Deployer .
+
+# The RECLASSIFIED capacity, citing its legal basis: under Art. 25(1)(b),
+# Acme counts as provider in this case.
+:RA_acme_provider a owl:NamedIndividual, norma:RoleAssignment ;
+    norma:hasAssignedParty :Party_Acme ;
+    norma:hasAssignedRole :Role_Provider ;
+    norma:assignedUnderRule :FCT_Art25_1_counts_as_provider .
+
+# ── CONTROL CASE: Acme has modified nothing, so Art. 25(1) is not activated
+#    and it remains only the deployer. The Art. 16 obligation must NOT reach
+#    it; the Art. 26 one must. This is what shows that reach is relative to
+#    the case and not a property of the party.
+:Action_comply_art26 a owl:NamedIndividual, norma:LegalAction ;
+    rdfs:label "comply with the deployer obligations of Article 26"@en .
+:OBL_Art26_deployer a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "OBL_Art26_deployer" ;
+    norma:normStatement "Deployers of high-risk AI systems shall comply with the obligations of Article 26."^^xsd:string ;
+    norma:hasLegalAgent :Role_Deployer ;
+    norma:hasLegalAction :Action_comply_art26 ;
+    norma:hasLegalSource :Regulation_AIA ;
+    norma:fromArticle "26"^^xsd:string ;
+    norma:hasBindingForce norma:HardLaw ;
+    norma:hasNormStatus norma:Active ;
+    norma:hasExtractionMethod norma:ManualLawyer ;
+    norma:wasAttributedToAnnotator :Annotator .
+
+:Case_acme_unmodified a owl:NamedIndividual, norma:FactPattern ;
+    rdfs:label "Acme, deployer, made no substantial modification"@en ;
+    norma:holdsRoleAssignment :RA_acme_deployer .

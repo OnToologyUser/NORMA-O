@@ -1,0 +1,13 @@
+# Stage 2e — Rec(x) yields Rec(x) and NegRec(¬x).
+# No analogue of axiom D: nothing like Rec(x) -> ¬Rec(¬x).
+PREFIX norma: <https://w3id.org/def/norma-o#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?n norma:entailsRecommended ?x ;
+     norma:entailsDiscouraged ?xn .
+}
+WHERE {
+  ?n a ?c . ?c rdfs:subClassOf* norma:Recommendation .
+  ?n norma:hasLegalAction ?x .
+  ?x norma:isNegationOf ?xn .
+}

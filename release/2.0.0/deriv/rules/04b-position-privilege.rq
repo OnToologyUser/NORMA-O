@@ -1,0 +1,38 @@
+# Stage 4b — Privilege and its correlative No-right.
+#
+# Here the rule DOES have to be restricted to Permission: obligations also
+# entail norma:entailsPermitted, by axiom D (O(x) -> P(x)), and minting a
+# privilege for every obligation would be noise. Only an annotated strong
+# permission confers a privilege.
+#
+# A Facultative comes for free: its closure entails P(x) and P(¬x), so the
+# rule mints TWO privileges with the right contents. That is what the axiom
+# min 2 confers.Privilege cannot demand on its own.
+#
+# The No-right is minted only if the norm names a counterparty: its IRI
+# includes it, so without it the variable stays unbound and the whole position
+# is omitted.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?n norma:confersLegalPosition ?priv, ?nr .
+  ?priv a norma:Privilege ;
+      rdfs:label ?privLabel ;
+      norma:hasPositionHolder ?A ;
+      norma:concernsLegalAction ?y ;
+      norma:isCorrelativeOf ?nr .
+  ?nr a norma:NoRight ;
+      norma:hasPositionHolder ?B ;
+      norma:isCorrelativeOf ?priv .
+}
+WHERE {
+  ?n a ?c . ?c rdfs:subClassOf* norma:Permission .
+  ?n norma:entailsPermitted ?y ;
+     norma:hasLegalAgent ?A .
+  OPTIONAL { ?n norma:hasCounterparty ?B }
+  BIND(REPLACE(STR(?y), "^.*[#/]", "") AS ?yl)
+  BIND(IRI(CONCAT(STR(?n), "_privilege_", ?yl)) AS ?priv)
+  BIND(REPLACE(STR(?B), "^.*[#/]", "") AS ?bl)
+  BIND(IRI(CONCAT(STR(?n), "_noright_", ?yl, "_", ?bl)) AS ?nr)
+  BIND(STRLANG(CONCAT("privilege concerning ", ?yl), "en") AS ?privLabel)
+}

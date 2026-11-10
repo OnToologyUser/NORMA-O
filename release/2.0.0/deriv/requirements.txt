@@ -1,0 +1,6 @@
+# Rule set: only needs rdflib.
+rdflib>=7.0
+
+# Only for deriv/tests/check_deriv.py, which checks consistency and the OWL 2 DL
+# profile with HermiT through owlready2 (requires Java). Not needed to derive.
+owlready2>=0.46

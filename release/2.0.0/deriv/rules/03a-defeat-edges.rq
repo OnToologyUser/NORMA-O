@@ -1,0 +1,18 @@
+# Stage 3a — extraction of the defeat digraph.
+#
+# One row per edge, with everything the evaluation needs: the kind of defeat,
+# the gate and the resolution principle. The REIFIED Defeater is queried rather
+# than norma:prevailsOver, because the chain defining that shortcut drops
+# norma:appliesWhen: using it would make every defeater applicable in every
+# case.
+#
+# ?kind may come back several times (the leaf class and norma:Defeater); the
+# evaluator keeps the most specific one.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?dfr ?kind ?a ?b ?gate ?principle WHERE {
+  ?dfr norma:defeatingNorm ?a ; norma:defeatedNorm ?b ; a ?kind .
+  ?kind rdfs:subClassOf* norma:Defeater .
+  OPTIONAL { ?dfr norma:appliesWhen ?gate }
+  OPTIONAL { ?dfr norma:hasResolutionPrinciple ?principle }
+}

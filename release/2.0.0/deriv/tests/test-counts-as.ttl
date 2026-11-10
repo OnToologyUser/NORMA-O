@@ -1,0 +1,97 @@
+# Constitutive -> regulative chaining, with the REAL structure of Article 6
+# of Regulation (EU) 2024/1689.
+#
+# The mistake this fixture exists to prevent: wiring the exception of 6(3)
+# straight to the Article 16 obligation. Article 6(3) does not except Article
+# 16; it excepts the CLASSIFICATION of 6(2), and Articles 16 and 26 both hang
+# from that classification. With the shortcut, Article 26 stays undefeated and
+# the legal result is false.
+#
+#   FCT 6(2): Annex III counts as high-risk   <--defeated-- FCT 6(3) narrow task
+#        | establishesTrigger                                     ^
+#        v                                                        | defeated
+#   condition "is high-risk"                        FCT 6(3) final: profiling
+#        |
+#        +--> activates OBL Art. 16 (provider)
+#        +--> activates OBL Art. 26 (deployer)
+
+@prefix norma: <https://w3id.org/def/norma-o#> .
+@prefix :      <https://example.org/norma-countsas#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://example.org/norma-countsas> a owl:Ontology ;
+    owl:imports <https://w3id.org/def/norma-o> .
+
+:provider a owl:NamedIndividual, norma:LegalRole ; rdfs:label "provider"@en .
+:deployer a owl:NamedIndividual, norma:LegalRole ; rdfs:label "deployer"@en .
+:authority a owl:NamedIndividual, norma:LegalRole ; rdfs:label "market surveillance authority"@en .
+:act_16 a owl:NamedIndividual, norma:LegalAction ; rdfs:label "comply with Art. 16"@en .
+:act_26 a owl:NamedIndividual, norma:LegalAction ; rdfs:label "comply with Art. 26"@en .
+
+# ── brute fact: being listed in Annex III ────────────────────────────
+:c_annex a owl:NamedIndividual, norma:LegalCondition ;
+    norma:conditionStatement "Is the AI system listed in Annex III?" ;
+    norma:hasTrigger :te_annex .
+:te_annex a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:TrueOutcome ; norma:activatesNorm :fct_62 .
+
+# ── Art. 6(2): the constitutive rule that ESTABLISHES the institutional fact ──
+:fct_62 a owl:NamedIndividual, norma:ConstitutiveRule ;
+    norma:deonticId "fct_62" ;
+    norma:factStatement "AI systems referred to in Annex III shall be considered to be high-risk." ;
+    norma:establishesTrigger :te_hr_16, :te_hr_26 .
+
+# ── INSTITUTIONAL fact: being high-risk. Never annotated in any case ──
+:c_highrisk a owl:NamedIndividual, norma:LegalCondition ;
+    norma:conditionStatement "Is the AI system high-risk?" ;
+    norma:hasTrigger :te_hr_16, :te_hr_26 .
+:te_hr_16 a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:TrueOutcome ; norma:activatesNorm :obl_16 .
+:te_hr_26 a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:TrueOutcome ; norma:activatesNorm :obl_26 .
+
+# ── the two obligations, conditioned on the institutional fact ───────
+:obl_16 a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "obl_16" ; norma:hasLegalAgent :provider ;
+    norma:hasCounterparty :authority ; norma:hasLegalAction :act_16 .
+:obl_26 a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "obl_26" ; norma:hasLegalAgent :deployer ;
+    norma:hasCounterparty :authority ; norma:hasLegalAction :act_26 .
+
+# ── Art. 6(3) first subparagraph: excepts the CLASSIFICATION, not the obligations ──
+:c_narrow a owl:NamedIndividual, norma:LegalCondition ;
+    norma:conditionStatement "Is the system intended to perform a narrow procedural task?" ;
+    norma:hasTrigger :te_narrow .
+:te_narrow a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:TrueOutcome ; norma:activatesNorm :fct_63 .
+:fct_63 a owl:NamedIndividual, norma:ConstitutiveRule ;
+    norma:deonticId "fct_63" ;
+    norma:factStatement "By derogation, an Annex III system is not high-risk where it performs a narrow procedural task." .
+:d_63 a owl:NamedIndividual, norma:ExceptionDefeater ;
+    norma:defeatingNorm :fct_63 ; norma:defeatedNorm :fct_62 ;
+    norma:appliesWhen :te_narrow .
+
+# ── Art. 6(3) final subparagraph: excepts the exception ──────────────
+:c_prof a owl:NamedIndividual, norma:LegalCondition ;
+    norma:conditionStatement "Does the AI system perform profiling of natural persons?" ;
+    norma:hasTrigger :te_prof .
+:te_prof a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:TrueOutcome ; norma:activatesNorm :fct_63_prof .
+:fct_63_prof a owl:NamedIndividual, norma:ConstitutiveRule ;
+    norma:deonticId "fct_63_prof" ;
+    norma:factStatement "Notwithstanding the first subparagraph, an Annex III system performing profiling is always high-risk." .
+:d_63_prof a owl:NamedIndividual, norma:ExceptionDefeater ;
+    norma:defeatingNorm :fct_63_prof ; norma:defeatedNorm :fct_63 ;
+    norma:appliesWhen :te_prof .
+
+# ── the three cases: BRUTE FACTS only, never the institutional one ───
+:C_annex a owl:NamedIndividual, norma:FactPattern ;
+    rdfs:label "Annex III only"@en ;
+    norma:holdsTrigger :te_annex .
+:C_narrow a owl:NamedIndividual, norma:FactPattern ;
+    rdfs:label "Annex III + narrow procedural task"@en ;
+    norma:holdsTrigger :te_annex, :te_narrow .
+:C_prof a owl:NamedIndividual, norma:FactPattern ;
+    rdfs:label "Annex III + narrow task + profiling"@en ;
+    norma:holdsTrigger :te_annex, :te_narrow, :te_prof .

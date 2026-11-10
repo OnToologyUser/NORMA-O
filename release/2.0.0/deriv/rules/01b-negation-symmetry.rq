@@ -1,0 +1,10 @@
+# Stage 1b — symmetrise isNegationOf.
+# The property is symmetric in the ontology, but a hand-written ABox may assert
+# only one direction. Without a reasoner the stage 2 closure would not see the
+# negation, so the missing direction is materialised.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+CONSTRUCT { ?b norma:isNegationOf ?a . }
+WHERE {
+  ?a norma:isNegationOf ?b .
+  FILTER NOT EXISTS { ?b norma:isNegationOf ?a }
+}

@@ -1,0 +1,21 @@
+# Stage 4d — isJuralOppositeOf on the Claim <-> NoRight axis.
+#
+# It cannot be derived like 04c: the content of the CORRELATIVE position is
+# deliberately not materialised (it propagates through the chain
+# isCorrelativeOf ∘ concernsLegalAction), so a join over contents would see
+# nothing without a reasoner. It is derived where it conceptually belongs: if
+# two primary positions are opposites, so are their correlatives.
+#
+#   Duty(A,x) opposite Privilege(A,¬x)  =>  Claim(B,x) opposite NoRight(B,¬x)
+#
+# Requires both correlatives to exist, which only happens if both norms name a
+# counterparty. If one is missing, nothing is invented.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+CONSTRUCT { ?claim norma:isJuralOppositeOf ?noright . }
+WHERE {
+  ?duty norma:isJuralOppositeOf ?priv .
+  ?duty    a norma:Duty      ; norma:isCorrelativeOf ?claim .
+  ?priv    a norma:Privilege ; norma:isCorrelativeOf ?noright .
+  ?claim   a norma:Claim .
+  ?noright a norma:NoRight .
+}

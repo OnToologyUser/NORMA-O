@@ -1,0 +1,9 @@
+# Stage 3b — universe of weak-permission candidates (A, y, C).
+# Only actions that appear in some entails* triple of a norm whose agent is A.
+# No weak permissions are generated for pairs the graph does not mention.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+SELECT DISTINCT ?A ?y ?C WHERE {
+  ?C a norma:FactPattern .
+  ?n norma:hasLegalAgent ?A ; ?entails ?y .
+  FILTER(STRSTARTS(STR(?entails), "https://w3id.org/def/norma-o#entails"))
+}

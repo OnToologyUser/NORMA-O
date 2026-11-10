@@ -1,0 +1,15 @@
+# Stage 2c — P(x) yields only: P(x), ¬F(x), ¬O(¬x).
+# NOTHING is generated about O(x), P(¬x) or F(¬x): they stay open, and
+# asserting them would be false. Also fires for Facultative, via subClassOf*.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?n norma:entailsPermitted     ?x ;
+     norma:entailsNotForbidden  ?x ;
+     norma:entailsNotObligatory ?xn .
+}
+WHERE {
+  ?n a ?c . ?c rdfs:subClassOf* norma:Permission .
+  ?n norma:hasLegalAction ?x .
+  ?x norma:isNegationOf ?xn .
+}

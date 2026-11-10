@@ -1,0 +1,227 @@
+# Test ABox for the deontic closure and weak permission.
+# One norm per row of the closure table, plus the test cases that follow.
+@prefix norma: <https://w3id.org/def/norma-o#> .
+@prefix :      <https://example.org/norma-test#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://example.org/norma-test> a owl:Ontology ; owl:imports <https://w3id.org/def/norma-o> .
+
+:A a owl:NamedIndividual, norma:LegalAgent ; rdfs:label "agent A"@en .
+:B a owl:NamedIndividual, norma:LegalAgent ; rdfs:label "agent B"@en .
+
+# ── one action per norm ───────────────────────────────────────────────
+:act_o  a owl:NamedIndividual, norma:LegalAction ; rdfs:label "o"@en .
+:act_f  a owl:NamedIndividual, norma:LegalAction ; rdfs:label "f"@en .
+:act_p  a owl:NamedIndividual, norma:LegalAction ; rdfs:label "p"@en .
+:act_fa a owl:NamedIndividual, norma:LegalAction ; rdfs:label "fa"@en .
+:act_r  a owl:NamedIndividual, norma:LegalAction ; rdfs:label "r"@en .
+:act_nr a owl:NamedIndividual, norma:LegalAction ; rdfs:label "nr"@en .
+:b a owl:NamedIndividual, norma:LegalAction ; rdfs:label "b"@en .
+:d a owl:NamedIndividual, norma:LegalAction ; rdfs:label "d"@en .
+:e a owl:NamedIndividual, norma:LegalAction ; rdfs:label "e"@en .
+:g a owl:NamedIndividual, norma:LegalAction ; rdfs:label "g"@en .
+
+# ── one norm per row of the closure table ─────────────────────────────
+:n_obl  a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_obl" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ; norma:hasLegalAction :act_o .
+:n_prh  a owl:NamedIndividual, norma:Prohibition ;
+    norma:deonticId "n_prh" ; norma:hasLegalAgent :A ; norma:hasLegalAction :act_f .
+:n_per  a owl:NamedIndividual, norma:Permission ;
+    norma:deonticId "n_per" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ; norma:hasLegalAction :act_p .
+:n_fac  a owl:NamedIndividual, norma:Facultative ;
+    norma:deonticId "n_fac" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ; norma:hasLegalAction :act_fa .
+:n_rec  a owl:NamedIndividual, norma:Recommendation ;
+    norma:deonticId "n_rec" ; norma:hasLegalAgent :A ; norma:hasLegalAction :act_r .
+:n_nrec a owl:NamedIndividual, norma:NegativeRecommendation ;
+    norma:deonticId "n_nrec" ; norma:hasLegalAgent :A ; norma:hasLegalAction :act_nr .
+# no deontic closure: constitutive rule
+:n_fct a owl:NamedIndividual, norma:ConstitutiveRule ;
+    norma:deonticId "n_fct" ; norma:factStatement "counts as something" .
+
+# ── T1/T2/T3: prohibition of b conditional on the true branch of c1 ──
+:c1 a owl:NamedIndividual, norma:LegalCondition ;
+    norma:conditionStatement "c1?" ; norma:hasTrigger :te_c1_true, :te_c1_false .
+:te_c1_true  a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:TrueOutcome ; norma:activatesNorm :n_b .
+:te_c1_false a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:FalseOutcome ; norma:activatesNorm :n_other .
+:n_b a owl:NamedIndividual, norma:Prohibition ;
+    norma:deonticId "n_b" ; norma:hasLegalAgent :A ; norma:hasLegalAction :b .
+:n_other a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_other" ; norma:hasLegalAgent :A ; norma:hasLegalAction :act_o .
+
+:C1 a owl:NamedIndividual, norma:FactPattern ; norma:holdsTrigger :te_c1_true, :te_x_true .
+:C2 a owl:NamedIndividual, norma:FactPattern ; norma:holdsTrigger :te_c1_false .
+:C3 a owl:NamedIndividual, norma:FactPattern .
+
+# ── T4: unconditional prohibition of d ───────────────────────────────
+:n_d a owl:NamedIndividual, norma:Prohibition ;
+    norma:deonticId "n_d" ; norma:hasLegalAgent :A ; norma:hasLegalAction :d .
+
+# ── T5: prohibition of e, superseded ─────────────────────────────────
+:n_e a owl:NamedIndividual, norma:Prohibition ;
+    norma:deonticId "n_e" ; norma:hasLegalAgent :A ; norma:hasLegalAction :e ;
+    norma:hasNormStatus norma:Superseded .
+
+# ── T6: unconditional obligation of g ────────────────────────────────
+:n_g a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_g" ; norma:hasLegalAgent :A ; norma:hasLegalAction :g .
+
+# ── T7: b forbidden to A, permitted to B ─────────────────────────────
+:n_b_B a owl:NamedIndividual, norma:Permission ;
+    norma:deonticId "n_b_B" ; norma:hasLegalAgent :B ; norma:hasLegalAction :b .
+
+# ── T8/T9: prohibition of h defeated by an exception active only in C1 ──
+:h a owl:NamedIndividual, norma:LegalAction ; rdfs:label "h"@en .
+:k a owl:NamedIndividual, norma:LegalAction ; rdfs:label "k"@en .
+
+:fct_exc a owl:NamedIndividual, norma:ConstitutiveRule ;
+    norma:deonticId "fct_exc" ;
+    norma:factStatement "The rule does not apply to the carved-out class." .
+:c_x a owl:NamedIndividual, norma:LegalCondition ;
+    norma:conditionStatement "c_x?" ; norma:hasTrigger :te_x_true .
+:te_x_true a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:TrueOutcome ; norma:activatesNorm :fct_exc .
+
+:n_h a owl:NamedIndividual, norma:Prohibition ;
+    norma:deonticId "n_h" ; norma:hasLegalAgent :A ; norma:hasLegalAction :h .
+:d_h a owl:NamedIndividual, norma:ExceptionDefeater ;
+    norma:defeatedNorm :n_h ; norma:defeatingNorm :fct_exc ; norma:appliesWhen :te_x_true .
+
+# ── T10: undercutting an obligation leaves a weak permission to omit ─
+:n_k a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_k" ; norma:hasLegalAgent :A ; norma:hasLegalAction :k .
+:d_k a owl:NamedIndividual, norma:ExceptionDefeater ;
+    norma:defeatedNorm :n_k ; norma:defeatingNorm :fct_exc ; norma:appliesWhen :te_x_true .
+
+# ── Two-level chain: the defeater is itself defeated ─────────────────
+# Correct semantics: n_m is REINSTATED in C1, so there is no WP(A,m_neg,C1).
+# A flat filter cannot see this: the digraph has to be evaluated by levels.
+:m a owl:NamedIndividual, norma:LegalAction ; rdfs:label "m"@en .
+:fct_chain a owl:NamedIndividual, norma:ConstitutiveRule ;
+    norma:deonticId "fct_chain" ; norma:factStatement "intermediate carve-out" .
+:n_m a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_m" ; norma:hasLegalAgent :A ; norma:hasLegalAction :m .
+:d_m a owl:NamedIndividual, norma:ExceptionDefeater ;
+    norma:defeatedNorm :n_m ; norma:defeatingNorm :fct_chain ; norma:appliesWhen :te_x_true .
+:d_chain a owl:NamedIndividual, norma:ExceptionDefeater ;
+    norma:defeatedNorm :fct_chain ; norma:defeatingNorm :fct_exc ; norma:appliesWhen :te_x_true .
+
+# ═══ Stage 5: norm-to-norm relations ════════════════════════════════
+# E1: F(¬x) ≡ O(x). Two norms with the same agent and counterparty, no
+# conditions, whose closures match point by point. The negation is declared
+# by hand: stage 1 checks both directions and does not mint it again.
+:C a owl:NamedIndividual, norma:LegalAgent ; rdfs:label "C"@en .
+:eq_act     a owl:NamedIndividual, norma:LegalAction ; rdfs:label "eq"@en .
+:eq_act_neg a owl:NamedIndividual, norma:LegalAction ; rdfs:label "not eq"@en ;
+    norma:isNegationOf :eq_act .
+:n_eq_obl a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_eq_obl" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ;
+    norma:hasLegalAction :eq_act .
+:n_eq_prh a owl:NamedIndividual, norma:Prohibition ;
+    norma:deonticId "n_eq_prh" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ;
+    norma:hasLegalAction :eq_act_neg .
+
+# E2: same clause, different counterparty -> NOT equivalent to either.
+:n_eq_obl_C a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_eq_obl_C" ; norma:hasLegalAgent :A ; norma:hasCounterparty :C ;
+    norma:hasLegalAction :eq_act .
+
+# E3: same clause, different agent -> NOT equivalent.
+:n_eq_obl_B a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_eq_obl_B" ; norma:hasLegalAgent :B ; norma:hasCounterparty :B ;
+    norma:hasLegalAction :eq_act .
+
+# E4: Permission and Facultative over the SAME action, agent and counterparty.
+# They share entailsPermitted(p2), so a single-triple join would make them
+# equivalent; they are not, because the facultative one also entails P(¬p2)
+# and ¬O(p2). This is what set equality is for.
+:p2 a owl:NamedIndividual, norma:LegalAction ; rdfs:label "p2"@en .
+:n_p2_per a owl:NamedIndividual, norma:Permission ;
+    norma:deonticId "n_p2_per" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ;
+    norma:hasLegalAction :p2 .
+:n_p2_fac a owl:NamedIndividual, norma:Facultative ;
+    norma:deonticId "n_p2_fac" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ;
+    norma:hasLegalAction :p2 .
+
+# E5: CONTRADICTORY. P(q2) against F(q2): exactly one holds.
+:q2 a owl:NamedIndividual, norma:LegalAction ; rdfs:label "q2"@en .
+:n_q_per a owl:NamedIndividual, norma:Permission ;
+    norma:deonticId "n_q_per" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ;
+    norma:hasLegalAction :q2 .
+:n_q_prh a owl:NamedIndividual, norma:Prohibition ;
+    norma:deonticId "n_q_prh" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ;
+    norma:hasLegalAction :q2 .
+
+# E6: CONTRARY. O(r2) against F(r2): both cannot hold, but both may fail.
+# Must yield deonticallyConflictsWith and NOT deonticallyContradicts.
+:r2 a owl:NamedIndividual, norma:LegalAction ; rdfs:label "r2"@en .
+:n_r_obl a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_r_obl" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ;
+    norma:hasLegalAction :r2 .
+:n_r_prh a owl:NamedIndividual, norma:Prohibition ;
+    norma:deonticId "n_r_prh" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ;
+    norma:hasLegalAction :r2 .
+
+# ── E11: Hohfeld's MULTITAL case. A has a duty of mt toward B and a
+#        privilege of ¬mt toward C. Same holder and negated contents, but
+#        they are TWO distinct jural relations, not an opposition: positions
+#        are directed.
+:mt a owl:NamedIndividual, norma:LegalAction ; rdfs:label "mt"@en .
+:n_mt_d a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_mt_d" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ;
+    norma:hasLegalAction :mt .
+:n_mt_p a owl:NamedIndividual, norma:Permission ;
+    norma:deonticId "n_mt_p" ; norma:hasLegalAgent :A ; norma:hasCounterparty :C ;
+    norma:hasLegalAction :mt_neg .
+:mt_neg a owl:NamedIndividual, norma:LegalAction ; rdfs:label "not mt"@en ;
+    norma:isNegationOf :mt .
+
+# ── E12: INCOMPATIBLE CONDITIONS. O(cc) under the true branch of c2 and
+#        F(cc) under the false one. They would be contraries, but they never
+#        coincide in a case, so there is no conflict to report.
+:cc a owl:NamedIndividual, norma:LegalAction ; rdfs:label "cc"@en .
+:c2 a owl:NamedIndividual, norma:LegalCondition ;
+    norma:conditionStatement "c2?" ; norma:hasTrigger :te_c2_true, :te_c2_false .
+:te_c2_true  a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:TrueOutcome  ; norma:activatesNorm :n_cc_obl .
+:te_c2_false a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:FalseOutcome ; norma:activatesNorm :n_cc_prh .
+:n_cc_obl a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_cc_obl" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ;
+    norma:hasLegalAction :cc .
+:n_cc_prh a owl:NamedIndividual, norma:Prohibition ;
+    norma:deonticId "n_cc_prh" ; norma:hasLegalAgent :A ; norma:hasCounterparty :B ;
+    norma:hasLegalAction :cc .
+
+# ── P1: ACTIVATION must filter the attack graph, not just the report.
+#        The defeater's gate DOES fire in C1 (te_x_true), but the excepting
+#        norm is not activated in C1 (its trigger is the false branch of c1,
+#        which C1 does not hold). A non-operative norm does not defeat: n_p1
+#        must be Applicable, and fct_p1 NotActivated.
+:p1a a owl:NamedIndividual, norma:LegalAction ; rdfs:label "p1"@en .
+:n_p1 a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_p1" ; norma:hasLegalAgent :A ; norma:hasLegalAction :p1a .
+:fct_p1 a owl:NamedIndividual, norma:ConstitutiveRule ;
+    norma:deonticId "fct_p1" ; norma:factStatement "exception not triggered in C1" .
+:te_p1_gate a owl:NamedIndividual, norma:TriggerEvent ;
+    norma:hasOutcome norma:FalseOutcome ; norma:activatesNorm :fct_p1 .
+:c_p1 a owl:NamedIndividual, norma:LegalCondition ;
+    norma:conditionStatement "p1?" ; norma:hasTrigger :te_p1_gate .
+:d_p1 a owl:NamedIndividual, norma:ExceptionDefeater ;
+    norma:defeatedNorm :n_p1 ; norma:defeatingNorm :fct_p1 ;
+    norma:appliesWhen :te_x_true .
+
+# ── P2: a REPEALED exception does not defeat. Not because n_p2 "recovers"
+#        anything, but because its validity was never taken away (cf. art. 2.2
+#        of the Spanish Civil Code).
+:p2a a owl:NamedIndividual, norma:LegalAction ; rdfs:label "p2a"@en .
+:n_p2 a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_p2" ; norma:hasLegalAgent :A ; norma:hasLegalAction :p2a .
+:fct_p2 a owl:NamedIndividual, norma:ConstitutiveRule ;
+    norma:deonticId "fct_p2" ; norma:factStatement "repealed exception" ;
+    norma:hasNormStatus norma:Superseded .
+:d_p2 a owl:NamedIndividual, norma:ExceptionDefeater ;
+    norma:defeatedNorm :n_p2 ; norma:defeatingNorm :fct_p2 ;
+    norma:appliesWhen :te_x_true .

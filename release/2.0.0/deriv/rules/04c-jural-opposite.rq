@@ -1,0 +1,41 @@
+# Stage 4c — isJuralOppositeOf on the Duty <-> Privilege axis.
+#
+# Second axis of Hohfeld's square. The correlative swaps the holder and keeps
+# the content; the OPPOSITE keeps the holder and negates the content:
+#   Duty(A->B, x)  is the opposite of  Privilege(A->B, ¬x)     [O(x) ≡ ¬P(¬x)]
+#
+# POSITIONS ARE DIRECTED, which is why the holder alone is not enough. An agent
+# may have a duty to do x toward B and a privilege not to do it toward C, and
+# that is not opposition: it is Hohfeld's multital analysis, two distinct
+# jural relations. The same holder AND the same counterparty are therefore
+# required.
+#
+# The counterparty is compared on the conferring NORMS, because the position's
+# own counterparty (hasPositionCounterparty) is derived through a chain and is
+# not materialised. An unannotated counterparty is treated as non-conflicting,
+# as in stage 5: a declared reading, not a neutral one.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+CONSTRUCT { ?duty norma:isJuralOppositeOf ?priv . }
+WHERE {
+  ?nd norma:confersLegalPosition ?duty .
+  ?np norma:confersLegalPosition ?priv .
+  ?duty a norma:Duty      ; norma:hasPositionHolder ?a ; norma:concernsLegalAction ?x .
+  ?priv a norma:Privilege ; norma:hasPositionHolder ?a ; norma:concernsLegalAction ?y .
+  ?x norma:isNegationOf ?y .
+  FILTER NOT EXISTS {
+    ?nd norma:hasCounterparty ?b1 . ?np norma:hasCounterparty ?b2 . FILTER(?b1 != ?b2)
+  }
+  # INCOMPATIBLE conditions, the same filter as 05b and 05c. Two norms
+  # activated by opposite branches of one condition never coincide in a case,
+  # so their positions never coexist either and there is no opposition to
+  # report. Without this the two routes to conflict disagreed: jural opposition
+  # fired where deontic contradiction, correctly, did not.
+  FILTER NOT EXISTS {
+    ?c norma:hasTrigger ?g1, ?g2 .
+    ?g1 norma:activatesNorm ?nd ; norma:hasOutcome ?o1 .
+    ?g2 norma:activatesNorm ?np ; norma:hasOutcome ?o2 .
+    FILTER(?o1 != ?o2)
+    FILTER NOT EXISTS { ?h1 norma:activatesNorm ?nd . FILTER NOT EXISTS { ?c norma:hasTrigger ?h1 } }
+    FILTER NOT EXISTS { ?h2 norma:activatesNorm ?np . FILTER NOT EXISTS { ?c norma:hasTrigger ?h2 } }
+  }
+}

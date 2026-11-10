@@ -1,0 +1,38 @@
+# Stage 5c — deonticallyConflictsWith for CONTRARY pairs.
+#
+# Contraries: both cannot hold, but both may fail. The typical case is O(x)
+# together with F(x), incompatible under axiom D and yet both false when x is
+# facultative. Also O(x) together with O(¬x), which is the same pair through
+# the closure.
+#
+# The SUPERPROPERTY is emitted rather than deonticallyContradicts: the class
+# restrictions confine contradiction to Permission (see 05b). Both ends are
+# excluded from the Permission subtree so as not to collect here what is
+# already a contradiction proper.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?n1 ?n2 WHERE {
+  ?n1 norma:entailsObligatory ?y ; norma:hasLegalAgent ?a .
+  ?n2 norma:entailsForbidden  ?y ; norma:hasLegalAgent ?a .
+  FILTER(?n1 != ?n2)
+  FILTER NOT EXISTS { ?n1 a ?k1 . ?k1 rdfs:subClassOf* norma:Permission }
+  FILTER NOT EXISTS { ?n2 a ?k2 . ?k2 rdfs:subClassOf* norma:Permission }
+  FILTER NOT EXISTS {
+    ?n1 norma:hasCounterparty ?b1 . ?n2 norma:hasCounterparty ?b2 . FILTER(?b1 != ?b2)
+  }
+
+  # INCOMPATIBLE conditions: two norms activated by opposite branches of the
+  # same condition never coincide in a case, so they do not conflict. Neither
+  # may have an activation outside that condition, because several triggers of
+  # a norm are read disjunctively and could make them coincide another way.
+  # This removes the clear false positive; whether the conflict materialises in
+  # a concrete case is decided by stage 3a.
+  FILTER NOT EXISTS {
+    ?c norma:hasTrigger ?g1, ?g2 .
+    ?g1 norma:activatesNorm ?n1 ; norma:hasOutcome ?o1 .
+    ?g2 norma:activatesNorm ?n2 ; norma:hasOutcome ?o2 .
+    FILTER(?o1 != ?o2)
+    FILTER NOT EXISTS { ?h1 norma:activatesNorm ?n1 . FILTER NOT EXISTS { ?c norma:hasTrigger ?h1 } }
+    FILTER NOT EXISTS { ?h2 norma:activatesNorm ?n2 . FILTER NOT EXISTS { ?c norma:hasTrigger ?h2 } }
+  }
+}

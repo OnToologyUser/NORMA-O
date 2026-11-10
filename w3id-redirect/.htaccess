@@ -34,26 +34,62 @@ RewriteRule ^1\.0/?$ https://sheyls.github.io/NORMA-O/OnToology/release/1.0.0/no
 
 RewriteRule ^1\.0/?$ https://sheyls.github.io/NORMA-O/OnToology/release/1.0.0/norma-ontology-v1.rdf/documentation/ontology.owl [R=303,L,NE]
 
-# Unversioned ontology IRI: https://w3id.org/def/norma-o
-RewriteCond %{HTTP_ACCEPT} application/ld\+json
-RewriteRule ^$ https://sheyls.github.io/NORMA-O/OnToology/development/norma-ontology-v1.rdf/documentation/ontology.jsonld [R=303,L,NE]
+# Version 2.0 has no generated HTML documentation, JSON-LD or N-Triples:
+# browsers are sent to the release folder on GitHub,
+# Turtle clients get Turtle, and every other Accept value falls back to RDF/XML.
 
+# Version IRI: https://w3id.org/def/norma-o/2.0
 RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/html|application/xhtml\+xml)
 RewriteCond %{HTTP_ACCEPT} text/html [OR]
 RewriteCond %{HTTP_ACCEPT} application/xhtml\+xml [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*
-RewriteRule ^$ https://sheyls.github.io/NORMA-O/OnToology/development/norma-ontology-v1.rdf/documentation/index-en.html [R=303,L,NE]
-
-RewriteCond %{HTTP_ACCEPT} application/n-triples
-RewriteRule ^$ https://sheyls.github.io/NORMA-O/OnToology/development/norma-ontology-v1.rdf/documentation/ontology.nt [R=303,L,NE]
+RewriteRule ^2\.0/?$ https://github.com/sheyls/NORMA-O/tree/main/release/2.0.0 [R=303,L,NE]
 
 RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
 RewriteCond %{HTTP_ACCEPT} text/\* [OR]
 RewriteCond %{HTTP_ACCEPT} \*/turtle
-RewriteRule ^$ https://sheyls.github.io/NORMA-O/OnToology/development/norma-ontology-v1.rdf/documentation/ontology.ttl [R=303,L,NE]
+RewriteRule ^2\.0/?$ https://sheyls.github.io/NORMA-O/release/2.0.0/norma-ontology-v2.ttl [R=303,L,NE]
 
-RewriteCond %{HTTP_ACCEPT} \*/\* [OR]
-RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-RewriteRule ^$ https://sheyls.github.io/NORMA-O/OnToology/development/norma-ontology-v1.rdf/documentation/ontology.owl [R=303,L,NE]
+RewriteRule ^2\.0/?$ https://sheyls.github.io/NORMA-O/release/2.0.0/norma-ontology-v2.rdf [R=303,L,NE]
 
-RewriteRule ^$ https://sheyls.github.io/NORMA-O/OnToology/development/norma-ontology-v1.rdf/documentation/ontology.owl [R=303,L,NE]
+# Derivation module, version IRI: https://w3id.org/def/norma-o/deriv/1.0
+RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/html|application/xhtml\+xml)
+RewriteCond %{HTTP_ACCEPT} text/html [OR]
+RewriteCond %{HTTP_ACCEPT} application/xhtml\+xml [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*
+RewriteRule ^deriv/1\.0/?$ https://github.com/sheyls/NORMA-O/tree/main/release/2.0.0 [R=303,L,NE]
+
+RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
+RewriteCond %{HTTP_ACCEPT} text/\* [OR]
+RewriteCond %{HTTP_ACCEPT} \*/turtle
+RewriteRule ^deriv/1\.0/?$ https://sheyls.github.io/NORMA-O/release/2.0.0/norma-o-deriv.ttl [R=303,L,NE]
+
+RewriteRule ^deriv/1\.0/?$ https://sheyls.github.io/NORMA-O/release/2.0.0/norma-o-deriv.rdf [R=303,L,NE]
+
+# Derivation module IRI (latest): https://w3id.org/def/norma-o/deriv
+RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/html|application/xhtml\+xml)
+RewriteCond %{HTTP_ACCEPT} text/html [OR]
+RewriteCond %{HTTP_ACCEPT} application/xhtml\+xml [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*
+RewriteRule ^deriv/?$ https://github.com/sheyls/NORMA-O/tree/main/release/2.0.0 [R=303,L,NE]
+
+RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
+RewriteCond %{HTTP_ACCEPT} text/\* [OR]
+RewriteCond %{HTTP_ACCEPT} \*/turtle
+RewriteRule ^deriv/?$ https://sheyls.github.io/NORMA-O/release/2.0.0/norma-o-deriv.ttl [R=303,L,NE]
+
+RewriteRule ^deriv/?$ https://sheyls.github.io/NORMA-O/release/2.0.0/norma-o-deriv.rdf [R=303,L,NE]
+
+# Unversioned ontology IRI (latest, currently 2.0): https://w3id.org/def/norma-o
+RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/html|application/xhtml\+xml)
+RewriteCond %{HTTP_ACCEPT} text/html [OR]
+RewriteCond %{HTTP_ACCEPT} application/xhtml\+xml [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*
+RewriteRule ^$ https://github.com/sheyls/NORMA-O/tree/main/release/2.0.0 [R=303,L,NE]
+
+RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
+RewriteCond %{HTTP_ACCEPT} text/\* [OR]
+RewriteCond %{HTTP_ACCEPT} \*/turtle
+RewriteRule ^$ https://sheyls.github.io/NORMA-O/release/2.0.0/norma-ontology-v2.ttl [R=303,L,NE]
+
+RewriteRule ^$ https://sheyls.github.io/NORMA-O/release/2.0.0/norma-ontology-v2.rdf [R=303,L,NE]

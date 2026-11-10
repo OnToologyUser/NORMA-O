@@ -1,0 +1,18 @@
+# Stage 2a — O(x) yields: O(x), P(x), ¬F(x), F(¬x), ¬P(¬x), ¬O(¬x).
+# P(x) and ¬O(¬x) follow from axiom D. Both members of each equivalent pair are
+# materialised so that queries work without a reasoner.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?n norma:entailsObligatory    ?x ;
+     norma:entailsPermitted     ?x ;
+     norma:entailsNotForbidden  ?x ;
+     norma:entailsForbidden     ?xn ;
+     norma:entailsNotPermitted  ?xn ;
+     norma:entailsNotObligatory ?xn .
+}
+WHERE {
+  ?n a ?c . ?c rdfs:subClassOf* norma:Obligation .
+  ?n norma:hasLegalAction ?x .
+  ?x norma:isNegationOf ?xn .
+}

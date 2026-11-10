@@ -1,0 +1,14 @@
+# Stage 2d — Facultative(x) ≡ P(x) ∧ P(¬x). The P(x) half is already added by
+# 02c because Facultative ⊑ Permission; only the other half is added here.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?n norma:entailsPermitted     ?xn ;
+     norma:entailsNotForbidden  ?xn ;
+     norma:entailsNotObligatory ?x .
+}
+WHERE {
+  ?n a ?c . ?c rdfs:subClassOf* norma:Facultative .
+  ?n norma:hasLegalAction ?x .
+  ?x norma:isNegationOf ?xn .
+}

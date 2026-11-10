@@ -1,0 +1,27 @@
+# Stage 1 — action negation.
+# For every LegalAction regulated by a norm that has no negation yet
+# (checking isNegationOf in both directions), ?x_neg is minted with a
+# deterministic IRI and BOTH directions are asserted, since no reasoner is assumed.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?neg a norma:LegalAction ;
+       rdfs:label ?negLabel ;
+       norma:isNegationOf ?x .
+  ?x norma:isNegationOf ?neg .
+}
+WHERE {
+  ?n a ?cls ; norma:hasLegalAction ?x .
+  ?cls rdfs:subClassOf* norma:RegulativeNorm .
+  FILTER NOT EXISTS { ?x norma:isNegationOf ?any }
+  FILTER NOT EXISTS { ?other norma:isNegationOf ?x }
+  # The minted label is built only from an ENGLISH label. Without the filter,
+  # an action labelled in several languages produced one "not …" label per
+  # language, all tagged @en, so a Spanish label ended up as
+  # "not etiquetar"@en. Nor is it translated: with no English label, the
+  # negation individual is still minted with its type and isNegationOf but no
+  # label, which is better than inventing one in the wrong language.
+  OPTIONAL { ?x rdfs:label ?l . FILTER(LANGMATCHES(LANG(?l), "en")) }
+  BIND(IRI(CONCAT(STR(?x), "_neg")) AS ?neg)
+  BIND(STRLANG(CONCAT("not ", STR(?l)), "en") AS ?negLabel)
+}

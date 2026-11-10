@@ -1,0 +1,15 @@
+# Stage 3a (bis) — edges asserted as shortcuts, without a Defeater node.
+#
+# norma:isExceptionTo and norma:supersedes sit under directlyPrevailsOver and
+# feed the same digraph. With no reified node there is no gate, so the edge is
+# unconditional: applicable in every case. For supersedes the defeat is
+# TEMPORAL, and is therefore applied as a validity filter before the case
+# graph is built.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+SELECT ?a ?b ?kind WHERE {
+  { ?a norma:isExceptionTo ?b . BIND(norma:ExceptionDefeater AS ?kind) }
+  UNION
+  { ?a norma:supersedes ?b .    BIND(norma:TemporalDefeater  AS ?kind) }
+  UNION
+  { ?b norma:supersededBy ?a .  BIND(norma:TemporalDefeater  AS ?kind) }
+}

@@ -1,0 +1,10 @@
+@prefix norma: <https://w3id.org/def/norma-o#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <https://example.org/cp#> .
+<https://example.org/cp> a owl:Ontology ; owl:imports <https://w3id.org/def/norma-o> .
+:R a owl:NamedIndividual, norma:LegalRole .
+:x a owl:NamedIndividual, norma:LegalAction .
+:P1 a owl:NamedIndividual, norma:Permission ;
+    norma:deonticId "P1" ; norma:hasLegalAgent :R ; norma:hasLegalAction :x .
+:F1 a owl:NamedIndividual, norma:Prohibition ;
+    norma:deonticId "F1" ; norma:hasLegalAgent :R ; norma:hasLegalAction :x .

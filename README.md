@@ -1,6 +1,6 @@
 # NORMA-O: The NORMA Ontology for Legal Norm Annotations
 
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19765302-blue)](https://doi.org/10.5281/zenodo.19765302)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.19765301-blue)](https://doi.org/10.5281/zenodo.19765301)
 [![OWL 2 DL](https://img.shields.io/badge/Ontology-OWL%202%20DL-orange)](https://www.w3.org/TR/owl2-overview/)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Docs](https://img.shields.io/badge/Documentation-w3id.org%2Fdef%2Fnorma--o-navy)](https://w3id.org/def/norma-o)
@@ -9,16 +9,33 @@
 **NORMA-O** is an OWL 2 DL ontology for the formal semantic representation of machine-readable legal norm annotations. It provides a structured vocabulary for publishing, integrating, and reusing annotations derived from regulatory texts, while preserving full traceability to the legal source and accountability for the annotation process.
 
 > **IRI:** `https://w3id.org/def/norma-o`  
-> **Version IRI:** `https://w3id.org/def/norma-o/1.0`  
+> **Version IRI:** `https://w3id.org/def/norma-o/2.0` (current) · `https://w3id.org/def/norma-o/1.0` (prior)  
 > **Preferred prefix:** `norma`  
-> **HTML Documentation:** [https://w3id.org/def/norma-o](https://w3id.org/def/norma-o)
+> **Derivation module:** `https://w3id.org/def/norma-o/deriv` (prefix `normad`)  
+> **Documentation:** [release 2.0](release/2.0.0/) · [WIDOCO HTML for 1.0](https://w3id.org/def/norma-o/1.0)
 
 This ontology is the TBox component of the **NORMA Semantic Toolkit** — see [`sheyls/norma-semantic-toolkit`](https://github.com/sheyls/norma-semantic-toolkit) for the full toolkit including the BPMN annotation methodology, knowledge graph construction pipeline, SWRL rule engine, and REST API.
 
 ---
 
+## What's new in 2.0
+
+Version 2.0 keeps every term of 1.0 and adds the means to state how norms relate to each other and to concrete cases, and to compute what applies, to whom and why:
+
+- **Standard Deontic Logic grounding** — action negation (`isNegationOf`), `Facultative`, `WeakPermission`, and deontic equivalence, contradiction and conflict between norms.
+- **Hohfeldian legal positions** — `Duty`, `Claim`, `Privilege` and `NoRight`, with holder, counterparty, correlatives and jural opposites.
+- **Roles, parties and cases** — `LegalRole`, `LegalParty`, `RoleAssignment`, `FactPattern`, and `confersRole` for constitutive rules.
+- **Defeasibility** — `ExceptionDefeater`, `ConflictDefeater` and `TemporalDefeater`; lex superior, specialis and posterior; normative rank; norm strength; and a prevalence digraph.
+- **Counts-as chaining** — `establishesTrigger` lets a constitutive rule establish an institutional fact that conditions regulative norms, so that defeating a classification (e.g. the high-risk classification of the AI Act) withdraws every obligation that depends on it.
+- **Derivation module and reference rule set** — the `normad` module and [`deriv/`](release/2.0.0/deriv/) compute the deontic closure, positions, prevalence ordering with cycle detection, per-case applicability and weak permissions.
+
+`norma:exception` is deprecated and `norma:UnderReview` moved to `ReviewStatus`. See [What's new in 2.0](release/2.0.0/WHATS-NEW.md) for the full description, migration guide, worked examples, term catalogue and known limitations.
+
+---
+
 ## Table of Contents
 
+- [What's new in 2.0](#whats-new-in-20)
 - [Overview](#overview)
 - [Methodology: LOT](#methodology-lot)
 - [Competency Questions](#competency-questions)
@@ -85,9 +102,9 @@ The following competency questions (CQs) guided the ontology design and serve as
 
 ## Ontology Diagram
 
-The diagram below shows the principal classes and object properties of NORMA-O.
+The diagram below shows the principal classes and object properties of NORMA-O 2.0. The 1.0 diagram is [here](release/1.0.0/norma-o.svg), and the derivation module's diagram [here](release/2.0.0/norma-o-deriv-v1.svg).
 
-![NORMA-O ontology diagram](release/1.0.0/norma-o.svg)
+![NORMA-O ontology diagram](release/2.0.0/norma-o-v2.svg)
 
 *Diagram generated with [diagrams.net](https://www.diagrams.net/).*
 
@@ -139,13 +156,15 @@ The ontology does not model procedural or institutional rules beyond what is nec
 
 ## Statistics
 
-| Element | Count |
-|---|---|
-| Classes | 23 |
-| Object properties | 33 |
-| Datatype properties | 24 |
-| Named individuals (TBox controlled vocabulary) | 23 |
-| OWL profile | OWL 2 DL |
+| Element | 1.0 | 2.0 | `normad` module |
+|---|---:|---:|---:|
+| Classes | 23 | 41 | 7 |
+| Object properties | 41 | 102 | 11 |
+| Datatype properties | 24 | 25 | 5 |
+| Named individuals (TBox controlled vocabulary) | 23 | 33 | 16 |
+| OWL profile | OWL 2 DL | OWL 2 DL | OWL 2 DL |
+
+The principal classes listed above are those of 1.0. The classes added in 2.0 are catalogued in [WHATS-NEW.md](release/2.0.0/WHATS-NEW.md#appendix-a--catalogue-of-new-core-terms).
 
 ---
 
@@ -165,16 +184,25 @@ NORMA-O imports and aligns with the following established vocabularies:
 
 ## Downloads
 
+**Version 2.0 (current)**
+
 | Format | File | Description |
 |---|---|---|
-| Turtle (preferred) | [`norma-ontology-v1.ttl`](release/1.0.0/norma-ontology-v1.ttl) | Primary source file, OWL 2 DL |
+| Turtle (preferred) | [`norma-ontology-v2.ttl`](release/2.0.0/norma-ontology-v2.ttl) | Core ontology, OWL 2 DL |
+| RDF/XML | [`norma-ontology-v2.rdf`](release/2.0.0/norma-ontology-v2.rdf) | Equivalent serialisation in RDF/XML |
+| Turtle / RDF/XML | [`norma-o-deriv.ttl`](release/2.0.0/norma-o-deriv.ttl) / [`.rdf`](release/2.0.0/norma-o-deriv.rdf) | `normad` derivation module |
+| Python | [`deriv/`](release/2.0.0/deriv/) | Reference rule set and checks |
+
+**Version 1.0**
+
+| Format | File | Description |
+|---|---|---|
+| Turtle | [`norma-ontology-v1.ttl`](release/1.0.0/norma-ontology-v1.ttl) | Primary source file, OWL 2 DL |
 | RDF/XML | [`norma-ontology-v1.rdf`](release/1.0.0/norma-ontology-v1.rdf) | Equivalent serialisation in RDF/XML |
-| OWL/XML | via [WIDOCO docs](https://w3id.org/def/norma-o) | Auto-generated |
-| JSON-LD | via [WIDOCO docs](https://w3id.org/def/norma-o) | Auto-generated |
-| N-Triples | via [WIDOCO docs](https://w3id.org/def/norma-o) | Auto-generated |
+| OWL/XML, JSON-LD, N-Triples | via [WIDOCO docs](https://w3id.org/def/norma-o/1.0) | Auto-generated |
 | Ontology Requirements Specification Document (PDF) | [`ords.pdf`](release/1.0.0/ords.pdf) | Requirements specification document |
 
-Content negotiation is supported at `https://w3id.org/def/norma-o`:
+Content negotiation is supported at `https://w3id.org/def/norma-o` (latest, currently 2.0), at the version IRIs `/2.0` and `/1.0`, and at `https://w3id.org/def/norma-o/deriv`:
 
 ```bash
 # Turtle
@@ -183,6 +211,8 @@ curl -L -H "Accept: text/turtle" https://w3id.org/def/norma-o
 # RDF/XML
 curl -L -H "Accept: application/rdf+xml" https://w3id.org/def/norma-o
 ```
+
+For 2.0, browsers are redirected to the [release folder](release/2.0.0/), and JSON-LD or N-Triples requests fall back to RDF/XML.
 
 ---
 
@@ -200,18 +230,25 @@ The ontology requirements specification document is available as PDF here: [`ord
 
 ## Citation
 
-If you use NORMA-O in your research, please cite:
+If you use NORMA-O in your research, please cite the version you used. For version 2.0:
 
 ```bibtex
 @misc{leyvaSanchez2026normaO,
   title        = {{NORMA-O}: The {NORMA} Ontology for Legal Norm Annotations},
   author       = {Leyva-Sánchez, Sheyla and Poveda-Villalón, María and Rodríguez-Doncel, Víctor},
   year         = {2026},
+  version      = {2.0},
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.19765302},
-  url          = {https://doi.org/10.5281/zenodo.19765302}
+  doi          = {10.5281/zenodo.24116269},
+  url          = {https://doi.org/10.5281/zenodo.24116269}
 }
 ```
+
+| Version | DOI |
+|---|---|
+| 2.0 | [10.5281/zenodo.24116269](https://doi.org/10.5281/zenodo.24116269) |
+| 1.0 | [10.5281/zenodo.19765302](https://doi.org/10.5281/zenodo.19765302) |
+| All versions (always resolves to the latest) | [10.5281/zenodo.19765301](https://doi.org/10.5281/zenodo.19765301) |
 
 ---
 
@@ -233,5 +270,5 @@ NORMA-O is the TBox component of a broader open resource for legal knowledge eng
 |---|---|
 | [`sheyls/NORMA-O`](https://github.com/sheyls/NORMA-O) | This repository — ontology TBox only |
 | [`sheyls/norma-semantic-toolkit`](https://github.com/sheyls/norma-semantic-toolkit) | Full toolkit: annotation methodology, KG construction pipeline, SWRL engine, REST API, web app |
-| [WIDOCO documentation](https://w3id.org/def/norma-o) | Full HTML documentation with cross-reference of all terms |
+| [WIDOCO documentation (1.0)](https://w3id.org/def/norma-o/1.0) | Full HTML documentation with cross-reference of all 1.0 terms |
 | [Zenodo community](https://zenodo.org/communities/norma) | All releases and supplementary materials |

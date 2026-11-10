@@ -1,0 +1,77 @@
+# Separate fixture for cycles, chained temporal defeat and Strict norms.
+# Kept apart from test-abox.ttl on purpose: there the ladder must stay ACYCLIC,
+# and a cycle would change isAcyclic and the strata of the whole file.
+@prefix norma: <https://w3id.org/def/norma-o#> .
+@prefix :      <https://example.org/norma-cycles#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://example.org/norma-cycles> a owl:Ontology ;
+    owl:imports <https://w3id.org/def/norma-o> .
+
+:A a owl:NamedIndividual, norma:LegalAgent ; rdfs:label "A"@en .
+:C0 a owl:NamedIndividual, norma:FactPattern ; rdfs:label "empty case"@en .
+
+# ── 1. SECOND-DEGREE conflict (Bobbio): two ConflictDefeaters in opposite
+#       directions citing DIFFERENT principles. The criteria are genuinely
+#       unordered for that pair: it must be reported, not resolved.
+:s1 a owl:NamedIndividual, norma:LegalAction ; rdfs:label "s1"@en .
+:n_s1 a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_s1" ; norma:hasLegalAgent :A ; norma:hasLegalAction :s1 .
+:n_s2 a owl:NamedIndividual, norma:Prohibition ;
+    norma:deonticId "n_s2" ; norma:hasLegalAgent :A ; norma:hasLegalAction :s1 .
+:cd_s12 a owl:NamedIndividual, norma:ConflictDefeater ;
+    norma:defeatingNorm :n_s1 ; norma:defeatedNorm :n_s2 ;
+    norma:hasResolutionPrinciple norma:LexSpecialis .
+:cd_s21 a owl:NamedIndividual, norma:ConflictDefeater ;
+    norma:defeatingNorm :n_s2 ; norma:defeatedNorm :n_s1 ;
+    norma:hasResolutionPrinciple norma:LexPosterior .
+
+# ── 2. ANNOTATION CONTRADICTION: the same principle in both directions.
+#       One principle cannot support both: it is fixed at the source.
+:t1 a owl:NamedIndividual, norma:LegalAction ; rdfs:label "t1"@en .
+:n_t1 a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_t1" ; norma:hasLegalAgent :A ; norma:hasLegalAction :t1 .
+:n_t2 a owl:NamedIndividual, norma:Prohibition ;
+    norma:deonticId "n_t2" ; norma:hasLegalAgent :A ; norma:hasLegalAction :t1 .
+:cd_t12 a owl:NamedIndividual, norma:ConflictDefeater ;
+    norma:defeatingNorm :n_t1 ; norma:defeatedNorm :n_t2 ;
+    norma:hasResolutionPrinciple norma:LexSuperior .
+:cd_t21 a owl:NamedIndividual, norma:ConflictDefeater ;
+    norma:defeatingNorm :n_t2 ; norma:defeatedNorm :n_t1 ;
+    norma:hasResolutionPrinciple norma:LexSuperior .
+
+# ── 3. IRRESOLUBLE ANTINOMY: a loop of exceptions, with no principle to
+#       orient it.
+:u1 a owl:NamedIndividual, norma:LegalAction ; rdfs:label "u1"@en .
+:n_u1 a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_u1" ; norma:hasLegalAgent :A ; norma:hasLegalAction :u1 .
+:n_u2 a owl:NamedIndividual, norma:Permission ;
+    norma:deonticId "n_u2" ; norma:hasLegalAgent :A ; norma:hasLegalAction :u1 .
+:ed_u12 a owl:NamedIndividual, norma:ExceptionDefeater ;
+    norma:defeatingNorm :n_u1 ; norma:defeatedNorm :n_u2 .
+:ed_u21 a owl:NamedIndividual, norma:ExceptionDefeater ;
+    norma:defeatingNorm :n_u2 ; norma:defeatedNorm :n_u1 .
+
+# ── 4. STRICT norm under attack: the defeat has no effect, and the annotation
+#       contradicts itself. It must be reported without changing the result.
+:v1 a owl:NamedIndividual, norma:LegalAction ; rdfs:label "v1"@en .
+:n_v a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_v" ; norma:hasLegalAgent :A ; norma:hasLegalAction :v1 ;
+    norma:hasNormStrength norma:Strict .
+:n_v_att a owl:NamedIndividual, norma:ConstitutiveRule ;
+    norma:deonticId "n_v_att" ; norma:factStatement "purports to except what admits no exception" .
+:ed_v a owl:NamedIndividual, norma:ExceptionDefeater ;
+    norma:defeatingNorm :n_v_att ; norma:defeatedNorm :n_v .
+
+# ── 5. CHAINED REPEAL: w1 repeals w2, w2 had repealed w3. No revival:
+#       w2 and w3 both stay OUTSIDE the system.
+:w1a a owl:NamedIndividual, norma:LegalAction ; rdfs:label "w"@en .
+:n_w1 a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_w1" ; norma:hasLegalAgent :A ; norma:hasLegalAction :w1a ;
+    norma:supersedes :n_w2 .
+:n_w2 a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_w2" ; norma:hasLegalAgent :A ; norma:hasLegalAction :w1a ;
+    norma:supersedes :n_w3 .
+:n_w3 a owl:NamedIndividual, norma:Obligation ;
+    norma:deonticId "n_w3" ; norma:hasLegalAgent :A ; norma:hasLegalAction :w1a .

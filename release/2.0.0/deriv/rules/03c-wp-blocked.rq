@@ -1,0 +1,15 @@
+# Stage 3c — candidates for blocking a weak permission.
+#
+# Returns the triples (A, y, C) together with the norm ?b that could block
+# them; the generator looks up the status of ?b in the case and blocks if it is
+# Applicable or Undecided.
+#
+# Neither validity nor activation is filtered here: both are already
+# applicability statuses computed by stage 3a (normad:Invalid,
+# normad:NotActivated). Having them in two places duplicated the logic and
+# risked the two diverging.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+SELECT DISTINCT ?A ?y ?C ?b WHERE {
+  ?C a norma:FactPattern .
+  ?b norma:hasLegalAgent ?A ; norma:entailsForbidden ?y .
+}

@@ -1,0 +1,12 @@
+# Stage 2f — NegRec(x) yields NegRec(x) and Rec(¬x).
+PREFIX norma: <https://w3id.org/def/norma-o#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?n norma:entailsDiscouraged ?x ;
+     norma:entailsRecommended ?xn .
+}
+WHERE {
+  ?n a ?c . ?c rdfs:subClassOf* norma:NegativeRecommendation .
+  ?n norma:hasLegalAction ?x .
+  ?x norma:isNegationOf ?xn .
+}

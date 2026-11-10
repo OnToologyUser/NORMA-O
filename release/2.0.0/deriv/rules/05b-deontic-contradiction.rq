@@ -1,0 +1,47 @@
+# Stage 5b — deonticallyContradicts between norms.
+#
+# Contradictory: their contents are each other's negation, so exactly one of
+# the two holds. With the closure the join is direct, because
+# entailsNotPermitted is equivalent to entailsForbidden:
+#   P(x) against F(x)   -> one entails P(y) and the other ¬P(y), with y = x
+#   P(¬x) against O(x)  -> likewise, with y = ¬x
+#
+# ?n1 IS RESTRICTED TO THE Permission SUBTREE, and for a reason. Without that
+# restriction the join also fires between O(x) and F(x), because axiom D gives
+# the obligation entailsPermitted(x); but that pair is CONTRARY, not
+# contradictory (both may fail, if the action is facultative), and emitting it
+# here would also be inconsistent: Obligation ⊑ ∀contradicts.Permission would
+# type the prohibition as a Permission, and the two classes are disjoint.
+# Contraries come out of 05c, under the superproperty. Starting from the
+# permission side is what separates the norm's own content from what merely
+# follows by D.
+#
+# Typing of the other end: entailsNotPermitted is produced only by the closure
+# of an Obligation or a Prohibition, so
+# Permission ⊑ ∀contradicts.(Obligation ⊔ Prohibition) holds without asking.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?n1 ?n2 WHERE {
+  ?n1 a ?c1 . ?c1 rdfs:subClassOf* norma:Permission .
+  ?n1 norma:entailsPermitted    ?y ; norma:hasLegalAgent ?a .
+  ?n2 norma:entailsNotPermitted ?y ; norma:hasLegalAgent ?a .
+  FILTER(?n1 != ?n2)
+  FILTER NOT EXISTS {
+    ?n1 norma:hasCounterparty ?b1 . ?n2 norma:hasCounterparty ?b2 . FILTER(?b1 != ?b2)
+  }
+
+  # INCOMPATIBLE conditions: two norms activated by opposite branches of the
+  # same condition never coincide in a case, so they do not conflict. Neither
+  # may have an activation outside that condition, because several triggers of
+  # a norm are read disjunctively and could make them coincide another way.
+  # This removes the clear false positive; whether the conflict materialises in
+  # a concrete case is decided by stage 3a.
+  FILTER NOT EXISTS {
+    ?c norma:hasTrigger ?g1, ?g2 .
+    ?g1 norma:activatesNorm ?n1 ; norma:hasOutcome ?o1 .
+    ?g2 norma:activatesNorm ?n2 ; norma:hasOutcome ?o2 .
+    FILTER(?o1 != ?o2)
+    FILTER NOT EXISTS { ?h1 norma:activatesNorm ?n1 . FILTER NOT EXISTS { ?c norma:hasTrigger ?h1 } }
+    FILTER NOT EXISTS { ?h2 norma:activatesNorm ?n2 . FILTER NOT EXISTS { ?c norma:hasTrigger ?h2 } }
+  }
+}

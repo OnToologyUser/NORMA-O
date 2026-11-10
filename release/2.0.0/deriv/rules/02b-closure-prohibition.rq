@@ -1,0 +1,17 @@
+# Stage 2b — F(x) yields: F(x), ¬P(x), ¬O(x), O(¬x), P(¬x), ¬F(¬x).
+# ¬O(x) follows from axiom D applied to the negation.
+PREFIX norma: <https://w3id.org/def/norma-o#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {
+  ?n norma:entailsForbidden     ?x ;
+     norma:entailsNotPermitted  ?x ;
+     norma:entailsNotObligatory ?x ;
+     norma:entailsObligatory    ?xn ;
+     norma:entailsPermitted     ?xn ;
+     norma:entailsNotForbidden  ?xn .
+}
+WHERE {
+  ?n a ?c . ?c rdfs:subClassOf* norma:Prohibition .
+  ?n norma:hasLegalAction ?x .
+  ?x norma:isNegationOf ?xn .
+}
