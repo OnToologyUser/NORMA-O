@@ -1,0 +1,1522 @@
+<h2 id="crossreference" class="list">Cross-reference for NORMA-O Derivation module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by NORMA-O Derivation module.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#ApplicabilityStatus"
+            title="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus">Applicability Status</a>
+      </li>
+      <li>
+         <a href="#Assumption" title="https://w3id.org/def/norma-o/deriv#Assumption">Assumption</a>
+      </li>
+      <li>
+         <a href="#CycleKind" title="https://w3id.org/def/norma-o/deriv#CycleKind">Cycle Kind</a>
+      </li>
+      <li>
+         <a href="#DerivationActivity"
+            title="https://w3id.org/def/norma-o/deriv#DerivationActivity">Derivation Activity</a>
+      </li>
+      <li>
+         <a href="#NormEvaluation"
+            title="https://w3id.org/def/norma-o/deriv#NormEvaluation">Norm Evaluation</a>
+      </li>
+      <li>
+         <a href="#PrevalenceCycle"
+            title="https://w3id.org/def/norma-o/deriv#PrevalenceCycle">Prevalence Cycle</a>
+      </li>
+      <li>
+         <a href="#PrevalenceOrdering"
+            title="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering">Prevalence Ordering</a>
+      </li>
+   </ul>
+   <div class="entity" id="ApplicabilityStatus">
+      <h3>Applicability Status<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#ApplicabilityStatus</p>
+      <div class="comment">
+         <span class="markdown">The label assigned to a norm by evaluating a described case: whether the norm applies to it, and if not, why not.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasApplicabilityStatus"
+               title="https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus">has applicability status</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Applicable" title="https://w3id.org/def/norma-o/deriv#Applicable">Applicable</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Defeated" title="https://w3id.org/def/norma-o/deriv#Defeated">Defeated</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Invalid" title="https://w3id.org/def/norma-o/deriv#Invalid">Invalid</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#NotActivated" title="https://w3id.org/def/norma-o/deriv#NotActivated">Not activated</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Undecided" title="https://w3id.org/def/norma-o/deriv#Undecided">Undecided</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Assumption">
+      <h3>Assumption<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#Assumption</p>
+      <div class="comment">
+         <span class="markdown">A non-monotonic reading adopted by a derivation activity, without which its conclusions do not follow.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isAssumptionOf"
+               title="https://w3id.org/def/norma-o/deriv#isAssumptionOf">is assumption of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#computedUnderAssumption"
+               title="https://w3id.org/def/norma-o/deriv#computedUnderAssumption">computed under assumption</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#ClosedCaseDescription"
+               title="https://w3id.org/def/norma-o/deriv#ClosedCaseDescription">Closed case description</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ClosedGraph" title="https://w3id.org/def/norma-o/deriv#ClosedGraph">Closed graph</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DefeatConsidered"
+               title="https://w3id.org/def/norma-o/deriv#DefeatConsidered">Defeat considered</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DefeatNotConsidered"
+               title="https://w3id.org/def/norma-o/deriv#DefeatNotConsidered">Defeat not considered</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GroundedSemantics"
+               title="https://w3id.org/def/norma-o/deriv#GroundedSemantics">Grounded semantics</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#InstitutionalFactsChained"
+               title="https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained">Institutional facts chained</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#OpenCounterparty"
+               title="https://w3id.org/def/norma-o/deriv#OpenCounterparty">Open counterparty</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ReinstatementNotComputed"
+               title="https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed">Reinstatement not computed</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CycleKind">
+      <h3>Cycle Kind<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#CycleKind</p>
+      <div class="comment">
+         <span class="markdown">The legal reading of a cycle in the defeat digraph.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasCycleKind" title="https://w3id.org/def/norma-o/deriv#hasCycleKind">has cycle kind</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#AnnotationContradiction"
+               title="https://w3id.org/def/norma-o/deriv#AnnotationContradiction">Annotation contradiction</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#IrresolubleAntinomy"
+               title="https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy">Irresoluble antinomy</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SecondDegreeConflict"
+               title="https://w3id.org/def/norma-o/deriv#SecondDegreeConflict">Second-degree conflict</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DerivationActivity">
+      <h3>Derivation Activity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#DerivationActivity</p>
+      <div class="comment">
+         <span class="markdown">A provenance activity that materialises normative conclusions from a NORMA annotation graph: deontic closure, weak permissions, typed prevalence edges, or a prevalence ordering.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Activity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Activity">activity</a>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#computedUnderAssumption"
+               title="https://w3id.org/def/norma-o/deriv#computedUnderAssumption">computed under assumption</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#derivedGraph" title="https://w3id.org/def/norma-o/deriv#derivedGraph">derived graph</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#ruleSetVersion"
+               title="https://w3id.org/def/norma-o/deriv#ruleSetVersion">rule set version</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#isAssumptionOf"
+               title="https://w3id.org/def/norma-o/deriv#isAssumptionOf">is assumption of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NormEvaluation">
+      <h3>Norm Evaluation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#NormEvaluation</p>
+      <div class="comment">
+         <span class="markdown">The outcome computed for one norm within one prevalence ordering: its level in the ladder and whether the norm applies to the case.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#evaluatedNorm" title="https://w3id.org/def/norma-o/deriv#evaluatedNorm">evaluated norm</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasApplicabilityStatus"
+               title="https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus">has applicability status</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#inOrdering" title="https://w3id.org/def/norma-o/deriv#inOrdering">in ordering</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#prevalenceLevel"
+               title="https://w3id.org/def/norma-o/deriv#prevalenceLevel">prevalence level</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#reachesParty" title="https://w3id.org/def/norma-o/deriv#reachesParty">reaches party</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PrevalenceCycle">
+      <h3>Prevalence Cycle<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#PrevalenceCycle</p>
+      <div class="comment">
+         <span class="markdown">A cycle found in a defeat digraph, reported rather than resolved. Full acyclicity is not expressible in OWL 2 DL, so it is checked by the compilation step: Kahn’s algorithm yields the stratification and the set of nodes it cannot order, while the cycles themselves are the non-trivial strongly connected components of that set.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#citesCompetingPrinciple"
+               title="https://w3id.org/def/norma-o/deriv#citesCompetingPrinciple">cites competing principle</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasCycleKind" title="https://w3id.org/def/norma-o/deriv#hasCycleKind">has cycle kind</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#involvesNorm" title="https://w3id.org/def/norma-o/deriv#involvesNorm">involves norm</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#inCycle" title="https://w3id.org/def/norma-o/deriv#inCycle">in cycle</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PrevalenceOrdering">
+      <h3>Prevalence Ordering<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#PrevalenceOrdering</p>
+      <div class="comment">
+         <span class="markdown">A computed stratification of a defeat digraph: the “ladder” obtained by flattening the asserted defeaters into prevalence edges and ordering the nodes topologically.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Entity"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Entity">entity</a>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#forFactPattern"
+               title="https://w3id.org/def/norma-o/deriv#forFactPattern">for fact pattern</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#inCycle" title="https://w3id.org/def/norma-o/deriv#inCycle">in cycle</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isAcyclic" title="https://w3id.org/def/norma-o/deriv#isAcyclic">is acyclic</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#stratumCount" title="https://w3id.org/def/norma-o/deriv#stratumCount">stratum count</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#inOrdering" title="https://w3id.org/def/norma-o/deriv#inOrdering">in ordering</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#citesCompetingPrinciple"
+            title="https://w3id.org/def/norma-o/deriv#citesCompetingPrinciple">cites competing principle</a>
+      </li>
+      <li>
+         <a href="#computedUnderAssumption"
+            title="https://w3id.org/def/norma-o/deriv#computedUnderAssumption">computed under assumption</a>
+      </li>
+      <li>
+         <a href="#evaluatedNorm" title="https://w3id.org/def/norma-o/deriv#evaluatedNorm">evaluated norm</a>
+      </li>
+      <li>
+         <a href="#forFactPattern"
+            title="https://w3id.org/def/norma-o/deriv#forFactPattern">for fact pattern</a>
+      </li>
+      <li>
+         <a href="#hasApplicabilityStatus"
+            title="https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus">has applicability status</a>
+      </li>
+      <li>
+         <a href="#hasCycleKind" title="https://w3id.org/def/norma-o/deriv#hasCycleKind">has cycle kind</a>
+      </li>
+      <li>
+         <a href="#inCycle" title="https://w3id.org/def/norma-o/deriv#inCycle">in cycle</a>
+      </li>
+      <li>
+         <a href="#inOrdering" title="https://w3id.org/def/norma-o/deriv#inOrdering">in ordering</a>
+      </li>
+      <li>
+         <a href="#involvesNorm" title="https://w3id.org/def/norma-o/deriv#involvesNorm">involves norm</a>
+      </li>
+      <li>
+         <a href="#isAssumptionOf"
+            title="https://w3id.org/def/norma-o/deriv#isAssumptionOf">is assumption of</a>
+      </li>
+      <li>
+         <a href="#reachesParty" title="https://w3id.org/def/norma-o/deriv#reachesParty">reaches party</a>
+      </li>
+   </ul>
+   <div class="entity" id="citesCompetingPrinciple">
+      <h3>cites competing principle<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#citesCompetingPrinciple</p>
+      <div class="comment">
+         <span class="markdown">Links a reported cycle to a resolution principle cited by one of the conflict defeaters on it. Two or more values are what make the cycle a second-degree conflict rather than an annotation error.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PrevalenceCycle"
+                  title="https://w3id.org/def/norma-o/deriv#PrevalenceCycle">Prevalence Cycle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/def/norma-o#ResolutionPrinciple"
+                  target="_blank"
+                  title="https://w3id.org/def/norma-o#ResolutionPrinciple">resolution principle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="computedUnderAssumption">
+      <h3>computed under assumption<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#computedUnderAssumption</p>
+      <div class="comment">
+         <span class="markdown">Links a derivation activity to an assumption its conclusions depend on. Not functional: a derivation typically relies on several.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DerivationActivity"
+                  title="https://w3id.org/def/norma-o/deriv#DerivationActivity">Derivation Activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Assumption" title="https://w3id.org/def/norma-o/deriv#Assumption">Assumption</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isAssumptionOf"
+                  title="https://w3id.org/def/norma-o/deriv#isAssumptionOf">is assumption of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="evaluatedNorm">
+      <h3>evaluated norm<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#evaluatedNorm</p>
+      <div class="comment">
+         <span class="markdown">Links an evaluation to the normative content it is about.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NormEvaluation"
+                  title="https://w3id.org/def/norma-o/deriv#NormEvaluation">Norm Evaluation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/def/norma-o#NormativeContent"
+                  target="_blank"
+                  title="https://w3id.org/def/norma-o#NormativeContent">normative content</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="forFactPattern">
+      <h3>for fact pattern<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#forFactPattern</p>
+      <div class="comment">
+         <span class="markdown">Links a prevalence ordering to the single described case it was computed for. Absent on the static ordering over the whole normative system.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PrevalenceOrdering"
+                  title="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering">Prevalence Ordering</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/def/norma-o#FactPattern"
+                  target="_blank"
+                  title="https://w3id.org/def/norma-o#FactPattern">fact pattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasApplicabilityStatus">
+      <h3>has applicability status<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus</p>
+      <div class="comment">
+         <span class="markdown">Associates an evaluation with at most one applicability status: the outcome the case yields for that norm.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NormEvaluation"
+                  title="https://w3id.org/def/norma-o/deriv#NormEvaluation">Norm Evaluation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ApplicabilityStatus"
+                  title="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus">Applicability Status</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCycleKind">
+      <h3>has cycle kind<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#hasCycleKind</p>
+      <div class="comment">
+         <span class="markdown">Associates a reported cycle with its legal reading.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PrevalenceCycle"
+                  title="https://w3id.org/def/norma-o/deriv#PrevalenceCycle">Prevalence Cycle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CycleKind" title="https://w3id.org/def/norma-o/deriv#CycleKind">Cycle Kind</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inCycle">
+      <h3>in cycle<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#inCycle</p>
+      <div class="comment">
+         <span class="markdown">Links a prevalence ordering to a cycle found while computing it.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PrevalenceOrdering"
+                  title="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering">Prevalence Ordering</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PrevalenceCycle"
+                  title="https://w3id.org/def/norma-o/deriv#PrevalenceCycle">Prevalence Cycle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inOrdering">
+      <h3>in ordering<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#inOrdering</p>
+      <div class="comment">
+         <span class="markdown">Links an evaluation to the prevalence ordering it belongs to.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NormEvaluation"
+                  title="https://w3id.org/def/norma-o/deriv#NormEvaluation">Norm Evaluation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PrevalenceOrdering"
+                  title="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering">Prevalence Ordering</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="involvesNorm">
+      <h3>involves norm<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#involvesNorm</p>
+      <div class="comment">
+         <span class="markdown">Links a reported cycle to a norm lying on it.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PrevalenceCycle"
+                  title="https://w3id.org/def/norma-o/deriv#PrevalenceCycle">Prevalence Cycle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/def/norma-o#NormativeContent"
+                  target="_blank"
+                  title="https://w3id.org/def/norma-o#NormativeContent">normative content</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isAssumptionOf">
+      <h3>is assumption of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#isAssumptionOf</p>
+      <div class="comment">
+         <span class="markdown">Links an assumption to the derivation activities that rely on it.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Assumption" title="https://w3id.org/def/norma-o/deriv#Assumption">Assumption</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DerivationActivity"
+                  title="https://w3id.org/def/norma-o/deriv#DerivationActivity">Derivation Activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#computedUnderAssumption"
+                  title="https://w3id.org/def/norma-o/deriv#computedUnderAssumption">computed under assumption</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="reachesParty">
+      <h3>reaches party<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#reachesParty</p>
+      <div class="comment">
+         <span class="markdown">Links a norm evaluation to a concrete party the evaluated norm reaches in that case: either the norm addresses that party directly, or it addresses a role the case places the party in.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NormEvaluation"
+                  title="https://w3id.org/def/norma-o/deriv#NormEvaluation">Norm Evaluation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/def/norma-o#LegalParty"
+                  target="_blank"
+                  title="https://w3id.org/def/norma-o#LegalParty">legal party</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#derivedGraph" title="https://w3id.org/def/norma-o/deriv#derivedGraph">derived graph</a>
+      </li>
+      <li>
+         <a href="#isAcyclic" title="https://w3id.org/def/norma-o/deriv#isAcyclic">is acyclic</a>
+      </li>
+      <li>
+         <a href="#prevalenceLevel"
+            title="https://w3id.org/def/norma-o/deriv#prevalenceLevel">prevalence level</a>
+      </li>
+      <li>
+         <a href="#ruleSetVersion"
+            title="https://w3id.org/def/norma-o/deriv#ruleSetVersion">rule set version</a>
+      </li>
+      <li>
+         <a href="#stratumCount" title="https://w3id.org/def/norma-o/deriv#stratumCount">stratum count</a>
+      </li>
+   </ul>
+   <div class="entity" id="derivedGraph">
+      <h3>derived graph<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#derivedGraph</p>
+      <div class="comment">
+         <span class="markdown">Name of the graph into which a derivation activity wrote its conclusions. Keeping derived conclusions in a named graph of their own is what allows them to be regenerated wholesale without touching the annotation graph.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DerivationActivity"
+                  title="https://w3id.org/def/norma-o/deriv#DerivationActivity">Derivation Activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">anyURI</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isAcyclic">
+      <h3>is acyclic<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#isAcyclic</p>
+      <div class="comment">
+         <span class="markdown">Whether the defeat digraph of this ordering was found to be acyclic. Reported, never assumed: it is the by-product of the topological sort.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PrevalenceOrdering"
+                  title="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering">Prevalence Ordering</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="prevalenceLevel">
+      <h3>prevalence level<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#prevalenceLevel</p>
+      <div class="comment">
+         <span class="markdown">The rung of the ladder: 0 for a norm that nothing prevails over, and otherwise one more than the highest level among the norms that prevail over it. Longest-path layering, so the level is canonical for a given digraph.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#NormEvaluation"
+                  title="https://w3id.org/def/norma-o/deriv#NormEvaluation">Norm Evaluation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="ruleSetVersion">
+      <h3>rule set version<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#ruleSetVersion</p>
+      <div class="comment">
+         <span class="markdown">Identifier of the rule set, and of its version, applied by a derivation activity. Two runs that report the same rule set version over the same input graph must produce the same output graph.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DerivationActivity"
+                  title="https://w3id.org/def/norma-o/deriv#DerivationActivity">Derivation Activity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="stratumCount">
+      <h3>stratum count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#stratumCount</p>
+      <div class="comment">
+         <span class="markdown">Number of rungs in the ladder: one more than the highest prevalence level reached.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PrevalenceOrdering"
+                  title="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering">Prevalence Ordering</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AnnotationContradiction"
+            title="https://w3id.org/def/norma-o/deriv#AnnotationContradiction">Annotation contradiction</a>
+      </li>
+      <li>
+         <a href="#ApplicabilityStatusScheme"
+            title="https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme">Applicability status scheme</a>
+      </li>
+      <li>
+         <a href="#Applicable" title="https://w3id.org/def/norma-o/deriv#Applicable">Applicable</a>
+      </li>
+      <li>
+         <a href="#AssumptionScheme"
+            title="https://w3id.org/def/norma-o/deriv#AssumptionScheme">Assumption scheme</a>
+      </li>
+      <li>
+         <a href="#ClosedCaseDescription"
+            title="https://w3id.org/def/norma-o/deriv#ClosedCaseDescription">Closed case description</a>
+      </li>
+      <li>
+         <a href="#ClosedGraph" title="https://w3id.org/def/norma-o/deriv#ClosedGraph">Closed graph</a>
+      </li>
+      <li>
+         <a href="#CycleKindScheme"
+            title="https://w3id.org/def/norma-o/deriv#CycleKindScheme">Cycle kind scheme</a>
+      </li>
+      <li>
+         <a href="#DefeatConsidered"
+            title="https://w3id.org/def/norma-o/deriv#DefeatConsidered">Defeat considered</a>
+      </li>
+      <li>
+         <a href="#DefeatNotConsidered"
+            title="https://w3id.org/def/norma-o/deriv#DefeatNotConsidered">Defeat not considered</a>
+      </li>
+      <li>
+         <a href="#Defeated" title="https://w3id.org/def/norma-o/deriv#Defeated">Defeated</a>
+      </li>
+      <li>
+         <a href="#GroundedSemantics"
+            title="https://w3id.org/def/norma-o/deriv#GroundedSemantics">Grounded semantics</a>
+      </li>
+      <li>
+         <a href="#InstitutionalFactsChained"
+            title="https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained">Institutional facts chained</a>
+      </li>
+      <li>
+         <a href="#Invalid" title="https://w3id.org/def/norma-o/deriv#Invalid">Invalid</a>
+      </li>
+      <li>
+         <a href="#IrresolubleAntinomy"
+            title="https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy">Irresoluble antinomy</a>
+      </li>
+      <li>
+         <a href="#NotActivated" title="https://w3id.org/def/norma-o/deriv#NotActivated">Not activated</a>
+      </li>
+      <li>
+         <a href="#OpenCounterparty"
+            title="https://w3id.org/def/norma-o/deriv#OpenCounterparty">Open counterparty</a>
+      </li>
+      <li>
+         <a href="#ReinstatementNotComputed"
+            title="https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed">Reinstatement not computed</a>
+      </li>
+      <li>
+         <a href="#SecondDegreeConflict"
+            title="https://w3id.org/def/norma-o/deriv#SecondDegreeConflict">Second-degree conflict</a>
+      </li>
+      <li>
+         <a href="#Undecided" title="https://w3id.org/def/norma-o/deriv#Undecided">Undecided</a>
+      </li>
+   </ul>
+   <div class="entity" id="AnnotationContradiction">
+      <h3>Annotation contradiction<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#AnnotationContradiction</p>
+      <div class="comment">
+         <span class="markdown">The cycle is formed by conflict defeaters citing the SAME resolution principle in opposite directions, which one principle cannot sustain.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#CycleKind" title="https://w3id.org/def/norma-o/deriv#CycleKind">Cycle Kind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ApplicabilityStatusScheme">
+      <h3>Applicability status scheme<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme</p>
+      <div class="comment">
+         <span class="markdown">SKOS concept scheme grouping the labels a case evaluation may assign to a norm: whether it applies, and if not, whether because it is outside the system, untriggered, defeated, or left undecided.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Applicable">
+      <h3>Applicable<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#Applicable</p>
+      <div class="comment">
+         <span class="markdown">The norm is valid, is activated by the facts of the case, and every defeater reaching it is itself defeated — or none reaches it. It applies.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#ApplicabilityStatus"
+               title="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus">Applicability Status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AssumptionScheme">
+      <h3>Assumption scheme<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#AssumptionScheme</p>
+      <div class="comment">
+         <span class="markdown">Extensible SKOS concept scheme grouping the non-monotonic assumptions that NORMA derivation activities may rely on.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ClosedCaseDescription">
+      <h3>Closed case description<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#ClosedCaseDescription</p>
+      <div class="comment">
+         <span class="markdown">Silence in a norma:FactPattern about a legal condition is read as that condition not holding, so a norm conditioned on it counts as inactive.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#Assumption" title="https://w3id.org/def/norma-o/deriv#Assumption">Assumption</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ClosedGraph">
+      <h3>Closed graph<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#ClosedGraph</p>
+      <div class="comment">
+         <span class="markdown">The absence of a norm from the evaluated graph is read as the absence of that norm from the normative system: negation by failure over the graph at hand.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#Assumption" title="https://w3id.org/def/norma-o/deriv#Assumption">Assumption</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CycleKindScheme">
+      <h3>Cycle kind scheme<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#CycleKindScheme</p>
+      <div class="comment">
+         <span class="markdown">SKOS concept scheme grouping the legal readings of a cycle in the defeat digraph.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o/deriv">https://w3id.org/def/norma-o/deriv</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DefeatConsidered">
+      <h3>Defeat considered<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#DefeatConsidered</p>
+      <div class="comment">
+         <span class="markdown">Defeat relations were taken into account: norms withdrawn by an applicable defeater were treated as not holding for the case.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#Assumption" title="https://w3id.org/def/norma-o/deriv#Assumption">Assumption</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DefeatNotConsidered">
+      <h3>Defeat not considered<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#DefeatNotConsidered</p>
+      <div class="comment">
+         <span class="markdown">Defeat relations were ignored: every valid and activated norm was treated as applying, whatever defeaters reach it.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#Assumption" title="https://w3id.org/def/norma-o/deriv#Assumption">Assumption</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Defeated">
+      <h3>Defeated<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#Defeated</p>
+      <div class="comment">
+         <span class="markdown">The norm is valid and activated, but at least one defeater reaching it has a defeating norm that is itself applicable. It does not apply to this case.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#ApplicabilityStatus"
+               title="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus">Applicability Status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GroundedSemantics">
+      <h3>Grounded semantics<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#GroundedSemantics</p>
+      <div class="comment">
+         <span class="markdown">Defeat was evaluated under Dung's grounded semantics: the unique minimal complete labelling, computed as a monotone fixpoint.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#Assumption" title="https://w3id.org/def/norma-o/deriv#Assumption">Assumption</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InstitutionalFactsChained">
+      <h3>Institutional facts chained<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained</p>
+      <div class="comment">
+         <span class="markdown">The facts established by the constitutive rules that apply were fed back into the case, and the regulative norms were evaluated against the case so augmented.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#Assumption" title="https://w3id.org/def/norma-o/deriv#Assumption">Assumption</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Invalid">
+      <h3>Invalid<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#Invalid</p>
+      <div class="comment">
+         <span class="markdown">The norm is not a member of the normative system being evaluated: it carries a lifecycle status that excludes it, or a temporal defeater has repealed it.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#ApplicabilityStatus"
+               title="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus">Applicability Status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IrresolubleAntinomy">
+      <h3>Irresoluble antinomy<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy</p>
+      <div class="comment">
+         <span class="markdown">The cycle involves defeat that cites no resolution principle at all, typically a loop of exception defeaters, so nothing in the annotation orients it.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#CycleKind" title="https://w3id.org/def/norma-o/deriv#CycleKind">Cycle Kind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NotActivated">
+      <h3>Not activated<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#NotActivated</p>
+      <div class="comment">
+         <span class="markdown">The norm is valid but the facts of the case do not trigger it: none of the trigger events that activate it fires in the described case.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#ApplicabilityStatus"
+               title="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus">Applicability Status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OpenCounterparty">
+      <h3>Open counterparty<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#OpenCounterparty</p>
+      <div class="comment">
+         <span class="markdown">A counterparty that no annotator named is read as not disagreeing, rather than as a mismatch, when two norms or two legal positions are compared.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#Assumption" title="https://w3id.org/def/norma-o/deriv#Assumption">Assumption</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ReinstatementNotComputed">
+      <h3>Reinstatement not computed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed</p>
+      <div class="comment">
+         <span class="markdown">Defeat was applied one level deep: a norm was treated as withdrawn whenever an applicable defeater exists, without checking whether that defeater is itself withdrawn.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#Assumption" title="https://w3id.org/def/norma-o/deriv#Assumption">Assumption</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SecondDegreeConflict">
+      <h3>Second-degree conflict<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#SecondDegreeConflict</p>
+      <div class="comment">
+         <span class="markdown">The norms on the cycle are related by conflict defeaters citing different resolution principles, so the criteria themselves are unordered for that pair.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#CycleKind" title="https://w3id.org/def/norma-o/deriv#CycleKind">Cycle Kind</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Undecided">
+      <h3>Undecided<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o/deriv#Undecided</p>
+      <div class="comment">
+         <span class="markdown">The asserted defeaters do not fix a label for the norm: the grounded fixpoint leaves it neither applicable nor defeated.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#ApplicabilityStatus"
+               title="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus">Applicability Status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="rules">
+   <h3 class="list" id="rule">Rules</h3>
+   <ul class="hlist"/>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

@@ -1,0 +1,385 @@
+[ {
+  "@id" : "https://example.org/norma-countsas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/def/norma-o"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#C_annex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#FactPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Annex III only"
+  } ],
+  "https://w3id.org/def/norma-o#holdsTrigger" : [ {
+    "@id" : "https://example.org/norma-countsas#te_annex"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#C_narrow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#FactPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Annex III + narrow procedural task"
+  } ],
+  "https://w3id.org/def/norma-o#holdsTrigger" : [ {
+    "@id" : "https://example.org/norma-countsas#te_annex"
+  }, {
+    "@id" : "https://example.org/norma-countsas#te_narrow"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#C_prof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#FactPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Annex III + narrow task + profiling"
+  } ],
+  "https://w3id.org/def/norma-o#holdsTrigger" : [ {
+    "@id" : "https://example.org/norma-countsas#te_annex"
+  }, {
+    "@id" : "https://example.org/norma-countsas#te_narrow"
+  }, {
+    "@id" : "https://example.org/norma-countsas#te_prof"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#act_16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comply with Art. 16"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#act_26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comply with Art. 26"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#authority",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "market surveillance authority"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#c_annex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalCondition"
+  } ],
+  "https://w3id.org/def/norma-o#conditionStatement" : [ {
+    "@value" : "Is the AI system listed in Annex III?"
+  } ],
+  "https://w3id.org/def/norma-o#hasTrigger" : [ {
+    "@id" : "https://example.org/norma-countsas#te_annex"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#c_highrisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalCondition"
+  } ],
+  "https://w3id.org/def/norma-o#conditionStatement" : [ {
+    "@value" : "Is the AI system high-risk?"
+  } ],
+  "https://w3id.org/def/norma-o#hasTrigger" : [ {
+    "@id" : "https://example.org/norma-countsas#te_hr_16"
+  }, {
+    "@id" : "https://example.org/norma-countsas#te_hr_26"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#c_narrow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalCondition"
+  } ],
+  "https://w3id.org/def/norma-o#conditionStatement" : [ {
+    "@value" : "Is the system intended to perform a narrow procedural task?"
+  } ],
+  "https://w3id.org/def/norma-o#hasTrigger" : [ {
+    "@id" : "https://example.org/norma-countsas#te_narrow"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#c_prof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalCondition"
+  } ],
+  "https://w3id.org/def/norma-o#conditionStatement" : [ {
+    "@value" : "Does the AI system perform profiling of natural persons?"
+  } ],
+  "https://w3id.org/def/norma-o#hasTrigger" : [ {
+    "@id" : "https://example.org/norma-countsas#te_prof"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#d_63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ExceptionDefeater"
+  } ],
+  "https://w3id.org/def/norma-o#appliesWhen" : [ {
+    "@id" : "https://example.org/norma-countsas#te_narrow"
+  } ],
+  "https://w3id.org/def/norma-o#defeatedNorm" : [ {
+    "@id" : "https://example.org/norma-countsas#fct_62"
+  } ],
+  "https://w3id.org/def/norma-o#defeatingNorm" : [ {
+    "@id" : "https://example.org/norma-countsas#fct_63"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#d_63_prof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ExceptionDefeater"
+  } ],
+  "https://w3id.org/def/norma-o#appliesWhen" : [ {
+    "@id" : "https://example.org/norma-countsas#te_prof"
+  } ],
+  "https://w3id.org/def/norma-o#defeatedNorm" : [ {
+    "@id" : "https://example.org/norma-countsas#fct_63"
+  } ],
+  "https://w3id.org/def/norma-o#defeatingNorm" : [ {
+    "@id" : "https://example.org/norma-countsas#fct_63_prof"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#deployer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "deployer"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#fct_62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ConstitutiveRule"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "fct_62"
+  } ],
+  "https://w3id.org/def/norma-o#establishesTrigger" : [ {
+    "@id" : "https://example.org/norma-countsas#te_hr_16"
+  }, {
+    "@id" : "https://example.org/norma-countsas#te_hr_26"
+  } ],
+  "https://w3id.org/def/norma-o#factStatement" : [ {
+    "@value" : "AI systems referred to in Annex III shall be considered to be high-risk."
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#fct_63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ConstitutiveRule"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "fct_63"
+  } ],
+  "https://w3id.org/def/norma-o#factStatement" : [ {
+    "@value" : "By derogation, an Annex III system is not high-risk where it performs a narrow procedural task."
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#fct_63_prof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ConstitutiveRule"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "fct_63_prof"
+  } ],
+  "https://w3id.org/def/norma-o#factStatement" : [ {
+    "@value" : "Notwithstanding the first subparagraph, an Annex III system performing profiling is always high-risk."
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#obl_16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Obligation"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "obl_16"
+  } ],
+  "https://w3id.org/def/norma-o#hasCounterparty" : [ {
+    "@id" : "https://example.org/norma-countsas#authority"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/norma-countsas#act_16"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/norma-countsas#provider"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#obl_26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Obligation"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "obl_26"
+  } ],
+  "https://w3id.org/def/norma-o#hasCounterparty" : [ {
+    "@id" : "https://example.org/norma-countsas#authority"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/norma-countsas#act_26"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/norma-countsas#deployer"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#provider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "provider"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#te_annex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#TriggerEvent"
+  } ],
+  "https://w3id.org/def/norma-o#activatesNorm" : [ {
+    "@id" : "https://example.org/norma-countsas#fct_62"
+  } ],
+  "https://w3id.org/def/norma-o#hasOutcome" : [ {
+    "@id" : "https://w3id.org/def/norma-o#TrueOutcome"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#te_hr_16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#TriggerEvent"
+  } ],
+  "https://w3id.org/def/norma-o#activatesNorm" : [ {
+    "@id" : "https://example.org/norma-countsas#obl_16"
+  } ],
+  "https://w3id.org/def/norma-o#hasOutcome" : [ {
+    "@id" : "https://w3id.org/def/norma-o#TrueOutcome"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#te_hr_26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#TriggerEvent"
+  } ],
+  "https://w3id.org/def/norma-o#activatesNorm" : [ {
+    "@id" : "https://example.org/norma-countsas#obl_26"
+  } ],
+  "https://w3id.org/def/norma-o#hasOutcome" : [ {
+    "@id" : "https://w3id.org/def/norma-o#TrueOutcome"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#te_narrow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#TriggerEvent"
+  } ],
+  "https://w3id.org/def/norma-o#activatesNorm" : [ {
+    "@id" : "https://example.org/norma-countsas#fct_63"
+  } ],
+  "https://w3id.org/def/norma-o#hasOutcome" : [ {
+    "@id" : "https://w3id.org/def/norma-o#TrueOutcome"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-countsas#te_prof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#TriggerEvent"
+  } ],
+  "https://w3id.org/def/norma-o#activatesNorm" : [ {
+    "@id" : "https://example.org/norma-countsas#fct_63_prof"
+  } ],
+  "https://w3id.org/def/norma-o#hasOutcome" : [ {
+    "@id" : "https://w3id.org/def/norma-o#TrueOutcome"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#ConstitutiveRule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#ExceptionDefeater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#FactPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#Obligation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#TriggerEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#activatesNorm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#appliesWhen",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#conditionStatement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#defeatedNorm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#defeatingNorm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#deonticId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#establishesTrigger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#factStatement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasCounterparty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasLegalAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasLegalAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasOutcome",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasTrigger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#holdsTrigger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

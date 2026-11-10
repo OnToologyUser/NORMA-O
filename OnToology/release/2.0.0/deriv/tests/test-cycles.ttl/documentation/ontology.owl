@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://example.org/norma-cycles#"
+     xml:base="https://example.org/norma-cycles"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:norma-o="https://w3id.org/def/norma-o#">
+    <owl:Ontology rdf:about="https://example.org/norma-cycles">
+        <owl:imports rdf:resource="https://w3id.org/def/norma-o"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/norma-o#defeatedNorm -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#defeatedNorm"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#defeatingNorm -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#defeatingNorm"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#deonticId -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#deonticId"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#factStatement -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#factStatement"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasLegalAction -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasLegalAction"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasLegalAgent -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasLegalAgent"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasNormStrength -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasNormStrength"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasResolutionPrinciple -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasResolutionPrinciple"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#supersedes -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#supersedes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/norma-o#ConflictDefeater -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#ConflictDefeater"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#ConstitutiveRule -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#ConstitutiveRule"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#ExceptionDefeater -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#ExceptionDefeater"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#FactPattern -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#FactPattern"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalAction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalAction"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalAgent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalAgent"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#Obligation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#Obligation"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#Permission -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#Permission"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#Prohibition -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#Prohibition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://example.org/norma-cycles#A -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#A">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalAgent"/>
+        <rdfs:label xml:lang="en">A</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#C0 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#C0">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#FactPattern"/>
+        <rdfs:label xml:lang="en">empty case</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#cd_s12 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#cd_s12">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ConflictDefeater"/>
+        <norma-o:defeatedNorm rdf:resource="https://example.org/norma-cycles#n_s2"/>
+        <norma-o:defeatingNorm rdf:resource="https://example.org/norma-cycles#n_s1"/>
+        <norma-o:hasResolutionPrinciple rdf:resource="https://w3id.org/def/norma-o#LexSpecialis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#cd_s21 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#cd_s21">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ConflictDefeater"/>
+        <norma-o:defeatedNorm rdf:resource="https://example.org/norma-cycles#n_s1"/>
+        <norma-o:defeatingNorm rdf:resource="https://example.org/norma-cycles#n_s2"/>
+        <norma-o:hasResolutionPrinciple rdf:resource="https://w3id.org/def/norma-o#LexPosterior"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#cd_t12 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#cd_t12">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ConflictDefeater"/>
+        <norma-o:defeatedNorm rdf:resource="https://example.org/norma-cycles#n_t2"/>
+        <norma-o:defeatingNorm rdf:resource="https://example.org/norma-cycles#n_t1"/>
+        <norma-o:hasResolutionPrinciple rdf:resource="https://w3id.org/def/norma-o#LexSuperior"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#cd_t21 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#cd_t21">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ConflictDefeater"/>
+        <norma-o:defeatedNorm rdf:resource="https://example.org/norma-cycles#n_t1"/>
+        <norma-o:defeatingNorm rdf:resource="https://example.org/norma-cycles#n_t2"/>
+        <norma-o:hasResolutionPrinciple rdf:resource="https://w3id.org/def/norma-o#LexSuperior"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#ed_u12 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#ed_u12">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ExceptionDefeater"/>
+        <norma-o:defeatedNorm rdf:resource="https://example.org/norma-cycles#n_u2"/>
+        <norma-o:defeatingNorm rdf:resource="https://example.org/norma-cycles#n_u1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#ed_u21 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#ed_u21">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ExceptionDefeater"/>
+        <norma-o:defeatedNorm rdf:resource="https://example.org/norma-cycles#n_u1"/>
+        <norma-o:defeatingNorm rdf:resource="https://example.org/norma-cycles#n_u2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#ed_v -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#ed_v">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ExceptionDefeater"/>
+        <norma-o:defeatedNorm rdf:resource="https://example.org/norma-cycles#n_v"/>
+        <norma-o:defeatingNorm rdf:resource="https://example.org/norma-cycles#n_v_att"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#n_s1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#n_s1">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Obligation"/>
+        <norma-o:deonticId>n_s1</norma-o:deonticId>
+        <norma-o:hasLegalAction rdf:resource="https://example.org/norma-cycles#s1"/>
+        <norma-o:hasLegalAgent rdf:resource="https://example.org/norma-cycles#A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#n_s2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#n_s2">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Prohibition"/>
+        <norma-o:deonticId>n_s2</norma-o:deonticId>
+        <norma-o:hasLegalAction rdf:resource="https://example.org/norma-cycles#s1"/>
+        <norma-o:hasLegalAgent rdf:resource="https://example.org/norma-cycles#A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#n_t1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#n_t1">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Obligation"/>
+        <norma-o:deonticId>n_t1</norma-o:deonticId>
+        <norma-o:hasLegalAction rdf:resource="https://example.org/norma-cycles#t1"/>
+        <norma-o:hasLegalAgent rdf:resource="https://example.org/norma-cycles#A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#n_t2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#n_t2">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Prohibition"/>
+        <norma-o:deonticId>n_t2</norma-o:deonticId>
+        <norma-o:hasLegalAction rdf:resource="https://example.org/norma-cycles#t1"/>
+        <norma-o:hasLegalAgent rdf:resource="https://example.org/norma-cycles#A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#n_u1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#n_u1">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Obligation"/>
+        <norma-o:deonticId>n_u1</norma-o:deonticId>
+        <norma-o:hasLegalAction rdf:resource="https://example.org/norma-cycles#u1"/>
+        <norma-o:hasLegalAgent rdf:resource="https://example.org/norma-cycles#A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#n_u2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#n_u2">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Permission"/>
+        <norma-o:deonticId>n_u2</norma-o:deonticId>
+        <norma-o:hasLegalAction rdf:resource="https://example.org/norma-cycles#u1"/>
+        <norma-o:hasLegalAgent rdf:resource="https://example.org/norma-cycles#A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#n_v -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#n_v">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Obligation"/>
+        <norma-o:deonticId>n_v</norma-o:deonticId>
+        <norma-o:hasLegalAction rdf:resource="https://example.org/norma-cycles#v1"/>
+        <norma-o:hasLegalAgent rdf:resource="https://example.org/norma-cycles#A"/>
+        <norma-o:hasNormStrength rdf:resource="https://w3id.org/def/norma-o#Strict"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#n_v_att -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#n_v_att">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ConstitutiveRule"/>
+        <norma-o:deonticId>n_v_att</norma-o:deonticId>
+        <norma-o:factStatement>purports to except what admits no exception</norma-o:factStatement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#n_w1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#n_w1">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Obligation"/>
+        <norma-o:deonticId>n_w1</norma-o:deonticId>
+        <norma-o:hasLegalAction rdf:resource="https://example.org/norma-cycles#w1a"/>
+        <norma-o:hasLegalAgent rdf:resource="https://example.org/norma-cycles#A"/>
+        <norma-o:supersedes rdf:resource="https://example.org/norma-cycles#n_w2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#n_w2 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#n_w2">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Obligation"/>
+        <norma-o:deonticId>n_w2</norma-o:deonticId>
+        <norma-o:hasLegalAction rdf:resource="https://example.org/norma-cycles#w1a"/>
+        <norma-o:hasLegalAgent rdf:resource="https://example.org/norma-cycles#A"/>
+        <norma-o:supersedes rdf:resource="https://example.org/norma-cycles#n_w3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#n_w3 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#n_w3">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Obligation"/>
+        <norma-o:deonticId>n_w3</norma-o:deonticId>
+        <norma-o:hasLegalAction rdf:resource="https://example.org/norma-cycles#w1a"/>
+        <norma-o:hasLegalAgent rdf:resource="https://example.org/norma-cycles#A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#s1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#s1">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalAction"/>
+        <rdfs:label xml:lang="en">s1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#t1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#t1">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalAction"/>
+        <rdfs:label xml:lang="en">t1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#u1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#u1">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalAction"/>
+        <rdfs:label xml:lang="en">u1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#v1 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#v1">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalAction"/>
+        <rdfs:label xml:lang="en">v1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-cycles#w1a -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-cycles#w1a">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalAction"/>
+        <rdfs:label xml:lang="en">w</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

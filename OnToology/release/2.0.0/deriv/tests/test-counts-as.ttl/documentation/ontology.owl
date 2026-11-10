@@ -1,0 +1,480 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://example.org/norma-countsas#"
+     xml:base="https://example.org/norma-countsas"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:norma-o="https://w3id.org/def/norma-o#">
+    <owl:Ontology rdf:about="https://example.org/norma-countsas">
+        <owl:imports rdf:resource="https://w3id.org/def/norma-o"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/norma-o#activatesNorm -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#activatesNorm"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#appliesWhen -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#appliesWhen"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#conditionStatement -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#conditionStatement"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#defeatedNorm -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#defeatedNorm"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#defeatingNorm -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#defeatingNorm"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#deonticId -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#deonticId"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#establishesTrigger -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#establishesTrigger"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#factStatement -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#factStatement"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasCounterparty -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasCounterparty"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasLegalAction -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasLegalAction"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasLegalAgent -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasLegalAgent"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasOutcome -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasOutcome"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasTrigger -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasTrigger"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#holdsTrigger -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#holdsTrigger"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/norma-o#ConstitutiveRule -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#ConstitutiveRule"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#ExceptionDefeater -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#ExceptionDefeater"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#FactPattern -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#FactPattern"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalAction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalAction"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalCondition -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalCondition"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalRole -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalRole"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#Obligation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#Obligation"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#TriggerEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#TriggerEvent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://example.org/norma-countsas#C_annex -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#C_annex">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#FactPattern"/>
+        <rdfs:label xml:lang="en">Annex III only</rdfs:label>
+        <norma-o:holdsTrigger rdf:resource="https://example.org/norma-countsas#te_annex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#C_narrow -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#C_narrow">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#FactPattern"/>
+        <rdfs:label xml:lang="en">Annex III + narrow procedural task</rdfs:label>
+        <norma-o:holdsTrigger rdf:resource="https://example.org/norma-countsas#te_annex"/>
+        <norma-o:holdsTrigger rdf:resource="https://example.org/norma-countsas#te_narrow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#C_prof -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#C_prof">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#FactPattern"/>
+        <rdfs:label xml:lang="en">Annex III + narrow task + profiling</rdfs:label>
+        <norma-o:holdsTrigger rdf:resource="https://example.org/norma-countsas#te_annex"/>
+        <norma-o:holdsTrigger rdf:resource="https://example.org/norma-countsas#te_narrow"/>
+        <norma-o:holdsTrigger rdf:resource="https://example.org/norma-countsas#te_prof"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#act_16 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#act_16">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalAction"/>
+        <rdfs:label xml:lang="en">comply with Art. 16</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#act_26 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#act_26">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalAction"/>
+        <rdfs:label xml:lang="en">comply with Art. 26</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#authority -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#authority">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalRole"/>
+        <rdfs:label xml:lang="en">market surveillance authority</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#c_annex -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#c_annex">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalCondition"/>
+        <norma-o:conditionStatement>Is the AI system listed in Annex III?</norma-o:conditionStatement>
+        <norma-o:hasTrigger rdf:resource="https://example.org/norma-countsas#te_annex"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#c_highrisk -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#c_highrisk">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalCondition"/>
+        <norma-o:conditionStatement>Is the AI system high-risk?</norma-o:conditionStatement>
+        <norma-o:hasTrigger rdf:resource="https://example.org/norma-countsas#te_hr_16"/>
+        <norma-o:hasTrigger rdf:resource="https://example.org/norma-countsas#te_hr_26"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#c_narrow -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#c_narrow">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalCondition"/>
+        <norma-o:conditionStatement>Is the system intended to perform a narrow procedural task?</norma-o:conditionStatement>
+        <norma-o:hasTrigger rdf:resource="https://example.org/norma-countsas#te_narrow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#c_prof -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#c_prof">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalCondition"/>
+        <norma-o:conditionStatement>Does the AI system perform profiling of natural persons?</norma-o:conditionStatement>
+        <norma-o:hasTrigger rdf:resource="https://example.org/norma-countsas#te_prof"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#d_63 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#d_63">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ExceptionDefeater"/>
+        <norma-o:appliesWhen rdf:resource="https://example.org/norma-countsas#te_narrow"/>
+        <norma-o:defeatedNorm rdf:resource="https://example.org/norma-countsas#fct_62"/>
+        <norma-o:defeatingNorm rdf:resource="https://example.org/norma-countsas#fct_63"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#d_63_prof -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#d_63_prof">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ExceptionDefeater"/>
+        <norma-o:appliesWhen rdf:resource="https://example.org/norma-countsas#te_prof"/>
+        <norma-o:defeatedNorm rdf:resource="https://example.org/norma-countsas#fct_63"/>
+        <norma-o:defeatingNorm rdf:resource="https://example.org/norma-countsas#fct_63_prof"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#deployer -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#deployer">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalRole"/>
+        <rdfs:label xml:lang="en">deployer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#fct_62 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#fct_62">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ConstitutiveRule"/>
+        <norma-o:deonticId>fct_62</norma-o:deonticId>
+        <norma-o:establishesTrigger rdf:resource="https://example.org/norma-countsas#te_hr_16"/>
+        <norma-o:establishesTrigger rdf:resource="https://example.org/norma-countsas#te_hr_26"/>
+        <norma-o:factStatement>AI systems referred to in Annex III shall be considered to be high-risk.</norma-o:factStatement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#fct_63 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#fct_63">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ConstitutiveRule"/>
+        <norma-o:deonticId>fct_63</norma-o:deonticId>
+        <norma-o:factStatement>By derogation, an Annex III system is not high-risk where it performs a narrow procedural task.</norma-o:factStatement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#fct_63_prof -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#fct_63_prof">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ConstitutiveRule"/>
+        <norma-o:deonticId>fct_63_prof</norma-o:deonticId>
+        <norma-o:factStatement>Notwithstanding the first subparagraph, an Annex III system performing profiling is always high-risk.</norma-o:factStatement>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#obl_16 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#obl_16">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Obligation"/>
+        <norma-o:deonticId>obl_16</norma-o:deonticId>
+        <norma-o:hasCounterparty rdf:resource="https://example.org/norma-countsas#authority"/>
+        <norma-o:hasLegalAction rdf:resource="https://example.org/norma-countsas#act_16"/>
+        <norma-o:hasLegalAgent rdf:resource="https://example.org/norma-countsas#provider"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#obl_26 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#obl_26">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Obligation"/>
+        <norma-o:deonticId>obl_26</norma-o:deonticId>
+        <norma-o:hasCounterparty rdf:resource="https://example.org/norma-countsas#authority"/>
+        <norma-o:hasLegalAction rdf:resource="https://example.org/norma-countsas#act_26"/>
+        <norma-o:hasLegalAgent rdf:resource="https://example.org/norma-countsas#deployer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#provider -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#provider">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalRole"/>
+        <rdfs:label xml:lang="en">provider</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#te_annex -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#te_annex">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#TriggerEvent"/>
+        <norma-o:activatesNorm rdf:resource="https://example.org/norma-countsas#fct_62"/>
+        <norma-o:hasOutcome rdf:resource="https://w3id.org/def/norma-o#TrueOutcome"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#te_hr_16 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#te_hr_16">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#TriggerEvent"/>
+        <norma-o:activatesNorm rdf:resource="https://example.org/norma-countsas#obl_16"/>
+        <norma-o:hasOutcome rdf:resource="https://w3id.org/def/norma-o#TrueOutcome"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#te_hr_26 -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#te_hr_26">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#TriggerEvent"/>
+        <norma-o:activatesNorm rdf:resource="https://example.org/norma-countsas#obl_26"/>
+        <norma-o:hasOutcome rdf:resource="https://w3id.org/def/norma-o#TrueOutcome"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#te_narrow -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#te_narrow">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#TriggerEvent"/>
+        <norma-o:activatesNorm rdf:resource="https://example.org/norma-countsas#fct_63"/>
+        <norma-o:hasOutcome rdf:resource="https://w3id.org/def/norma-o#TrueOutcome"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/norma-countsas#te_prof -->
+
+
+    <owl:NamedIndividual rdf:about="https://example.org/norma-countsas#te_prof">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#TriggerEvent"/>
+        <norma-o:activatesNorm rdf:resource="https://example.org/norma-countsas#fct_63_prof"/>
+        <norma-o:hasOutcome rdf:resource="https://w3id.org/def/norma-o#TrueOutcome"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

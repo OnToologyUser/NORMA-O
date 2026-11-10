@@ -28,6 +28,12 @@ This section provides details for each class and property defined by NORMA ontol
          <a href="#ExtractionMethod" title="https://w3id.org/def/norma-o#ExtractionMethod">Extraction Method</a>
       </li>
       <li>
+         <a href="#LegalAction" title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
+      </li>
+      <li>
+         <a href="#LegalAgent" title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
+      </li>
+      <li>
          <a href="#LegalCondition" title="https://w3id.org/def/norma-o#LegalCondition">Legal Condition</a>
       </li>
       <li>
@@ -73,9 +79,7 @@ This section provides details for each class and property defined by NORMA ontol
          </a>
       </li>
       <li>
-         <a href="#RegulativeNorm" title="https://w3id.org/def/norma-o#RegulativeNorm">
-            <span>Regulative Norm</span>
-         </a>
+         <a href="#RegulativeNorm" title="https://w3id.org/def/norma-o#RegulativeNorm">Regulative Norm</a>
       </li>
       <li>
          <a href="#ReviewStatus" title="https://w3id.org/def/norma-o#ReviewStatus">Review Status</a>
@@ -379,6 +383,82 @@ This section provides details for each class and property defined by NORMA ontol
          </dd>
       </dl>
    </div>
+   <div class="entity" id="LegalAction">
+      <h3>Legal Action<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o#LegalAction</p>
+      <div class="comment">
+         <span class="markdown">A normalized legal action that is prescribed, prohibited, permitted, or recommended by a regulative norm. NORMA pipeline consumers may work with the literal shortcut `norma:actionText` for low-ceremony use and mint LegalAction individuals only when the knowledge graph needs action-level reuse across norms.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o">https://w3id.org/def/norma-o</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isLegalActionOf" title="https://w3id.org/def/norma-o#isLegalActionOf">is legal action of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasLegalAction" title="https://w3id.org/def/norma-o#hasLegalAction">has legal action</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#LegalAgent" title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LegalCondition" title="https://w3id.org/def/norma-o#LegalCondition">Legal Condition</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LegalObject" title="https://w3id.org/def/norma-o#LegalObject">Legal Object</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LegalSource" title="https://w3id.org/def/norma-o#LegalSource">Legal Source</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#NormativeContent" title="https://w3id.org/def/norma-o#NormativeContent">Normative Content</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LegalAgent">
+      <h3>Legal Agent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/norma-o#LegalAgent</p>
+      <div class="comment">
+         <span class="markdown">An entity that bears the legally relevant role of subject of a regulative norm: the party that is obliged, prohibited, permitted, or recommended to perform a legal action.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o">https://w3id.org/def/norma-o</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isLegalAgentOf" title="https://w3id.org/def/norma-o#isLegalAgentOf">is legal agent of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasLegalAgent" title="https://w3id.org/def/norma-o#hasLegalAgent">has legal agent</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#LegalAction" title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LegalCondition" title="https://w3id.org/def/norma-o#LegalCondition">Legal Condition</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LegalObject" title="https://w3id.org/def/norma-o#LegalObject">Legal Object</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LegalSource" title="https://w3id.org/def/norma-o#LegalSource">Legal Source</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#NormativeContent" title="https://w3id.org/def/norma-o#NormativeContent">Normative Content</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="LegalCondition">
       <h3>Legal Condition<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -413,12 +493,8 @@ This section provides details for each class and property defined by NORMA ontol
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="https://w3id.org/def/norma-o#LegalAction"
-               target="_blank"
-               title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
-            <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/def/norma-o#LegalAgent"
-               target="_blank"
-               title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
+            <a href="#LegalAction" title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LegalAgent" title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LegalObject" title="https://w3id.org/def/norma-o#LegalObject">Legal Object</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LegalSource" title="https://w3id.org/def/norma-o#LegalSource">Legal Source</a>
             <sup class="type-c" title="class">c</sup>, <a href="#NormativeContent" title="https://w3id.org/def/norma-o#NormativeContent">Normative Content</a>
@@ -455,12 +531,8 @@ This section provides details for each class and property defined by NORMA ontol
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="https://w3id.org/def/norma-o#LegalAction"
-               target="_blank"
-               title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
-            <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/def/norma-o#LegalAgent"
-               target="_blank"
-               title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
+            <a href="#LegalAction" title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LegalAgent" title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LegalCondition" title="https://w3id.org/def/norma-o#LegalCondition">Legal Condition</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LegalSource" title="https://w3id.org/def/norma-o#LegalSource">Legal Source</a>
             <sup class="type-c" title="class">c</sup>, <a href="#NormativeContent" title="https://w3id.org/def/norma-o#NormativeContent">Normative Content</a>
@@ -518,12 +590,8 @@ This section provides details for each class and property defined by NORMA ontol
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="https://w3id.org/def/norma-o#LegalAction"
-               target="_blank"
-               title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
-            <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/def/norma-o#LegalAgent"
-               target="_blank"
-               title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
+            <a href="#LegalAction" title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LegalAgent" title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LegalCondition" title="https://w3id.org/def/norma-o#LegalCondition">Legal Condition</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LegalObject" title="https://w3id.org/def/norma-o#LegalObject">Legal Object</a>
             <sup class="type-c" title="class">c</sup>, <a href="#NormativeContent" title="https://w3id.org/def/norma-o#NormativeContent">Normative Content</a>
@@ -718,12 +786,8 @@ This section provides details for each class and property defined by NORMA ontol
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="https://w3id.org/def/norma-o#LegalAction"
-               target="_blank"
-               title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
-            <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/def/norma-o#LegalAgent"
-               target="_blank"
-               title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
+            <a href="#LegalAction" title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LegalAgent" title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LegalCondition" title="https://w3id.org/def/norma-o#LegalCondition">Legal Condition</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LegalObject" title="https://w3id.org/def/norma-o#LegalObject">Legal Object</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LegalSource" title="https://w3id.org/def/norma-o#LegalSource">Legal Source</a>
@@ -850,6 +914,15 @@ This section provides details for each class and property defined by NORMA ontol
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/norma-o#RegulativeNorm</p>
+      <div class="comment">
+         <span class="markdown">A normative content item that regulates conduct by prescribing, prohibiting, permitting, or recommending a legal action.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://w3id.org/def/norma-o">https://w3id.org/def/norma-o</a>
+         </dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -896,10 +969,6 @@ This section provides details for each class and property defined by NORMA ontol
          <dd>
             <a href="#ConstitutiveRule" title="https://w3id.org/def/norma-o#ConstitutiveRule">Constitutive Rule</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is also defined as</dt>
-         <dd>
-            <a href="#RegulativeNorm">named individual</a>
          </dd>
       </dl>
    </div>
@@ -1357,9 +1426,7 @@ This section provides details for each class and property defined by NORMA ontol
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="https://w3id.org/def/norma-o#LegalAction"
-                  target="_blank"
-                  title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
+               <a href="#LegalAction" title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1395,9 +1462,7 @@ This section provides details for each class and property defined by NORMA ontol
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="https://w3id.org/def/norma-o#LegalAgent"
-                  target="_blank"
-                  title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
+               <a href="#LegalAgent" title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1882,9 +1947,7 @@ This section provides details for each class and property defined by NORMA ontol
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="https://w3id.org/def/norma-o#LegalAction"
-                  target="_blank"
-                  title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
+               <a href="#LegalAction" title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1920,9 +1983,7 @@ This section provides details for each class and property defined by NORMA ontol
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="https://w3id.org/def/norma-o#LegalAgent"
-                  target="_blank"
-                  title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
+               <a href="#LegalAgent" title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -3616,16 +3677,6 @@ This section provides details for each class and property defined by NORMA ontol
          <a href="#InternalPolicy" title="https://w3id.org/def/norma-o#InternalPolicy">Internal Policy</a>
       </li>
       <li>
-         <a href="#LegalAction" title="https://w3id.org/def/norma-o#LegalAction">
-            <span>Legal Action</span>
-         </a>
-      </li>
-      <li>
-         <a href="#LegalAgent" title="https://w3id.org/def/norma-o#LegalAgent">
-            <span>Legal Agent</span>
-         </a>
-      </li>
-      <li>
          <a href="#LLMExtraction" title="https://w3id.org/def/norma-o#LLMExtraction">LLM extraction</a>
       </li>
       <li>
@@ -3684,11 +3735,6 @@ This section provides details for each class and property defined by NORMA ontol
       <li>
          <a href="#Recommendation" title="https://w3id.org/def/norma-o#Recommendation">
             <span>Recommendation</span>
-         </a>
-      </li>
-      <li>
-         <a href="#RegulativeNorm" title="https://w3id.org/def/norma-o#RegulativeNorm">
-            <span>Regulative Norm</span>
          </a>
       </li>
       <li>
@@ -4017,38 +4063,6 @@ This section provides details for each class and property defined by NORMA ontol
             <a href="#BindingForce" title="https://w3id.org/def/norma-o#BindingForce">Binding Force</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-      </dl>
-   </div>
-   <div class="entity" id="LegalAction">
-      <h3>Legal Action<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/norma-o#LegalAction</p>
-      <dl class="description">
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#LegalAgent" title="https://w3id.org/def/norma-o#LegalAgent">Legal Agent</a>, <a href="#LegalCondition" title="https://w3id.org/def/norma-o#LegalCondition">Legal Condition</a>, <a href="#LegalObject" title="https://w3id.org/def/norma-o#LegalObject">Legal Object</a>, <a href="#LegalSource" title="https://w3id.org/def/norma-o#LegalSource">Legal Source</a>, <a href="#NormativeContent" title="https://w3id.org/def/norma-o#NormativeContent">Normative Content</a>
-         </dd>
-         <dt>is also defined as</dt>
-         <dd>class</dd>
-      </dl>
-   </div>
-   <div class="entity" id="LegalAgent">
-      <h3>Legal Agent<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/norma-o#LegalAgent</p>
-      <dl class="description">
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#LegalAction" title="https://w3id.org/def/norma-o#LegalAction">Legal Action</a>, <a href="#LegalCondition" title="https://w3id.org/def/norma-o#LegalCondition">Legal Condition</a>, <a href="#LegalObject" title="https://w3id.org/def/norma-o#LegalObject">Legal Object</a>, <a href="#LegalSource" title="https://w3id.org/def/norma-o#LegalSource">Legal Source</a>, <a href="#NormativeContent" title="https://w3id.org/def/norma-o#NormativeContent">Normative Content</a>
-         </dd>
-         <dt>is also defined as</dt>
-         <dd>class</dd>
       </dl>
    </div>
    <div class="entity" id="LLMExtraction">
@@ -4384,24 +4398,6 @@ This section provides details for each class and property defined by NORMA ontol
          <dt>is also defined as</dt>
          <dd>
             <a href="#Recommendation">class</a>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="RegulativeNorm">
-      <h3>Regulative Norm<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/norma-o#RegulativeNorm</p>
-      <dl class="description">
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#ConstitutiveRule" title="https://w3id.org/def/norma-o#ConstitutiveRule">Constitutive Rule</a>
-         </dd>
-         <dt>is also defined as</dt>
-         <dd>
-            <a href="#RegulativeNorm">class</a>
          </dd>
       </dl>
    </div>

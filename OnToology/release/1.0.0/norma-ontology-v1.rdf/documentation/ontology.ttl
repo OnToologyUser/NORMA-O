@@ -951,6 +951,10 @@ rdf:value rdf:type owl:ObjectProperty .
 #    Individuals
 #################################################################
 
+###  https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg
+<https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg> rdf:type owl:NamedIndividual .
+
+
 ###  https://w3id.org/def/norma-o
 <https://w3id.org/def/norma-o> rdf:type owl:NamedIndividual ;
                                <http://xmlns.com/foaf/0.1/logo> <https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg> .
@@ -1327,10 +1331,6 @@ rdf:value rdf:type owl:ObjectProperty .
              rdfs:comment "Under legal, editorial, or analytical review."@en ;
              rdfs:label "Under Review"@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Under Review"@en .
-
-
-###  https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg
-<https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg> rdf:type owl:NamedIndividual .
 
 
 #################################################################

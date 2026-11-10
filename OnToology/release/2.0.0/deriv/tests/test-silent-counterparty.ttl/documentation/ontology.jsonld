@@ -1,0 +1,70 @@
+[ {
+  "@id" : "https://example.org/cp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/def/norma-o"
+  } ]
+}, {
+  "@id" : "https://example.org/cp#F1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Prohibition"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "F1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/cp#x"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/cp#R"
+  } ]
+}, {
+  "@id" : "https://example.org/cp#P1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Permission"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "P1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/cp#x"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/cp#R"
+  } ]
+}, {
+  "@id" : "https://example.org/cp#R",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalRole"
+  } ]
+}, {
+  "@id" : "https://example.org/cp#x",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalAction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#Permission",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#Prohibition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#deonticId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasLegalAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasLegalAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

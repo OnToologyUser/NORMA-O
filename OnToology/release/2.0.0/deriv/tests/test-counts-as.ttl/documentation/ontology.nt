@@ -1,0 +1,247 @@
+<https://example.org/norma-countsas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://example.org/norma-countsas> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/def/norma-o> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/norma-o#activatesNorm
+<https://w3id.org/def/norma-o#activatesNorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#appliesWhen
+<https://w3id.org/def/norma-o#appliesWhen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#conditionStatement
+<https://w3id.org/def/norma-o#conditionStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#defeatedNorm
+<https://w3id.org/def/norma-o#defeatedNorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#defeatingNorm
+<https://w3id.org/def/norma-o#defeatingNorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#deonticId
+<https://w3id.org/def/norma-o#deonticId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#establishesTrigger
+<https://w3id.org/def/norma-o#establishesTrigger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#factStatement
+<https://w3id.org/def/norma-o#factStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#hasCounterparty
+<https://w3id.org/def/norma-o#hasCounterparty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#hasLegalAction
+<https://w3id.org/def/norma-o#hasLegalAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#hasLegalAgent
+<https://w3id.org/def/norma-o#hasLegalAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#hasOutcome
+<https://w3id.org/def/norma-o#hasOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#hasTrigger
+<https://w3id.org/def/norma-o#hasTrigger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/def/norma-o#holdsTrigger
+<https://w3id.org/def/norma-o#holdsTrigger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/norma-o#ConstitutiveRule
+<https://w3id.org/def/norma-o#ConstitutiveRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/norma-o#ExceptionDefeater
+<https://w3id.org/def/norma-o#ExceptionDefeater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/norma-o#FactPattern
+<https://w3id.org/def/norma-o#FactPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/norma-o#LegalAction
+<https://w3id.org/def/norma-o#LegalAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/norma-o#LegalCondition
+<https://w3id.org/def/norma-o#LegalCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/norma-o#LegalRole
+<https://w3id.org/def/norma-o#LegalRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/norma-o#Obligation
+<https://w3id.org/def/norma-o#Obligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/def/norma-o#TriggerEvent
+<https://w3id.org/def/norma-o#TriggerEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://example.org/norma-countsas#C_annex
+<https://example.org/norma-countsas#C_annex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#C_annex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#FactPattern> .
+<https://example.org/norma-countsas#C_annex> <http://www.w3.org/2000/01/rdf-schema#label> "Annex III only"@en .
+<https://example.org/norma-countsas#C_annex> <https://w3id.org/def/norma-o#holdsTrigger> <https://example.org/norma-countsas#te_annex> .
+# 
+# https://example.org/norma-countsas#C_narrow
+<https://example.org/norma-countsas#C_narrow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#C_narrow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#FactPattern> .
+<https://example.org/norma-countsas#C_narrow> <http://www.w3.org/2000/01/rdf-schema#label> "Annex III + narrow procedural task"@en .
+<https://example.org/norma-countsas#C_narrow> <https://w3id.org/def/norma-o#holdsTrigger> <https://example.org/norma-countsas#te_annex> .
+<https://example.org/norma-countsas#C_narrow> <https://w3id.org/def/norma-o#holdsTrigger> <https://example.org/norma-countsas#te_narrow> .
+# 
+# https://example.org/norma-countsas#C_prof
+<https://example.org/norma-countsas#C_prof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#C_prof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#FactPattern> .
+<https://example.org/norma-countsas#C_prof> <http://www.w3.org/2000/01/rdf-schema#label> "Annex III + narrow task + profiling"@en .
+<https://example.org/norma-countsas#C_prof> <https://w3id.org/def/norma-o#holdsTrigger> <https://example.org/norma-countsas#te_annex> .
+<https://example.org/norma-countsas#C_prof> <https://w3id.org/def/norma-o#holdsTrigger> <https://example.org/norma-countsas#te_narrow> .
+<https://example.org/norma-countsas#C_prof> <https://w3id.org/def/norma-o#holdsTrigger> <https://example.org/norma-countsas#te_prof> .
+# 
+# https://example.org/norma-countsas#act_16
+<https://example.org/norma-countsas#act_16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#act_16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#LegalAction> .
+<https://example.org/norma-countsas#act_16> <http://www.w3.org/2000/01/rdf-schema#label> "comply with Art. 16"@en .
+# 
+# https://example.org/norma-countsas#act_26
+<https://example.org/norma-countsas#act_26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#act_26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#LegalAction> .
+<https://example.org/norma-countsas#act_26> <http://www.w3.org/2000/01/rdf-schema#label> "comply with Art. 26"@en .
+# 
+# https://example.org/norma-countsas#authority
+<https://example.org/norma-countsas#authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#authority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#LegalRole> .
+<https://example.org/norma-countsas#authority> <http://www.w3.org/2000/01/rdf-schema#label> "market surveillance authority"@en .
+# 
+# https://example.org/norma-countsas#c_annex
+<https://example.org/norma-countsas#c_annex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#c_annex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#LegalCondition> .
+<https://example.org/norma-countsas#c_annex> <https://w3id.org/def/norma-o#conditionStatement> "Is the AI system listed in Annex III?" .
+<https://example.org/norma-countsas#c_annex> <https://w3id.org/def/norma-o#hasTrigger> <https://example.org/norma-countsas#te_annex> .
+# 
+# https://example.org/norma-countsas#c_highrisk
+<https://example.org/norma-countsas#c_highrisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#c_highrisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#LegalCondition> .
+<https://example.org/norma-countsas#c_highrisk> <https://w3id.org/def/norma-o#conditionStatement> "Is the AI system high-risk?" .
+<https://example.org/norma-countsas#c_highrisk> <https://w3id.org/def/norma-o#hasTrigger> <https://example.org/norma-countsas#te_hr_16> .
+<https://example.org/norma-countsas#c_highrisk> <https://w3id.org/def/norma-o#hasTrigger> <https://example.org/norma-countsas#te_hr_26> .
+# 
+# https://example.org/norma-countsas#c_narrow
+<https://example.org/norma-countsas#c_narrow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#c_narrow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#LegalCondition> .
+<https://example.org/norma-countsas#c_narrow> <https://w3id.org/def/norma-o#conditionStatement> "Is the system intended to perform a narrow procedural task?" .
+<https://example.org/norma-countsas#c_narrow> <https://w3id.org/def/norma-o#hasTrigger> <https://example.org/norma-countsas#te_narrow> .
+# 
+# https://example.org/norma-countsas#c_prof
+<https://example.org/norma-countsas#c_prof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#c_prof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#LegalCondition> .
+<https://example.org/norma-countsas#c_prof> <https://w3id.org/def/norma-o#conditionStatement> "Does the AI system perform profiling of natural persons?" .
+<https://example.org/norma-countsas#c_prof> <https://w3id.org/def/norma-o#hasTrigger> <https://example.org/norma-countsas#te_prof> .
+# 
+# https://example.org/norma-countsas#d_63
+<https://example.org/norma-countsas#d_63> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#d_63> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#ExceptionDefeater> .
+<https://example.org/norma-countsas#d_63> <https://w3id.org/def/norma-o#appliesWhen> <https://example.org/norma-countsas#te_narrow> .
+<https://example.org/norma-countsas#d_63> <https://w3id.org/def/norma-o#defeatedNorm> <https://example.org/norma-countsas#fct_62> .
+<https://example.org/norma-countsas#d_63> <https://w3id.org/def/norma-o#defeatingNorm> <https://example.org/norma-countsas#fct_63> .
+# 
+# https://example.org/norma-countsas#d_63_prof
+<https://example.org/norma-countsas#d_63_prof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#d_63_prof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#ExceptionDefeater> .
+<https://example.org/norma-countsas#d_63_prof> <https://w3id.org/def/norma-o#appliesWhen> <https://example.org/norma-countsas#te_prof> .
+<https://example.org/norma-countsas#d_63_prof> <https://w3id.org/def/norma-o#defeatedNorm> <https://example.org/norma-countsas#fct_63> .
+<https://example.org/norma-countsas#d_63_prof> <https://w3id.org/def/norma-o#defeatingNorm> <https://example.org/norma-countsas#fct_63_prof> .
+# 
+# https://example.org/norma-countsas#deployer
+<https://example.org/norma-countsas#deployer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#deployer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#LegalRole> .
+<https://example.org/norma-countsas#deployer> <http://www.w3.org/2000/01/rdf-schema#label> "deployer"@en .
+# 
+# https://example.org/norma-countsas#fct_62
+<https://example.org/norma-countsas#fct_62> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#fct_62> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#ConstitutiveRule> .
+<https://example.org/norma-countsas#fct_62> <https://w3id.org/def/norma-o#deonticId> "fct_62" .
+<https://example.org/norma-countsas#fct_62> <https://w3id.org/def/norma-o#establishesTrigger> <https://example.org/norma-countsas#te_hr_16> .
+<https://example.org/norma-countsas#fct_62> <https://w3id.org/def/norma-o#establishesTrigger> <https://example.org/norma-countsas#te_hr_26> .
+<https://example.org/norma-countsas#fct_62> <https://w3id.org/def/norma-o#factStatement> "AI systems referred to in Annex III shall be considered to be high-risk." .
+# 
+# https://example.org/norma-countsas#fct_63
+<https://example.org/norma-countsas#fct_63> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#fct_63> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#ConstitutiveRule> .
+<https://example.org/norma-countsas#fct_63> <https://w3id.org/def/norma-o#deonticId> "fct_63" .
+<https://example.org/norma-countsas#fct_63> <https://w3id.org/def/norma-o#factStatement> "By derogation, an Annex III system is not high-risk where it performs a narrow procedural task." .
+# 
+# https://example.org/norma-countsas#fct_63_prof
+<https://example.org/norma-countsas#fct_63_prof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#fct_63_prof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#ConstitutiveRule> .
+<https://example.org/norma-countsas#fct_63_prof> <https://w3id.org/def/norma-o#deonticId> "fct_63_prof" .
+<https://example.org/norma-countsas#fct_63_prof> <https://w3id.org/def/norma-o#factStatement> "Notwithstanding the first subparagraph, an Annex III system performing profiling is always high-risk." .
+# 
+# https://example.org/norma-countsas#obl_16
+<https://example.org/norma-countsas#obl_16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#obl_16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#Obligation> .
+<https://example.org/norma-countsas#obl_16> <https://w3id.org/def/norma-o#deonticId> "obl_16" .
+<https://example.org/norma-countsas#obl_16> <https://w3id.org/def/norma-o#hasCounterparty> <https://example.org/norma-countsas#authority> .
+<https://example.org/norma-countsas#obl_16> <https://w3id.org/def/norma-o#hasLegalAction> <https://example.org/norma-countsas#act_16> .
+<https://example.org/norma-countsas#obl_16> <https://w3id.org/def/norma-o#hasLegalAgent> <https://example.org/norma-countsas#provider> .
+# 
+# https://example.org/norma-countsas#obl_26
+<https://example.org/norma-countsas#obl_26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#obl_26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#Obligation> .
+<https://example.org/norma-countsas#obl_26> <https://w3id.org/def/norma-o#deonticId> "obl_26" .
+<https://example.org/norma-countsas#obl_26> <https://w3id.org/def/norma-o#hasCounterparty> <https://example.org/norma-countsas#authority> .
+<https://example.org/norma-countsas#obl_26> <https://w3id.org/def/norma-o#hasLegalAction> <https://example.org/norma-countsas#act_26> .
+<https://example.org/norma-countsas#obl_26> <https://w3id.org/def/norma-o#hasLegalAgent> <https://example.org/norma-countsas#deployer> .
+# 
+# https://example.org/norma-countsas#provider
+<https://example.org/norma-countsas#provider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#provider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#LegalRole> .
+<https://example.org/norma-countsas#provider> <http://www.w3.org/2000/01/rdf-schema#label> "provider"@en .
+# 
+# https://example.org/norma-countsas#te_annex
+<https://example.org/norma-countsas#te_annex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#te_annex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#TriggerEvent> .
+<https://example.org/norma-countsas#te_annex> <https://w3id.org/def/norma-o#activatesNorm> <https://example.org/norma-countsas#fct_62> .
+<https://example.org/norma-countsas#te_annex> <https://w3id.org/def/norma-o#hasOutcome> <https://w3id.org/def/norma-o#TrueOutcome> .
+# 
+# https://example.org/norma-countsas#te_hr_16
+<https://example.org/norma-countsas#te_hr_16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#te_hr_16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#TriggerEvent> .
+<https://example.org/norma-countsas#te_hr_16> <https://w3id.org/def/norma-o#activatesNorm> <https://example.org/norma-countsas#obl_16> .
+<https://example.org/norma-countsas#te_hr_16> <https://w3id.org/def/norma-o#hasOutcome> <https://w3id.org/def/norma-o#TrueOutcome> .
+# 
+# https://example.org/norma-countsas#te_hr_26
+<https://example.org/norma-countsas#te_hr_26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#te_hr_26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#TriggerEvent> .
+<https://example.org/norma-countsas#te_hr_26> <https://w3id.org/def/norma-o#activatesNorm> <https://example.org/norma-countsas#obl_26> .
+<https://example.org/norma-countsas#te_hr_26> <https://w3id.org/def/norma-o#hasOutcome> <https://w3id.org/def/norma-o#TrueOutcome> .
+# 
+# https://example.org/norma-countsas#te_narrow
+<https://example.org/norma-countsas#te_narrow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#te_narrow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#TriggerEvent> .
+<https://example.org/norma-countsas#te_narrow> <https://w3id.org/def/norma-o#activatesNorm> <https://example.org/norma-countsas#fct_63> .
+<https://example.org/norma-countsas#te_narrow> <https://w3id.org/def/norma-o#hasOutcome> <https://w3id.org/def/norma-o#TrueOutcome> .
+# 
+# https://example.org/norma-countsas#te_prof
+<https://example.org/norma-countsas#te_prof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://example.org/norma-countsas#te_prof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o#TriggerEvent> .
+<https://example.org/norma-countsas#te_prof> <https://w3id.org/def/norma-o#activatesNorm> <https://example.org/norma-countsas#fct_63_prof> .
+<https://example.org/norma-countsas#te_prof> <https://w3id.org/def/norma-o#hasOutcome> <https://w3id.org/def/norma-o#TrueOutcome> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

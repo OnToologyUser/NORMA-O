@@ -1,0 +1,2636 @@
+@prefix : <https://w3id.org/def/norma-o#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/def/norma-o#> .
+
+<https://w3id.org/def/norma-o> rdf:type owl:Ontology ;
+                                owl:versionIRI <https://w3id.org/def/norma-o/2.0> ;
+                                owl:imports <http://data.europa.eu/eli/ontology> ,
+                                            <http://www.w3.org/ns/prov-o> ,
+                                            <http://xmlns.com/foaf/0.1/> ;
+                                <http://purl.org/dc/terms/alternative> "NORMA Ontology"@en ;
+                                <http://purl.org/dc/terms/bibliographicCitation> "Leyva-Sánchez, S. et al. (2026). NORMA-O: The NORMA Ontology for Legal Norm Annotations (Version 2.0) [Ontology]. https://w3id.org/def/norma-o/2.0"@en ;
+                                <http://purl.org/dc/terms/contributor> _:genid1 ,
+                                                                       _:genid2 ;
+                                <http://purl.org/dc/terms/created> "2026-04-15"^^xsd:date ;
+                                <http://purl.org/dc/terms/creator> _:genid3 ;
+                                <http://purl.org/dc/terms/description> "The NORMA ontology is a formal semantic model for representing machine-readable legal norm annotations as reusable knowledge graph resources. It distinguishes between regulative norms and constitutive rules; represents legal conditions, their evaluated outcomes, and branch-sensitive activation through a TriggerEvent n-ary relation pattern; and captures the legal agents, actions, objects, sources, provenance metadata, lifecycle status, review status, extraction method, and controlled classification values needed for traceable and interoperable publication. The ontology aligns with PROV-O for provenance, ELI for legal resource modelling, FOAF for agent-oriented metadata, and SKOS for controlled vocabularies, and provides informative alignments with LKIF-Core via SKOS mapping properties. Regulative norms are formally grounded in Standard Deontic Logic, whose interdefinability of operators (F(X) ≡ O(¬X), P(X) ≡ ¬O(¬X), and facultativeness as P(X) ∧ P(¬X)) is captured through action negation and inter-norm deontic equivalence and contradiction relations, and in Hohfeld's scheme of first-order jural correlatives (duty and claim, privilege and no-right), represented as reified, directed legal positions between a holder and a counterparty. Defeasibility is modelled as a reified defeat relation between norms — undercutting exceptions, rebutting conflicts resolved by lex superior, specialis or posterior, and repeal — which flattens into a norm-to-norm prevalence digraph whose stratification, cycles and reinstatements are derived rather than stored. The deontic closure of each norm and the weak permissions holding in a described case are likewise part of the vocabulary but never annotated: they are materialised by a rule set into a derived graph, whose activity records the non-monotonic assumptions it relied on through the companion NORMA-O Derivation module."@en ;
+                                <http://purl.org/dc/terms/issued> "2026-11-09"^^xsd:date ;
+                                <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-1/en> ;
+                                <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                <http://purl.org/dc/terms/modified> "2026-11-09"^^xsd:date ;
+                                <http://purl.org/dc/terms/publisher> _:genid4 ;
+                                <http://purl.org/dc/terms/source> <https://github.com/sheyls/NORMA-O> ;
+                                <http://purl.org/dc/terms/title> "NORMA-O: The NORMA Ontology for Legal Norm Annotations"@en ;
+                                <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.24116269" ;
+                                <http://purl.org/ontology/bibo/status> "Published"@en ;
+                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "norma" ;
+                                <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/norma-o#" ;
+                                rdfs:comment "Formal ontology for representing machine-readable legal norm annotations, their legal context, conditional applicability, provenance, source traceability, lifecycle status, and controlled classification values in the NORMA toolkit."@en ;
+                                rdfs:label "NORMA ontology"@en ;
+                                rdfs:seeAlso <http://www.estrellaproject.org/lkif-core/norm.owl> ,
+                                             <https://doi.org/10.2307/785533> ,
+                                             <https://plato.stanford.edu/entries/logic-deontic/> ,
+                                             <https://plato.stanford.edu/entries/reasoning-defeasible/> ,
+                                             <https://w3id.org/def/norma-o/deriv> ,
+                                             <https://www.w3.org/TR/swbp-n-aryRelations/> ;
+                                owl:priorVersion <https://w3id.org/def/norma-o/1.0> ;
+                                owl:versionInfo "2.0" ;
+                                <https://schema.org/includedInDataCatalog> <https://zenodo.org/communities/norma> .
+
+_:genid1 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
+          <http://xmlns.com/foaf/0.1/name> "María Poveda-Villalón" .
+
+_:genid2 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
+          <http://xmlns.com/foaf/0.1/name> "Víctor Rodríguez-Doncel" .
+
+_:genid3 rdf:type <http://xmlns.com/foaf/0.1/Person> ;
+          <http://xmlns.com/foaf/0.1/name> "Sheyla Leyva-Sánchez" .
+
+_:genid4 rdf:type <http://xmlns.com/foaf/0.1/Organization> ;
+          <http://xmlns.com/foaf/0.1/name> "NORMA project" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/alternative
+<http://purl.org/dc/terms/alternative> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/doi
+<http://purl.org/ontology/bibo/doi> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/includedInDataCatalog
+<https://schema.org/includedInDataCatalog> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#value
+rdf:value rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/def/norma-o#aboutAction
+:aboutAction rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :WeakPermission ;
+             rdfs:range :LegalAction ;
+             rdfs:comment "Links a weak permission to the single legal action it concerns."@en ;
+             rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+             rdfs:label "about action"@en .
+
+
+###  https://w3id.org/def/norma-o#activatesNorm
+:activatesNorm rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf rdf:value ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :TriggerEvent ;
+               rdfs:range :NormativeContent ;
+               rdfs:comment "Links a trigger event to the normative content it activates. Declared functional because each trigger event activates exactly one normative content item. Declared as a subproperty of rdf:value to mark the activated norm as the main value of the reified n-ary relation."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "activates norm"@en .
+
+
+###  https://w3id.org/def/norma-o#appliesWhen
+:appliesWhen rdf:type owl:ObjectProperty ;
+             rdfs:domain :Defeater ;
+             rdfs:range :TriggerEvent ;
+             rdfs:comment "Links a defeater to a trigger event that activates it. The range is norma:TriggerEvent rather than norma:ConditionOutcome so that the gate identifies both the legal condition and the branch it takes: an outcome value on its own is shared by every condition in the graph and therefore identifies nothing."@en ;
+             rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+             rdfs:label "applies when"@en ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "For the same reason a defeater whose defeating norm is invalid — repealed, or carrying a lifecycle status that excludes it — withdraws nothing. The defeated norm then simply remains applicable: it never lost its own validity, which is the same principle that bars a repealed repealing norm from reviving what it repealed."@en ,
+                                                             "The condition of an exception may be annotated in two places, and a consumer must read them in CONJUNCTION. This property gates the defeat relation: it says when the defeater reaches the defeated norm. The activation of the defeating norm, through norma:activatesNorm, says whether that norm is operative in the case at all. A norm the case does not trigger is not operative and therefore defeats nothing, however its defeater is gated — so an evaluation that honoured only this property would let an untriggered exception withdraw its rule. Requiring both lets an annotator state the condition in either place and still get the right answer, and where the two differ it yields their conjunction, which is the conservative reading."@en .
+
+
+###  https://w3id.org/def/norma-o#assignedUnderRule
+:assignedUnderRule rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :isRuleOfRoleAssignment ;
+                   rdfs:domain :RoleAssignment ;
+                   rdfs:range :NormativeContent ;
+                   rdfs:comment "Links a role assignment to the normative content that justifies it: the constitutive rule under which this party counts as occupying this role in this case."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                   rdfs:label "assigned under rule"@en ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Not required by an axiom. An assignment may record a party’s original capacity, which no reclassifying rule confers and which the facts of the case simply state; it is the reclassified ones that need the citation. Enforce it where a corpus demands it with SHACL."@en ,
+                                                                   "Without it an assignment is a bare assertion with no legal basis, which defeats the purpose of an ontology built for source traceability: a consumer asking why a party counts as a provider must be able to reach article 25(1) rather than take the annotator’s word for it. It also makes the assignment auditable against the rule, since the rule names the role it confers with norma:confersRole and the circumstances with its own activation conditions."@en .
+
+
+###  https://w3id.org/def/norma-o#concernsLegalAction
+:concernsLegalAction rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :isContentOfLegalPosition ;
+                     rdfs:domain :LegalPosition ;
+                     rdfs:range :LegalAction ;
+                     owl:propertyChainAxiom ( :isCorrelativeOf
+                                              :concernsLegalAction
+                                            ) ;
+                     rdfs:comment "Links a legal position to the legal action that forms its content. The action is always one to be realised by the party who is bound or free: the holder of a Duty or Privilege, and the counterparty of a Claim or No-right. For positions conferred by a Prohibition, the content is the negated action (see norma:isNegationOf). Implemented with the OWL 2 property chain isCorrelativeOf ∘ concernsLegalAction, so that correlative positions share the same content, as Hohfeld's correlativity requires."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                     rdfs:label "concerns legal action"@en .
+
+
+###  https://w3id.org/def/norma-o#confersLegalPosition
+:confersLegalPosition rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :isLegalPositionConferredBy ;
+                      rdfs:domain :NormativeContent ;
+                      rdfs:range :LegalPosition ;
+                      rdfs:comment "Links normative content to a Hohfeldian legal position it creates. A binding regulative norm confers a pair of correlative positions: an Obligation or Prohibition confers a Duty and its Claim, a Permission a Privilege and its No-right. The domain is NormativeContent rather than RegulativeNorm so that second-order positions conferred by constitutive rules can be added by future extensions."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                      rdfs:label "confers legal position"@en .
+
+
+###  https://w3id.org/def/norma-o#confersRole
+:confersRole rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isRoleConferredBy ;
+             rdfs:domain :NormativeContent ;
+             rdfs:range :LegalRole ;
+             rdfs:comment "Links normative content to a legal role it attributes. On a norma:ConstitutiveRule this is the rule’s constitutive effect: the role that the parties satisfying its circumstances come to occupy."@en ;
+             rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+             rdfs:label "confers role"@en ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "This is what gives norma:ConstitutiveRule a formal consequence instead of only a text. A definitional provision that constitutes a role, and a reclassifying provision such as article 25(1) of Regulation (UE) 2024/1689, both state which role results; the circumstances under which it results are the rule’s own activation conditions, through norma:activatesNorm, so a reclassification that the case does not trigger confers nothing."@en ,
+                                                             "Whether a particular party comes to occupy the role is not stated here. The rule says which role follows; norma:RoleAssignment in a norma:FactPattern says who occupies it in a case. Keeping the two apart is what lets one rule serve every case."@en .
+
+
+###  https://w3id.org/def/norma-o#conflictPrevailsOver
+:conflictPrevailsOver rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :prevailsOver ;
+                      rdfs:domain :NormativeContent ;
+                      rdfs:range :NormativeContent ;
+                      rdfs:comment "Typed prevalence edge for rebutting defeat resolved by a priority principle. Materialised by the compilation step in the derived artefact and never asserted by annotators: rebutting defeat always goes through a reified norma:ConflictDefeater, which carries the resolution principle."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                      rdfs:label "conflict prevails over"@en .
+
+
+###  https://w3id.org/def/norma-o#defeatedNorm
+:defeatedNorm rdf:type owl:ObjectProperty ;
+              rdfs:domain :Defeater ;
+              rdfs:range :NormativeContent ;
+              rdfs:comment "Links a defeater to the normative content whose normative effect it withdraws. Deliberately not functional, because a single repeal may withdraw a block of norms; enforce the cardinality your domain requires with SHACL."@en ;
+              rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+              rdfs:label "defeated norm"@en .
+
+
+###  https://w3id.org/def/norma-o#defeatingNorm
+:defeatingNorm rdf:type owl:ObjectProperty ;
+               rdfs:domain :Defeater ;
+               rdfs:range :NormativeContent ;
+               rdfs:comment "Links a defeater to the normative content that performs the overriding. Required in practice: a defeater that names none contributes no edge to norma:prevailsOver, so the defeat it records stays invisible in the flat prevalence digraph and cannot itself be defeated. Where the source expresses a carve-out without granting a liberty, state it as a norma:ConstitutiveRule rather than leaving this property empty."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "defeating norm"@en .
+
+
+###  https://w3id.org/def/norma-o#deonticallyConflictsWith
+:deonticallyConflictsWith rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :relatesTo ;
+                          rdf:type owl:SymmetricProperty ,
+                                   owl:IrreflexiveProperty ;
+                          rdfs:domain :RegulativeNorm ;
+                          rdfs:range :RegulativeNorm ;
+                          rdfs:comment "Links two regulative norms that cannot both hold for the same legal agent, counterparty, and circumstances under Standard Deontic Logic. Covers contradictory pairs (see norma:deonticallyContradicts) and contrary pairs, which cannot both hold but may both fail to hold, such as an Obligation of X and a Prohibition of X (O(X) and O(¬X), jointly inconsistent under axiom D). Intended to support norm-conflict detection."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                          rdfs:label "deontically conflicts with"@en ;
+                          <http://www.w3.org/2004/02/skos/core#scopeNote> "Conflict is detected BETWEEN ROLES, not between parties. Both this relation and norma:WeakPermission compare the norma:hasLegalAgent of two norms, which in real legislation is a norma:LegalRole, so a clash between the duties of two roles that one and the same norma:LegalParty occupies in a case is NOT detected — and article 25(1) of Regulation (EU) 2024/1689, under which a deployer comes to count as a provider as well, is exactly that situation. Projecting the comparison onto parties is future work."@en ,
+                                                                          "Derived, never annotated. Contradictory pairs come from norma:deonticallyContradicts and are entailed through the subproperty axiom. Contrary pairs are a separate join over the closure: one norm entails norma:entailsObligatory of an action and the other norma:entailsForbidden of that same action, for the same legal agent, without disagreeing on the counterparty, without activation conditions that cannot hold together, and with both ends outside the norma:Permission subtree."@en ,
+                                                                          "Irreflexive: no norm conflicts with itself. A derived conflict is a finding about the normative system, not an inconsistency in the graph — real legal corpora contain antinomies, and resolving them is the business of the defeasibility layer, not of the reasoner."@en .
+
+
+###  https://w3id.org/def/norma-o#deonticallyContradicts
+:deonticallyContradicts rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :deonticallyConflictsWith ;
+                        rdf:type owl:SymmetricProperty ,
+                                 owl:IrreflexiveProperty ;
+                        rdfs:domain :RegulativeNorm ;
+                        rdfs:range :RegulativeNorm ;
+                        rdfs:comment "Links two regulative norms whose deontic contents are the negation of each other, so that exactly one of them holds: a Permission of X and a Prohibition of X (P(X) ≡ ¬F(X)), or a Permission of ¬X and an Obligation of X (P(¬X) ≡ ¬O(X)). In Hohfeld's terms, the Privilege conferred by the permission is the jural opposite of the Duty conferred by the other norm."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                        rdfs:label "deontically contradicts"@en ;
+                        <http://www.w3.org/2004/02/skos/core#scopeNote> "Circumstances cannot be dropped from the comparison. Two norms activated by OPPOSITE branches of one norma:LegalCondition never meet in any case, so reporting them as in conflict is a false positive, and the derivation excludes that pair. What remains is a POTENTIAL conflict: this property has no slot for a case, so whether the conflict is realised — both norms valid, activated and undefeated in a described norma:FactPattern — is settled by evaluating that case, not by this relation."@en ,
+                                                                        "Derived, never annotated. Given the closure, the join is: one norm entails norma:entailsPermitted of an action and the other norma:entailsNotPermitted of that same action, for the same legal agent, without disagreeing on the counterparty, and without activation conditions that cannot hold together."@en ,
+                                                                        "Irreflexive: no norm contradicts itself. The Hohfeldian face of this relation is norma:isJuralOppositeOf holding between positions conferred by the two norms."@en ,
+                                                                        "The derivation must start from the PERMISSION side, and the class-level restrictions are what force this. Axiom D gives an Obligation of X the entailment P(X), so a join taken in either direction would also fire between an Obligation and a Prohibition of the same action — a CONTRARY pair, which can fail together and therefore does not belong here. Worse, emitting it would be inconsistent: norma:Obligation is restricted to contradict only norma:Permission, so the prohibition would be typed as a Permission, and the two classes are disjoint. Restricting one end to the norma:Permission subtree distinguishes a norm’s own deontic content from what merely follows by D; contraries are recorded with the superproperty norma:deonticallyConflictsWith."@en .
+
+
+###  https://w3id.org/def/norma-o#directlyPrevailsOver
+:directlyPrevailsOver rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :prevailsOver ;
+                      rdf:type owl:AsymmetricProperty ,
+                               owl:IrreflexiveProperty ;
+                      rdfs:domain :NormativeContent ;
+                      rdfs:range :NormativeContent ;
+                      rdfs:comment "Superproperty of the asserted prevalence shortcuts. Declared asymmetric and irreflexive so that no norm prevails over itself and two norms cannot each be asserted to prevail directly over the other."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                      rdfs:label "directly prevails over"@en ;
+                      <http://www.w3.org/2004/02/skos/core#scopeNote> "A deliberately partial guard: it catches self-loops and two-cycles among asserted shortcuts only. Full acyclicity of the defeat digraph is not expressible in OWL 2 DL and must be checked by the consuming application, where a cycle signals an antinomy to be resolved by a norma:ResolutionPrinciple or reported as irresoluble."@en .
+
+
+###  https://w3id.org/def/norma-o#entailsDiscouraged
+:entailsDiscouraged rdf:type owl:ObjectProperty ;
+                    rdfs:domain :RegulativeNorm ;
+                    rdfs:range :LegalAction ;
+                    rdfs:comment "Derived: the regulative norm entails that the legal action is discouraged."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                    rdfs:label "entails discouraged"@en .
+
+
+###  https://w3id.org/def/norma-o#entailsForbidden
+:entailsForbidden rdf:type owl:ObjectProperty ;
+                  owl:equivalentProperty :entailsNotPermitted ;
+                  rdfs:domain :RegulativeNorm ;
+                  rdfs:range :LegalAction ;
+                  rdfs:comment "Derived: the regulative norm entails that the legal action is forbidden, F(x), equivalently that its negation is obligatory, O(not-x)."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "entails forbidden"@en .
+
+
+###  https://w3id.org/def/norma-o#entailsNotForbidden
+:entailsNotForbidden rdf:type owl:ObjectProperty ;
+                     owl:equivalentProperty :entailsPermitted ;
+                     rdfs:domain :RegulativeNorm ;
+                     rdfs:range :LegalAction ;
+                     rdfs:comment "Derived: the regulative norm entails that the legal action is not forbidden, not-F(x). Equivalent to entailing that the action is permitted."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                     rdfs:label "entails not forbidden"@en .
+
+
+###  https://w3id.org/def/norma-o#entailsNotObligatory
+:entailsNotObligatory rdf:type owl:ObjectProperty ;
+                      rdfs:domain :RegulativeNorm ;
+                      rdfs:range :LegalAction ;
+                      owl:propertyDisjointWith :entailsObligatory ;
+                      rdfs:comment "Derived: the regulative norm entails that the legal action is not obligatory, not-O(x). Follows from a prohibition of the action, or from a permission of its negation."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                      rdfs:label "entails not obligatory"@en .
+
+
+###  https://w3id.org/def/norma-o#entailsNotPermitted
+:entailsNotPermitted rdf:type owl:ObjectProperty ;
+                     rdfs:domain :RegulativeNorm ;
+                     rdfs:range :LegalAction ;
+                     owl:propertyDisjointWith :entailsPermitted ;
+                     rdfs:comment "Derived: the regulative norm entails that the legal action is not permitted, not-P(x). Equivalent to entailing that the action is forbidden."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                     rdfs:label "entails not permitted"@en .
+
+
+###  https://w3id.org/def/norma-o#entailsObligatory
+:entailsObligatory rdf:type owl:ObjectProperty ;
+                   rdfs:domain :RegulativeNorm ;
+                   rdfs:range :LegalAction ;
+                   rdfs:comment "Derived: the regulative norm entails that the legal action is obligatory, O(x)."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                   rdfs:label "entails obligatory"@en ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Both members of each equivalent pair are materialised — F(x) alongside not-P(x) — so that queries succeed without reasoning; under reasoning they are the same relation."@en ,
+                                                                   "Derived, never annotated. The closure is materialised by a rule set rather than entailed by OWL, because the equivalences that flip the action — F(x) equivalent to O(not-x), and P(x) to not-O(not-x) — would need property chains over norma:isNegationOf in both directions. That violates the regularity condition of OWL 2 DL, since it would require entailsObligatory to precede entailsForbidden and entailsForbidden to precede entailsObligatory at once, and it would make the properties non-simple, so they could no longer be declared disjoint. Only the two equivalences that keep the same action are asserted as axioms."@en ,
+                                                                   "The eight norma:entails... properties make the Standard Deontic Logic closure of an annotated norm explicit, so that it can be queried without a reasoner. They are scoped to a single norm: each says what that norm implies about the action for its own legal agent, toward its own counterparty and under its own conditions — not what status the action holds in the normative system as a whole, which other norms may settle differently. Two norms entailing opposite statuses for the same action is a norm conflict, to be recorded with norma:deonticallyConflictsWith, and not an inconsistency."@en .
+
+
+###  https://w3id.org/def/norma-o#entailsPermitted
+:entailsPermitted rdf:type owl:ObjectProperty ;
+                  rdfs:domain :RegulativeNorm ;
+                  rdfs:range :LegalAction ;
+                  rdfs:comment "Derived: the regulative norm entails that the legal action is permitted, P(x). Equivalent to entailing that the action is not forbidden, and implied by an obligation of the action through the SDL axiom D."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "entails permitted"@en .
+
+
+###  https://w3id.org/def/norma-o#entailsRecommended
+:entailsRecommended rdf:type owl:ObjectProperty ;
+                    rdfs:domain :RegulativeNorm ;
+                    rdfs:range :LegalAction ;
+                    rdfs:comment "Derived: the regulative norm entails that the legal action is recommended."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                    rdfs:label "entails recommended"@en ;
+                    <http://www.w3.org/2004/02/skos/core#scopeNote> "The recommendation operators receive no analogue of the SDL axiom D: nothing of the form Rec(x) implies not-Rec(not-x) is generated, because a non-binding operator licenses no such inference. Only the action-flipping analogy holds, so a recommendation of x entails that not-x is discouraged."@en .
+
+
+###  https://w3id.org/def/norma-o#establishesTrigger
+:establishesTrigger rdf:type owl:ObjectProperty ;
+                    rdfs:domain :NormativeContent ;
+                    rdfs:range :TriggerEvent ;
+                    rdfs:comment "Links normative content to a trigger event that HOLDS whenever that content applies: the institutional fact the content brings about. On a norma:ConstitutiveRule this is its counts-as conclusion expressed as a fact of the case, so that regulative norms conditioned on that fact become activated by it."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                    rdfs:label "establishes trigger"@en ;
+                    <http://www.w3.org/2004/02/skos/core#scopeNote> "Evaluation therefore ALTERNATES: the institutional facts established by the constitutive rules that apply are added to the case, and the regulative norms are evaluated against the case so augmented, until no new fact appears. The classic counts-as problem (Searle; Jones and Sergot). Because the set of established facts only grows, the alternation terminates; but a fact may gate a defeater that withdraws the very rule that established it, and a consumer must be told when that happened rather than shown a conclusion that quietly rests on it."@en ,
+                                                                    "This is what chains constitutive rules to regulative ones, and without it the two layers never meet. norma:confersRole covers the counts-as that attributes a ROLE; this covers the counts-as that establishes a FACT. Article 6(2) of Regulation (EU) 2024/1689 is the case that demands it: systems listed in Annex III count as high-risk, and the obligations of Articles 16 and 26 are conditioned on being high-risk rather than on being listed."@en ,
+                                                                    "Why it cannot be replaced by annotating the fact in the norma:FactPattern: a fact asserted in the case is brute and no defeater can touch it, whereas an institutional fact is DEFEASIBLE. Article 6(3) withdraws the classification of Article 6(2), and the final subparagraph withdraws that withdrawal, so whether the system counts as high-risk is the outcome of evaluating a defeat chain. A regulative norm wired directly to the defeated rule would skip a rung: everything else depending on the same classification by another path would stay undefeated."@en .
+
+
+###  https://w3id.org/def/norma-o#exceptionPrevailsOver
+:exceptionPrevailsOver rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :prevailsOver ;
+                       rdfs:domain :NormativeContent ;
+                       rdfs:range :NormativeContent ;
+                       rdfs:comment "Typed prevalence edge for undercutting defeat, so that the kind of defeat survives the flattening of the reified Defeater into the norm-to-norm digraph. It is entailed wherever the norma:isExceptionTo shortcut is used, and materialised by the compilation step in the derived artefact for defeat stated through a reified norma:ExceptionDefeater; annotators never assert it directly."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                       rdfs:label "exception prevails over"@en .
+
+
+###  https://w3id.org/def/norma-o#forAgent
+:forAgent rdf:type owl:ObjectProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :WeakPermission ;
+          rdfs:range :LegalAgent ;
+          rdfs:comment "Links a weak permission to the single legal agent for whom the action is not forbidden."@en ;
+          rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+          rdfs:label "for agent"@en .
+
+
+###  https://w3id.org/def/norma-o#fromRank
+:fromRank rdf:type owl:ObjectProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :NormativeContent ;
+          rdfs:range :NormativeRank ;
+          rdfs:comment "Denormalised normative rank copied from the norm's legal source, in the same way as norma:fromRegulation and norma:fromArticle. A property chain over hasLegalSource and hasRank is deliberately not used, because it would make the property non-simple and therefore unable to be functional."@en ;
+          rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+          rdfs:label "from rank"@en .
+
+
+###  https://w3id.org/def/norma-o#generatedNormativeContent
+:generatedNormativeContent rdf:type owl:ObjectProperty ;
+                           rdfs:domain :AnnotationActivity ;
+                           rdfs:range :NormativeContent ;
+                           rdfs:comment "Links an annotation activity to normative content that it generated."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                           rdfs:label "generated normative content"@en .
+
+
+###  https://w3id.org/def/norma-o#hasAssignedParty
+:hasAssignedParty rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :RoleAssignment ;
+                  rdfs:range :LegalParty ;
+                  rdfs:comment "Links a role assignment to the single party that occupies the role."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "has assigned party"@en .
+
+
+###  https://w3id.org/def/norma-o#hasAssignedRole
+:hasAssignedRole rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :isAssignedRoleOf ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :RoleAssignment ;
+                 rdfs:range :LegalRole ;
+                 rdfs:comment "Links a role assignment to the single role the party occupies."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                 rdfs:label "has assigned role"@en .
+
+
+###  https://w3id.org/def/norma-o#hasBindingForce
+:hasBindingForce rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :isBindingForceOf ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :RegulativeNorm ;
+                 rdfs:range :BindingForce ;
+                 rdfs:comment "Associates a regulative norm with exactly one binding-force value."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                 rdfs:label "has binding force"@en .
+
+
+###  https://w3id.org/def/norma-o#hasComplianceCriticality
+:hasComplianceCriticality rdf:type owl:ObjectProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain :RegulativeNorm ;
+                          rdfs:range :ComplianceCriticality ;
+                          rdfs:comment "Associates a regulative norm with exactly one compliance-criticality value."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                          rdfs:label "has compliance criticality"@en .
+
+
+###  https://w3id.org/def/norma-o#hasCounterparty
+:hasCounterparty rdf:type owl:ObjectProperty ;
+                 rdfs:domain :RegulativeNorm ;
+                 rdfs:range :LegalAgent ;
+                 rdfs:comment "Links a regulative norm to the legal agent in relation to whom the norm-bearing legal agent is bound or free: the holder of the correlative Claim of an Obligation or Prohibition, or of the correlative No-right of a Permission. Together with norma:hasLegalAgent it makes both ends of the Hohfeldian relation explicit at norm level."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                 rdfs:label "has counterparty"@en ;
+                 <http://www.w3.org/2004/02/skos/core#scopeNote> "When the legal text names no beneficiary, as is common in public-law regulation, the counterparty is typically the competent public authority or the class of persons the norm protects; mint a LegalAgent for it rather than leaving the relation implicit."@en .
+
+
+###  https://w3id.org/def/norma-o#hasExtractionMethod
+:hasExtractionMethod rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain :NormativeContent ;
+                     rdfs:range :ExtractionMethod ;
+                     rdfs:comment "Associates a normative content item with the method used to produce its annotation."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                     rdfs:label "has extraction method"@en .
+
+
+###  https://w3id.org/def/norma-o#hasLegalAction
+:hasLegalAction rdf:type owl:ObjectProperty ;
+                rdfs:domain :RegulativeNorm ;
+                rdfs:range :LegalAction ;
+                rdfs:comment "Links a regulative norm to the legal action it regulates. The producer may instead use the literal shortcut `norma:actionText`; both forms are permitted."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "has legal action"@en .
+
+
+###  https://w3id.org/def/norma-o#hasLegalAgent
+:hasLegalAgent rdf:type owl:ObjectProperty ;
+               rdfs:domain :RegulativeNorm ;
+               rdfs:range :LegalAgent ;
+               rdfs:comment "Links a regulative norm to its norm-bearing legal agent (the subject obliged, prohibited, permitted, or recommended)."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "has legal agent"@en .
+
+
+###  https://w3id.org/def/norma-o#hasLegalObject
+:hasLegalObject rdf:type owl:ObjectProperty ;
+                rdfs:domain :RegulativeNorm ;
+                rdfs:range :LegalObject ;
+                rdfs:comment "Links a regulative norm to the legal object of the action it regulates."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "has legal object"@en .
+
+
+###  https://w3id.org/def/norma-o#hasLegalSource
+:hasLegalSource rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isLegalSourceOf ;
+                rdfs:domain :NormativeContent ;
+                rdfs:range :LegalSource ;
+                rdfs:comment "Links normative content to the legal source (work-level resource) from which it is extracted."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "has legal source"@en .
+
+
+###  https://w3id.org/def/norma-o#hasNormStatus
+:hasNormStatus rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :NormativeContent ;
+               rdfs:range :NormStatus ;
+               rdfs:comment "Associates a normative content item with exactly one lifecycle status."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "has norm status"@en .
+
+
+###  https://w3id.org/def/norma-o#hasNormStrength
+:hasNormStrength rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :isNormStrengthOf ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :NormativeContent ;
+                 rdfs:range :NormStrength ;
+                 rdfs:comment "Associates a normative content item with exactly one strength value, stating whether it admits defeat."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                 rdfs:label "has norm strength"@en .
+
+
+###  https://w3id.org/def/norma-o#hasOutcome
+:hasOutcome rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :TriggerEvent ;
+            rdfs:range :ConditionOutcome ;
+            rdfs:comment "Links a trigger event to the condition outcome that characterises it, for example the true branch, false branch, or another controlled outcome. Declared functional because each trigger event has exactly one outcome."@en ;
+            rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+            rdfs:label "has outcome"@en .
+
+
+###  https://w3id.org/def/norma-o#hasPositionCounterparty
+:hasPositionCounterparty rdf:type owl:ObjectProperty ;
+                         rdfs:domain :LegalPosition ;
+                         rdfs:range :LegalAgent ;
+                         owl:propertyChainAxiom ( :isCorrelativeOf
+                                                  :hasPositionHolder
+                                                ) ;
+                         rdfs:comment "Links a legal position to the legal agent against whom it is held (B in \"A has a duty toward B\"). Implemented with the OWL 2 property chain isCorrelativeOf ∘ hasPositionHolder, which encodes Hohfeld's correlativity: the counterparty of a position is the holder of its correlative. Because it is defined by a property chain, the property is non-simple in OWL 2 DL and cannot be declared functional; validate the uniqueness of the counterparty with SHACL."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                         rdfs:label "has position counterparty"@en .
+
+
+###  https://w3id.org/def/norma-o#hasPositionHolder
+:hasPositionHolder rdf:type owl:ObjectProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain :LegalPosition ;
+                   rdfs:range :LegalAgent ;
+                   rdfs:comment "Links a legal position to the single legal agent who holds it (A in \"A has a duty toward B\")."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                   rdfs:label "has position holder"@en .
+
+
+###  https://w3id.org/def/norma-o#hasRank
+:hasRank rdf:type owl:ObjectProperty ,
+                  owl:FunctionalProperty ;
+         rdfs:domain :LegalSource ;
+         rdfs:range :NormativeRank ;
+         rdfs:comment "Associates a legal source with exactly one rank in the hierarchy of sources. Rank is a property of the source rather than of the individual norm; norms carry the denormalised copy norma:fromRank."@en ;
+         rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+         rdfs:label "has rank"@en .
+
+
+###  https://w3id.org/def/norma-o#hasResolutionPrinciple
+:hasResolutionPrinciple rdf:type owl:ObjectProperty ;
+                        rdfs:domain :ConflictDefeater ;
+                        rdfs:range :ResolutionPrinciple ;
+                        rdfs:comment "Associates a conflict defeater with the legal principle that orients it. Not functional: lex specialis and lex posterior may be invoked together, and they may point in opposite directions."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                        rdfs:label "has resolution principle"@en .
+
+
+###  https://w3id.org/def/norma-o#hasReviewStatus
+:hasReviewStatus rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :NormativeContent ;
+                 rdfs:range :ReviewStatus ;
+                 rdfs:comment "Associates a normative content item with one review status."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                 rdfs:label "has review status"@en .
+
+
+###  https://w3id.org/def/norma-o#hasSourceExpression
+:hasSourceExpression rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://data.europa.eu/eli/ontology#is_realized_by> ;
+                     rdfs:domain :LegalSource ;
+                     rdfs:range :LegalSourceExpression ;
+                     rdfs:comment "Links a LegalSource (ELI work-level) to a specific LegalSourceExpression (language, version, consolidation). Subproperty of `eli:is_realized_by` to preserve ELI semantics."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                     rdfs:label "has source expression"@en .
+
+
+###  https://w3id.org/def/norma-o#hasTrigger
+:hasTrigger rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isTriggerOfCondition ;
+            rdfs:domain :LegalCondition ;
+            rdfs:range :TriggerEvent ;
+            rdfs:comment "Links a legal condition to one of its trigger events. A condition may have several trigger events, for example one trigger event for the true branch and one trigger event for the false branch."@en ;
+            rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+            rdfs:label "has trigger"@en .
+
+
+###  https://w3id.org/def/norma-o#holdsRoleAssignment
+:holdsRoleAssignment rdf:type owl:ObjectProperty ;
+                     rdfs:domain :FactPattern ;
+                     rdfs:range :RoleAssignment ;
+                     rdfs:comment "Links a fact pattern to a role assignment that holds in it: who acted, and in what capacity."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                     rdfs:label "holds role assignment"@en ;
+                     <http://www.w3.org/2004/02/skos/core#scopeNote> "Together with norma:holdsTrigger this completes the description of a case: the triggers say what happened, the role assignments say in what capacity each party acted. A norm addressed to a role reaches, in that case, the parties the case places in that role; the reach itself is a consequence and belongs in a derived artefact, not here."@en .
+
+
+###  https://w3id.org/def/norma-o#holdsTrigger
+:holdsTrigger rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isHeldInFactPattern ;
+              rdfs:domain :FactPattern ;
+              rdfs:range :TriggerEvent ;
+              rdfs:comment "Links a fact pattern to a trigger event that fires in it, that is, to a legal condition together with the outcome it takes in the described case. The trigger events a fact pattern holds select the active subgraph of activation and defeat relations."@en ;
+              rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+              rdfs:label "holds trigger"@en .
+
+
+###  https://w3id.org/def/norma-o#inFactPattern
+:inFactPattern rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :WeakPermission ;
+               rdfs:range :FactPattern ;
+               rdfs:comment "Links a weak permission to the single described case relative to which it was computed."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "in fact pattern"@en .
+
+
+###  https://w3id.org/def/norma-o#isActivatedByTriggerEvent
+:isActivatedByTriggerEvent rdf:type owl:ObjectProperty ;
+                           owl:inverseOf :activatesNorm ;
+                           rdfs:domain :NormativeContent ;
+                           rdfs:range :TriggerEvent ;
+                           rdfs:comment "Links normative content to a trigger event that activates it."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                           rdfs:label "is activated by trigger event"@en .
+
+
+###  https://w3id.org/def/norma-o#isAnnotatorOf
+:isAnnotatorOf rdf:type owl:ObjectProperty ;
+               owl:inverseOf :wasAttributedToAnnotator ;
+               rdfs:domain :AnnotatorAgent ;
+               rdfs:range :NormativeContent ;
+               rdfs:comment "Links an annotator agent to normative content attributed to that annotator."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "is annotator of"@en .
+
+
+###  https://w3id.org/def/norma-o#isAssignedPartyOf
+:isAssignedPartyOf rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :hasAssignedParty ;
+                   rdfs:domain :LegalParty ;
+                   rdfs:range :RoleAssignment ;
+                   rdfs:comment "Links a party to the role assignments that place it in a role."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                   rdfs:label "is assigned party of"@en .
+
+
+###  https://w3id.org/def/norma-o#isAssignedRoleOf
+:isAssignedRoleOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain :LegalRole ;
+                  rdfs:range :RoleAssignment ;
+                  rdfs:comment "Links a role to the role assignments that place a party in it."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "is assigned role of"@en .
+
+
+###  https://w3id.org/def/norma-o#isBindingForceOf
+:isBindingForceOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain :BindingForce ;
+                  rdfs:range :RegulativeNorm ;
+                  rdfs:comment "Links a binding-force value to regulative norms classified with that value."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "is binding force of"@en .
+
+
+###  https://w3id.org/def/norma-o#isComplianceCriticalityOf
+:isComplianceCriticalityOf rdf:type owl:ObjectProperty ;
+                           owl:inverseOf :hasComplianceCriticality ;
+                           rdfs:domain :ComplianceCriticality ;
+                           rdfs:range :RegulativeNorm ;
+                           rdfs:comment "Links a compliance-criticality value to regulative norms classified with that value."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                           rdfs:label "is compliance criticality of"@en .
+
+
+###  https://w3id.org/def/norma-o#isContentOfLegalPosition
+:isContentOfLegalPosition rdf:type owl:ObjectProperty ;
+                          rdfs:domain :LegalAction ;
+                          rdfs:range :LegalPosition ;
+                          rdfs:comment "Links a legal action to a legal position whose content it forms."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                          rdfs:label "is content of legal position"@en .
+
+
+###  https://w3id.org/def/norma-o#isCorrelativeOf
+:isCorrelativeOf rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ,
+                          owl:SymmetricProperty ,
+                          owl:IrreflexiveProperty ;
+                 rdfs:domain :LegalPosition ;
+                 rdfs:range :LegalPosition ;
+                 rdfs:comment "Links a legal position to its Hohfeldian correlative: the position necessarily held by the counterparty toward the holder concerning the same action (Duty ⟷ Claim, Privilege ⟷ No-right). Symmetric because correlativity is mutual, functional because each position has exactly one correlative, and irreflexive because no position is its own correlative. It drives the property chains of norma:hasPositionCounterparty and norma:concernsLegalAction."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                 rdfs:label "is correlative of"@en .
+
+
+###  https://w3id.org/def/norma-o#isCounterpartyOf
+:isCounterpartyOf rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :hasCounterparty ;
+                  rdfs:domain :LegalAgent ;
+                  rdfs:range :RegulativeNorm ;
+                  rdfs:comment "Links a legal agent to a regulative norm for which it is the counterparty."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "is counterparty of"@en .
+
+
+###  https://w3id.org/def/norma-o#isDefeatedBy
+:isDefeatedBy rdf:type owl:ObjectProperty ;
+              owl:inverseOf :defeatedNorm ;
+              rdfs:domain :NormativeContent ;
+              rdfs:range :Defeater ;
+              rdfs:comment "Links normative content to a defeater that withdraws its normative effect."@en ;
+              rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+              rdfs:label "is defeated by"@en .
+
+
+###  https://w3id.org/def/norma-o#isDefeatingNormOf
+:isDefeatingNormOf rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :defeatingNorm ;
+                   rdfs:domain :NormativeContent ;
+                   rdfs:range :Defeater ;
+                   rdfs:comment "Links normative content to a defeater in which it performs the overriding."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                   rdfs:label "is defeating norm of"@en .
+
+
+###  https://w3id.org/def/norma-o#isDeonticallyEquivalentTo
+:isDeonticallyEquivalentTo rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :relatesTo ;
+                           rdf:type owl:SymmetricProperty ,
+                                    owl:TransitiveProperty ;
+                           rdfs:domain :RegulativeNorm ;
+                           rdfs:range :RegulativeNorm ;
+                           rdfs:comment "Links two regulative norms that express the same deontic content for the same legal agent, counterparty, and circumstances under the interdefinability of deontic operators, even when annotated with different operators: e.g. a Prohibition of X and an Obligation of ¬X (F(X) ≡ O(¬X)), or a Negative Recommendation of X and a Recommendation of ¬X. Symmetric and transitive. Class-level restrictions on the RegulativeNorm subclasses keep equivalences within compatible operator families, so asserting, for instance, that an Obligation is equivalent to a Permission makes the knowledge graph inconsistent."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                           rdfs:label "is deontically equivalent to"@en ;
+                           <http://www.w3.org/2004/02/skos/core#example> "SWRL derivation: norma:Prohibition(?n1) ^ norma:hasLegalAction(?n1, ?x) ^ norma:Obligation(?n2) ^ norma:hasLegalAction(?n2, ?y) ^ norma:isNegationOf(?x, ?y) ^ norma:hasLegalAgent(?n1, ?a) ^ norma:hasLegalAgent(?n2, ?a) -> norma:isDeonticallyEquivalentTo(?n1, ?n2), additionally requiring the same counterparty, legal object, and triggering conditions where these are annotated."@en ;
+                           <http://www.w3.org/2004/02/skos/core#scopeNote> "An unannotated counterparty is treated as not disagreeing rather than as a mismatch. This is a declared reading, not a neutral one: it lets equivalences surface in corpora where the counterparty is not yet annotated, at the cost of asserting an equivalence that a later annotation may refute. Producers that annotate norma:hasCounterparty throughout get the strict reading for free."@en ,
+                                                                           "Circumstances are compared as the set of (norma:LegalCondition, outcome) pairs activating each norm, not as trigger-event identity: a producer that mints one norma:TriggerEvent per norm would otherwise never find two norms equivalent. Two norms with the same content but different activating conditions are not equivalent, which is why the comparison cannot be dropped."@en ,
+                                                                           "Derived, never annotated. Given the closure, the general join replaces the operator-by-operator rule above: two norms are equivalent when they share the legal agent, do not disagree on the counterparty, are activated in the same circumstances, and their CLOSURES COINCIDE term by term. Set equality is what makes the test sound — a Permission and a Facultative over the same action share norma:entailsPermitted, so a join on a single shared entailment would wrongly equate them, while the facultative additionally entails P(¬X) and ¬O(X)."@en ,
+                                                                           "PRIMA FACIE, like the Hohfeldian positions and for the same reason: the relation holds between the norms AS ENACTED and does not consult their status in any case. Two norms stay equivalent even where an exception defeats one of them, and a conflict stays recorded even where the facts of a case activate only one side. Realising or dissolving either in a particular situation is the business of the case evaluation."@en .
+
+
+###  https://w3id.org/def/norma-o#isExceptionTo
+:isExceptionTo rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :directlyPrevailsOver ,
+                                  :exceptionPrevailsOver ;
+               rdfs:domain :NormativeContent ;
+               rdfs:range :NormativeContent ;
+               rdfs:comment "Low-ceremony shortcut stating that the subject norm is a carve-out from the object norm, without reifying a Defeater. Mint a norma:ExceptionDefeater instead when the carve-out needs a condition, a principle, or provenance of its own."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "is exception to"@en .
+
+
+###  https://w3id.org/def/norma-o#isExtractionMethodOf
+:isExtractionMethodOf rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :hasExtractionMethod ;
+                      rdfs:domain :ExtractionMethod ;
+                      rdfs:range :NormativeContent ;
+                      rdfs:comment "Links an extraction method to normative content produced using that method."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                      rdfs:label "is extraction method of"@en .
+
+
+###  https://w3id.org/def/norma-o#isGateOfDefeater
+:isGateOfDefeater rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :appliesWhen ;
+                  rdfs:domain :TriggerEvent ;
+                  rdfs:range :Defeater ;
+                  rdfs:comment "Links a trigger event to a defeater it activates."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "is gate of defeater"@en .
+
+
+###  https://w3id.org/def/norma-o#isHeldInFactPattern
+:isHeldInFactPattern rdf:type owl:ObjectProperty ;
+                     rdfs:domain :TriggerEvent ;
+                     rdfs:range :FactPattern ;
+                     rdfs:comment "Links a trigger event to fact patterns in which it fires."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                     rdfs:label "is held in fact pattern"@en .
+
+
+###  https://w3id.org/def/norma-o#isJuralOppositeOf
+:isJuralOppositeOf rdf:type owl:ObjectProperty ,
+                            owl:SymmetricProperty ,
+                            owl:IrreflexiveProperty ;
+                   rdfs:domain :LegalPosition ;
+                   rdfs:range :LegalPosition ;
+                   rdfs:comment "Links a legal position to its Hohfeldian jural opposite: the position held by the SAME agent TOWARD THE SAME COUNTERPARTY whose content is the negation of this one's, so that exactly one of the two obtains (Duty ⟷ Privilege, Claim ⟷ No-right). A Duty of A toward B concerning X is the opposite of a Privilege of A toward B concerning ¬X, mirroring O(X) ≡ ¬P(¬X). Symmetric because opposition is mutual, and irreflexive because no position is its own opposite."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                   rdfs:label "is jural opposite of"@en ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Deliberately NOT functional, unlike norma:isCorrelativeOf. A position has exactly one correlative, minted with it by the same norm, but its opposite may be conferred by several different norms at once, and in a conflicting normative system it may be conferred by none. Deliberately NOT transitive either: the opposite of the opposite is the position itself, so transitivity would make every position its own opposite and contradict irreflexivity."@en ,
+                                                                   "Derived, never annotated. The join is: same norma:hasPositionHolder, same counterparty, contents related by norma:isNegationOf, and classes drawn from one axis of the square. The counterparty is compared on the CONFERRING NORMS, through norma:hasCounterparty, because the position's own norma:hasPositionCounterparty follows from a property chain and is not materialised. Because each position is conferred by a norm, deriving an opposition between positions conferred by two DIFFERENT norms is the Hohfeldian face of norma:deonticallyContradicts specifically, and not of its superproperty: a CONTRARY pair confers two Duties, never a Duty and its opposite, so contraries have no Hohfeldian face at all. Under the subproperty axiom the pair is also in norma:deonticallyConflictsWith, which is what a query over the derived graph will find. The two are NOT independent evidence of a conflict, and must not be presented as such: both are computed from the same deontic closure, so their agreement is an internal coherence check on the two joins — worth running, since either can be written wrongly — and not a second confirmation of the conflict itself. Independent evidence would have to come from outside the closure, such as from the legal text."@en ,
+                                                                   "THE COUNTERPARTY MUST BE COMPARED, because legal positions are directed. What the comparison does with silence is a separate decision: a counterparty that no annotator named is read as NOT DISAGREEING rather than as a mismatch, which lets oppositions surface in corpora where the counterparty is not yet annotated, at the cost of an opposition that a later annotation may refute. That reading is non-monotonic and a derivation that adopts it records normad:OpenCounterparty. One agent may bear a Duty toward B concerning X and at the same time hold a Privilege against C concerning ¬X, and those are two distinct jural relations rather than an opposition — Hohfeld's own multital analysis. Comparing holders alone would collapse them and report a contradiction where none exists."@en ,
+                                                                   "The second axis of Hohfeld's square, and the counterpart of norma:isCorrelativeOf. The two must not be confused: a correlative is the same jural relation seen from the other party, concerning the same action, whereas an opposite is held by the same party toward the same party and concerns the negated action. Correlativity therefore swaps holder and counterparty, while opposition preserves both and negates the content."@en .
+
+
+###  https://w3id.org/def/norma-o#isLegalActionOf
+:isLegalActionOf rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :hasLegalAction ;
+                 rdfs:domain :LegalAction ;
+                 rdfs:range :RegulativeNorm ;
+                 rdfs:comment "Links a legal action to the regulative norm that regulates it."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                 rdfs:label "is legal action of"@en .
+
+
+###  https://w3id.org/def/norma-o#isLegalAgentOf
+:isLegalAgentOf rdf:type owl:ObjectProperty ;
+                owl:inverseOf :hasLegalAgent ;
+                rdfs:domain :LegalAgent ;
+                rdfs:range :RegulativeNorm ;
+                rdfs:comment "Links a legal agent to the regulative norm for which it is the norm-bearing subject."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "is legal agent of"@en .
+
+
+###  https://w3id.org/def/norma-o#isLegalObjectOf
+:isLegalObjectOf rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :hasLegalObject ;
+                 rdfs:domain :LegalObject ;
+                 rdfs:range :RegulativeNorm ;
+                 rdfs:comment "Links a legal object to the regulative norm in which it is regulated."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                 rdfs:label "is legal object of"@en .
+
+
+###  https://w3id.org/def/norma-o#isLegalPositionConferredBy
+:isLegalPositionConferredBy rdf:type owl:ObjectProperty ;
+                            rdfs:domain :LegalPosition ;
+                            rdfs:range :NormativeContent ;
+                            rdfs:comment "Links a legal position to the normative content that confers it."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                            rdfs:label "is legal position conferred by"@en .
+
+
+###  https://w3id.org/def/norma-o#isLegalSourceOf
+:isLegalSourceOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain :LegalSource ;
+                 rdfs:range :NormativeContent ;
+                 rdfs:comment "Links a legal source to normative content extracted or derived from it."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                 rdfs:label "is legal source of"@en .
+
+
+###  https://w3id.org/def/norma-o#isNegationOf
+:isNegationOf rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ,
+                       owl:SymmetricProperty ,
+                       owl:IrreflexiveProperty ;
+              rdfs:domain :LegalAction ;
+              rdfs:range :LegalAction ;
+              rdfs:comment "Links a legal action X to the legal action ¬X that consists in not performing X, and vice versa. Provides the action-level negation that Standard Deontic Logic needs to state F(X) ≡ O(¬X) and P(X) ≡ ¬O(¬X). Symmetric because ¬¬X ≡ X; functional because an action has a single negation (two actions declared as negations of the same action are inferred to be the same action); irreflexive because no action is its own negation."@en ;
+              rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+              rdfs:label "is negation of"@en .
+
+
+###  https://w3id.org/def/norma-o#isNormStatusOf
+:isNormStatusOf rdf:type owl:ObjectProperty ;
+                owl:inverseOf :hasNormStatus ;
+                rdfs:domain :NormStatus ;
+                rdfs:range :NormativeContent ;
+                rdfs:comment "Links a norm-status value to normative content carrying that lifecycle status."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "is norm status of"@en .
+
+
+###  https://w3id.org/def/norma-o#isNormStrengthOf
+:isNormStrengthOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain :NormStrength ;
+                  rdfs:range :NormativeContent ;
+                  rdfs:comment "Links a strength value to normative content classified with it."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "is norm strength of"@en .
+
+
+###  https://w3id.org/def/norma-o#isOutcomeOfTriggerEvent
+:isOutcomeOfTriggerEvent rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :hasOutcome ;
+                         rdfs:domain :ConditionOutcome ;
+                         rdfs:range :TriggerEvent ;
+                         rdfs:comment "Links a condition outcome to trigger events characterised by that outcome."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                         rdfs:label "is outcome of trigger event"@en .
+
+
+###  https://w3id.org/def/norma-o#isPositionCounterpartyOf
+:isPositionCounterpartyOf rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :hasPositionCounterparty ;
+                          rdfs:domain :LegalAgent ;
+                          rdfs:range :LegalPosition ;
+                          rdfs:comment "Links a legal agent to a legal position held against it."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                          rdfs:label "is position counterparty of"@en .
+
+
+###  https://w3id.org/def/norma-o#isPositionHolderOf
+:isPositionHolderOf rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :hasPositionHolder ;
+                    rdfs:domain :LegalAgent ;
+                    rdfs:range :LegalPosition ;
+                    rdfs:comment "Links a legal agent to a legal position it holds."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                    rdfs:label "is position holder of"@en .
+
+
+###  https://w3id.org/def/norma-o#isPrevailedOverBy
+:isPrevailedOverBy rdf:type owl:ObjectProperty ;
+                   rdfs:domain :NormativeContent ;
+                   rdfs:range :NormativeContent ;
+                   rdfs:comment "Links normative content to normative content that prevails over it."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                   rdfs:label "is prevailed over by"@en .
+
+
+###  https://w3id.org/def/norma-o#isRankOf
+:isRankOf rdf:type owl:ObjectProperty ;
+          owl:inverseOf :hasRank ;
+          rdfs:domain :NormativeRank ;
+          rdfs:range :LegalSource ;
+          rdfs:comment "Links a normative rank to the legal sources classified with it."@en ;
+          rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+          rdfs:label "is rank of"@en .
+
+
+###  https://w3id.org/def/norma-o#isResolutionPrincipleOf
+:isResolutionPrincipleOf rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :hasResolutionPrinciple ;
+                         rdfs:domain :ResolutionPrinciple ;
+                         rdfs:range :ConflictDefeater ;
+                         rdfs:comment "Links a resolution principle to conflict defeaters it orients."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                         rdfs:label "is resolution principle of"@en .
+
+
+###  https://w3id.org/def/norma-o#isReviewStatusOf
+:isReviewStatusOf rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :hasReviewStatus ;
+                  rdfs:domain :ReviewStatus ;
+                  rdfs:range :NormativeContent ;
+                  rdfs:comment "Links a review-status value to normative content carrying that status."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "is review status of"@en .
+
+
+###  https://w3id.org/def/norma-o#isRoleAssignmentIn
+:isRoleAssignmentIn rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :holdsRoleAssignment ;
+                    rdfs:domain :RoleAssignment ;
+                    rdfs:range :FactPattern ;
+                    rdfs:comment "Links a role assignment to the fact patterns in which it holds."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                    rdfs:label "is role assignment in"@en .
+
+
+###  https://w3id.org/def/norma-o#isRoleConferredBy
+:isRoleConferredBy rdf:type owl:ObjectProperty ;
+                   rdfs:domain :LegalRole ;
+                   rdfs:range :NormativeContent ;
+                   rdfs:comment "Links a legal role to the normative content that attributes it."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                   rdfs:label "is role conferred by"@en .
+
+
+###  https://w3id.org/def/norma-o#isRuleOfRoleAssignment
+:isRuleOfRoleAssignment rdf:type owl:ObjectProperty ;
+                        rdfs:domain :NormativeContent ;
+                        rdfs:range :RoleAssignment ;
+                        rdfs:comment "Links normative content to the role assignments it justifies."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                        rdfs:label "is rule of role assignment"@en .
+
+
+###  https://w3id.org/def/norma-o#isSourceExpressionOf
+:isSourceExpressionOf rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :hasSourceExpression ;
+                      rdfs:domain :LegalSourceExpression ;
+                      rdfs:range :LegalSource ;
+                      rdfs:comment "Links a legal source expression to the legal source it realizes or expresses."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                      rdfs:label "is source expression of"@en .
+
+
+###  https://w3id.org/def/norma-o#isSourceForDerivedNormativeContent
+:isSourceForDerivedNormativeContent rdf:type owl:ObjectProperty ;
+                                    owl:inverseOf :wasDerivedFromSource ;
+                                    rdfs:domain :LegalSource ;
+                                    rdfs:range :NormativeContent ;
+                                    rdfs:comment "Links a legal source to normative content derived from it."@en ;
+                                    rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                                    rdfs:label "is source for derived normative content"@en .
+
+
+###  https://w3id.org/def/norma-o#isTriggerEstablishedBy
+:isTriggerEstablishedBy rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :establishesTrigger ;
+                        rdfs:domain :TriggerEvent ;
+                        rdfs:range :NormativeContent ;
+                        rdfs:comment "Links a trigger event to the normative content whose application establishes it as a fact of the case."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                        rdfs:label "is trigger established by"@en .
+
+
+###  https://w3id.org/def/norma-o#isTriggerOfCondition
+:isTriggerOfCondition rdf:type owl:ObjectProperty ;
+                      rdfs:domain :TriggerEvent ;
+                      rdfs:range :LegalCondition ;
+                      rdfs:comment "Links a trigger event back to the legal condition whose branch or outcome it represents."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                      rdfs:label "is trigger of condition"@en .
+
+
+###  https://w3id.org/def/norma-o#isTriggeredByCondition
+:isTriggeredByCondition rdf:type owl:ObjectProperty ;
+                        rdfs:domain :NormativeContent ;
+                        rdfs:range :LegalCondition ;
+                        rdfs:comment "Links normative content to the legal condition that triggers it."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                        rdfs:label "is triggered by condition"@en .
+
+
+###  https://w3id.org/def/norma-o#prevailsOver
+:prevailsOver rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isPrevailedOverBy ;
+              rdfs:domain :NormativeContent ;
+              rdfs:range :NormativeContent ;
+              owl:propertyChainAxiom ( :isDefeatingNormOf
+                                       :defeatedNorm
+                                     ) ;
+              rdfs:comment "Shortcut: links defeating normative content to the normative content it defeats, whenever a defeater relates the two. Implemented as the OWL 2 property chain isDefeatingNormOf composed with defeatedNorm, in the same way as norma:triggersNorm. Two things are lost in the flattening, and only one of them is recoverable: the kind of defeat, which clients retrieve by traversing the reified Defeater node or by using the typed subproperties, and the gate norma:appliesWhen, which has no shortcut at all. This property is therefore the UNGATED projection of the defeat digraph — the static ordering over the whole normative system. Case-relative evaluation must traverse the reified Defeater, never this shortcut, or every defeater would count as applicable in every case."@en ;
+              rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+              rdfs:label "prevails over"@en ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "Annotators assert Defeaters and, where convenient, the shortcuts norma:isExceptionTo and norma:supersedes. The annotation graph never carries norma:prevailsOver, its typed subproperties, prevalence levels, or defeat status: these are consequences of what has been asserted. A compilation step may materialise them, together with the stratification, in a separate derived artefact that is regenerated rather than maintained by hand — the same arrangement as the generated SWRL rule file. Materialising them back into the annotation graph would desynchronise them from the normative system from which they follow."@en ,
+                                                              "Transitivity is deliberately not declared, for two independent reasons. Technically, a property defined by a property chain is non-simple in OWL 2 DL and cannot also be asymmetric or irreflexive. Substantively, defeat is not transitive: if A defeats B and B defeats C, then C is reinstated, because B is itself withdrawn, and a transitive closure asserting that A defeats C would destroy precisely the reinstatement that consumers must compute."@en .
+
+
+###  https://w3id.org/def/norma-o#relatesTo
+:relatesTo rdf:type owl:ObjectProperty ,
+                    owl:SymmetricProperty ;
+           rdfs:domain :NormativeContent ;
+           rdfs:range :NormativeContent ;
+           rdfs:comment "Generic symmetric association between two normative content items (e.g. cross-references, thematic links). Prefer more specific properties when available."@en ;
+           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+           rdfs:label "relates to"@en .
+
+
+###  https://w3id.org/def/norma-o#supersededBy
+:supersededBy rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :NormativeContent ;
+              rdfs:range :NormativeContent ;
+              rdfs:comment "Links a superseded normative content item to the single item that replaces it. Pairs with the `norma:Superseded` NormStatus value. (Note: declared FunctionalProperty; relax this if your domain allows a norm to be split across multiple successors.)"@en ;
+              rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+              rdfs:label "superseded by"@en .
+
+
+###  https://w3id.org/def/norma-o#supersedes
+:supersedes rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :directlyPrevailsOver ,
+                               :temporalPrevailsOver ;
+            owl:inverseOf :supersededBy ;
+            rdfs:domain :NormativeContent ;
+            rdfs:range :NormativeContent ;
+            rdfs:comment "Links normative content to an earlier normative content item that it replaces."@en ;
+            rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+            rdfs:label "supersedes"@en ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "Supersession is the low-ceremony form of temporal defeat, so it feeds the prevalence digraph through norma:temporalPrevailsOver. Mint a norma:TemporalDefeater instead when the repeal needs its own condition, provenance, or several defeated norms."@en .
+
+
+###  https://w3id.org/def/norma-o#temporalPrevailsOver
+:temporalPrevailsOver rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :prevailsOver ;
+                      rdfs:domain :NormativeContent ;
+                      rdfs:range :NormativeContent ;
+                      rdfs:comment "Typed prevalence edge for repeal. It is entailed wherever the norma:supersedes shortcut is used, and materialised by the compilation step for repeal stated through a reified norma:TemporalDefeater. Consumers apply it as a validity filter over the normative system rather than as a step of the case-specific prevalence ordering."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                      rdfs:label "temporal prevails over"@en .
+
+
+###  https://w3id.org/def/norma-o#triggersNorm
+:triggersNorm rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isTriggeredByCondition ;
+              rdfs:domain :LegalCondition ;
+              rdfs:range :NormativeContent ;
+              owl:propertyChainAxiom ( :hasTrigger
+                                       :activatesNorm
+                                     ) ;
+              rdfs:comment "Shortcut: links a legal condition to a normative content item whenever the condition has a trigger event that activates that norm. Implemented as the OWL 2 property chain hasTrigger ∘ activatesNorm. The outcome branch is not recoverable from this shortcut alone; clients that need the true, false, or other branch outcome must traverse the reified TriggerEvent node."@en ;
+              rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+              rdfs:label "triggers norm"@en .
+
+
+###  https://w3id.org/def/norma-o#usedLegalSource
+:usedLegalSource rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://www.w3.org/ns/prov#used> ;
+                 owl:inverseOf :wasUsedByAnnotationActivity ;
+                 rdfs:domain :AnnotationActivity ;
+                 rdfs:range :LegalSource ;
+                 rdfs:comment "Links an annotation activity to the legal source it used as input."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                 rdfs:label "used legal source"@en .
+
+
+###  https://w3id.org/def/norma-o#wasAnnotatorAssociatedWithActivity
+:wasAnnotatorAssociatedWithActivity rdf:type owl:ObjectProperty ;
+                                    rdfs:domain :AnnotatorAgent ;
+                                    rdfs:range :AnnotationActivity ;
+                                    rdfs:comment "Links an annotator agent to an annotation activity with which the agent was associated."@en ;
+                                    rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                                    rdfs:label "was annotator associated with activity"@en .
+
+
+###  https://w3id.org/def/norma-o#wasAssociatedWithAnnotator
+:wasAssociatedWithAnnotator rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasAssociatedWith> ;
+                            owl:inverseOf :wasAnnotatorAssociatedWithActivity ;
+                            rdfs:domain :AnnotationActivity ;
+                            rdfs:range :AnnotatorAgent ;
+                            rdfs:comment "Links an annotation activity to the annotator agent that performed it."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                            rdfs:label "was associated with annotator"@en .
+
+
+###  https://w3id.org/def/norma-o#wasAttributedToAnnotator
+:wasAttributedToAnnotator rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasAttributedTo> ;
+                          rdfs:domain :NormativeContent ;
+                          rdfs:range :AnnotatorAgent ;
+                          rdfs:comment "Links normative content to the annotator agent responsible for it."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                          rdfs:label "was attributed to annotator"@en .
+
+
+###  https://w3id.org/def/norma-o#wasDerivedFromSource
+:wasDerivedFromSource rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+                      rdfs:domain :NormativeContent ;
+                      rdfs:range :LegalSource ;
+                      rdfs:comment "Links normative content to the legal source from which it was derived (entity-to-entity derivation shortcut)."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                      rdfs:label "was derived from source"@en .
+
+
+###  https://w3id.org/def/norma-o#wasGeneratedByAnnotationActivity
+:wasGeneratedByAnnotationActivity rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasGeneratedBy> ;
+                                  owl:inverseOf :generatedNormativeContent ;
+                                  rdfs:domain :NormativeContent ;
+                                  rdfs:range :AnnotationActivity ;
+                                  rdfs:comment "Links normative content to the annotation activity that generated it."@en ;
+                                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                                  rdfs:label "was generated by annotation activity"@en .
+
+
+###  https://w3id.org/def/norma-o#wasUsedByAnnotationActivity
+:wasUsedByAnnotationActivity rdf:type owl:ObjectProperty ;
+                             rdfs:domain :LegalSource ;
+                             rdfs:range :AnnotationActivity ;
+                             rdfs:comment "Links a legal source to the annotation activity that used it as input."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                             rdfs:label "was used by annotation activity"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/def/norma-o#actionText
+:actionText rdf:type owl:DatatypeProperty ;
+            rdfs:domain :RegulativeNorm ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Raw textual form of the regulated action as entered in the annotation template."@en ;
+            rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+            rdfs:label "action text"@en ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "A LOW-CEREMONY SHORTCUT, and the derivation does not read it. The same holds for norma:agentText, norma:objectText, norma:conditionTrigger and the norma:from… literals: they record what the text said without committing to an individual, which is useful while annotating and useless for inference. A norm that carries only norma:actionText and no norma:hasLegalAction falls OUT of the deontic closure, confers no Hohfeldian position and blocks no weak permission. Mint the individuals as soon as the graph has to reason across norms."@en .
+
+
+###  https://w3id.org/def/norma-o#agentText
+:agentText rdf:type owl:DatatypeProperty ;
+           rdfs:domain :RegulativeNorm ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Raw textual form of the legal agent as entered in the annotation template."@en ;
+           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+           rdfs:label "agent text"@en .
+
+
+###  https://w3id.org/def/norma-o#annotationDate
+:annotationDate rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :AnnotationActivity ;
+                rdfs:range xsd:date ;
+                rdfs:comment "Date on which the annotation activity took place. Convenience shortcut; for instant-level precision use `prov:startedAtTime`/`prov:endedAtTime` from PROV-O (both are valid on prov:Activity, unlike prov:generatedAtTime which is defined on prov:Entity)."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "annotation date"@en .
+
+
+###  https://w3id.org/def/norma-o#articleNumber
+:articleNumber rdf:type owl:DatatypeProperty ;
+               rdfs:domain :LegalSource ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Article, section, or equivalent unit number. Not functional: a single LegalSource may cover multiple articles."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "article number"@en .
+
+
+###  https://w3id.org/def/norma-o#conditionStatement
+:conditionStatement rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :LegalCondition ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Plain-language formulation of the legal condition being evaluated. In the NORMA toolkit it is taken from the label of the annotated condition, but the property itself is independent of any authoring tool."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                    rdfs:label "condition statement"@en .
+
+
+###  https://w3id.org/def/norma-o#conditionTrigger
+:conditionTrigger rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :RegulativeNorm ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Raw textual description of the condition under which the norm applies."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "condition trigger"@en .
+
+
+###  https://w3id.org/def/norma-o#confidenceScore
+:confidenceScore rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :AnnotationActivity ;
+                 rdfs:range [ rdf:type rdfs:Datatype ;
+                              owl:onDatatype xsd:decimal ;
+                              owl:withRestrictions ( [ xsd:minInclusive 0.0
+                                                     ]
+                                                     [ xsd:maxInclusive 1.0
+                                                     ]
+                                                   )
+                            ] ;
+                 rdfs:comment "Confidence score the annotation activity assigned to its output, constrained to the closed interval [0,1]. Placed on the activity rather than the annotation entity to attribute uncertainty to the extraction process; downstream consumers traverse `prov:wasGeneratedBy` to reach it."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                 rdfs:label "confidence score"@en .
+
+
+###  https://w3id.org/def/norma-o#deadline
+:deadline rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :NormativeContent ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Deadline, sunset date, end date, or textual temporal constraint associated with the normative content."@en ;
+          rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+          rdfs:label "deadline"@en .
+
+
+###  https://w3id.org/def/norma-o#deonticId
+:deonticId rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :NormativeContent ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Unique identifier for a norm or constitutive rule within a regulation pack. Any stable local identifier is acceptable; the NORMA toolkit composes one from the modality notation and a slug of the annotated element label (e.g. OBL_Mark_AI_generated_content). Uniqueness is a producer invariant, not an OWL one; to enforce global uniqueness across graphs, declare InverseFunctionalProperty or add a SHACL uniqueness constraint."@en ;
+           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+           rdfs:label "deontic ID"@en .
+
+
+###  https://w3id.org/def/norma-o#effectiveDate
+:effectiveDate rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :NormativeContent ;
+               rdfs:range xsd:date ;
+               rdfs:comment "Date from which the normative content is effective."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "effective date"@en .
+
+
+###  https://w3id.org/def/norma-o#exception
+:exception rdf:type owl:DatatypeProperty ;
+           rdfs:domain :RegulativeNorm ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Exception or carve-out under which the norm does not apply."@en ;
+           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+           rdfs:label "exception"@en ;
+           owl:deprecated "true"^^xsd:boolean ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "Deprecated in favour of the defeasibility layer: use norma:ExceptionDefeater, or the norma:isExceptionTo shortcut, so that the carve-out carries its condition, its provenance, and a place in the prevalence digraph. Retained for backwards compatibility with published graphs and as a last-resort literal for carve-outs that have not yet been analysed."@en .
+
+
+###  https://w3id.org/def/norma-o#factStatement
+:factStatement rdf:type owl:DatatypeProperty ;
+               rdfs:domain :ConstitutiveRule ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Plain-language statement of the constitutive rule."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "fact statement"@en .
+
+
+###  https://w3id.org/def/norma-o#fromArticle
+:fromArticle rdf:type owl:DatatypeProperty ;
+             rdfs:domain :NormativeContent ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Denormalised article identifier copied from the linked LegalSource."@en ;
+             rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+             rdfs:label "from article"@en .
+
+
+###  https://w3id.org/def/norma-o#fromParagraph
+:fromParagraph rdf:type owl:DatatypeProperty ;
+               rdfs:domain :NormativeContent ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Denormalised paragraph identifier copied from the linked LegalSource."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "from paragraph"@en .
+
+
+###  https://w3id.org/def/norma-o#fromRegulation
+:fromRegulation rdf:type owl:DatatypeProperty ;
+                rdfs:domain :NormativeContent ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Denormalised regulation name copied from the linked LegalSource for convenient querying and SWRL rule generation."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "from regulation"@en .
+
+
+###  https://w3id.org/def/norma-o#lastReviewDate
+:lastReviewDate rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :NormativeContent ;
+                rdfs:range xsd:date ;
+                rdfs:comment "Date of the most recent legal or editorial review of this annotation. A lifecycle property of the norm itself, not of the activity that created it."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "last review date"@en .
+
+
+###  https://w3id.org/def/norma-o#normStatement
+:normStatement rdf:type owl:DatatypeProperty ;
+               rdfs:domain :NormativeContent ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Human-readable restatement of the norm or rule."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "norm statement"@en .
+
+
+###  https://w3id.org/def/norma-o#objectText
+:objectText rdf:type owl:DatatypeProperty ;
+            rdfs:domain :RegulativeNorm ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Raw textual form of the legal object as entered in the annotation template."@en ;
+            rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+            rdfs:label "object text"@en .
+
+
+###  https://w3id.org/def/norma-o#originalText
+:originalText rdf:type owl:DatatypeProperty ;
+              rdfs:domain :LegalSource ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Verbatim legal text from the legal source."@en ;
+              rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+              rdfs:label "original text"@en .
+
+
+###  https://w3id.org/def/norma-o#paragraphNumber
+:paragraphNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :LegalSource ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Paragraph, subsection, or equivalent granular locator. Not functional."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                 rdfs:label "paragraph number"@en .
+
+
+###  https://w3id.org/def/norma-o#rankLevel
+:rankLevel rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :NormativeRank ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "Integer ordinal attached to a normative rank so that lex superior is computable by comparison. A higher level prevails over a lower one."@en ;
+           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+           rdfs:label "rank level"@en .
+
+
+###  https://w3id.org/def/norma-o#regulationName
+:regulationName rdf:type owl:DatatypeProperty ;
+                rdfs:domain :LegalSource ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Name of the legal or regulatory source."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "regulation name"@en .
+
+
+###  https://w3id.org/def/norma-o#regulationURI
+:regulationURI rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :LegalSource ;
+               rdfs:range xsd:anyURI ;
+               rdfs:comment "URI identifying the legal source."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "regulation URI"@en .
+
+
+###  https://w3id.org/def/norma-o#sanction
+:sanction rdf:type owl:DatatypeProperty ;
+          rdfs:domain :RegulativeNorm ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Sanction or consequence associated with non-compliance."@en ;
+          rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+          rdfs:label "sanction"@en ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "A literal, and deliberately nothing more: the VIOLATION of a norm is out of scope in this version. What a breach brings about — a compensatory obligation, a contrary-to-duty conditional of the form ‘if O(x) is violated then O(y)’ — is a central feature of defeasible deontic logics and is not represented here at all. A consumer can read the sanction text; nothing can compute with it, and no derivation rule consults it."@en .
+
+
+###  https://w3id.org/def/norma-o#sourceURI
+:sourceURI rdf:type owl:DatatypeProperty ;
+           rdfs:domain :NormativeContent ;
+           rdfs:range xsd:anyURI ;
+           rdfs:comment "Denormalised URI copied from the linked LegalSource."@en ;
+           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+           rdfs:label "source URI"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/def/norma-o#AnnotationActivity
+:AnnotationActivity rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
+                    rdfs:comment "A provenance activity that produces a NORMA annotation (i.e. a NormativeContent) from one or more LegalSources."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                    rdfs:label "Annotation Activity"@en .
+
+
+###  https://w3id.org/def/norma-o#AnnotatorAgent
+:AnnotatorAgent rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                rdfs:comment "A provenance agent responsible for creating, reviewing, or attesting to a NORMA annotation. May represent a person (legal expert, analyst), a software system (LLM extractor, rule engine), or an organization. For finer-grained typing use the corresponding PROV-O subclasses (prov:Person, prov:SoftwareAgent, prov:Organization). Integrity constraint (not OWL-enforced): for a given NormativeContent, `prov:wasAttributedTo` and `prov:wasAssociatedWith` (via its generating AnnotationActivity) should resolve to the same agent; validate with SHACL."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "Annotator Agent"@en .
+
+
+###  https://w3id.org/def/norma-o#BindingForce
+:BindingForce rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+              rdfs:comment "Binding force of a norm."@en ;
+              rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+              rdfs:label "Binding Force"@en .
+
+
+###  https://w3id.org/def/norma-o#Claim
+:Claim rdf:type owl:Class ;
+       rdfs:subClassOf :LegalPosition ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isCorrelativeOf ;
+                         owl:someValuesFrom :Duty
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isJuralOppositeOf ;
+                         owl:allValuesFrom :NoRight
+                       ] ;
+       rdfs:comment "A legal position in which the holder is entitled, as against the counterparty, that the counterparty realise the concerned action content."@en ;
+       rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+       rdfs:label "Claim"@en ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "Claim-right"@en ,
+                                                      "Right"@en ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Hohfeldian right in the strict sense (claim). Correlative: Duty. Jural opposite: No-right."@en .
+
+
+###  https://w3id.org/def/norma-o#ComplianceCriticality
+:ComplianceCriticality rdf:type owl:Class ;
+                       rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                       rdfs:comment "Criticality level associated with non-compliance with a regulative norm."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                       rdfs:label "Compliance Criticality"@en .
+
+
+###  https://w3id.org/def/norma-o#ConditionOutcome
+:ConditionOutcome rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  rdfs:comment "A controlled outcome value produced by evaluating a LegalCondition. It is modelled as an extensible SKOS concept class so binary branches, multi-way gateway branches, exception branches, and decision-table outcomes can all be represented consistently."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "Condition Outcome"@en .
+
+
+###  https://w3id.org/def/norma-o#ConflictDefeater
+:ConflictDefeater rdf:type owl:Class ;
+                  rdfs:subClassOf :Defeater ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasResolutionPrinciple ;
+                                    owl:someValuesFrom :ResolutionPrinciple
+                                  ] ;
+                  rdfs:comment "A defeater in which the defeating norm asserts an opposing deontic status and prevails by a priority principle, which fixes the resulting status."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "Conflict Defeater"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Rebutting defeat in Pollock's sense. Presupposes a conflict detected at the deontic layer (norma:deonticallyConflictsWith, norma:deonticallyContradicts) and records the legal principle that resolves it."@en ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Neither presupposition is OWL-enforceable: that the two related norms are in conflict joins two roles of the same node, and the existential restriction on norma:hasResolutionPrinciple is satisfied in the open world by an unnamed principle, so a missing principle is not detected by a reasoner. Validate both with SHACL."@en ,
+                                                                  "Two conflict defeaters relating the same pair of norms in opposite directions, each citing a different resolution principle, represent a second-degree conflict in Bobbio's sense rather than an annotation error: the criteria are genuinely unordered for that pair, and the direction of prevalence then depends on a policy that the ontology does not fix. norma:conflictPrevailsOver is deliberately left outside the asymmetric norma:directlyPrevailsOver so that such a pair remains representable, and consuming applications should report one prevalence ordering per admissible policy instead of silently choosing one. A pair asserted in opposite directions under the same principle is, by contrast, a contradiction in the annotation."@en .
+
+
+###  https://w3id.org/def/norma-o#ConstitutiveRule
+:ConstitutiveRule rdf:type owl:Class ;
+                  rdfs:subClassOf :NormativeContent ;
+                  owl:disjointWith :RegulativeNorm ;
+                  rdfs:comment "A normative content item that defines, classifies, or constitutes a legal concept, status, or institutional fact."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "Constitutive Rule"@en ;
+                  rdfs:seeAlso <http://www.estrellaproject.org/lkif-core/lkif-top.owl#counts_as> ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "LKIF-Core does not reify constitutive rules as a class; it expresses constitutive force through the lkif:counts_as property on Subjective_Entity (Searle-style institutional facts). The reference is informative only — no formal alignment is asserted because a class cannot be subsumed by a property."@en ,
+                                                                  "Scope carve-outs belong here. A clause stating that a norm does not apply to a class of addressees, systems, or circumstances delimits the field of application without granting any liberty, so it is constitutive rather than regulative; modelling it as a norma:Permission would assert a strong permission that the source does not grant. Stating it as a ConstitutiveRule also gives the carve-out a node in the prevalence digraph, so that it can in turn be limited by a further defeater."@en ,
+                                                                  "The Searle reading is given formal consequence by norma:confersRole. A constitutive rule that constitutes a role says so, and the role it confers reaches a party through a norma:RoleAssignment in a case; the ‘context C’ of ‘X counts as Y in C’ is the rule’s own activation condition. Without that property the class carries a text and a node in the prevalence digraph and nothing else, which is how it stood before: a rule could be evaluated as applicable and still produce no consequence at all."@en .
+
+
+###  https://w3id.org/def/norma-o#Defeater
+:Defeater rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :defeatedNorm ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :NormativeContent
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :defeatingNorm ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :NormativeContent
+                          ] ;
+          rdfs:comment "Reified defeat relation by which one piece of normative content withdraws or overrides the normative effect of another. Abstract superclass: use norma:ExceptionDefeater, norma:ConflictDefeater or norma:TemporalDefeater. Follows the same W3C n-ary relation pattern as norma:TriggerEvent."@en ;
+          rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+          rdfs:label "Defeater"@en ;
+          rdfs:seeAlso <https://plato.stanford.edu/entries/reasoning-defeasible/> ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "Defeasibility is a derived status rather than a class: a norm has a known defeater if and only if it is the norma:defeatedNorm of some Defeater. Under the open-world assumption the absence of a defeater does not entail that a norm is indefeasible; norms known to admit no defeat are marked with norma:hasNormStrength norma:Strict."@en ,
+                                                          "Defeat chains require the intermediate carve-out to be normative content: because norma:defeatedNorm ranges over norma:NormativeContent, an exception can itself be excepted only when it is stated as a norm — a norma:Permission where the source grants a liberty, a norma:ConstitutiveRule where it merely delimits the field of application. A defeater that names no defeating norm contributes no edge to norma:prevailsOver and cannot itself be defeated, so it is an incomplete annotation rather than a modelling option. The minimum cardinality on norma:defeatingNorm records that commitment but does not detect its breach, since under the open-world assumption an unnamed defeating norm is always assumed to exist; enforce it with SHACL."@en ,
+                                                          "Provenance: a Defeater is a prov:Entity, so use prov:wasAttributedTo and prov:wasGeneratedBy directly. Do not use norma:wasAttributedToAnnotator, whose domain is norma:NormativeContent: Defeater is disjoint from NormativeContent and such an assertion would make the graph inconsistent."@en .
+
+
+###  https://w3id.org/def/norma-o#Duty
+:Duty rdf:type owl:Class ;
+      rdfs:subClassOf :LegalPosition ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :isCorrelativeOf ;
+                        owl:someValuesFrom :Claim
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :isJuralOppositeOf ;
+                        owl:allValuesFrom :Privilege
+                      ] ;
+      rdfs:comment "A legal position in which the holder is bound, toward the counterparty, to realise the concerned action content: to perform the action, or to refrain from it when the content is a negated action."@en ;
+      rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+      rdfs:label "Duty"@en ;
+      <http://www.w3.org/2004/02/skos/core#definition> "Hohfeldian duty. Correlative: Claim. Jural opposite: Privilege — a Duty concerning X is the negation of a Privilege concerning ¬X, mirroring O(X) ≡ ¬P(¬X)."@en .
+
+
+###  https://w3id.org/def/norma-o#ExceptionDefeater
+:ExceptionDefeater rdf:type owl:Class ;
+                   rdfs:subClassOf :Defeater ;
+                   rdfs:comment "A defeater that switches off the applicability of the defeated norm under a condition, without asserting the opposite deontic status."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                   rdfs:label "Exception Defeater"@en ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Undercutting defeat in Pollock's sense. In SDL terms, undercutting O(X) yields not-O(X) — a weak permission to omit X — and not F(X). In Hohfeld's terms the Duty conferred by the defeated norm is withdrawn together with its correlative Claim, leaving the agent at liberty. NORMA records that outcome as legal positions (norma:Privilege with its norma:NoRight), never by minting a new norma:Permission individual, which would assert an explicit legislative grant that the source text does not make."@en ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Several norma:appliesWhen gates on one defeater are read conjunctively, while alternative defeaters on the same defeated norm are read disjunctively. An exception that offers several alternative qualifying circumstances is therefore modelled as several ExceptionDefeaters."@en .
+
+
+###  https://w3id.org/def/norma-o#ExtractionMethod
+:ExtractionMethod rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  rdfs:comment "Method used to produce the annotation."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "Extraction Method"@en .
+
+
+###  https://w3id.org/def/norma-o#FactPattern
+:FactPattern rdf:type owl:Class ;
+             rdfs:comment "A described case: the trigger events that fire in a concrete situation, that is, the legal conditions together with the outcomes they take, and the roles the parties involved occupy in it. An input to norm applicability, not a result of it."@en ;
+             rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+             rdfs:label "Fact Pattern"@en ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "A FactPattern selects the active subgraph of activation and defeat relations for a case. The resulting applicability — which norms survive, at which level of the prevalence ordering, and which are reinstated — is deliberately not represented in the ontology: it follows from the described facts and the asserted defeaters, and publishing it as annotated fact would desynchronise it from the normative system from which it follows."@en .
+
+
+###  https://w3id.org/def/norma-o#Facultative
+:Facultative rdf:type owl:Class ;
+             rdfs:subClassOf :Permission ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :confersLegalPosition ;
+                               owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Privilege
+                             ] ;
+             rdfs:comment "A permission under which a legal action is optional: the legal agent is permitted both to perform it and to omit it."@en ;
+             rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+             rdfs:label "Facultative"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "SDL: P(X) ∧ P(¬X), equivalently ¬O(¬X) ∧ ¬O(X) — X is neither forbidden nor obligatory. Hohfeld: the legal agent (A) holds two Privileges toward the counterparty (B), one concerning X and one concerning ¬X (a bilateral liberty), each with a correlative No-right held by B."@en ;
+             <http://www.w3.org/2004/02/skos/core#notation> "FAC" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "Modelled as a subclass of norma:Permission because it is the conjunction of two permissions. It thereby inherits disjointness from norma:Obligation and norma:Prohibition, as SDL requires: P(¬X) contradicts O(X) and P(X) contradicts F(X)."@en .
+
+
+###  https://w3id.org/def/norma-o#LegalAction
+:LegalAction rdf:type owl:Class ;
+             rdfs:comment "A normalized legal action that is prescribed, prohibited, permitted, or recommended by a regulative norm. Consumers may work with the literal shortcut `norma:actionText` for low-ceremony use and mint LegalAction individuals only when the knowledge graph needs action-level reuse across norms."@en ;
+             rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+             rdfs:label "Legal Action"@en ;
+             rdfs:seeAlso <http://www.estrellaproject.org/lkif-core/legal-action.owl#Legal_Action> ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "EVERY inference across norms joins on this class. The deontic closure, the equivalence and conflict relations, the Hohfeldian positions and the weak permission all compare norms through the action they regulate, so two annotators who mint separate individuals for one and the same conduct produce two unrelated islands and the derivation silently finds nothing — no equivalence, no conflict, no blocking of a weak permission. The ontology provides NO mechanism for aligning actions across annotators or regulations: assert owl:sameAs between them, or draw the individuals from a vocabulary of actions agreed beforehand. This is the main data-quality obligation a producer carries, and no reasoner can discharge it."@en .
+
+
+###  https://w3id.org/def/norma-o#LegalAgent
+:LegalAgent rdf:type owl:Class ;
+            rdfs:comment "An entity that bears the legally relevant role of subject of a regulative norm: the party that is obliged, prohibited, permitted, or recommended to perform a legal action."@en ;
+            rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+            rdfs:label "Legal Agent"@en ;
+            rdfs:seeAlso <http://www.estrellaproject.org/lkif-core/legal-action.owl#Legal_Person> ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "Conceptually close to lkif-la:Legal_Person (Natural_Person, Private_Legal_Person, Public_Body). rdfs:seeAlso is used rather than rdfs:subClassOf because lkif-la:Legal_Person also covers Legislative_Body — entities that utter norms rather than bear them — which falls outside NORMA's LegalAgent role, and because lkif-core/legal-action.owl is not imported. foaf:Agent is intentionally not asserted as a TBox parent because it is broader than legal personhood (it includes software agents and other non-legal entities); FOAF classes remain available for instance-level annotation."@en ,
+                                                            "Deliberately left as the common parent of norma:LegalRole and norma:LegalParty rather than being split away, because a norm may be annotated as addressing either, and legacy annotations that commit to neither remain valid. Real legislation almost always addresses a role: in Regulation (EU) 2024/1689 the addressees are the provider, the deployer, the importer and so on, never a named undertaking. Which concrete party bears a norm is therefore a fact about a case, not about the norm, and is stated with norma:RoleAssignment."@en .
+
+
+###  https://w3id.org/def/norma-o#LegalCondition
+:LegalCondition rdf:type owl:Class ;
+                rdfs:comment "A legally relevant condition, fact pattern, or decision criterion whose evaluated outcome determines whether normative content becomes applicable or is triggered. Branch-specific activation is represented using the n-ary TriggerEvent pattern via norma:hasTrigger."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "Legal Condition"@en .
+
+
+###  https://w3id.org/def/norma-o#LegalObject
+:LegalObject rdf:type owl:Class ;
+             rdfs:comment "The entity, resource, person, document, system, content, or data item toward which the regulated action is directed."@en ;
+             rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+             rdfs:label "Legal Object"@en .
+
+
+###  https://w3id.org/def/norma-o#LegalParty
+:LegalParty rdf:type owl:Class ;
+            rdfs:subClassOf :LegalAgent ;
+            owl:disjointWith :LegalRole ;
+            rdfs:comment "A concrete natural or legal person, public authority, agency or body: the entity that occupies a role in a described case, as opposed to the role itself."@en ;
+            rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+            rdfs:label "Legal Party"@en ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "Parties belong to cases, not to norms. A norm that names a party directly is possible — an individual decision, a sanction — but in general legislation addresses roles, and the link between the two is made per case with norma:RoleAssignment."@en .
+
+
+###  https://w3id.org/def/norma-o#LegalPosition
+:LegalPosition rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :concernsLegalAction ;
+                                 owl:someValuesFrom :LegalAction
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasPositionCounterparty ;
+                                 owl:someValuesFrom :LegalAgent
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasPositionHolder ;
+                                 owl:someValuesFrom :LegalAgent
+                               ] ;
+               <http://purl.org/dc/terms/bibliographicCitation> "Hohfeld, W. N. (1913). Some Fundamental Legal Conceptions as Applied in Judicial Reasoning. The Yale Law Journal, 23(1), 16–59."@en ;
+               rdfs:comment "A directed, first-order jural relation in Hohfeld's sense, held by one legal agent (the holder) against another (the counterparty) and concerning a legal action or its negation, as conferred by normative content. Reified following the W3C n-ary relation pattern so that holder, counterparty, action content, and correlative position can be stated explicitly."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "Legal Position"@en ;
+               rdfs:seeAlso <https://doi.org/10.2307/785533> ;
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "Hohfeld's correlatives describe one and the same jural relation from the standpoint of each party: whenever A holds a position toward B concerning X, B necessarily holds the correlative position toward A concerning X. NORMA encodes this with norma:isCorrelativeOf (symmetric, functional, irreflexive) and two OWL 2 property chains that derive the counterparty and propagate the action content across correlatives. The square's other axis, between positions of the same party over negated contents, is norma:isJuralOppositeOf. The mapping from deontic operators is: O(X) ⇒ Duty(A→B, X) ⟷ Claim(B→A, X); F(X) ≡ O(¬X) ⇒ Duty(A→B, ¬X) ⟷ Claim(B→A, ¬X); P(X) ⇒ Privilege(A→B, X) ⟷ NoRight(B→A, X), where A is the norm's legal agent (norma:hasLegalAgent) and B its counterparty (norma:hasCounterparty). OWL reasoning cannot mint these positions, because minting requires creating individuals: they are materialised from the deontic closure by the derivation rule set, which needs only the norm's operator, action, agent and counterparty to be annotated. Once minted, the counterparty and the correlative's content follow by the property chains and need not be written. Only first-order positions are modelled; second-order positions (power, liability, immunity, disability) are out of scope."@en ,
+                                                               "PRIMA FACIE, and not a conclusion about any case. A position is conferred by the norm AS ENACTED, so it is derived from the norm alone and never consults the norm’s status in a described situation: a norm that a case renders inapplicable — defeated by an exception, untriggered by the facts, or outside the system altogether — still confers its position here. “A bears a duty toward B concerning X” therefore reads as what the provision establishes, not as what A owes in a given case. Whether that duty bites is settled by evaluating the case, in the derivation module, and a consumer answering a compliance question must join the two."@en .
+
+
+###  https://w3id.org/def/norma-o#LegalRole
+:LegalRole rdf:type owl:Class ;
+           rdfs:subClassOf :LegalAgent ;
+           rdfs:comment "An abstract addressee defined by a legal source: the capacity in which a party is bound, such as provider, deployer, importer or distributor. What norms name, as opposed to the party that happens to occupy it."@en ;
+           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+           rdfs:label "Legal Role"@en ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "A role is itself constituted by a norma:ConstitutiveRule — a legal definition — and so is part of the normative system rather than of the facts. Annotating the defining provision gives the role a source: article 3(3) of Regulation (EU) 2024/1689 defines the provider, article 3(8) defines the operator as a provider, product manufacturer, deployer, authorised representative, importer or distributor."@en ,
+                                                           "NO SPECIALISATION RELATION between roles is asserted, and the omission is deliberate rather than an oversight. A hierarchy would only change a derivation where a norm addresses a supertype, and in Regulation (EU) 2024/1689 the substantive duties are addressed to the leaf roles while ‘operator’ serves as a scope and enforcement term: article 74 does not impose duties on operators but refers the word back to the scope of article 2(1). Adding the relation before a corpus exercises it would put untested structure in the ontology. Note also that co-specialisations do not join: a norm addressed to the provider does not reach the deployer merely because both are operators."@en .
+
+
+###  https://w3id.org/def/norma-o#LegalSource
+:LegalSource rdf:type owl:Class ;
+             rdfs:subClassOf <http://data.europa.eu/eli/ontology#LegalResource> ;
+             rdfs:comment "A legal resource (in the ELI sense: a work-level identity) from which normative content is extracted, cited, or traced."@en ;
+             rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+             rdfs:label "Legal Source"@en ;
+             rdfs:seeAlso <http://www.estrellaproject.org/lkif-core/norm.owl#Legal_Document> ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "Conceptually related to lkif:Legal_Document. NORMA aligns formally to eli:LegalResource (the maintained W3C-adjacent legal-resource standard) rather than to lkif:Legal_Document, because lkif:Legal_Document is itself an expression:Medium subclass with restrictions on bears/utterer that are incompatible with NORMA's source-as-reference pattern. The LKIF reference is informative only."@en .
+
+
+###  https://w3id.org/def/norma-o#LegalSourceExpression
+:LegalSourceExpression rdf:type owl:Class ;
+                       rdfs:subClassOf <http://data.europa.eu/eli/ontology#LegalExpression> ;
+                       rdfs:comment "A concrete legal expression of a LegalSource: a specific language, consolidation, or published version of the underlying legal resource. Follows the ELI work/expression pattern: a LegalSource is realised by one or more LegalSourceExpressions via `norma:hasSourceExpression` (subproperty of `eli:is_realized_by`)."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                       rdfs:label "Legal Source Expression"@en .
+
+
+###  https://w3id.org/def/norma-o#NegativeRecommendation
+:NegativeRecommendation rdf:type owl:Class ;
+                        rdfs:subClassOf :RegulativeNorm ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :isDeonticallyEquivalentTo ;
+                                          owl:allValuesFrom [ rdf:type owl:Class ;
+                                                              owl:unionOf ( :NegativeRecommendation
+                                                                            :Recommendation
+                                                                          )
+                                                            ]
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :confersLegalPosition ;
+                                          owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                        ] ;
+                        rdfs:comment "A regulative norm stating that a legal action is discouraged."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                        rdfs:label "Negative Recommendation"@en ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "Performing X is discouraged but not forbidden. By analogy with F(X) ≡ O(¬X), a Negative Recommendation of X is deontically equivalent to a Recommendation of ¬X. Like Recommendation, it confers no Hohfeldian legal position."@en ;
+                        <http://www.w3.org/2004/02/skos/core#notation> "REC_NOT" .
+
+
+###  https://w3id.org/def/norma-o#NoRight
+:NoRight rdf:type owl:Class ;
+         rdfs:subClassOf :LegalPosition ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :isCorrelativeOf ;
+                           owl:someValuesFrom :Privilege
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :isJuralOppositeOf ;
+                           owl:allValuesFrom :Claim
+                         ] ;
+         rdfs:comment "A legal position in which the holder has no claim, as against the counterparty, that the counterparty refrain from realising the concerned action content."@en ;
+         rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+         rdfs:label "No-right"@en ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Hohfeldian no-right. Correlative: Privilege. Jural opposite: Claim."@en .
+
+
+###  https://w3id.org/def/norma-o#NormStatus
+:NormStatus rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+            rdfs:comment "Lifecycle status of a normative content item."@en ;
+            rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+            rdfs:label "Norm Status"@en .
+
+
+###  https://w3id.org/def/norma-o#NormStrength
+:NormStrength rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+              rdfs:comment "Whether a norm admits defeat at all."@en ;
+              rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+              rdfs:label "Norm Strength"@en ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "Distinguishes strict norms, which no defeater may withdraw, from defeasible ones. Consumers should refuse to apply a defeater whose defeated norm is strict; OWL cannot enforce this because the constraint joins two roles of the same node."@en .
+
+
+###  https://w3id.org/def/norma-o#NormativeContent
+:NormativeContent rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://data.europa.eu/eli/ontology#jurisdiction> ;
+                                    owl:allValuesFrom <http://data.europa.eu/eli/ontology#AdministrativeArea>
+                                  ] ;
+                  rdfs:comment "An informational entity that expresses machine-readable legal-normative content extracted or formulated from a legal source, either a regulative norm or a constitutive rule. Jurisdiction is represented only with eli:jurisdiction, whose value must be an eli:AdministrativeArea. If no authoritative URI is available yet, use a local provisional resource typed as eli:AdministrativeArea and provide its rdfs:label."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "Normative Content"@en ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Do not attach jurisdiction strings directly to NormativeContent. For extracted labels such as \"Spain\" or \"California\", mint a local jurisdiction resource, type it as eli:AdministrativeArea, attach the extracted text as rdfs:label, and later align or replace it with an authoritative URI when available."@en .
+
+
+###  https://w3id.org/def/norma-o#NormativeRank
+:NormativeRank rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+               rdfs:comment "Rank of a legal source in the hierarchy of sources, from constitutional instruments down to organisational ones."@en ;
+               rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+               rdfs:label "Normative Rank"@en ;
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "Distinct from norma:BindingForce: two hard-law norms may differ in rank. The integer norma:rankLevel makes lex superior computable by comparison within a single legal order; conflicts across legal orders, and questions of competence, are out of scope."@en .
+
+
+###  https://w3id.org/def/norma-o#Obligation
+:Obligation rdf:type owl:Class ;
+            rdfs:subClassOf :RegulativeNorm ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :confersLegalPosition ;
+                              owl:someValuesFrom :Duty
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :confersLegalPosition ;
+                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :Claim
+                                                                :Duty
+                                                              )
+                                                ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :deonticallyContradicts ;
+                              owl:allValuesFrom :Permission
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :isDeonticallyEquivalentTo ;
+                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :Obligation
+                                                                :Prohibition
+                                                              )
+                                                ]
+                            ] ;
+            rdfs:comment "A regulative norm stating that a legal action is required."@en ;
+            rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+            rdfs:label "Obligation"@en ;
+            rdfs:seeAlso <http://www.estrellaproject.org/lkif-core/norm.owl#Obligation> ;
+            <http://www.w3.org/2004/02/skos/core#definition> "SDL: O(X) — the legal agent is obliged to perform X. Hohfeld: the legal agent (A) bears a Duty toward the counterparty (B) concerning X, and B holds the correlative Claim against A concerning X."@en ;
+            <http://www.w3.org/2004/02/skos/core#notation> "OBL" .
+
+
+###  https://w3id.org/def/norma-o#Permission
+:Permission rdf:type owl:Class ;
+            rdfs:subClassOf :RegulativeNorm ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :confersLegalPosition ;
+                              owl:someValuesFrom :Privilege
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :confersLegalPosition ;
+                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :NoRight
+                                                                :Privilege
+                                                              )
+                                                ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :deonticallyContradicts ;
+                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :Obligation
+                                                                :Prohibition
+                                                              )
+                                                ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :isDeonticallyEquivalentTo ;
+                              owl:allValuesFrom :Permission
+                            ] ;
+            rdfs:comment "A regulative norm stating that a legal action is allowed."@en ;
+            rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+            rdfs:label "Permission"@en ;
+            rdfs:seeAlso <http://www.estrellaproject.org/lkif-core/norm.owl#Permission> ;
+            <http://www.w3.org/2004/02/skos/core#definition> "SDL: P(X) ≡ ¬F(X) ≡ ¬O(¬X) — the legal agent is permitted to perform X, i.e. is not forbidden to perform it; a Permission of X deontically contradicts (norma:deonticallyContradicts) a Prohibition of X, and a Permission of ¬X contradicts an Obligation of X. Hohfeld: the legal agent (A) holds a Privilege toward the counterparty (B) concerning X — the jural opposite of a Duty concerning ¬X — and B has the correlative No-right against A concerning X."@en ;
+            <http://www.w3.org/2004/02/skos/core#notation> "PER" .
+
+
+###  https://w3id.org/def/norma-o#Privilege
+:Privilege rdf:type owl:Class ;
+           rdfs:subClassOf :LegalPosition ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :isCorrelativeOf ;
+                             owl:someValuesFrom :NoRight
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :isJuralOppositeOf ;
+                             owl:allValuesFrom :Duty
+                           ] ;
+           rdfs:comment "A legal position in which the holder is free, as against the counterparty, to realise the concerned action content, because the holder has no duty toward the counterparty to the contrary."@en ;
+           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+           rdfs:label "Privilege"@en ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "Liberty"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Hohfeldian privilege (liberty). Correlative: No-right. Jural opposite: Duty — a Privilege concerning X is the negation of a Duty concerning ¬X, mirroring P(X) ≡ ¬O(¬X)."@en .
+
+
+###  https://w3id.org/def/norma-o#Prohibition
+:Prohibition rdf:type owl:Class ;
+             rdfs:subClassOf :RegulativeNorm ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :confersLegalPosition ;
+                               owl:someValuesFrom :Duty
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :confersLegalPosition ;
+                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                   owl:unionOf ( :Claim
+                                                                 :Duty
+                                                               )
+                                                 ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :deonticallyContradicts ;
+                               owl:allValuesFrom :Permission
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :isDeonticallyEquivalentTo ;
+                               owl:allValuesFrom [ rdf:type owl:Class ;
+                                                   owl:unionOf ( :Obligation
+                                                                 :Prohibition
+                                                               )
+                                                 ]
+                             ] ;
+             rdfs:comment "A regulative norm stating that a legal action is forbidden."@en ;
+             rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+             rdfs:label "Prohibition"@en ;
+             rdfs:seeAlso <http://www.estrellaproject.org/lkif-core/norm.owl#Prohibition> ;
+             <http://www.w3.org/2004/02/skos/core#definition> "SDL: F(X) ≡ O(¬X) — the legal agent is forbidden to perform X, i.e. obliged not to perform it; a Prohibition of X is therefore deontically equivalent (norma:isDeonticallyEquivalentTo) to an Obligation of the negated action ¬X (norma:isNegationOf). Hohfeld: the legal agent (A) bears a Duty toward the counterparty (B) concerning ¬X, and B holds the correlative Claim against A concerning ¬X."@en ;
+             <http://www.w3.org/2004/02/skos/core#notation> "PRH" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "Annotate the positive action X with norma:hasLegalAction and norma:actionText, since the negation is already carried by the operator: an action text such as \"must not develop\" under a Prohibition would read as F(¬X) ≡ O(X)."@en .
+
+
+###  https://w3id.org/def/norma-o#Recommendation
+:Recommendation rdf:type owl:Class ;
+                rdfs:subClassOf :RegulativeNorm ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :isDeonticallyEquivalentTo ;
+                                  owl:allValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( :NegativeRecommendation
+                                                                    :Recommendation
+                                                                  )
+                                                    ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :confersLegalPosition ;
+                                  owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                ] ;
+                rdfs:comment "A regulative norm stating that a legal action is recommended."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "Recommendation"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Performing X is recommended but not required. Recommendation is a non-binding operator outside the O/P/F core of SDL and confers no Hohfeldian legal position: omitting X breaches no duty and infringes no claim."@en ;
+                <http://www.w3.org/2004/02/skos/core#notation> "REC" .
+
+
+###  https://w3id.org/def/norma-o#RegulativeNorm
+:RegulativeNorm rdf:type owl:Class ;
+                rdfs:subClassOf :NormativeContent ;
+                rdfs:comment "A normative content item that regulates conduct by prescribing, prohibiting, permitting, or recommending a legal action."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "Regulative Norm"@en ;
+                rdfs:seeAlso <http://www.estrellaproject.org/lkif-core/norm.owl#Norm> ,
+                             <https://plato.stanford.edu/entries/logic-deontic/> ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "Conceptually close to lkif:Norm in LKIF-Core. rdfs:seeAlso is used rather than rdfs:subClassOf because lkif:Norm is equivalentClass to a restriction on lkif:qualifies (a property NORMA does not use) and because LKIF axiomatises the deontic operators as interdefinable (lkif:Obligation owl:equivalentClass lkif:Prohibition), which would conflict with NORMA's pairwise disjointness of regulative subclasses if formal subsumption were asserted."@en ,
+                                                                "Formal grounding in Standard Deontic Logic (SDL). The subclasses of RegulativeNorm classify the deontic operator explicitly used by the annotated legal statement (its surface modality), which is why they are pairwise disjoint. SDL interdefinability — F(X) ≡ O(¬X), P(X) ≡ ¬F(X) ≡ ¬O(¬X), and facultativeness as P(X) ∧ P(¬X) — is therefore not asserted as class equivalence, which would collapse the disjoint annotation classes as in LKIF-Core, but as relations between norms mediated by action negation: norma:isNegationOf between legal actions, and norma:isDeonticallyEquivalentTo, norma:deonticallyContradicts and norma:deonticallyConflictsWith between regulative norms. Likewise, the SDL theorem O(X) → P(X) (axiom D) is a logical consequence of an obligation and does not make an Obligation annotation a Permission annotation. The intersubjective reading of each operator is given by the Hohfeldian legal positions it confers (norma:confersLegalPosition)."@en .
+
+
+###  https://w3id.org/def/norma-o#ResolutionPrinciple
+:ResolutionPrinciple rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                     rdfs:comment "A legal principle that orients the resolution of a conflict between norms."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                     rdfs:label "Resolution Principle"@en ;
+                     <http://www.w3.org/2004/02/skos/core#scopeNote> "Resolution principles may themselves conflict — lex specialis against lex posterior is the classic second-degree conflict — which is why norma:hasResolutionPrinciple is not functional and why the order in which principles are applied is a policy of the consuming application rather than an ontological truth."@en .
+
+
+###  https://w3id.org/def/norma-o#ReviewStatus
+:ReviewStatus rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+              rdfs:comment "Legal review status of an annotation."@en ;
+              rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+              rdfs:label "Review Status"@en .
+
+
+###  https://w3id.org/def/norma-o#RoleAssignment
+:RoleAssignment rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasAssignedParty ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :LegalParty
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasAssignedRole ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :LegalRole
+                                ] ;
+                rdfs:comment "The fact that a given party occupies a given role. Reified following the W3C n-ary relation pattern, as norma:TriggerEvent, norma:LegalPosition, norma:Defeater and norma:WeakPermission are, because the relation is ternary: a party occupies a role IN A CASE."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "Role Assignment"@en ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "ASSERTED, not derived, and this is the one place where the ontology departs from its own principle of deriving what is not generative. The reason is a GAP IN THE MODEL and not an impossibility, which is worth stating precisely. Judging the facts of a case is not the obstacle: a norma:FactPattern already asserts norma:holdsTrigger, and “a substantial modification was made” is as much a judgement about facts as “Acme made it”. The obstacle is that a norma:TriggerEvent records WHAT happened and not WHO did it, so although a constitutive rule names the role it confers (norma:confersRole) and the circumstances that bring it about (its own activation conditions), nothing in the graph connects those circumstances to a party. Were the trigger to carry the party that performed the conduct, a rule could mint the assignment; until then the annotator asserts it, cites the rule with norma:assignedUnderRule, and what the derivation computes is the REACH of each norm."@en ,
+                                                                "Because the assignment is asserted and never retracted, a case may hold one whose justifying rule turns out to be inapplicable there, whether untriggered by the facts or defeated. That is detectable without deriving anything, and a derivation reports it rather than presenting a reach that rests on a rule which does not apply."@en ,
+                                                                "Held by a norma:FactPattern, which thereby describes both what happened and in what capacity each party acted. An assignment asserted outside any fact pattern makes no claim about any case."@en ,
+                                                                "Reification is not optional: the same party occupies different roles in different cases, and one case may assign several roles to one party. A binary property from party to role would fix the assignment for all cases at once and could not represent the reclassification that a constitutive rule performs."@en ,
+                                                                "Why it must be case-relative, with the clearest example in current law: article 25(1) of Regulation (EU) 2024/1689 provides that a distributor, importer, deployer or other third party SHALL BE CONSIDERED TO BE A PROVIDER of a high-risk AI system where it puts its name on the system, makes a substantial modification, or modifies the intended purpose. That is Searle’s ‘X counts as Y in context C’ stated as positive law, and article 25(2) withdraws the role from the original provider in the same breath. The assignment therefore holds under circumstances, which a case-independent property could not express. It is NOT itself defeasible: norma:defeatedNorm ranges over norma:NormativeContent and a role assignment is disjoint from it, so no defeater can target one. What is defeasible is the constitutive rule that justifies the assignment, through norma:assignedUnderRule. Withdrawing that rule does not retract an assignment already asserted in a case, so the withdrawal of a role — article 25(2) of Regulation (EU) 2024/1689, which stops treating the original provider as a provider — is out of scope in this version."@en .
+
+
+###  https://w3id.org/def/norma-o#TemporalDefeater
+:TemporalDefeater rdf:type owl:Class ;
+                  rdfs:subClassOf :Defeater ;
+                  rdfs:comment "A defeater in which a later norm withdraws an earlier one: repeal."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  rdfs:label "Temporal Defeater"@en ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Derogation under lex posterior. Unlike an ExceptionDefeater it is total rather than case-conditional, and it concerns the validity of the defeated norm — its membership of the normative system — rather than its applicability to a particular case."@en ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Pairs with the norma:supersedes shortcut and the norma:Superseded lifecycle value. Because repeal bears on validity and not on applicability, consumers that stratify the defeat digraph should apply temporal defeat as a filter selecting the normative system in force at a given time, before building the case-specific graph, rather than as a step of that graph."@en .
+
+
+###  https://w3id.org/def/norma-o#TriggerEvent
+:TriggerEvent rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :activatesNorm ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :NormativeContent
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasOutcome ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :ConditionOutcome
+                              ] ;
+              rdfs:comment "Reified instance of the triggering relation between a legal condition, one evaluated condition outcome, and one activated normative content item. Represents true, false, and other branch-specific activations without using separate branch-label datatype properties. Follows Pattern 1 / Use Case 1 of the W3C Working Group Note Defining N-ary Relations on the Semantic Web."@en ;
+              rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+              rdfs:label "Trigger Event"@en .
+
+
+###  https://w3id.org/def/norma-o#WeakPermission
+:WeakPermission rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :aboutAction ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :LegalAction
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :forAgent ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :LegalAgent
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :inFactPattern ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :FactPattern
+                                ] ;
+                rdfs:comment "A derived, case-relative statement that a legal action is not forbidden for a legal agent under a described fact pattern. Reified following the W3C n-ary relation pattern, as norma:TriggerEvent, norma:LegalPosition and norma:Defeater are."@en ;
+                rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                rdfs:label "Weak Permission"@en ;
+                rdfs:seeAlso <https://w3id.org/def/norma-o/deriv> ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Weak permission in the sense of von Wright and of Alchourron and Bulygin: not-F(x) holding by absence of a prohibition, as opposed to strong permission, which is an enacted norma:Permission. A WeakPermission is therefore not a norm — it has no legal source and no text — and is disjoint from norma:NormativeContent."@en ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "A prohibition whose own status is undecided BLOCKS the weak permission: the reading is sceptical, not credulous. If the fate of a prohibition is not fixed by the asserted defeaters, then it cannot be asserted that the action is not forbidden, and the honest result is the absence of a weak permission rather than one that a later resolution may withdraw. A credulous reading would also compound an optimism the conclusion already carries, since a weak permission is a closed-world conclusion to begin with."@en ,
+                                                                "Not monotonic, and not an entailment of the annotation graph on its own: it is computed under a closed-world reading of the described case, of the evaluated graph, or of both. Adding a norm, or adding a fact to the case, can withdraw it. Instances therefore belong only in a derived graph, carry prov:wasGeneratedBy toward the activity that produced them, and that activity must record the assumptions it relied on with normad:computedUnderAssumption from the NORMA-O Derivation module."@en ,
+                                                                "Relative to the agent and NOT to a counterparty, deliberately. This follows the Standard Deontic Logic reading, where the conclusion is that no norm of the system prohibits the action to that agent. It does not translate directly into a Hohfeldian position, which would be directed and would read as a liberty against a particular party: a norma:Privilege is conferred by an enacted norma:Permission, whereas a weak permission is the mere absence of a prohibition and so names no counterparty to hold the correlative norma:NoRight against."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://sheyls.github.io/NORMA-O/release/2.0.0/norma-o-v2.svg
+<https://sheyls.github.io/NORMA-O/release/2.0.0/norma-o-v2.svg> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/def/norma-o
+<https://w3id.org/def/norma-o> rdf:type owl:NamedIndividual ;
+                               <http://xmlns.com/foaf/0.1/logo> <https://sheyls.github.io/NORMA-O/release/2.0.0/norma-o-v2.svg> .
+
+
+###  https://w3id.org/def/norma-o#Active
+:Active rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2004/02/skos/core#Concept> ,
+                 :NormStatus ;
+        <http://www.w3.org/2004/02/skos/core#inScheme> :NormStatusScheme ;
+        <http://www.w3.org/2004/02/skos/core#topConceptOf> :NormStatusScheme ;
+        rdfs:comment "Currently in force or active."@en ;
+        rdfs:label "Active"@en ;
+        <http://www.w3.org/2004/02/skos/core#notation> "ACTIVE" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "Active"@en .
+
+
+###  https://w3id.org/def/norma-o#Approved
+:Approved rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                   :ReviewStatus ;
+          <http://www.w3.org/2004/02/skos/core#inScheme> :ReviewStatusScheme ;
+          <http://www.w3.org/2004/02/skos/core#topConceptOf> :ReviewStatusScheme ;
+          rdfs:comment "Review status indicating that the annotation has been validated and accepted."@en ;
+          rdfs:label "Approved"@en ;
+          <http://www.w3.org/2004/02/skos/core#notation> "APPROVED" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Approved"@en .
+
+
+###  https://w3id.org/def/norma-o#BindingForceScheme
+:BindingForceScheme rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                    <http://www.w3.org/2004/02/skos/core#hasTopConcept> :Contractual ,
+                                                                        :HardLaw ,
+                                                                        :InternalPolicy ,
+                                                                        :SoftLaw ;
+                    rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "SKOS concept scheme grouping binding-force values used by NORMA regulative norms."@en ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Binding force scheme"@en .
+
+
+###  https://w3id.org/def/norma-o#ComplianceCriticalityScheme
+:ComplianceCriticalityScheme rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                             <http://www.w3.org/2004/02/skos/core#hasTopConcept> :Critical ,
+                                                                                 :High ,
+                                                                                 :Low ,
+                                                                                 :Medium ;
+                             rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "SKOS concept scheme grouping compliance criticality values used by NORMA regulative norms."@en ;
+                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Compliance criticality scheme"@en .
+
+
+###  https://w3id.org/def/norma-o#ConditionOutcomeScheme
+:ConditionOutcomeScheme rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                        <http://www.w3.org/2004/02/skos/core#hasTopConcept> :FalseOutcome ,
+                                                                            :TrueOutcome ;
+                        rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "Extensible SKOS scheme grouping condition outcome values used by NORMA trigger events."@en ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Condition outcome scheme"@en .
+
+
+###  https://w3id.org/def/norma-o#ConstitutionalRank
+:ConstitutionalRank rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos/core#Concept> ,
+                             :NormativeRank ;
+                    <http://www.w3.org/2004/02/skos/core#inScheme> :NormativeRankScheme ;
+                    <http://www.w3.org/2004/02/skos/core#topConceptOf> :NormativeRankScheme ;
+                    :rankLevel 40 ;
+                    rdfs:comment "Rank of constitutional or founding instruments, including treaties where these head the legal order."@en ;
+                    rdfs:label "Constitutional"@en ;
+                    <http://www.w3.org/2004/02/skos/core#notation> "CONSTITUTIONAL" ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Constitutional"@en .
+
+
+###  https://w3id.org/def/norma-o#Contractual
+:Contractual rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                      :BindingForce ;
+             <http://www.w3.org/2004/02/skos/core#inScheme> :BindingForceScheme ;
+             <http://www.w3.org/2004/02/skos/core#topConceptOf> :BindingForceScheme ;
+             rdfs:comment "Binding force category for obligations, permissions, or constraints arising from a contract or agreement."@en ;
+             rdfs:label "Contractual"@en ;
+             <http://www.w3.org/2004/02/skos/core#notation> "CONTRACTUAL" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Contractual"@en .
+
+
+###  https://w3id.org/def/norma-o#Critical
+:Critical rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                   :ComplianceCriticality ;
+          <http://www.w3.org/2004/02/skos/core#inScheme> :ComplianceCriticalityScheme ;
+          <http://www.w3.org/2004/02/skos/core#topConceptOf> :ComplianceCriticalityScheme ;
+          rdfs:comment "Compliance criticality level indicating that non-compliance may cause severe legal, financial, operational, or safety consequences."@en ;
+          rdfs:label "Critical"@en ;
+          <http://www.w3.org/2004/02/skos/core#notation> "CRITICAL" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Critical"@en .
+
+
+###  https://w3id.org/def/norma-o#Defeasible
+:Defeasible rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos/core#Concept> ,
+                     :NormStrength ;
+            <http://www.w3.org/2004/02/skos/core#inScheme> :NormStrengthScheme ;
+            <http://www.w3.org/2004/02/skos/core#topConceptOf> :NormStrengthScheme ;
+            rdfs:comment "Strength value for a norm that may be withdrawn by an applicable defeater. The default reading when no strength is stated."@en ;
+            rdfs:label "Defeasible"@en ;
+            <http://www.w3.org/2004/02/skos/core#notation> "DEFEASIBLE" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Defeasible"@en .
+
+
+###  https://w3id.org/def/norma-o#DelegatedRank
+:DelegatedRank rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos/core#Concept> ,
+                        :NormativeRank ;
+               <http://www.w3.org/2004/02/skos/core#inScheme> :NormativeRankScheme ;
+               <http://www.w3.org/2004/02/skos/core#topConceptOf> :NormativeRankScheme ;
+               :rankLevel 10 ;
+               rdfs:comment "Rank of delegated acts, technical annexes, and equivalent instruments issued under a specific delegation."@en ;
+               rdfs:label "Delegated"@en ;
+               <http://www.w3.org/2004/02/skos/core#notation> "DELEGATED" ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Delegated"@en .
+
+
+###  https://w3id.org/def/norma-o#Disputed
+:Disputed rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                   :NormStatus ;
+          <http://www.w3.org/2004/02/skos/core#inScheme> :NormStatusScheme ;
+          <http://www.w3.org/2004/02/skos/core#topConceptOf> :NormStatusScheme ;
+          rdfs:comment "Legally or interpretively disputed."@en ;
+          rdfs:label "Disputed"@en ;
+          <http://www.w3.org/2004/02/skos/core#notation> "DISPUTED" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Disputed"@en .
+
+
+###  https://w3id.org/def/norma-o#ExtractionMethodScheme
+:ExtractionMethodScheme rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                        <http://www.w3.org/2004/02/skos/core#hasTopConcept> :LLMExtraction ,
+                                                                            :ManualAnalyst ,
+                                                                            :ManualLawyer ,
+                                                                            :PatternMatching ,
+                                                                            :RuleBased ;
+                        rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "SKOS concept scheme grouping annotation extraction method values used by NORMA."@en ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Extraction method scheme"@en .
+
+
+###  https://w3id.org/def/norma-o#FalseOutcome
+:FalseOutcome rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos/core#Concept> ,
+                       :ConditionOutcome ;
+              <http://www.w3.org/2004/02/skos/core#inScheme> :ConditionOutcomeScheme ;
+              <http://www.w3.org/2004/02/skos/core#topConceptOf> :ConditionOutcomeScheme ;
+              rdfs:comment "Condition outcome indicating that the condition does not hold, corresponding to a false or no branch."@en ;
+              rdfs:label "False Outcome"@en ;
+              <http://www.w3.org/2004/02/skos/core#notation> "FALSE" ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "False outcome"@en .
+
+
+###  https://w3id.org/def/norma-o#HardLaw
+:HardLaw rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/02/skos/core#Concept> ,
+                  :BindingForce ;
+         <http://www.w3.org/2004/02/skos/core#inScheme> :BindingForceScheme ;
+         <http://www.w3.org/2004/02/skos/core#topConceptOf> :BindingForceScheme ;
+         rdfs:comment "Binding force category for legally binding instruments such as statutes, regulations, or enforceable legal acts."@en ;
+         rdfs:label "Hard Law"@en ;
+         <http://www.w3.org/2004/02/skos/core#notation> "HARD_LAW" ;
+         <http://www.w3.org/2004/02/skos/core#prefLabel> "Hard Law"@en .
+
+
+###  https://w3id.org/def/norma-o#High
+:High rdf:type owl:NamedIndividual ,
+               <http://www.w3.org/2004/02/skos/core#Concept> ,
+               :ComplianceCriticality ;
+      <http://www.w3.org/2004/02/skos/core#inScheme> :ComplianceCriticalityScheme ;
+      <http://www.w3.org/2004/02/skos/core#topConceptOf> :ComplianceCriticalityScheme ;
+      rdfs:comment "Compliance criticality level indicating a high level of legal, operational, or business risk in case of non-compliance."@en ;
+      rdfs:label "High"@en ;
+      <http://www.w3.org/2004/02/skos/core#notation> "HIGH" ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "High"@en .
+
+
+###  https://w3id.org/def/norma-o#InternalPolicy
+:InternalPolicy rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos/core#Concept> ,
+                         :BindingForce ;
+                <http://www.w3.org/2004/02/skos/core#inScheme> :BindingForceScheme ;
+                <http://www.w3.org/2004/02/skos/core#topConceptOf> :BindingForceScheme ;
+                rdfs:comment "Binding force category for internal organizational policies, procedures, or governance rules."@en ;
+                rdfs:label "Internal Policy"@en ;
+                <http://www.w3.org/2004/02/skos/core#notation> "INTERNAL_POLICY" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Internal Policy"@en .
+
+
+###  https://w3id.org/def/norma-o#LLMExtraction
+:LLMExtraction rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos/core#Concept> ,
+                        :ExtractionMethod ;
+               <http://www.w3.org/2004/02/skos/core#inScheme> :ExtractionMethodScheme ;
+               <http://www.w3.org/2004/02/skos/core#topConceptOf> :ExtractionMethodScheme ;
+               rdfs:comment "Extraction method indicating that the annotation was produced using a large language model."@en ;
+               rdfs:label "LLM extraction"@en ;
+               <http://www.w3.org/2004/02/skos/core#notation> "LLM_EXTRACTION" ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "LLM extraction"@en .
+
+
+###  https://w3id.org/def/norma-o#LegislativeRank
+:LegislativeRank rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos/core#Concept> ,
+                          :NormativeRank ;
+                 <http://www.w3.org/2004/02/skos/core#inScheme> :NormativeRankScheme ;
+                 <http://www.w3.org/2004/02/skos/core#topConceptOf> :NormativeRankScheme ;
+                 :rankLevel 30 ;
+                 rdfs:comment "Rank of primary legislation: statutes, regulations, and equivalent legislative acts."@en ;
+                 rdfs:label "Legislative"@en ;
+                 <http://www.w3.org/2004/02/skos/core#notation> "LEGISLATIVE" ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Legislative"@en .
+
+
+###  https://w3id.org/def/norma-o#LexPosterior
+:LexPosterior rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos/core#Concept> ,
+                       :ResolutionPrinciple ;
+              <http://www.w3.org/2004/02/skos/core#inScheme> :ResolutionPrincipleScheme ;
+              <http://www.w3.org/2004/02/skos/core#topConceptOf> :ResolutionPrincipleScheme ;
+              rdfs:comment "Resolution principle giving precedence to the later norm over the earlier one."@en ;
+              rdfs:label "Lex posterior"@en ;
+              <http://www.w3.org/2004/02/skos/core#notation> "LEX_POSTERIOR" ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Lex posterior"@en .
+
+
+###  https://w3id.org/def/norma-o#LexSpecialis
+:LexSpecialis rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos/core#Concept> ,
+                       :ResolutionPrinciple ;
+              <http://www.w3.org/2004/02/skos/core#inScheme> :ResolutionPrincipleScheme ;
+              <http://www.w3.org/2004/02/skos/core#topConceptOf> :ResolutionPrincipleScheme ;
+              rdfs:comment "Resolution principle giving precedence to the more specific norm over the more general one."@en ;
+              rdfs:label "Lex specialis"@en ;
+              <http://www.w3.org/2004/02/skos/core#notation> "LEX_SPECIALIS" ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Lex specialis"@en .
+
+
+###  https://w3id.org/def/norma-o#LexSuperior
+:LexSuperior rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                      :ResolutionPrinciple ;
+             <http://www.w3.org/2004/02/skos/core#inScheme> :ResolutionPrincipleScheme ;
+             <http://www.w3.org/2004/02/skos/core#topConceptOf> :ResolutionPrincipleScheme ;
+             rdfs:comment "Resolution principle giving precedence to the norm of higher rank in the hierarchy of sources."@en ;
+             rdfs:label "Lex superior"@en ;
+             <http://www.w3.org/2004/02/skos/core#notation> "LEX_SUPERIOR" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Lex superior"@en .
+
+
+###  https://w3id.org/def/norma-o#Low
+:Low rdf:type owl:NamedIndividual ,
+              <http://www.w3.org/2004/02/skos/core#Concept> ,
+              :ComplianceCriticality ;
+     <http://www.w3.org/2004/02/skos/core#inScheme> :ComplianceCriticalityScheme ;
+     <http://www.w3.org/2004/02/skos/core#topConceptOf> :ComplianceCriticalityScheme ;
+     rdfs:comment "Compliance criticality level indicating limited compliance risk or impact."@en ;
+     rdfs:label "Low"@en ;
+     <http://www.w3.org/2004/02/skos/core#notation> "LOW" ;
+     <http://www.w3.org/2004/02/skos/core#prefLabel> "Low"@en .
+
+
+###  https://w3id.org/def/norma-o#ManualAnalyst
+:ManualAnalyst rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos/core#Concept> ,
+                        :ExtractionMethod ;
+               <http://www.w3.org/2004/02/skos/core#inScheme> :ExtractionMethodScheme ;
+               <http://www.w3.org/2004/02/skos/core#topConceptOf> :ExtractionMethodScheme ;
+               rdfs:comment "Extraction method indicating that the annotation was created manually by a non-lawyer analyst."@en ;
+               rdfs:label "Manual annotation (analyst)"@en ;
+               <http://www.w3.org/2004/02/skos/core#notation> "MANUAL_ANALYST" ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Manual annotation (analyst)"@en .
+
+
+###  https://w3id.org/def/norma-o#ManualLawyer
+:ManualLawyer rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos/core#Concept> ,
+                       :ExtractionMethod ;
+              <http://www.w3.org/2004/02/skos/core#inScheme> :ExtractionMethodScheme ;
+              <http://www.w3.org/2004/02/skos/core#topConceptOf> :ExtractionMethodScheme ;
+              rdfs:comment "Extraction method indicating that the annotation was created manually by a legal expert."@en ;
+              rdfs:label "Manual annotation (lawyer)"@en ;
+              <http://www.w3.org/2004/02/skos/core#notation> "MANUAL_LAWYER" ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Manual annotation (lawyer)"@en .
+
+
+###  https://w3id.org/def/norma-o#Medium
+:Medium rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2004/02/skos/core#Concept> ,
+                 :ComplianceCriticality ;
+        <http://www.w3.org/2004/02/skos/core#inScheme> :ComplianceCriticalityScheme ;
+        <http://www.w3.org/2004/02/skos/core#topConceptOf> :ComplianceCriticalityScheme ;
+        rdfs:comment "Compliance criticality level indicating moderate compliance risk or impact."@en ;
+        rdfs:label "Medium"@en ;
+        <http://www.w3.org/2004/02/skos/core#notation> "MEDIUM" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "Medium"@en .
+
+
+###  https://w3id.org/def/norma-o#NormStatusScheme
+:NormStatusScheme rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                  <http://www.w3.org/2004/02/skos/core#hasTopConcept> :Active ,
+                                                                      :Disputed ,
+                                                                      :NotYetInForce ,
+                                                                      :Superseded ;
+                  rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "SKOS concept scheme grouping lifecycle status values used by NORMA normative content."@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Norm status scheme"@en .
+
+
+###  https://w3id.org/def/norma-o#NormStrengthScheme
+:NormStrengthScheme rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                    <http://www.w3.org/2004/02/skos/core#hasTopConcept> :Defeasible ,
+                                                                        :Strict ;
+                    rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "SKOS concept scheme grouping the norm strength values used by NORMA normative content."@en ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Norm strength scheme"@en .
+
+
+###  https://w3id.org/def/norma-o#NormativeRankScheme
+:NormativeRankScheme rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                     <http://www.w3.org/2004/02/skos/core#hasTopConcept> :ConstitutionalRank ,
+                                                                         :DelegatedRank ,
+                                                                         :LegislativeRank ,
+                                                                         :OrganisationalRank ,
+                                                                         :RegulatoryRank ;
+                     rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "Extensible SKOS concept scheme grouping the normative rank values used by NORMA legal sources. Extend it for jurisdictions whose hierarchy of sources needs finer distinctions."@en ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Normative rank scheme"@en .
+
+
+###  https://w3id.org/def/norma-o#NotReviewed
+:NotReviewed rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                      :ReviewStatus ;
+             <http://www.w3.org/2004/02/skos/core#inScheme> :ReviewStatusScheme ;
+             <http://www.w3.org/2004/02/skos/core#topConceptOf> :ReviewStatusScheme ;
+             rdfs:comment "Review status indicating that the normative content has not yet been reviewed."@en ;
+             rdfs:label "Not Reviewed"@en ;
+             <http://www.w3.org/2004/02/skos/core#notation> "NOT_REVIEWED" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Not Reviewed"@en .
+
+
+###  https://w3id.org/def/norma-o#NotYetInForce
+:NotYetInForce rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos/core#Concept> ,
+                        :NormStatus ;
+               <http://www.w3.org/2004/02/skos/core#inScheme> :NormStatusScheme ;
+               <http://www.w3.org/2004/02/skos/core#topConceptOf> :NormStatusScheme ;
+               rdfs:comment "Published or known but not yet effective."@en ;
+               rdfs:label "Not Yet In Force"@en ;
+               <http://www.w3.org/2004/02/skos/core#notation> "NOT_YET_IN_FORCE" ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Not Yet In Force"@en .
+
+
+###  https://w3id.org/def/norma-o#OrganisationalRank
+:OrganisationalRank rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos/core#Concept> ,
+                             :NormativeRank ;
+                    <http://www.w3.org/2004/02/skos/core#inScheme> :NormativeRankScheme ;
+                    <http://www.w3.org/2004/02/skos/core#topConceptOf> :NormativeRankScheme ;
+                    :rankLevel 0 ;
+                    rdfs:comment "Rank of internal organisational instruments, which yield to every external source."@en ;
+                    rdfs:label "Organisational"@en ;
+                    <http://www.w3.org/2004/02/skos/core#notation> "ORGANISATIONAL" ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Organisational"@en .
+
+
+###  https://w3id.org/def/norma-o#PatternMatching
+:PatternMatching rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos/core#Concept> ,
+                          :ExtractionMethod ;
+                 <http://www.w3.org/2004/02/skos/core#inScheme> :ExtractionMethodScheme ;
+                 <http://www.w3.org/2004/02/skos/core#topConceptOf> :ExtractionMethodScheme ;
+                 rdfs:comment "Extraction method indicating that annotation content was produced by matching textual or structural patterns."@en ;
+                 rdfs:label "Pattern matching"@en ;
+                 <http://www.w3.org/2004/02/skos/core#notation> "PATTERN_MATCHING" ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Pattern matching"@en .
+
+
+###  https://w3id.org/def/norma-o#PendingReview
+:PendingReview rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos/core#Concept> ,
+                        :ReviewStatus ;
+               <http://www.w3.org/2004/02/skos/core#inScheme> :ReviewStatusScheme ;
+               <http://www.w3.org/2004/02/skos/core#topConceptOf> :ReviewStatusScheme ;
+               rdfs:comment "Review status indicating that the annotation is waiting for review."@en ;
+               rdfs:label "Pending Review"@en ;
+               <http://www.w3.org/2004/02/skos/core#notation> "PENDING_REVIEW" ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Pending Review"@en .
+
+
+###  https://w3id.org/def/norma-o#RegulatoryRank
+:RegulatoryRank rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos/core#Concept> ,
+                         :NormativeRank ;
+                <http://www.w3.org/2004/02/skos/core#inScheme> :NormativeRankScheme ;
+                <http://www.w3.org/2004/02/skos/core#topConceptOf> :NormativeRankScheme ;
+                :rankLevel 20 ;
+                rdfs:comment "Rank of secondary or implementing instruments issued under primary legislation."@en ;
+                rdfs:label "Regulatory"@en ;
+                <http://www.w3.org/2004/02/skos/core#notation> "REGULATORY" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Regulatory"@en .
+
+
+###  https://w3id.org/def/norma-o#ResolutionPrincipleScheme
+:ResolutionPrincipleScheme rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                           <http://www.w3.org/2004/02/skos/core#hasTopConcept> :LexPosterior ,
+                                                                               :LexSpecialis ,
+                                                                               :LexSuperior ;
+                           rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "SKOS concept scheme grouping the conflict resolution principles used by NORMA conflict defeaters."@en ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Resolution principle scheme"@en .
+
+
+###  https://w3id.org/def/norma-o#ReviewStatusScheme
+:ReviewStatusScheme rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                    <http://www.w3.org/2004/02/skos/core#hasTopConcept> :Approved ,
+                                                                        :NotReviewed ,
+                                                                        :PendingReview ,
+                                                                        :UnderReview ;
+                    rdfs:isDefinedBy <https://w3id.org/def/norma-o> ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "SKOS concept scheme grouping review status values used by NORMA annotations."@en ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Review status scheme"@en .
+
+
+###  https://w3id.org/def/norma-o#RuleBased
+:RuleBased rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                    :ExtractionMethod ;
+           <http://www.w3.org/2004/02/skos/core#inScheme> :ExtractionMethodScheme ;
+           <http://www.w3.org/2004/02/skos/core#topConceptOf> :ExtractionMethodScheme ;
+           rdfs:comment "Extraction method indicating that the annotation was produced by deterministic rules."@en ;
+           rdfs:label "Rule-based extraction"@en ;
+           <http://www.w3.org/2004/02/skos/core#notation> "RULE_BASED" ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Rule-based extraction"@en .
+
+
+###  https://w3id.org/def/norma-o#SoftLaw
+:SoftLaw rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/02/skos/core#Concept> ,
+                  :BindingForce ;
+         <http://www.w3.org/2004/02/skos/core#inScheme> :BindingForceScheme ;
+         <http://www.w3.org/2004/02/skos/core#topConceptOf> :BindingForceScheme ;
+         rdfs:comment "Binding force category for non-binding guidance, recommendations, codes of conduct, or policy instruments."@en ;
+         rdfs:label "Soft Law"@en ;
+         rdfs:seeAlso <http://www.estrellaproject.org/lkif-core/norm.owl#Soft_Law> ;
+         <http://www.w3.org/2004/02/skos/core#notation> "SOFT_LAW" ;
+         <http://www.w3.org/2004/02/skos/core#prefLabel> "Soft Law"@en .
+
+
+###  https://w3id.org/def/norma-o#Strict
+:Strict rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2004/02/skos/core#Concept> ,
+                 :NormStrength ;
+        <http://www.w3.org/2004/02/skos/core#inScheme> :NormStrengthScheme ;
+        <http://www.w3.org/2004/02/skos/core#topConceptOf> :NormStrengthScheme ;
+        rdfs:comment "Strength value for a norm that admits no defeat, such as a peremptory or constitutional-core norm."@en ;
+        rdfs:label "Strict"@en ;
+        <http://www.w3.org/2004/02/skos/core#notation> "STRICT" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "Strict"@en .
+
+
+###  https://w3id.org/def/norma-o#Superseded
+:Superseded rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos/core#Concept> ,
+                     :NormStatus ;
+            <http://www.w3.org/2004/02/skos/core#inScheme> :NormStatusScheme ;
+            <http://www.w3.org/2004/02/skos/core#topConceptOf> :NormStatusScheme ;
+            rdfs:comment "Replaced by another norm."@en ;
+            rdfs:label "Superseded"@en ;
+            <http://www.w3.org/2004/02/skos/core#notation> "SUPERSEDED" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Superseded"@en .
+
+
+###  https://w3id.org/def/norma-o#TrueOutcome
+:TrueOutcome rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                      :ConditionOutcome ;
+             <http://www.w3.org/2004/02/skos/core#inScheme> :ConditionOutcomeScheme ;
+             <http://www.w3.org/2004/02/skos/core#topConceptOf> :ConditionOutcomeScheme ;
+             rdfs:comment "Condition outcome indicating that the condition holds, corresponding to a true or yes branch."@en ;
+             rdfs:label "True Outcome"@en ;
+             <http://www.w3.org/2004/02/skos/core#notation> "TRUE" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "True outcome"@en .
+
+
+###  https://w3id.org/def/norma-o#UnderReview
+:UnderReview rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                      :ReviewStatus ;
+             <http://www.w3.org/2004/02/skos/core#inScheme> :ReviewStatusScheme ;
+             <http://www.w3.org/2004/02/skos/core#topConceptOf> :ReviewStatusScheme ;
+             rdfs:comment "Review status indicating that the annotation is currently under legal, editorial, or analytical review."@en ;
+             rdfs:label "Under Review"@en ;
+             <http://www.w3.org/2004/02/skos/core#notation> "UNDER_REVIEW" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Under Review"@en ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "Moved from norma:NormStatus to norma:ReviewStatus in version 2.0. Reviewing an annotation does not change whether the norm itself is in force, so the value belongs to the review lifecycle of the annotation — between norma:PendingReview and norma:Approved — and not to the lifecycle of the normative content. Consumers of version 1.0 graphs that used it as a norm status should remap it."@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Claim
+                :Duty
+                :NoRight
+                :Privilege
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ConflictDefeater
+                :ExceptionDefeater
+                :TemporalDefeater
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Defeater
+                :FactPattern
+                :LegalAction
+                :LegalAgent
+                :LegalCondition
+                :LegalObject
+                :LegalPosition
+                :LegalSource
+                :NormativeContent
+                :RoleAssignment
+                :WeakPermission
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :NegativeRecommendation
+                :Obligation
+                :Permission
+                :Prohibition
+                :Recommendation
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

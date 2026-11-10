@@ -1,0 +1,398 @@
+[ {
+  "@id" : "https://example.org/norma-cycles",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/def/norma-o"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#A",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalAgent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#C0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#FactPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "empty case"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#cd_s12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ConflictDefeater"
+  } ],
+  "https://w3id.org/def/norma-o#defeatedNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_s2"
+  } ],
+  "https://w3id.org/def/norma-o#defeatingNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_s1"
+  } ],
+  "https://w3id.org/def/norma-o#hasResolutionPrinciple" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LexSpecialis"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#cd_s21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ConflictDefeater"
+  } ],
+  "https://w3id.org/def/norma-o#defeatedNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_s1"
+  } ],
+  "https://w3id.org/def/norma-o#defeatingNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_s2"
+  } ],
+  "https://w3id.org/def/norma-o#hasResolutionPrinciple" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LexPosterior"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#cd_t12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ConflictDefeater"
+  } ],
+  "https://w3id.org/def/norma-o#defeatedNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_t2"
+  } ],
+  "https://w3id.org/def/norma-o#defeatingNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_t1"
+  } ],
+  "https://w3id.org/def/norma-o#hasResolutionPrinciple" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LexSuperior"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#cd_t21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ConflictDefeater"
+  } ],
+  "https://w3id.org/def/norma-o#defeatedNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_t1"
+  } ],
+  "https://w3id.org/def/norma-o#defeatingNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_t2"
+  } ],
+  "https://w3id.org/def/norma-o#hasResolutionPrinciple" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LexSuperior"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#ed_u12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ExceptionDefeater"
+  } ],
+  "https://w3id.org/def/norma-o#defeatedNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_u2"
+  } ],
+  "https://w3id.org/def/norma-o#defeatingNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_u1"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#ed_u21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ExceptionDefeater"
+  } ],
+  "https://w3id.org/def/norma-o#defeatedNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_u1"
+  } ],
+  "https://w3id.org/def/norma-o#defeatingNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_u2"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#ed_v",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ExceptionDefeater"
+  } ],
+  "https://w3id.org/def/norma-o#defeatedNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_v"
+  } ],
+  "https://w3id.org/def/norma-o#defeatingNorm" : [ {
+    "@id" : "https://example.org/norma-cycles#n_v_att"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#n_s1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Obligation"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "n_s1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/norma-cycles#s1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/norma-cycles#A"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#n_s2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Prohibition"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "n_s2"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/norma-cycles#s1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/norma-cycles#A"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#n_t1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Obligation"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "n_t1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/norma-cycles#t1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/norma-cycles#A"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#n_t2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Prohibition"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "n_t2"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/norma-cycles#t1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/norma-cycles#A"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#n_u1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Obligation"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "n_u1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/norma-cycles#u1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/norma-cycles#A"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#n_u2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Permission"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "n_u2"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/norma-cycles#u1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/norma-cycles#A"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#n_v",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Obligation"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "n_v"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/norma-cycles#v1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/norma-cycles#A"
+  } ],
+  "https://w3id.org/def/norma-o#hasNormStrength" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Strict"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#n_v_att",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ConstitutiveRule"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "n_v_att"
+  } ],
+  "https://w3id.org/def/norma-o#factStatement" : [ {
+    "@value" : "purports to except what admits no exception"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#n_w1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Obligation"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "n_w1"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/norma-cycles#w1a"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/norma-cycles#A"
+  } ],
+  "https://w3id.org/def/norma-o#supersedes" : [ {
+    "@id" : "https://example.org/norma-cycles#n_w2"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#n_w2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Obligation"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "n_w2"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/norma-cycles#w1a"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/norma-cycles#A"
+  } ],
+  "https://w3id.org/def/norma-o#supersedes" : [ {
+    "@id" : "https://example.org/norma-cycles#n_w3"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#n_w3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Obligation"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "n_w3"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://example.org/norma-cycles#w1a"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://example.org/norma-cycles#A"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#s1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "s1"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#t1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "t1"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#u1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "u1"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#v1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "v1"
+  } ]
+}, {
+  "@id" : "https://example.org/norma-cycles#w1a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "w"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#ConflictDefeater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#ConstitutiveRule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#ExceptionDefeater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#FactPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#Obligation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#Permission",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#Prohibition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#defeatedNorm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#defeatingNorm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#deonticId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#factStatement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasLegalAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasLegalAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasNormStrength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasResolutionPrinciple",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#supersedes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

@@ -865,10 +865,12 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
+# https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg
+<https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
 # https://w3id.org/def/norma-o
 <https://w3id.org/def/norma-o> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/def/norma-o> <http://xmlns.com/foaf/0.1/logo> <https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg> .
-<https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
 # https://w3id.org/def/norma-o#Active
 <https://w3id.org/def/norma-o#Active> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1208,8 +1210,6 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/def/norma-o#UnderReview> <http://www.w3.org/2000/01/rdf-schema#comment> "Under legal, editorial, or analytical review."@en .
 <https://w3id.org/def/norma-o#UnderReview> <http://www.w3.org/2000/01/rdf-schema#label> "Under Review"@en .
 <https://w3id.org/def/norma-o#UnderReview> <http://www.w3.org/2004/02/skos/core#prefLabel> "Under Review"@en .
-# 
-# https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg
 # 
 # 
 # 

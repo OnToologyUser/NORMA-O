@@ -1,0 +1,734 @@
+@prefix : <https://example.org/norma-test#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://example.org/norma-test#> .
+
+<https://example.org/norma-test> rdf:type owl:Ontology ;
+                                  owl:imports <https://w3id.org/def/norma-o> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/def/norma-o#activatesNorm
+<https://w3id.org/def/norma-o#activatesNorm> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#appliesWhen
+<https://w3id.org/def/norma-o#appliesWhen> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#conditionStatement
+<https://w3id.org/def/norma-o#conditionStatement> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#defeatedNorm
+<https://w3id.org/def/norma-o#defeatedNorm> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#defeatingNorm
+<https://w3id.org/def/norma-o#defeatingNorm> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#deonticId
+<https://w3id.org/def/norma-o#deonticId> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#factStatement
+<https://w3id.org/def/norma-o#factStatement> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#hasCounterparty
+<https://w3id.org/def/norma-o#hasCounterparty> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#hasLegalAction
+<https://w3id.org/def/norma-o#hasLegalAction> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#hasLegalAgent
+<https://w3id.org/def/norma-o#hasLegalAgent> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#hasNormStatus
+<https://w3id.org/def/norma-o#hasNormStatus> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#hasOutcome
+<https://w3id.org/def/norma-o#hasOutcome> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#hasTrigger
+<https://w3id.org/def/norma-o#hasTrigger> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#holdsTrigger
+<https://w3id.org/def/norma-o#holdsTrigger> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/def/norma-o#isNegationOf
+<https://w3id.org/def/norma-o#isNegationOf> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/def/norma-o#ConstitutiveRule
+<https://w3id.org/def/norma-o#ConstitutiveRule> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/norma-o#ExceptionDefeater
+<https://w3id.org/def/norma-o#ExceptionDefeater> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/norma-o#FactPattern
+<https://w3id.org/def/norma-o#FactPattern> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/norma-o#Facultative
+<https://w3id.org/def/norma-o#Facultative> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/norma-o#LegalAction
+<https://w3id.org/def/norma-o#LegalAction> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/norma-o#LegalAgent
+<https://w3id.org/def/norma-o#LegalAgent> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/norma-o#LegalCondition
+<https://w3id.org/def/norma-o#LegalCondition> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/norma-o#NegativeRecommendation
+<https://w3id.org/def/norma-o#NegativeRecommendation> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/norma-o#Obligation
+<https://w3id.org/def/norma-o#Obligation> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/norma-o#Permission
+<https://w3id.org/def/norma-o#Permission> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/norma-o#Prohibition
+<https://w3id.org/def/norma-o#Prohibition> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/norma-o#Recommendation
+<https://w3id.org/def/norma-o#Recommendation> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/norma-o#TriggerEvent
+<https://w3id.org/def/norma-o#TriggerEvent> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://example.org/norma-test#A
+:A rdf:type owl:NamedIndividual ,
+            <https://w3id.org/def/norma-o#LegalAgent> ;
+   rdfs:label "agent A"@en .
+
+
+###  https://example.org/norma-test#B
+:B rdf:type owl:NamedIndividual ,
+            <https://w3id.org/def/norma-o#LegalAgent> ;
+   rdfs:label "agent B"@en .
+
+
+###  https://example.org/norma-test#C
+:C rdf:type owl:NamedIndividual ,
+            <https://w3id.org/def/norma-o#LegalAgent> ;
+   rdfs:label "C"@en .
+
+
+###  https://example.org/norma-test#C1
+:C1 rdf:type owl:NamedIndividual ,
+             <https://w3id.org/def/norma-o#FactPattern> ;
+    <https://w3id.org/def/norma-o#holdsTrigger> :te_c1_true ,
+                                                :te_x_true .
+
+
+###  https://example.org/norma-test#C2
+:C2 rdf:type owl:NamedIndividual ,
+             <https://w3id.org/def/norma-o#FactPattern> ;
+    <https://w3id.org/def/norma-o#holdsTrigger> :te_c1_false .
+
+
+###  https://example.org/norma-test#C3
+:C3 rdf:type owl:NamedIndividual ,
+             <https://w3id.org/def/norma-o#FactPattern> .
+
+
+###  https://example.org/norma-test#act_f
+:act_f rdf:type owl:NamedIndividual ,
+                <https://w3id.org/def/norma-o#LegalAction> ;
+       rdfs:label "f"@en .
+
+
+###  https://example.org/norma-test#act_fa
+:act_fa rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/def/norma-o#LegalAction> ;
+        rdfs:label "fa"@en .
+
+
+###  https://example.org/norma-test#act_nr
+:act_nr rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/def/norma-o#LegalAction> ;
+        rdfs:label "nr"@en .
+
+
+###  https://example.org/norma-test#act_o
+:act_o rdf:type owl:NamedIndividual ,
+                <https://w3id.org/def/norma-o#LegalAction> ;
+       rdfs:label "o"@en .
+
+
+###  https://example.org/norma-test#act_p
+:act_p rdf:type owl:NamedIndividual ,
+                <https://w3id.org/def/norma-o#LegalAction> ;
+       rdfs:label "p"@en .
+
+
+###  https://example.org/norma-test#act_r
+:act_r rdf:type owl:NamedIndividual ,
+                <https://w3id.org/def/norma-o#LegalAction> ;
+       rdfs:label "r"@en .
+
+
+###  https://example.org/norma-test#b
+:b rdf:type owl:NamedIndividual ,
+            <https://w3id.org/def/norma-o#LegalAction> ;
+   rdfs:label "b"@en .
+
+
+###  https://example.org/norma-test#c1
+:c1 rdf:type owl:NamedIndividual ,
+             <https://w3id.org/def/norma-o#LegalCondition> ;
+    <https://w3id.org/def/norma-o#conditionStatement> "c1?" ;
+    <https://w3id.org/def/norma-o#hasTrigger> :te_c1_false ,
+                                              :te_c1_true .
+
+
+###  https://example.org/norma-test#c2
+:c2 rdf:type owl:NamedIndividual ,
+             <https://w3id.org/def/norma-o#LegalCondition> ;
+    <https://w3id.org/def/norma-o#conditionStatement> "c2?" ;
+    <https://w3id.org/def/norma-o#hasTrigger> :te_c2_false ,
+                                              :te_c2_true .
+
+
+###  https://example.org/norma-test#c_p1
+:c_p1 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/def/norma-o#LegalCondition> ;
+      <https://w3id.org/def/norma-o#conditionStatement> "p1?" ;
+      <https://w3id.org/def/norma-o#hasTrigger> :te_p1_gate .
+
+
+###  https://example.org/norma-test#c_x
+:c_x rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#LegalCondition> ;
+     <https://w3id.org/def/norma-o#conditionStatement> "c_x?" ;
+     <https://w3id.org/def/norma-o#hasTrigger> :te_x_true .
+
+
+###  https://example.org/norma-test#cc
+:cc rdf:type owl:NamedIndividual ,
+             <https://w3id.org/def/norma-o#LegalAction> ;
+    rdfs:label "cc"@en .
+
+
+###  https://example.org/norma-test#d
+:d rdf:type owl:NamedIndividual ,
+            <https://w3id.org/def/norma-o#LegalAction> ;
+   rdfs:label "d"@en .
+
+
+###  https://example.org/norma-test#d_chain
+:d_chain rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/def/norma-o#ExceptionDefeater> ;
+         <https://w3id.org/def/norma-o#appliesWhen> :te_x_true ;
+         <https://w3id.org/def/norma-o#defeatedNorm> :fct_chain ;
+         <https://w3id.org/def/norma-o#defeatingNorm> :fct_exc .
+
+
+###  https://example.org/norma-test#d_h
+:d_h rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#ExceptionDefeater> ;
+     <https://w3id.org/def/norma-o#appliesWhen> :te_x_true ;
+     <https://w3id.org/def/norma-o#defeatedNorm> :n_h ;
+     <https://w3id.org/def/norma-o#defeatingNorm> :fct_exc .
+
+
+###  https://example.org/norma-test#d_k
+:d_k rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#ExceptionDefeater> ;
+     <https://w3id.org/def/norma-o#appliesWhen> :te_x_true ;
+     <https://w3id.org/def/norma-o#defeatedNorm> :n_k ;
+     <https://w3id.org/def/norma-o#defeatingNorm> :fct_exc .
+
+
+###  https://example.org/norma-test#d_m
+:d_m rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#ExceptionDefeater> ;
+     <https://w3id.org/def/norma-o#appliesWhen> :te_x_true ;
+     <https://w3id.org/def/norma-o#defeatedNorm> :n_m ;
+     <https://w3id.org/def/norma-o#defeatingNorm> :fct_chain .
+
+
+###  https://example.org/norma-test#d_p1
+:d_p1 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/def/norma-o#ExceptionDefeater> ;
+      <https://w3id.org/def/norma-o#appliesWhen> :te_x_true ;
+      <https://w3id.org/def/norma-o#defeatedNorm> :n_p1 ;
+      <https://w3id.org/def/norma-o#defeatingNorm> :fct_p1 .
+
+
+###  https://example.org/norma-test#d_p2
+:d_p2 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/def/norma-o#ExceptionDefeater> ;
+      <https://w3id.org/def/norma-o#appliesWhen> :te_x_true ;
+      <https://w3id.org/def/norma-o#defeatedNorm> :n_p2 ;
+      <https://w3id.org/def/norma-o#defeatingNorm> :fct_p2 .
+
+
+###  https://example.org/norma-test#e
+:e rdf:type owl:NamedIndividual ,
+            <https://w3id.org/def/norma-o#LegalAction> ;
+   rdfs:label "e"@en .
+
+
+###  https://example.org/norma-test#eq_act
+:eq_act rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/def/norma-o#LegalAction> ;
+        rdfs:label "eq"@en .
+
+
+###  https://example.org/norma-test#eq_act_neg
+:eq_act_neg rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/norma-o#LegalAction> ;
+            rdfs:label "not eq"@en ;
+            <https://w3id.org/def/norma-o#isNegationOf> :eq_act .
+
+
+###  https://example.org/norma-test#fct_chain
+:fct_chain rdf:type owl:NamedIndividual ,
+                    <https://w3id.org/def/norma-o#ConstitutiveRule> ;
+           <https://w3id.org/def/norma-o#deonticId> "fct_chain" ;
+           <https://w3id.org/def/norma-o#factStatement> "intermediate carve-out" .
+
+
+###  https://example.org/norma-test#fct_exc
+:fct_exc rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/def/norma-o#ConstitutiveRule> ;
+         <https://w3id.org/def/norma-o#deonticId> "fct_exc" ;
+         <https://w3id.org/def/norma-o#factStatement> "The rule does not apply to the carved-out class." .
+
+
+###  https://example.org/norma-test#fct_p1
+:fct_p1 rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/def/norma-o#ConstitutiveRule> ;
+        <https://w3id.org/def/norma-o#deonticId> "fct_p1" ;
+        <https://w3id.org/def/norma-o#factStatement> "exception not triggered in C1" .
+
+
+###  https://example.org/norma-test#fct_p2
+:fct_p2 rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/def/norma-o#ConstitutiveRule> ;
+        <https://w3id.org/def/norma-o#deonticId> "fct_p2" ;
+        <https://w3id.org/def/norma-o#factStatement> "repealed exception" ;
+        <https://w3id.org/def/norma-o#hasNormStatus> <https://w3id.org/def/norma-o#Superseded> .
+
+
+###  https://example.org/norma-test#g
+:g rdf:type owl:NamedIndividual ,
+            <https://w3id.org/def/norma-o#LegalAction> ;
+   rdfs:label "g"@en .
+
+
+###  https://example.org/norma-test#h
+:h rdf:type owl:NamedIndividual ,
+            <https://w3id.org/def/norma-o#LegalAction> ;
+   rdfs:label "h"@en .
+
+
+###  https://example.org/norma-test#k
+:k rdf:type owl:NamedIndividual ,
+            <https://w3id.org/def/norma-o#LegalAction> ;
+   rdfs:label "k"@en .
+
+
+###  https://example.org/norma-test#m
+:m rdf:type owl:NamedIndividual ,
+            <https://w3id.org/def/norma-o#LegalAction> ;
+   rdfs:label "m"@en .
+
+
+###  https://example.org/norma-test#mt
+:mt rdf:type owl:NamedIndividual ,
+             <https://w3id.org/def/norma-o#LegalAction> ;
+    rdfs:label "mt"@en .
+
+
+###  https://example.org/norma-test#mt_neg
+:mt_neg rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/def/norma-o#LegalAction> ;
+        rdfs:label "not mt"@en ;
+        <https://w3id.org/def/norma-o#isNegationOf> :mt .
+
+
+###  https://example.org/norma-test#n_b
+:n_b rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#Prohibition> ;
+     <https://w3id.org/def/norma-o#deonticId> "n_b" ;
+     <https://w3id.org/def/norma-o#hasLegalAction> :b ;
+     <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_b_B
+:n_b_B rdf:type owl:NamedIndividual ,
+                <https://w3id.org/def/norma-o#Permission> ;
+       <https://w3id.org/def/norma-o#deonticId> "n_b_B" ;
+       <https://w3id.org/def/norma-o#hasLegalAction> :b ;
+       <https://w3id.org/def/norma-o#hasLegalAgent> :B .
+
+
+###  https://example.org/norma-test#n_cc_obl
+:n_cc_obl rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/def/norma-o#Obligation> ;
+          <https://w3id.org/def/norma-o#deonticId> "n_cc_obl" ;
+          <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+          <https://w3id.org/def/norma-o#hasLegalAction> :cc ;
+          <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_cc_prh
+:n_cc_prh rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/def/norma-o#Prohibition> ;
+          <https://w3id.org/def/norma-o#deonticId> "n_cc_prh" ;
+          <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+          <https://w3id.org/def/norma-o#hasLegalAction> :cc ;
+          <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_d
+:n_d rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#Prohibition> ;
+     <https://w3id.org/def/norma-o#deonticId> "n_d" ;
+     <https://w3id.org/def/norma-o#hasLegalAction> :d ;
+     <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_e
+:n_e rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#Prohibition> ;
+     <https://w3id.org/def/norma-o#deonticId> "n_e" ;
+     <https://w3id.org/def/norma-o#hasLegalAction> :e ;
+     <https://w3id.org/def/norma-o#hasLegalAgent> :A ;
+     <https://w3id.org/def/norma-o#hasNormStatus> <https://w3id.org/def/norma-o#Superseded> .
+
+
+###  https://example.org/norma-test#n_eq_obl
+:n_eq_obl rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/def/norma-o#Obligation> ;
+          <https://w3id.org/def/norma-o#deonticId> "n_eq_obl" ;
+          <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+          <https://w3id.org/def/norma-o#hasLegalAction> :eq_act ;
+          <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_eq_obl_B
+:n_eq_obl_B rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/norma-o#Obligation> ;
+            <https://w3id.org/def/norma-o#deonticId> "n_eq_obl_B" ;
+            <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+            <https://w3id.org/def/norma-o#hasLegalAction> :eq_act ;
+            <https://w3id.org/def/norma-o#hasLegalAgent> :B .
+
+
+###  https://example.org/norma-test#n_eq_obl_C
+:n_eq_obl_C rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/norma-o#Obligation> ;
+            <https://w3id.org/def/norma-o#deonticId> "n_eq_obl_C" ;
+            <https://w3id.org/def/norma-o#hasCounterparty> :C ;
+            <https://w3id.org/def/norma-o#hasLegalAction> :eq_act ;
+            <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_eq_prh
+:n_eq_prh rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/def/norma-o#Prohibition> ;
+          <https://w3id.org/def/norma-o#deonticId> "n_eq_prh" ;
+          <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+          <https://w3id.org/def/norma-o#hasLegalAction> :eq_act_neg ;
+          <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_fac
+:n_fac rdf:type owl:NamedIndividual ,
+                <https://w3id.org/def/norma-o#Facultative> ;
+       <https://w3id.org/def/norma-o#deonticId> "n_fac" ;
+       <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+       <https://w3id.org/def/norma-o#hasLegalAction> :act_fa ;
+       <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_fct
+:n_fct rdf:type owl:NamedIndividual ,
+                <https://w3id.org/def/norma-o#ConstitutiveRule> ;
+       <https://w3id.org/def/norma-o#deonticId> "n_fct" ;
+       <https://w3id.org/def/norma-o#factStatement> "counts as something" .
+
+
+###  https://example.org/norma-test#n_g
+:n_g rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#Obligation> ;
+     <https://w3id.org/def/norma-o#deonticId> "n_g" ;
+     <https://w3id.org/def/norma-o#hasLegalAction> :g ;
+     <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_h
+:n_h rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#Prohibition> ;
+     <https://w3id.org/def/norma-o#deonticId> "n_h" ;
+     <https://w3id.org/def/norma-o#hasLegalAction> :h ;
+     <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_k
+:n_k rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#Obligation> ;
+     <https://w3id.org/def/norma-o#deonticId> "n_k" ;
+     <https://w3id.org/def/norma-o#hasLegalAction> :k ;
+     <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_m
+:n_m rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#Obligation> ;
+     <https://w3id.org/def/norma-o#deonticId> "n_m" ;
+     <https://w3id.org/def/norma-o#hasLegalAction> :m ;
+     <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_mt_d
+:n_mt_d rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/def/norma-o#Obligation> ;
+        <https://w3id.org/def/norma-o#deonticId> "n_mt_d" ;
+        <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+        <https://w3id.org/def/norma-o#hasLegalAction> :mt ;
+        <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_mt_p
+:n_mt_p rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/def/norma-o#Permission> ;
+        <https://w3id.org/def/norma-o#deonticId> "n_mt_p" ;
+        <https://w3id.org/def/norma-o#hasCounterparty> :C ;
+        <https://w3id.org/def/norma-o#hasLegalAction> :mt_neg ;
+        <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_nrec
+:n_nrec rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/def/norma-o#NegativeRecommendation> ;
+        <https://w3id.org/def/norma-o#deonticId> "n_nrec" ;
+        <https://w3id.org/def/norma-o#hasLegalAction> :act_nr ;
+        <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_obl
+:n_obl rdf:type owl:NamedIndividual ,
+                <https://w3id.org/def/norma-o#Obligation> ;
+       <https://w3id.org/def/norma-o#deonticId> "n_obl" ;
+       <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+       <https://w3id.org/def/norma-o#hasLegalAction> :act_o ;
+       <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_other
+:n_other rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/def/norma-o#Obligation> ;
+         <https://w3id.org/def/norma-o#deonticId> "n_other" ;
+         <https://w3id.org/def/norma-o#hasLegalAction> :act_o ;
+         <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_p1
+:n_p1 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/def/norma-o#Obligation> ;
+      <https://w3id.org/def/norma-o#deonticId> "n_p1" ;
+      <https://w3id.org/def/norma-o#hasLegalAction> :p1a ;
+      <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_p2
+:n_p2 rdf:type owl:NamedIndividual ,
+               <https://w3id.org/def/norma-o#Obligation> ;
+      <https://w3id.org/def/norma-o#deonticId> "n_p2" ;
+      <https://w3id.org/def/norma-o#hasLegalAction> :p2a ;
+      <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_p2_fac
+:n_p2_fac rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/def/norma-o#Facultative> ;
+          <https://w3id.org/def/norma-o#deonticId> "n_p2_fac" ;
+          <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+          <https://w3id.org/def/norma-o#hasLegalAction> :p2 ;
+          <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_p2_per
+:n_p2_per rdf:type owl:NamedIndividual ,
+                   <https://w3id.org/def/norma-o#Permission> ;
+          <https://w3id.org/def/norma-o#deonticId> "n_p2_per" ;
+          <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+          <https://w3id.org/def/norma-o#hasLegalAction> :p2 ;
+          <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_per
+:n_per rdf:type owl:NamedIndividual ,
+                <https://w3id.org/def/norma-o#Permission> ;
+       <https://w3id.org/def/norma-o#deonticId> "n_per" ;
+       <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+       <https://w3id.org/def/norma-o#hasLegalAction> :act_p ;
+       <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_prh
+:n_prh rdf:type owl:NamedIndividual ,
+                <https://w3id.org/def/norma-o#Prohibition> ;
+       <https://w3id.org/def/norma-o#deonticId> "n_prh" ;
+       <https://w3id.org/def/norma-o#hasLegalAction> :act_f ;
+       <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_q_per
+:n_q_per rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/def/norma-o#Permission> ;
+         <https://w3id.org/def/norma-o#deonticId> "n_q_per" ;
+         <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+         <https://w3id.org/def/norma-o#hasLegalAction> :q2 ;
+         <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_q_prh
+:n_q_prh rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/def/norma-o#Prohibition> ;
+         <https://w3id.org/def/norma-o#deonticId> "n_q_prh" ;
+         <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+         <https://w3id.org/def/norma-o#hasLegalAction> :q2 ;
+         <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_r_obl
+:n_r_obl rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/def/norma-o#Obligation> ;
+         <https://w3id.org/def/norma-o#deonticId> "n_r_obl" ;
+         <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+         <https://w3id.org/def/norma-o#hasLegalAction> :r2 ;
+         <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_r_prh
+:n_r_prh rdf:type owl:NamedIndividual ,
+                  <https://w3id.org/def/norma-o#Prohibition> ;
+         <https://w3id.org/def/norma-o#deonticId> "n_r_prh" ;
+         <https://w3id.org/def/norma-o#hasCounterparty> :B ;
+         <https://w3id.org/def/norma-o#hasLegalAction> :r2 ;
+         <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#n_rec
+:n_rec rdf:type owl:NamedIndividual ,
+                <https://w3id.org/def/norma-o#Recommendation> ;
+       <https://w3id.org/def/norma-o#deonticId> "n_rec" ;
+       <https://w3id.org/def/norma-o#hasLegalAction> :act_r ;
+       <https://w3id.org/def/norma-o#hasLegalAgent> :A .
+
+
+###  https://example.org/norma-test#p1a
+:p1a rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#LegalAction> ;
+     rdfs:label "p1"@en .
+
+
+###  https://example.org/norma-test#p2
+:p2 rdf:type owl:NamedIndividual ,
+             <https://w3id.org/def/norma-o#LegalAction> ;
+    rdfs:label "p2"@en .
+
+
+###  https://example.org/norma-test#p2a
+:p2a rdf:type owl:NamedIndividual ,
+              <https://w3id.org/def/norma-o#LegalAction> ;
+     rdfs:label "p2a"@en .
+
+
+###  https://example.org/norma-test#q2
+:q2 rdf:type owl:NamedIndividual ,
+             <https://w3id.org/def/norma-o#LegalAction> ;
+    rdfs:label "q2"@en .
+
+
+###  https://example.org/norma-test#r2
+:r2 rdf:type owl:NamedIndividual ,
+             <https://w3id.org/def/norma-o#LegalAction> ;
+    rdfs:label "r2"@en .
+
+
+###  https://example.org/norma-test#te_c1_false
+:te_c1_false rdf:type owl:NamedIndividual ,
+                      <https://w3id.org/def/norma-o#TriggerEvent> ;
+             <https://w3id.org/def/norma-o#activatesNorm> :n_other ;
+             <https://w3id.org/def/norma-o#hasOutcome> <https://w3id.org/def/norma-o#FalseOutcome> .
+
+
+###  https://example.org/norma-test#te_c1_true
+:te_c1_true rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/norma-o#TriggerEvent> ;
+            <https://w3id.org/def/norma-o#activatesNorm> :n_b ;
+            <https://w3id.org/def/norma-o#hasOutcome> <https://w3id.org/def/norma-o#TrueOutcome> .
+
+
+###  https://example.org/norma-test#te_c2_false
+:te_c2_false rdf:type owl:NamedIndividual ,
+                      <https://w3id.org/def/norma-o#TriggerEvent> ;
+             <https://w3id.org/def/norma-o#activatesNorm> :n_cc_prh ;
+             <https://w3id.org/def/norma-o#hasOutcome> <https://w3id.org/def/norma-o#FalseOutcome> .
+
+
+###  https://example.org/norma-test#te_c2_true
+:te_c2_true rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/norma-o#TriggerEvent> ;
+            <https://w3id.org/def/norma-o#activatesNorm> :n_cc_obl ;
+            <https://w3id.org/def/norma-o#hasOutcome> <https://w3id.org/def/norma-o#TrueOutcome> .
+
+
+###  https://example.org/norma-test#te_p1_gate
+:te_p1_gate rdf:type owl:NamedIndividual ,
+                     <https://w3id.org/def/norma-o#TriggerEvent> ;
+            <https://w3id.org/def/norma-o#activatesNorm> :fct_p1 ;
+            <https://w3id.org/def/norma-o#hasOutcome> <https://w3id.org/def/norma-o#FalseOutcome> .
+
+
+###  https://example.org/norma-test#te_x_true
+:te_x_true rdf:type owl:NamedIndividual ,
+                    <https://w3id.org/def/norma-o#TriggerEvent> ;
+           <https://w3id.org/def/norma-o#activatesNorm> :fct_exc ;
+           <https://w3id.org/def/norma-o#hasOutcome> <https://w3id.org/def/norma-o#TrueOutcome> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

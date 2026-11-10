@@ -1,0 +1,808 @@
+{
+  "@context" : {
+    "isAssignedPartyOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isAssignedPartyOf",
+      "@type" : "@id"
+    },
+    "LegalSource" : {
+      "@id" : "https://w3id.org/def/norma-o#LegalSource"
+    },
+    "isCorrelativeOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isCorrelativeOf",
+      "@type" : "@id"
+    },
+    "ComplianceCriticality" : {
+      "@id" : "https://w3id.org/def/norma-o#ComplianceCriticality"
+    },
+    "NormativeRank" : {
+      "@id" : "https://w3id.org/def/norma-o#NormativeRank"
+    },
+    "relatesTo" : {
+      "@id" : "https://w3id.org/def/norma-o#relatesTo",
+      "@type" : "@id"
+    },
+    "scopeNote" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#scopeNote"
+    },
+    "NoRight" : {
+      "@id" : "https://w3id.org/def/norma-o#NoRight"
+    },
+    "hasPositionCounterparty" : {
+      "@id" : "https://w3id.org/def/norma-o#hasPositionCounterparty",
+      "@type" : "@id"
+    },
+    "fromRank" : {
+      "@id" : "https://w3id.org/def/norma-o#fromRank",
+      "@type" : "@id"
+    },
+    "ConstitutiveRule" : {
+      "@id" : "https://w3id.org/def/norma-o#ConstitutiveRule"
+    },
+    "isNormStrengthOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isNormStrengthOf",
+      "@type" : "@id"
+    },
+    "wasGeneratedBy" : {
+      "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "isSourceExpressionOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isSourceExpressionOf",
+      "@type" : "@id"
+    },
+    "example" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#example"
+    },
+    "Duty" : {
+      "@id" : "https://w3id.org/def/norma-o#Duty"
+    },
+    "LegalCondition" : {
+      "@id" : "https://w3id.org/def/norma-o#LegalCondition"
+    },
+    "Recommendation" : {
+      "@id" : "https://w3id.org/def/norma-o#Recommendation"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "concernsLegalAction" : {
+      "@id" : "https://w3id.org/def/norma-o#concernsLegalAction",
+      "@type" : "@id"
+    },
+    "deadline" : {
+      "@id" : "https://w3id.org/def/norma-o#deadline",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "holdsRoleAssignment" : {
+      "@id" : "https://w3id.org/def/norma-o#holdsRoleAssignment",
+      "@type" : "@id"
+    },
+    "TemporalDefeater" : {
+      "@id" : "https://w3id.org/def/norma-o#TemporalDefeater"
+    },
+    "isDefeatedBy" : {
+      "@id" : "https://w3id.org/def/norma-o#isDefeatedBy",
+      "@type" : "@id"
+    },
+    "RegulativeNorm" : {
+      "@id" : "https://w3id.org/def/norma-o#RegulativeNorm"
+    },
+    "directlyPrevailsOver" : {
+      "@id" : "https://w3id.org/def/norma-o#directlyPrevailsOver",
+      "@type" : "@id"
+    },
+    "temporalPrevailsOver" : {
+      "@id" : "https://w3id.org/def/norma-o#temporalPrevailsOver",
+      "@type" : "@id"
+    },
+    "exceptionPrevailsOver" : {
+      "@id" : "https://w3id.org/def/norma-o#exceptionPrevailsOver",
+      "@type" : "@id"
+    },
+    "NormStatus" : {
+      "@id" : "https://w3id.org/def/norma-o#NormStatus"
+    },
+    "bibliographicCitation" : {
+      "@id" : "http://purl.org/dc/terms/bibliographicCitation"
+    },
+    "Organization" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Organization"
+    },
+    "normStatement" : {
+      "@id" : "https://w3id.org/def/norma-o#normStatement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "is_realized_by" : {
+      "@id" : "http://data.europa.eu/eli/ontology#is_realized_by",
+      "@type" : "@id"
+    },
+    "confersRole" : {
+      "@id" : "https://w3id.org/def/norma-o#confersRole",
+      "@type" : "@id"
+    },
+    "deonticallyContradicts" : {
+      "@id" : "https://w3id.org/def/norma-o#deonticallyContradicts",
+      "@type" : "@id"
+    },
+    "Permission" : {
+      "@id" : "https://w3id.org/def/norma-o#Permission"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "isJuralOppositeOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isJuralOppositeOf",
+      "@type" : "@id"
+    },
+    "objectText" : {
+      "@id" : "https://w3id.org/def/norma-o#objectText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasLegalObject" : {
+      "@id" : "https://w3id.org/def/norma-o#hasLegalObject",
+      "@type" : "@id"
+    },
+    "paragraphNumber" : {
+      "@id" : "https://w3id.org/def/norma-o#paragraphNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Obligation" : {
+      "@id" : "https://w3id.org/def/norma-o#Obligation"
+    },
+    "priorVersion" : {
+      "@id" : "http://www.w3.org/2002/07/owl#priorVersion"
+    },
+    "isCounterpartyOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isCounterpartyOf",
+      "@type" : "@id"
+    },
+    "isPositionHolderOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isPositionHolderOf",
+      "@type" : "@id"
+    },
+    "BindingForce" : {
+      "@id" : "https://w3id.org/def/norma-o#BindingForce"
+    },
+    "wasAttributedTo" : {
+      "@id" : "http://www.w3.org/ns/prov#wasAttributedTo",
+      "@type" : "@id"
+    },
+    "isOutcomeOfTriggerEvent" : {
+      "@id" : "https://w3id.org/def/norma-o#isOutcomeOfTriggerEvent",
+      "@type" : "@id"
+    },
+    "wasGeneratedByAnnotationActivity" : {
+      "@id" : "https://w3id.org/def/norma-o#wasGeneratedByAnnotationActivity",
+      "@type" : "@id"
+    },
+    "supersededBy" : {
+      "@id" : "https://w3id.org/def/norma-o#supersededBy",
+      "@type" : "@id"
+    },
+    "actionText" : {
+      "@id" : "https://w3id.org/def/norma-o#actionText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Prohibition" : {
+      "@id" : "https://w3id.org/def/norma-o#Prohibition"
+    },
+    "sanction" : {
+      "@id" : "https://w3id.org/def/norma-o#sanction",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "doi" : {
+      "@id" : "http://purl.org/ontology/bibo/doi"
+    },
+    "regulationName" : {
+      "@id" : "https://w3id.org/def/norma-o#regulationName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "effectiveDate" : {
+      "@id" : "https://w3id.org/def/norma-o#effectiveDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "hasSourceExpression" : {
+      "@id" : "https://w3id.org/def/norma-o#hasSourceExpression",
+      "@type" : "@id"
+    },
+    "isTriggerOfCondition" : {
+      "@id" : "https://w3id.org/def/norma-o#isTriggerOfCondition",
+      "@type" : "@id"
+    },
+    "hasExtractionMethod" : {
+      "@id" : "https://w3id.org/def/norma-o#hasExtractionMethod",
+      "@type" : "@id"
+    },
+    "hasResolutionPrinciple" : {
+      "@id" : "https://w3id.org/def/norma-o#hasResolutionPrinciple",
+      "@type" : "@id"
+    },
+    "hasPositionHolder" : {
+      "@id" : "https://w3id.org/def/norma-o#hasPositionHolder",
+      "@type" : "@id"
+    },
+    "Claim" : {
+      "@id" : "https://w3id.org/def/norma-o#Claim"
+    },
+    "LegalResource" : {
+      "@id" : "http://data.europa.eu/eli/ontology#LegalResource"
+    },
+    "exception" : {
+      "@id" : "https://w3id.org/def/norma-o#exception",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isTriggeredByCondition" : {
+      "@id" : "https://w3id.org/def/norma-o#isTriggeredByCondition",
+      "@type" : "@id"
+    },
+    "Activity" : {
+      "@id" : "http://www.w3.org/ns/prov#Activity"
+    },
+    "prevailsOver" : {
+      "@id" : "https://w3id.org/def/norma-o#prevailsOver",
+      "@type" : "@id"
+    },
+    "used" : {
+      "@id" : "http://www.w3.org/ns/prov#used",
+      "@type" : "@id"
+    },
+    "NormativeContent" : {
+      "@id" : "https://w3id.org/def/norma-o#NormativeContent"
+    },
+    "Facultative" : {
+      "@id" : "https://w3id.org/def/norma-o#Facultative"
+    },
+    "isAssignedRoleOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isAssignedRoleOf",
+      "@type" : "@id"
+    },
+    "fromArticle" : {
+      "@id" : "https://w3id.org/def/norma-o#fromArticle",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "LegalPosition" : {
+      "@id" : "https://w3id.org/def/norma-o#LegalPosition"
+    },
+    "hasLegalSource" : {
+      "@id" : "https://w3id.org/def/norma-o#hasLegalSource",
+      "@type" : "@id"
+    },
+    "isNegationOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isNegationOf",
+      "@type" : "@id"
+    },
+    "hasTrigger" : {
+      "@id" : "https://w3id.org/def/norma-o#hasTrigger",
+      "@type" : "@id"
+    },
+    "notation" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+    },
+    "confidenceScore" : {
+      "@id" : "https://w3id.org/def/norma-o#confidenceScore"
+    },
+    "isBindingForceOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isBindingForceOf",
+      "@type" : "@id"
+    },
+    "isHeldInFactPattern" : {
+      "@id" : "https://w3id.org/def/norma-o#isHeldInFactPattern",
+      "@type" : "@id"
+    },
+    "triggersNorm" : {
+      "@id" : "https://w3id.org/def/norma-o#triggersNorm",
+      "@type" : "@id"
+    },
+    "LegalObject" : {
+      "@id" : "https://w3id.org/def/norma-o#LegalObject"
+    },
+    "Agent" : {
+      "@id" : "http://www.w3.org/ns/prov#Agent"
+    },
+    "isLegalPositionConferredBy" : {
+      "@id" : "https://w3id.org/def/norma-o#isLegalPositionConferredBy",
+      "@type" : "@id"
+    },
+    "wasUsedByAnnotationActivity" : {
+      "@id" : "https://w3id.org/def/norma-o#wasUsedByAnnotationActivity",
+      "@type" : "@id"
+    },
+    "LegalSourceExpression" : {
+      "@id" : "https://w3id.org/def/norma-o#LegalSourceExpression"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "isComplianceCriticalityOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isComplianceCriticalityOf",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "isRankOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isRankOf",
+      "@type" : "@id"
+    },
+    "isLegalActionOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isLegalActionOf",
+      "@type" : "@id"
+    },
+    "isPositionCounterpartyOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isPositionCounterpartyOf",
+      "@type" : "@id"
+    },
+    "ExtractionMethod" : {
+      "@id" : "https://w3id.org/def/norma-o#ExtractionMethod"
+    },
+    "LegalAgent" : {
+      "@id" : "https://w3id.org/def/norma-o#LegalAgent"
+    },
+    "hasBindingForce" : {
+      "@id" : "https://w3id.org/def/norma-o#hasBindingForce",
+      "@type" : "@id"
+    },
+    "conditionStatement" : {
+      "@id" : "https://w3id.org/def/norma-o#conditionStatement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "defeatingNorm" : {
+      "@id" : "https://w3id.org/def/norma-o#defeatingNorm",
+      "@type" : "@id"
+    },
+    "fromParagraph" : {
+      "@id" : "https://w3id.org/def/norma-o#fromParagraph",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isSourceForDerivedNormativeContent" : {
+      "@id" : "https://w3id.org/def/norma-o#isSourceForDerivedNormativeContent",
+      "@type" : "@id"
+    },
+    "value" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+      "@type" : "@id"
+    },
+    "wasDerivedFrom" : {
+      "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "@type" : "@id"
+    },
+    "hasOutcome" : {
+      "@id" : "https://w3id.org/def/norma-o#hasOutcome",
+      "@type" : "@id"
+    },
+    "entailsForbidden" : {
+      "@id" : "https://w3id.org/def/norma-o#entailsForbidden",
+      "@type" : "@id"
+    },
+    "hasCounterparty" : {
+      "@id" : "https://w3id.org/def/norma-o#hasCounterparty",
+      "@type" : "@id"
+    },
+    "isResolutionPrincipleOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isResolutionPrincipleOf",
+      "@type" : "@id"
+    },
+    "WeakPermission" : {
+      "@id" : "https://w3id.org/def/norma-o#WeakPermission"
+    },
+    "factStatement" : {
+      "@id" : "https://w3id.org/def/norma-o#factStatement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "conditionTrigger" : {
+      "@id" : "https://w3id.org/def/norma-o#conditionTrigger",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "sourceURI" : {
+      "@id" : "https://w3id.org/def/norma-o#sourceURI",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "hasLegalAction" : {
+      "@id" : "https://w3id.org/def/norma-o#hasLegalAction",
+      "@type" : "@id"
+    },
+    "NegativeRecommendation" : {
+      "@id" : "https://w3id.org/def/norma-o#NegativeRecommendation"
+    },
+    "ConditionOutcome" : {
+      "@id" : "https://w3id.org/def/norma-o#ConditionOutcome"
+    },
+    "status" : {
+      "@id" : "http://purl.org/ontology/bibo/status"
+    },
+    "ExceptionDefeater" : {
+      "@id" : "https://w3id.org/def/norma-o#ExceptionDefeater"
+    },
+    "hasComplianceCriticality" : {
+      "@id" : "https://w3id.org/def/norma-o#hasComplianceCriticality",
+      "@type" : "@id"
+    },
+    "isRoleConferredBy" : {
+      "@id" : "https://w3id.org/def/norma-o#isRoleConferredBy",
+      "@type" : "@id"
+    },
+    "wasAttributedToAnnotator" : {
+      "@id" : "https://w3id.org/def/norma-o#wasAttributedToAnnotator",
+      "@type" : "@id"
+    },
+    "isAnnotatorOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isAnnotatorOf",
+      "@type" : "@id"
+    },
+    "LegalParty" : {
+      "@id" : "https://w3id.org/def/norma-o#LegalParty"
+    },
+    "supersedes" : {
+      "@id" : "https://w3id.org/def/norma-o#supersedes",
+      "@type" : "@id"
+    },
+    "hasRank" : {
+      "@id" : "https://w3id.org/def/norma-o#hasRank",
+      "@type" : "@id"
+    },
+    "deprecated" : {
+      "@id" : "http://www.w3.org/2002/07/owl#deprecated"
+    },
+    "hasNormStrength" : {
+      "@id" : "https://w3id.org/def/norma-o#hasNormStrength",
+      "@type" : "@id"
+    },
+    "hasAssignedParty" : {
+      "@id" : "https://w3id.org/def/norma-o#hasAssignedParty",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "entailsObligatory" : {
+      "@id" : "https://w3id.org/def/norma-o#entailsObligatory",
+      "@type" : "@id"
+    },
+    "assignedUnderRule" : {
+      "@id" : "https://w3id.org/def/norma-o#assignedUnderRule",
+      "@type" : "@id"
+    },
+    "RoleAssignment" : {
+      "@id" : "https://w3id.org/def/norma-o#RoleAssignment"
+    },
+    "articleNumber" : {
+      "@id" : "https://w3id.org/def/norma-o#articleNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "agentText" : {
+      "@id" : "https://w3id.org/def/norma-o#agentText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasNormStatus" : {
+      "@id" : "https://w3id.org/def/norma-o#hasNormStatus",
+      "@type" : "@id"
+    },
+    "definition" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#definition"
+    },
+    "deonticId" : {
+      "@id" : "https://w3id.org/def/norma-o#deonticId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "activatesNorm" : {
+      "@id" : "https://w3id.org/def/norma-o#activatesNorm",
+      "@type" : "@id"
+    },
+    "rankLevel" : {
+      "@id" : "https://w3id.org/def/norma-o#rankLevel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "jurisdiction" : {
+      "@id" : "http://data.europa.eu/eli/ontology#jurisdiction",
+      "@type" : "@id"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "isPrevailedOverBy" : {
+      "@id" : "https://w3id.org/def/norma-o#isPrevailedOverBy",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "isContentOfLegalPosition" : {
+      "@id" : "https://w3id.org/def/norma-o#isContentOfLegalPosition",
+      "@type" : "@id"
+    },
+    "wasAssociatedWith" : {
+      "@id" : "http://www.w3.org/ns/prov#wasAssociatedWith",
+      "@type" : "@id"
+    },
+    "annotationDate" : {
+      "@id" : "https://w3id.org/def/norma-o#annotationDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/terms/source"
+    },
+    "confersLegalPosition" : {
+      "@id" : "https://w3id.org/def/norma-o#confersLegalPosition",
+      "@type" : "@id"
+    },
+    "wasAssociatedWithAnnotator" : {
+      "@id" : "https://w3id.org/def/norma-o#wasAssociatedWithAnnotator",
+      "@type" : "@id"
+    },
+    "FactPattern" : {
+      "@id" : "https://w3id.org/def/norma-o#FactPattern"
+    },
+    "entailsDiscouraged" : {
+      "@id" : "https://w3id.org/def/norma-o#entailsDiscouraged",
+      "@type" : "@id"
+    },
+    "isRuleOfRoleAssignment" : {
+      "@id" : "https://w3id.org/def/norma-o#isRuleOfRoleAssignment",
+      "@type" : "@id"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher"
+    },
+    "AnnotatorAgent" : {
+      "@id" : "https://w3id.org/def/norma-o#AnnotatorAgent"
+    },
+    "isTriggerEstablishedBy" : {
+      "@id" : "https://w3id.org/def/norma-o#isTriggerEstablishedBy",
+      "@type" : "@id"
+    },
+    "ReviewStatus" : {
+      "@id" : "https://w3id.org/def/norma-o#ReviewStatus"
+    },
+    "isReviewStatusOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isReviewStatusOf",
+      "@type" : "@id"
+    },
+    "isGateOfDefeater" : {
+      "@id" : "https://w3id.org/def/norma-o#isGateOfDefeater",
+      "@type" : "@id"
+    },
+    "hasReviewStatus" : {
+      "@id" : "https://w3id.org/def/norma-o#hasReviewStatus",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "entailsPermitted" : {
+      "@id" : "https://w3id.org/def/norma-o#entailsPermitted",
+      "@type" : "@id"
+    },
+    "isActivatedByTriggerEvent" : {
+      "@id" : "https://w3id.org/def/norma-o#isActivatedByTriggerEvent",
+      "@type" : "@id"
+    },
+    "topConceptOf" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#topConceptOf"
+    },
+    "aboutAction" : {
+      "@id" : "https://w3id.org/def/norma-o#aboutAction",
+      "@type" : "@id"
+    },
+    "Defeater" : {
+      "@id" : "https://w3id.org/def/norma-o#Defeater"
+    },
+    "isRoleAssignmentIn" : {
+      "@id" : "https://w3id.org/def/norma-o#isRoleAssignmentIn",
+      "@type" : "@id"
+    },
+    "logo" : {
+      "@id" : "http://xmlns.com/foaf/0.1/logo",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "TriggerEvent" : {
+      "@id" : "https://w3id.org/def/norma-o#TriggerEvent"
+    },
+    "Entity" : {
+      "@id" : "http://www.w3.org/ns/prov#Entity"
+    },
+    "isDeonticallyEquivalentTo" : {
+      "@id" : "https://w3id.org/def/norma-o#isDeonticallyEquivalentTo",
+      "@type" : "@id"
+    },
+    "hasLegalAgent" : {
+      "@id" : "https://w3id.org/def/norma-o#hasLegalAgent",
+      "@type" : "@id"
+    },
+    "entailsNotForbidden" : {
+      "@id" : "https://w3id.org/def/norma-o#entailsNotForbidden",
+      "@type" : "@id"
+    },
+    "originalText" : {
+      "@id" : "https://w3id.org/def/norma-o#originalText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "isNormStatusOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isNormStatusOf",
+      "@type" : "@id"
+    },
+    "generatedNormativeContent" : {
+      "@id" : "https://w3id.org/def/norma-o#generatedNormativeContent",
+      "@type" : "@id"
+    },
+    "entailsNotPermitted" : {
+      "@id" : "https://w3id.org/def/norma-o#entailsNotPermitted",
+      "@type" : "@id"
+    },
+    "fromRegulation" : {
+      "@id" : "https://w3id.org/def/norma-o#fromRegulation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "language" : {
+      "@id" : "http://purl.org/dc/terms/language"
+    },
+    "Privilege" : {
+      "@id" : "https://w3id.org/def/norma-o#Privilege"
+    },
+    "isExtractionMethodOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isExtractionMethodOf",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "usedLegalSource" : {
+      "@id" : "https://w3id.org/def/norma-o#usedLegalSource",
+      "@type" : "@id"
+    },
+    "isLegalAgentOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isLegalAgentOf",
+      "@type" : "@id"
+    },
+    "entailsRecommended" : {
+      "@id" : "https://w3id.org/def/norma-o#entailsRecommended",
+      "@type" : "@id"
+    },
+    "establishesTrigger" : {
+      "@id" : "https://w3id.org/def/norma-o#establishesTrigger",
+      "@type" : "@id"
+    },
+    "ResolutionPrinciple" : {
+      "@id" : "https://w3id.org/def/norma-o#ResolutionPrinciple"
+    },
+    "isExceptionTo" : {
+      "@id" : "https://w3id.org/def/norma-o#isExceptionTo",
+      "@type" : "@id"
+    },
+    "lastReviewDate" : {
+      "@id" : "https://w3id.org/def/norma-o#lastReviewDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "wasAnnotatorAssociatedWithActivity" : {
+      "@id" : "https://w3id.org/def/norma-o#wasAnnotatorAssociatedWithActivity",
+      "@type" : "@id"
+    },
+    "isDefeatingNormOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isDefeatingNormOf",
+      "@type" : "@id"
+    },
+    "holdsTrigger" : {
+      "@id" : "https://w3id.org/def/norma-o#holdsTrigger",
+      "@type" : "@id"
+    },
+    "alternative" : {
+      "@id" : "http://purl.org/dc/terms/alternative"
+    },
+    "LegalRole" : {
+      "@id" : "https://w3id.org/def/norma-o#LegalRole"
+    },
+    "deonticallyConflictsWith" : {
+      "@id" : "https://w3id.org/def/norma-o#deonticallyConflictsWith",
+      "@type" : "@id"
+    },
+    "LegalAction" : {
+      "@id" : "https://w3id.org/def/norma-o#LegalAction"
+    },
+    "isLegalSourceOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isLegalSourceOf",
+      "@type" : "@id"
+    },
+    "AdministrativeArea" : {
+      "@id" : "http://data.europa.eu/eli/ontology#AdministrativeArea"
+    },
+    "includedInDataCatalog" : {
+      "@id" : "https://schema.org/includedInDataCatalog"
+    },
+    "hasAssignedRole" : {
+      "@id" : "https://w3id.org/def/norma-o#hasAssignedRole",
+      "@type" : "@id"
+    },
+    "conflictPrevailsOver" : {
+      "@id" : "https://w3id.org/def/norma-o#conflictPrevailsOver",
+      "@type" : "@id"
+    },
+    "isLegalObjectOf" : {
+      "@id" : "https://w3id.org/def/norma-o#isLegalObjectOf",
+      "@type" : "@id"
+    },
+    "NormStrength" : {
+      "@id" : "https://w3id.org/def/norma-o#NormStrength"
+    },
+    "AnnotationActivity" : {
+      "@id" : "https://w3id.org/def/norma-o#AnnotationActivity"
+    },
+    "hasTopConcept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#hasTopConcept"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "forAgent" : {
+      "@id" : "https://w3id.org/def/norma-o#forAgent",
+      "@type" : "@id"
+    },
+    "inFactPattern" : {
+      "@id" : "https://w3id.org/def/norma-o#inFactPattern",
+      "@type" : "@id"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "LegalExpression" : {
+      "@id" : "http://data.europa.eu/eli/ontology#LegalExpression"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "regulationURI" : {
+      "@id" : "https://w3id.org/def/norma-o#regulationURI",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "entailsNotObligatory" : {
+      "@id" : "https://w3id.org/def/norma-o#entailsNotObligatory",
+      "@type" : "@id"
+    },
+    "wasDerivedFromSource" : {
+      "@id" : "https://w3id.org/def/norma-o#wasDerivedFromSource",
+      "@type" : "@id"
+    },
+    "ConflictDefeater" : {
+      "@id" : "https://w3id.org/def/norma-o#ConflictDefeater"
+    },
+    "appliesWhen" : {
+      "@id" : "https://w3id.org/def/norma-o#appliesWhen",
+      "@type" : "@id"
+    },
+    "defeatedNorm" : {
+      "@id" : "https://w3id.org/def/norma-o#defeatedNorm",
+      "@type" : "@id"
+    }
+  }
+}

@@ -156,6 +156,9 @@
   "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
+  "@id" : "https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
   "@id" : "https://schema.org/includedInDataCatalog",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -2847,7 +2850,4 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/def/norma-o#AnnotationActivity"
   } ]
-}, {
-  "@id" : "https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 } ]

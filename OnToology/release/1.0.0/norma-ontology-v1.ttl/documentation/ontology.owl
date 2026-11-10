@@ -1407,6 +1407,13 @@
     
 
 
+    <!-- https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg -->
+
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg"/>
+    
+
+
     <!-- https://w3id.org/def/norma-o -->
 
 
@@ -1922,13 +1929,6 @@
         <rdfs:label xml:lang="en">Under Review</rdfs:label>
         <skos:prefLabel xml:lang="en">Under Review</skos:prefLabel>
     </owl:NamedIndividual>
-    
-
-
-    <!-- https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg -->
-
-
-    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/sheyls/NORMA-O/main/release/1.0.0/norma-o.svg"/>
     
 
 

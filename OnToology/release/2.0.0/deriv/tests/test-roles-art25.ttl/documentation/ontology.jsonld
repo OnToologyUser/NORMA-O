@@ -1,0 +1,466 @@
+[ {
+  "@id" : "https://w3id.org/def/norma-o#AnnotatorAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#ConstitutiveRule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#FactPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalParty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#LegalSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#Obligation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#RoleAssignment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#TriggerEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#activatesNorm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#assignedUnderRule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#conditionStatement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#confersRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#deonticId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#factStatement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#fromArticle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#fromParagraph",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasAssignedParty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasAssignedRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasBindingForce",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasExtractionMethod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasLegalAction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasLegalAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasLegalObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasLegalSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasNormStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasOutcome",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasRank",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#hasTrigger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#holdsRoleAssignment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#holdsTrigger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#normStatement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#regulationName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/def/norma-o#wasAttributedToAnnotator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/def/norma-o"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Action_comply_art16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comply with the provider obligations of Article 16"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Action_comply_art26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comply with the deployer obligations of Article 26"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Annotator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#AnnotatorAgent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hand annotation for the Art. 25 experiment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Case_acme_modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#FactPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Acme, deployer, substantially modified system X"
+  } ],
+  "https://w3id.org/def/norma-o#holdsRoleAssignment" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#RA_acme_deployer"
+  }, {
+    "@id" : "https://w3id.org/norma-abox/art25#RA_acme_provider"
+  } ],
+  "https://w3id.org/def/norma-o#holdsTrigger" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#TE_art25_1b"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Case_acme_unmodified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#FactPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Acme, deployer, made no substantial modification"
+  } ],
+  "https://w3id.org/def/norma-o#holdsRoleAssignment" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#RA_acme_deployer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Cond_art25_1b",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalCondition"
+  } ],
+  "https://w3id.org/def/norma-o#conditionStatement" : [ {
+    "@value" : "Has the party made a substantial modification to the high-risk AI system after it was placed on the market?"
+  } ],
+  "https://w3id.org/def/norma-o#hasTrigger" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#TE_art25_1b"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#FCT_Art25_1_counts_as_provider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ConstitutiveRule"
+  } ],
+  "https://w3id.org/def/norma-o#confersRole" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Role_Provider"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "FCT_Art25_1_counts_as_provider"
+  } ],
+  "https://w3id.org/def/norma-o#factStatement" : [ {
+    "@value" : "Any distributor, importer, deployer or other third party shall be considered to be a provider of a high-risk AI system in any of the circumstances of Art. 25(1)(a) to (c)."
+  } ],
+  "https://w3id.org/def/norma-o#fromArticle" : [ {
+    "@value" : "25"
+  } ],
+  "https://w3id.org/def/norma-o#fromParagraph" : [ {
+    "@value" : "1"
+  } ],
+  "https://w3id.org/def/norma-o#hasExtractionMethod" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ManualLawyer"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalSource" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Regulation_AIA"
+  } ],
+  "https://w3id.org/def/norma-o#hasNormStatus" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Active"
+  } ],
+  "https://w3id.org/def/norma-o#wasAttributedToAnnotator" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Annotator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#FCT_Art3_8_operator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ConstitutiveRule"
+  } ],
+  "https://w3id.org/def/norma-o#confersRole" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Role_Operator"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "FCT_Art3_8_operator"
+  } ],
+  "https://w3id.org/def/norma-o#factStatement" : [ {
+    "@value" : "'operator' means a provider, product manufacturer, deployer, authorised representative, importer or distributor."
+  } ],
+  "https://w3id.org/def/norma-o#fromArticle" : [ {
+    "@value" : "3"
+  } ],
+  "https://w3id.org/def/norma-o#fromParagraph" : [ {
+    "@value" : "8"
+  } ],
+  "https://w3id.org/def/norma-o#hasExtractionMethod" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ManualLawyer"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalSource" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Regulation_AIA"
+  } ],
+  "https://w3id.org/def/norma-o#hasNormStatus" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Active"
+  } ],
+  "https://w3id.org/def/norma-o#wasAttributedToAnnotator" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Annotator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#OBL_Art16_provider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Obligation"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "OBL_Art16_provider"
+  } ],
+  "https://w3id.org/def/norma-o#fromArticle" : [ {
+    "@value" : "16"
+  } ],
+  "https://w3id.org/def/norma-o#hasBindingForce" : [ {
+    "@id" : "https://w3id.org/def/norma-o#HardLaw"
+  } ],
+  "https://w3id.org/def/norma-o#hasExtractionMethod" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ManualLawyer"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Action_comply_art16"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Role_Provider"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalObject" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#System_X"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalSource" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Regulation_AIA"
+  } ],
+  "https://w3id.org/def/norma-o#hasNormStatus" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Active"
+  } ],
+  "https://w3id.org/def/norma-o#normStatement" : [ {
+    "@value" : "Providers of high-risk AI systems shall comply with the obligations of Article 16."
+  } ],
+  "https://w3id.org/def/norma-o#wasAttributedToAnnotator" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Annotator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#OBL_Art26_deployer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Obligation"
+  } ],
+  "https://w3id.org/def/norma-o#deonticId" : [ {
+    "@value" : "OBL_Art26_deployer"
+  } ],
+  "https://w3id.org/def/norma-o#fromArticle" : [ {
+    "@value" : "26"
+  } ],
+  "https://w3id.org/def/norma-o#hasBindingForce" : [ {
+    "@id" : "https://w3id.org/def/norma-o#HardLaw"
+  } ],
+  "https://w3id.org/def/norma-o#hasExtractionMethod" : [ {
+    "@id" : "https://w3id.org/def/norma-o#ManualLawyer"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAction" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Action_comply_art26"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalAgent" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Role_Deployer"
+  } ],
+  "https://w3id.org/def/norma-o#hasLegalSource" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Regulation_AIA"
+  } ],
+  "https://w3id.org/def/norma-o#hasNormStatus" : [ {
+    "@id" : "https://w3id.org/def/norma-o#Active"
+  } ],
+  "https://w3id.org/def/norma-o#normStatement" : [ {
+    "@value" : "Deployers of high-risk AI systems shall comply with the obligations of Article 26."
+  } ],
+  "https://w3id.org/def/norma-o#wasAttributedToAnnotator" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Annotator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Party_Acme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalParty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Acme GmbH"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#RA_acme_deployer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#RoleAssignment"
+  } ],
+  "https://w3id.org/def/norma-o#hasAssignedParty" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Party_Acme"
+  } ],
+  "https://w3id.org/def/norma-o#hasAssignedRole" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Role_Deployer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#RA_acme_provider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#RoleAssignment"
+  } ],
+  "https://w3id.org/def/norma-o#assignedUnderRule" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#FCT_Art25_1_counts_as_provider"
+  } ],
+  "https://w3id.org/def/norma-o#hasAssignedParty" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Party_Acme"
+  } ],
+  "https://w3id.org/def/norma-o#hasAssignedRole" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#Role_Provider"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Regulation_AIA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalSource"
+  } ],
+  "https://w3id.org/def/norma-o#hasRank" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegislativeRank"
+  } ],
+  "https://w3id.org/def/norma-o#regulationName" : [ {
+    "@value" : "Regulation (EU) 2024/1689 (AI Act)"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Role_AuthRep",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalAgent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "authorised representative (Art. 3(5))"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Role_Deployer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "deployer (Art. 3(4))"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Role_Distributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "distributor (Art. 3(7))"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Role_Importer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "importer (Art. 3(6))"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Role_Operator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "operator (Art. 3(8))"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#Role_Provider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "provider (Art. 3(3))"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#System_X",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#LegalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "high-risk AI system X"
+  } ]
+}, {
+  "@id" : "https://w3id.org/norma-abox/art25#TE_art25_1b",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/def/norma-o#TriggerEvent"
+  } ],
+  "https://w3id.org/def/norma-o#activatesNorm" : [ {
+    "@id" : "https://w3id.org/norma-abox/art25#FCT_Art25_1_counts_as_provider"
+  } ],
+  "https://w3id.org/def/norma-o#hasOutcome" : [ {
+    "@id" : "https://w3id.org/def/norma-o#TrueOutcome"
+  } ]
+} ]

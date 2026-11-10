@@ -1,0 +1,586 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/norma-abox/art25#"
+     xml:base="https://w3id.org/norma-abox/art25"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:norma-o="https://w3id.org/def/norma-o#">
+    <owl:Ontology rdf:about="https://w3id.org/norma-abox/art25">
+        <owl:imports rdf:resource="https://w3id.org/def/norma-o"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/norma-o#activatesNorm -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#activatesNorm"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#assignedUnderRule -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#assignedUnderRule"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#conditionStatement -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#conditionStatement"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#confersRole -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#confersRole"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#deonticId -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#deonticId"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#factStatement -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#factStatement"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#fromArticle -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#fromArticle"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#fromParagraph -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#fromParagraph"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasAssignedParty -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasAssignedParty"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasAssignedRole -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasAssignedRole"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasBindingForce -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasBindingForce"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasExtractionMethod -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasExtractionMethod"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasLegalAction -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasLegalAction"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasLegalAgent -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasLegalAgent"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasLegalObject -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasLegalObject"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasLegalSource -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasLegalSource"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasNormStatus -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasNormStatus"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasOutcome -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasOutcome"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasRank -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasRank"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#hasTrigger -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#hasTrigger"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#holdsRoleAssignment -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#holdsRoleAssignment"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#holdsTrigger -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#holdsTrigger"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#normStatement -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#normStatement"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#regulationName -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#regulationName"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#wasAttributedToAnnotator -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/norma-o#wasAttributedToAnnotator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/norma-o#AnnotatorAgent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#AnnotatorAgent"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#ConstitutiveRule -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#ConstitutiveRule"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#FactPattern -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#FactPattern"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalAction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalAction"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalAgent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalAgent"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalCondition -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalCondition"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalObject -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalObject"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalParty -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalParty"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalRole -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalRole"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalSource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalSource"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#Obligation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#Obligation"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#RoleAssignment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#RoleAssignment"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#TriggerEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#TriggerEvent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Action_comply_art16 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Action_comply_art16">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalAction"/>
+        <rdfs:label xml:lang="en">comply with the provider obligations of Article 16</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Action_comply_art26 -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Action_comply_art26">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalAction"/>
+        <rdfs:label xml:lang="en">comply with the deployer obligations of Article 26</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Annotator -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Annotator">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#AnnotatorAgent"/>
+        <rdfs:label xml:lang="en">hand annotation for the Art. 25 experiment</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Case_acme_modified -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Case_acme_modified">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#FactPattern"/>
+        <rdfs:label xml:lang="en">Acme, deployer, substantially modified system X</rdfs:label>
+        <norma-o:holdsRoleAssignment rdf:resource="https://w3id.org/norma-abox/art25#RA_acme_deployer"/>
+        <norma-o:holdsRoleAssignment rdf:resource="https://w3id.org/norma-abox/art25#RA_acme_provider"/>
+        <norma-o:holdsTrigger rdf:resource="https://w3id.org/norma-abox/art25#TE_art25_1b"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Case_acme_unmodified -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Case_acme_unmodified">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#FactPattern"/>
+        <rdfs:label xml:lang="en">Acme, deployer, made no substantial modification</rdfs:label>
+        <norma-o:holdsRoleAssignment rdf:resource="https://w3id.org/norma-abox/art25#RA_acme_deployer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Cond_art25_1b -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Cond_art25_1b">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalCondition"/>
+        <norma-o:conditionStatement>Has the party made a substantial modification to the high-risk AI system after it was placed on the market?</norma-o:conditionStatement>
+        <norma-o:hasTrigger rdf:resource="https://w3id.org/norma-abox/art25#TE_art25_1b"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#FCT_Art25_1_counts_as_provider -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#FCT_Art25_1_counts_as_provider">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ConstitutiveRule"/>
+        <norma-o:confersRole rdf:resource="https://w3id.org/norma-abox/art25#Role_Provider"/>
+        <norma-o:deonticId>FCT_Art25_1_counts_as_provider</norma-o:deonticId>
+        <norma-o:factStatement>Any distributor, importer, deployer or other third party shall be considered to be a provider of a high-risk AI system in any of the circumstances of Art. 25(1)(a) to (c).</norma-o:factStatement>
+        <norma-o:fromArticle>25</norma-o:fromArticle>
+        <norma-o:fromParagraph>1</norma-o:fromParagraph>
+        <norma-o:hasExtractionMethod rdf:resource="https://w3id.org/def/norma-o#ManualLawyer"/>
+        <norma-o:hasLegalSource rdf:resource="https://w3id.org/norma-abox/art25#Regulation_AIA"/>
+        <norma-o:hasNormStatus rdf:resource="https://w3id.org/def/norma-o#Active"/>
+        <norma-o:wasAttributedToAnnotator rdf:resource="https://w3id.org/norma-abox/art25#Annotator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#FCT_Art3_8_operator -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#FCT_Art3_8_operator">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#ConstitutiveRule"/>
+        <norma-o:confersRole rdf:resource="https://w3id.org/norma-abox/art25#Role_Operator"/>
+        <norma-o:deonticId>FCT_Art3_8_operator</norma-o:deonticId>
+        <norma-o:factStatement>&apos;operator&apos; means a provider, product manufacturer, deployer, authorised representative, importer or distributor.</norma-o:factStatement>
+        <norma-o:fromArticle>3</norma-o:fromArticle>
+        <norma-o:fromParagraph>8</norma-o:fromParagraph>
+        <norma-o:hasExtractionMethod rdf:resource="https://w3id.org/def/norma-o#ManualLawyer"/>
+        <norma-o:hasLegalSource rdf:resource="https://w3id.org/norma-abox/art25#Regulation_AIA"/>
+        <norma-o:hasNormStatus rdf:resource="https://w3id.org/def/norma-o#Active"/>
+        <norma-o:wasAttributedToAnnotator rdf:resource="https://w3id.org/norma-abox/art25#Annotator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#OBL_Art16_provider -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#OBL_Art16_provider">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Obligation"/>
+        <norma-o:deonticId>OBL_Art16_provider</norma-o:deonticId>
+        <norma-o:fromArticle>16</norma-o:fromArticle>
+        <norma-o:hasBindingForce rdf:resource="https://w3id.org/def/norma-o#HardLaw"/>
+        <norma-o:hasExtractionMethod rdf:resource="https://w3id.org/def/norma-o#ManualLawyer"/>
+        <norma-o:hasLegalAction rdf:resource="https://w3id.org/norma-abox/art25#Action_comply_art16"/>
+        <norma-o:hasLegalAgent rdf:resource="https://w3id.org/norma-abox/art25#Role_Provider"/>
+        <norma-o:hasLegalObject rdf:resource="https://w3id.org/norma-abox/art25#System_X"/>
+        <norma-o:hasLegalSource rdf:resource="https://w3id.org/norma-abox/art25#Regulation_AIA"/>
+        <norma-o:hasNormStatus rdf:resource="https://w3id.org/def/norma-o#Active"/>
+        <norma-o:normStatement>Providers of high-risk AI systems shall comply with the obligations of Article 16.</norma-o:normStatement>
+        <norma-o:wasAttributedToAnnotator rdf:resource="https://w3id.org/norma-abox/art25#Annotator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#OBL_Art26_deployer -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#OBL_Art26_deployer">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#Obligation"/>
+        <norma-o:deonticId>OBL_Art26_deployer</norma-o:deonticId>
+        <norma-o:fromArticle>26</norma-o:fromArticle>
+        <norma-o:hasBindingForce rdf:resource="https://w3id.org/def/norma-o#HardLaw"/>
+        <norma-o:hasExtractionMethod rdf:resource="https://w3id.org/def/norma-o#ManualLawyer"/>
+        <norma-o:hasLegalAction rdf:resource="https://w3id.org/norma-abox/art25#Action_comply_art26"/>
+        <norma-o:hasLegalAgent rdf:resource="https://w3id.org/norma-abox/art25#Role_Deployer"/>
+        <norma-o:hasLegalSource rdf:resource="https://w3id.org/norma-abox/art25#Regulation_AIA"/>
+        <norma-o:hasNormStatus rdf:resource="https://w3id.org/def/norma-o#Active"/>
+        <norma-o:normStatement>Deployers of high-risk AI systems shall comply with the obligations of Article 26.</norma-o:normStatement>
+        <norma-o:wasAttributedToAnnotator rdf:resource="https://w3id.org/norma-abox/art25#Annotator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Party_Acme -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Party_Acme">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalParty"/>
+        <rdfs:label xml:lang="en">Acme GmbH</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#RA_acme_deployer -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#RA_acme_deployer">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#RoleAssignment"/>
+        <norma-o:hasAssignedParty rdf:resource="https://w3id.org/norma-abox/art25#Party_Acme"/>
+        <norma-o:hasAssignedRole rdf:resource="https://w3id.org/norma-abox/art25#Role_Deployer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#RA_acme_provider -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#RA_acme_provider">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#RoleAssignment"/>
+        <norma-o:assignedUnderRule rdf:resource="https://w3id.org/norma-abox/art25#FCT_Art25_1_counts_as_provider"/>
+        <norma-o:hasAssignedParty rdf:resource="https://w3id.org/norma-abox/art25#Party_Acme"/>
+        <norma-o:hasAssignedRole rdf:resource="https://w3id.org/norma-abox/art25#Role_Provider"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Regulation_AIA -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Regulation_AIA">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalSource"/>
+        <norma-o:hasRank rdf:resource="https://w3id.org/def/norma-o#LegislativeRank"/>
+        <norma-o:regulationName>Regulation (EU) 2024/1689 (AI Act)</norma-o:regulationName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Role_AuthRep -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Role_AuthRep">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalAgent"/>
+        <rdfs:label xml:lang="en">authorised representative (Art. 3(5))</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Role_Deployer -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Role_Deployer">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalRole"/>
+        <rdfs:label xml:lang="en">deployer (Art. 3(4))</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Role_Distributor -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Role_Distributor">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalRole"/>
+        <rdfs:label xml:lang="en">distributor (Art. 3(7))</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Role_Importer -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Role_Importer">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalRole"/>
+        <rdfs:label xml:lang="en">importer (Art. 3(6))</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Role_Operator -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Role_Operator">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalRole"/>
+        <rdfs:label xml:lang="en">operator (Art. 3(8))</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#Role_Provider -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#Role_Provider">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalRole"/>
+        <rdfs:label xml:lang="en">provider (Art. 3(3))</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#System_X -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#System_X">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#LegalObject"/>
+        <rdfs:label xml:lang="en">high-risk AI system X</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/norma-abox/art25#TE_art25_1b -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/norma-abox/art25#TE_art25_1b">
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o#TriggerEvent"/>
+        <norma-o:activatesNorm rdf:resource="https://w3id.org/norma-abox/art25#FCT_Art25_1_counts_as_provider"/>
+        <norma-o:hasOutcome rdf:resource="https://w3id.org/def/norma-o#TrueOutcome"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

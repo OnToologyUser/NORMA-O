@@ -1,0 +1,1057 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/def/norma-o/deriv#"
+     xml:base="https://w3id.org/def/norma-o/deriv"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="https://w3id.org/def/norma-o/deriv">
+        <owl:versionIRI rdf:resource="https://w3id.org/def/norma-o/deriv/1.0"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o"/>
+        <owl:imports rdf:resource="https://w3id.org/def/norma-o"/>
+        <terms:bibliographicCitation xml:lang="en">Leyva-Sánchez, S. et al. (2026). NORMA-O Derivation module (Version 1.0) [Ontology]. https://w3id.org/def/norma-o/deriv/1.0</terms:bibliographicCitation>
+        <terms:contributor rdf:nodeID="genid1"/>
+        <terms:contributor rdf:nodeID="genid2"/>
+        <terms:creator rdf:nodeID="genid3"/>
+        <terms:description xml:lang="en">A companion module to the NORMA ontology for describing derived normative graphs: the activity that materialised them, the rule set and its version, and — crucially — the non-monotonic assumptions under which the conclusions hold. NORMA-O states what norms mean and how they defeat one another; this module states under what reading a particular set of conclusions was computed, so that a published derived graph is reproducible and cannot be mistaken for annotated fact.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-09</terms:issued>
+        <terms:language rdf:resource="http://id.loc.gov/vocabulary/iso639-1/en"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-09</terms:modified>
+        <terms:publisher rdf:nodeID="genid4"/>
+        <terms:source rdf:resource="https://github.com/sheyls/NORMA-O"/>
+        <terms:title xml:lang="en">NORMA-O Derivation: provenance and assumptions of derived normative conclusions</terms:title>
+        <bibo:doi>10.5281/zenodo.24116269</bibo:doi>
+        <bibo:status xml:lang="en">Published</bibo:status>
+        <vann:preferredNamespacePrefix>normad</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/def/norma-o/deriv#</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">Companion module to NORMA-O 2.0 that describes derived normative graphs: the derivation activity, the rule set and version applied, the assumptions the conclusions depend on, and the prevalence orderings, norm evaluations and cycles they contain.</rdfs:comment>
+        <rdfs:label xml:lang="en">NORMA-O Derivation module</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/def/norma-o"/>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <foaf:logo rdf:resource="https://sheyls.github.io/NORMA-O/release/2.0.0/norma-o-deriv-v1.svg"/>
+        <schema:includedInDataCatalog rdf:resource="https://zenodo.org/communities/norma"/>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>María Poveda-Villalón</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Víctor Rodríguez-Doncel</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Sheyla Leyva-Sánchez</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid4">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:name>NORMA project</foaf:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/doi -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/doi"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#topConceptOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/logo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/logo"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- https://schema.org/includedInDataCatalog -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/includedInDataCatalog"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#citesCompetingPrinciple -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/norma-o/deriv#citesCompetingPrinciple">
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#PrevalenceCycle"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/norma-o#ResolutionPrinciple"/>
+        <rdfs:comment xml:lang="en">Links a reported cycle to a resolution principle cited by one of the conflict defeaters on it. Two or more values are what make the cycle a second-degree conflict rather than an annotation error.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">cites competing principle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#computedUnderAssumption -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/norma-o/deriv#computedUnderAssumption">
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#DerivationActivity"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/norma-o/deriv#Assumption"/>
+        <rdfs:comment xml:lang="en">Links a derivation activity to an assumption its conclusions depend on. Not functional: a derivation typically relies on several.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">computed under assumption</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#evaluatedNorm -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/norma-o/deriv#evaluatedNorm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#NormEvaluation"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/norma-o#NormativeContent"/>
+        <rdfs:comment xml:lang="en">Links an evaluation to the normative content it is about.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">evaluated norm</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#forFactPattern -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/norma-o/deriv#forFactPattern">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/norma-o#FactPattern"/>
+        <rdfs:comment xml:lang="en">Links a prevalence ordering to the single described case it was computed for. Absent on the static ordering over the whole normative system.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">for fact pattern</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#NormEvaluation"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus"/>
+        <rdfs:comment xml:lang="en">Associates an evaluation with at most one applicability status: the outcome the case yields for that norm.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">has applicability status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#hasCycleKind -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/norma-o/deriv#hasCycleKind">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#PrevalenceCycle"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/norma-o/deriv#CycleKind"/>
+        <rdfs:comment xml:lang="en">Associates a reported cycle with its legal reading.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">has cycle kind</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#inCycle -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/norma-o/deriv#inCycle">
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/norma-o/deriv#PrevalenceCycle"/>
+        <rdfs:comment xml:lang="en">Links a prevalence ordering to a cycle found while computing it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">in cycle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#inOrdering -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/norma-o/deriv#inOrdering">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#NormEvaluation"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering"/>
+        <rdfs:comment xml:lang="en">Links an evaluation to the prevalence ordering it belongs to.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">in ordering</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#involvesNorm -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/norma-o/deriv#involvesNorm">
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#PrevalenceCycle"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/norma-o#NormativeContent"/>
+        <rdfs:comment xml:lang="en">Links a reported cycle to a norm lying on it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">involves norm</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#isAssumptionOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/norma-o/deriv#isAssumptionOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/norma-o/deriv#computedUnderAssumption"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#Assumption"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/norma-o/deriv#DerivationActivity"/>
+        <rdfs:comment xml:lang="en">Links an assumption to the derivation activities that rely on it.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">is assumption of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#reachesParty -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/norma-o/deriv#reachesParty">
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#NormEvaluation"/>
+        <rdfs:range rdf:resource="https://w3id.org/def/norma-o#LegalParty"/>
+        <rdfs:comment xml:lang="en">Links a norm evaluation to a concrete party the evaluated norm reaches in that case: either the norm addresses that party directly, or it addresses a role the case places the party in.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">reaches party</rdfs:label>
+        <skos:scopeNote xml:lang="en">Case-relative by construction, because norma:RoleAssignment is: the same party is reached by different norms in different cases, which is the point of a provision such as article 25(1) of Regulation (EU) 2024/1689. Computed, never annotated — asserting it would desynchronise it from the roles and the facts it follows from.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Reach and applicability are separate questions, and both are needed to answer “what applies to this party”. This property says the norm is ADDRESSED to the party in the case; normad:hasApplicabilityStatus says whether it applies at all. A norm may reach a party and still be normad:Defeated, normad:NotActivated or normad:Invalid, so a consumer joins the two rather than reading either alone.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#derivedGraph -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/norma-o/deriv#derivedGraph">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#DerivationActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Name of the graph into which a derivation activity wrote its conclusions. Keeping derived conclusions in a named graph of their own is what allows them to be regenerated wholesale without touching the annotation graph.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">derived graph</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#isAcyclic -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/norma-o/deriv#isAcyclic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether the defeat digraph of this ordering was found to be acyclic. Reported, never assumed: it is the by-product of the topological sort.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">is acyclic</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#prevalenceLevel -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/norma-o/deriv#prevalenceLevel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#NormEvaluation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">The rung of the ladder: 0 for a norm that nothing prevails over, and otherwise one more than the highest level among the norms that prevail over it. Longest-path layering, so the level is canonical for a given digraph.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">prevalence level</rdfs:label>
+        <skos:scopeNote xml:lang="en">A low level means nothing defeats the norm, not that the norm prevails: a norm at level 0 may still be invalid or untriggered, and a norm at a higher level may well apply because everything that defeats it is itself defeated. The level orders the digraph; normad:hasApplicabilityStatus says what the case yields. Computed on the CONDENSATION of the digraph into strongly connected components, so every norm in the system receives a rung: a cycle contracts to a single node and the norms on it share its level. Layering on the digraph itself would leave the acyclic DESCENDANTS of a cycle without a level, although their position in the ladder is perfectly determined by the norms above and below them.</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#ruleSetVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/norma-o/deriv#ruleSetVersion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#DerivationActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identifier of the rule set, and of its version, applied by a derivation activity. Two runs that report the same rule set version over the same input graph must produce the same output graph.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">rule set version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#stratumCount -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/norma-o/deriv#stratumCount">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">Number of rungs in the ladder: one more than the highest prevalence level reached.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">stratum count</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#FactPattern -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#FactPattern"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#LegalParty -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#LegalParty"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#NormativeContent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#NormativeContent"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o#ResolutionPrinciple -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o#ResolutionPrinciple"/>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#ApplicabilityStatus -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">The label assigned to a norm by evaluating a described case: whether the norm applies to it, and if not, why not.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">Applicability Status</rdfs:label>
+        <skos:scopeNote xml:lang="en">Five values, and three different reasons a norm may fail to apply, which a consumer must be able to tell apart: it may have left the normative system (normad:Invalid), it may be in the system but untriggered by the facts of the case (normad:NotActivated), or it may be triggered and then set aside by a defeater (normad:Defeated). The values are assigned in that order of precedence, so that the most basic reason is the one reported: validity first, activation next, and the defeat labelling only for norms that are valid and activated.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Named for APPLICABILITY and not for being in force, because NORMA-O separates the two and this evaluation settles only the second: in legal usage a norm is in force as a matter of temporal validity, which norma:TemporalDefeater and norma:NormStatus govern, whereas what a case decides is whether the norm reaches that case. Calling an excepted norm “not in force” would contradict the very distinction the defeasibility layer is built on, since an exception leaves the norm in the system.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#Assumption -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o/deriv#Assumption">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">A non-monotonic reading adopted by a derivation activity, without which its conclusions do not follow.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">Assumption</rdfs:label>
+        <skos:scopeNote xml:lang="en">Extensible: add further assumptions as new derivation layers are defined. Each value names something the annotation graph does not state and the derivation nevertheless relies on.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Some values are mutually exclusive — a closed and an open reading of the case, or defeat considered and not considered — but that exclusion constrains the set of values one activity may carry, which OWL cannot express: it is a constraint on the values of normad:computedUnderAssumption for a single subject. Validate it with SHACL.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#CycleKind -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o/deriv#CycleKind">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">The legal reading of a cycle in the defeat digraph.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">Cycle Kind</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#DerivationActivity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o/deriv#DerivationActivity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/norma-o/deriv#computedUnderAssumption"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/norma-o/deriv#Assumption"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A provenance activity that materialises normative conclusions from a NORMA annotation graph: deontic closure, weak permissions, typed prevalence edges, or a prevalence ordering.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">Derivation Activity</rdfs:label>
+        <skos:scopeNote xml:lang="en">At least one assumption must be recorded. A derived graph with no stated assumptions is not interpretable: the same annotation graph yields different conclusions under different readings of silence, of defeat, and of graph completeness.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Distinct from norma:AnnotationActivity, which produces annotations from legal sources. A DerivationActivity consumes an annotation graph and produces consequences of it; its output is regenerated rather than maintained, and must never be merged back into the annotation graph. Use prov:used for the input graph, prov:startedAtTime for the run, and normad:ruleSetVersion for the rule set that was applied.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#NormEvaluation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o/deriv#NormEvaluation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/norma-o/deriv#evaluatedNorm"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/norma-o#NormativeContent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/norma-o/deriv#inOrdering"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The outcome computed for one norm within one prevalence ordering: its level in the ladder and whether the norm applies to the case.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">Norm Evaluation</rdfs:label>
+        <skos:scopeNote xml:lang="en">Reified following the W3C n-ary relation pattern, as norma:TriggerEvent, norma:LegalPosition, norma:Defeater and norma:WeakPermission are. Reification is not optional here: one norm has as many outcomes as there are cases evaluated, so the status cannot be a property of the norm itself.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">The status is optional, and its absence is meaningful: an evaluation belonging to the STATIC ordering carries a level and no status, because the static ladder orders the normative system without deciding any case. Only a case-relative ordering yields a status.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#PrevalenceCycle -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o/deriv#PrevalenceCycle">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/norma-o/deriv#involvesNorm"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/def/norma-o#NormativeContent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A cycle found in a defeat digraph, reported rather than resolved. Full acyclicity is not expressible in OWL 2 DL, so it is checked by the compilation step: Kahn’s algorithm yields the stratification and the set of nodes it cannot order, while the cycles themselves are the non-trivial strongly connected components of that set.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">Prevalence Cycle</rdfs:label>
+        <skos:scopeNote xml:lang="en">A cycle is not automatically an error. Per norma:ConflictDefeater, two conflict defeaters relating the same pair in opposite directions under DIFFERENT resolution principles are a second-degree conflict in Bobbio’s sense: the criteria are genuinely unordered for that pair, and the compilation step must report one ordering per admissible policy instead of silently choosing one. The same pair asserted under the SAME principle is, by contrast, a contradiction in the annotation. normad:CycleKind records which reading applies.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Lying on a cycle does NOT by itself leave a norm undecided, and the two must not be conflated. Grounded semantics still decides a cycle that is attacked from outside it: where a and b defeat each other and an undefeated c defeats a, the labelling is c applicable, a defeated and b applicable, because b is reinstated once its only attacker falls. Conversely a norm OFF the cycle whose only attackers lie on an undecided one is itself undecided. So normad:Undecided tracks what the fixpoint leaves unlabelled, not cycle membership, and this class reports the cycle as a finding about the annotation independently of how the norms on it end up labelled.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#PrevalenceOrdering -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/norma-o/deriv#PrevalenceOrdering">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">A computed stratification of a defeat digraph: the “ladder” obtained by flattening the asserted defeaters into prevalence edges and ordering the nodes topologically.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <rdfs:label xml:lang="en">Prevalence Ordering</rdfs:label>
+        <skos:scopeNote xml:lang="en">NORMA-O deliberately represents no prevalence level and no defeat status: norma:FactPattern states that the resulting applicability follows from the described facts and the asserted defeaters, and norma:prevailsOver states that a compilation step may materialise the stratification in a separate derived artefact. This class is that artefact’s root, which is why it lives in the module and not in the core ontology.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Temporal defeat is also applied FLATLY, where defeat inside the ordering is evaluated under grounded semantics, and the asymmetry is substantive rather than technical: repealing a repealing norm does not revive the norm it repealed, so a chain in which w1 repeals w2 and w2 repealed w3 leaves both w2 and w3 outside the system. A norm merely rendered inapplicable by an exception is reinstated when that exception falls, because it never left the system; a repealed norm has left it. The reading is a DEFAULT recorded as an assumption, not a universal claim. It follows the civil-law tradition, where article 2.2 of the Spanish Civil Code states it expressly, but interpretation acts differ across jurisdictions and nothing in the ontology settles the question: a consumer whose jurisdiction provides otherwise overrides the reading and says so in the activity’s assumptions.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Temporal defeat is applied before the ordering is built, not as an edge in it. norma:TemporalDefeater bears on validity rather than applicability, so a norm it withdraws is absent from the system being stratified.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Without normad:forFactPattern the ordering is the STATIC one over the whole normative system, computed on the ungated projection of the defeat digraph; with it, the ordering is case-relative and only the defeaters whose gate fires in that case contribute edges. The two are different graphs and must not be mixed: norma:prevailsOver is the ungated projection, because the property chain that defines it drops norma:appliesWhen, so case evaluation has to traverse the reified norma:Defeater instead.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#AnnotationContradiction -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#AnnotationContradiction">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#CycleKind"/>
+        <rdfs:comment xml:lang="en">The cycle is formed by conflict defeaters citing the SAME resolution principle in opposite directions, which one principle cannot sustain.</rdfs:comment>
+        <rdfs:label xml:lang="en">Annotation contradiction</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#CycleKindScheme"/>
+        <skos:notation>ANNOTATION_CONTRADICTION</skos:notation>
+        <skos:prefLabel xml:lang="en">Annotation contradiction</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">An annotation defect to be fixed at source, unlike normad:SecondDegreeConflict.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#CycleKindScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <skos:definition xml:lang="en">SKOS concept scheme grouping the labels a case evaluation may assign to a norm: whether it applies, and if not, whether because it is outside the system, untriggered, defeated, or left undecided.</skos:definition>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#Applicable"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#Defeated"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#Invalid"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#NotActivated"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#Undecided"/>
+        <skos:prefLabel xml:lang="en">Applicability status scheme</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#Applicable -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#Applicable">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus"/>
+        <rdfs:comment xml:lang="en">The norm is valid, is activated by the facts of the case, and every defeater reaching it is itself defeated — or none reaches it. It applies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Applicable</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme"/>
+        <skos:notation>APPLICABLE</skos:notation>
+        <skos:prefLabel xml:lang="en">Applicable</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Reinstatement lands here. A norm set aside by a defeater whose own defeating norm is defeated becomes applicable again, which is why norma:prevailsOver is deliberately not transitive.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#AssumptionScheme -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#AssumptionScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <skos:definition xml:lang="en">Extensible SKOS concept scheme grouping the non-monotonic assumptions that NORMA derivation activities may rely on.</skos:definition>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#ClosedCaseDescription"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#ClosedGraph"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#DefeatConsidered"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#DefeatNotConsidered"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#GroundedSemantics"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#OpenCounterparty"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed"/>
+        <skos:prefLabel xml:lang="en">Assumption scheme</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#ClosedCaseDescription -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#ClosedCaseDescription">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#Assumption"/>
+        <rdfs:comment xml:lang="en">Silence in a norma:FactPattern about a legal condition is read as that condition not holding, so a norm conditioned on it counts as inactive.</rdfs:comment>
+        <rdfs:label xml:lang="en">Closed case description</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+        <skos:notation>CLOSED_CASE</skos:notation>
+        <skos:prefLabel xml:lang="en">Closed case description</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The description of the case is taken to be complete. This is what makes a conclusion case-relative and precise — a conditional prohibition does not block in the cases where its condition is not activated — but it also means an incompletely described case yields conclusions that are stronger than the facts warrant. Completeness of the fact pattern is a data-quality obligation on the producer, not something the derivation can check.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#ClosedGraph -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#ClosedGraph">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#Assumption"/>
+        <rdfs:comment xml:lang="en">The absence of a norm from the evaluated graph is read as the absence of that norm from the normative system: negation by failure over the graph at hand.</rdfs:comment>
+        <rdfs:label xml:lang="en">Closed graph</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+        <skos:notation>CLOSED_GRAPH</skos:notation>
+        <skos:prefLabel xml:lang="en">Closed graph</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Every weak permission depends on this assumption, since a weak permission is the absence of a prohibition. Pair it with a bounded completeness claim about which sources were analysed, or the conclusion is only as strong as the graph is complete.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#CycleKindScheme -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#CycleKindScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/norma-o/deriv"/>
+        <skos:definition xml:lang="en">SKOS concept scheme grouping the legal readings of a cycle in the defeat digraph.</skos:definition>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#AnnotationContradiction"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/def/norma-o/deriv#SecondDegreeConflict"/>
+        <skos:prefLabel xml:lang="en">Cycle kind scheme</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#DefeatConsidered -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#DefeatConsidered">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#Assumption"/>
+        <rdfs:comment xml:lang="en">Defeat relations were taken into account: norms withdrawn by an applicable defeater were treated as not holding for the case.</rdfs:comment>
+        <rdfs:label xml:lang="en">Defeat considered</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+        <skos:notation>DEFEAT_CONSIDERED</skos:notation>
+        <skos:prefLabel xml:lang="en">Defeat considered</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Pairs with normad:DefeatNotConsidered, which is recorded when defeat was skipped. Absence of both is not to be read as either: this is an open-world vocabulary, and inferring a reading from a missing value is the very thing the module exists to prevent. An activity recording neither has simply not stated what it did.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#DefeatNotConsidered -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#DefeatNotConsidered">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#Assumption"/>
+        <rdfs:comment xml:lang="en">Defeat relations were ignored: every valid and activated norm was treated as applying, whatever defeaters reach it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Defeat not considered</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+        <skos:notation>DEFEAT_NOT_CONSIDERED</skos:notation>
+        <skos:prefLabel xml:lang="en">Defeat not considered</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">A legitimate reading for a fast or partial derivation, and the explicit complement of normad:DefeatConsidered, which exists so that no consumer has to infer the reading from a missing value. Conclusions recorded under it are wrong in exactly the cases the defeasibility layer exists to handle, such as an exception that exempts the agent, so they are provisional. Mutually exclusive with normad:DefeatConsidered; validate with SHACL.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#Defeated -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#Defeated">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus"/>
+        <rdfs:comment xml:lang="en">The norm is valid and activated, but at least one defeater reaching it has a defeating norm that is itself applicable. It does not apply to this case.</rdfs:comment>
+        <rdfs:label xml:lang="en">Defeated</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme"/>
+        <skos:notation>DEFEATED</skos:notation>
+        <skos:prefLabel xml:lang="en">Defeated</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Being defeated in a case says nothing about validity: the norm remains a member of the normative system and applies in cases where the defeater does not reach it. Contrast normad:Invalid.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#GroundedSemantics -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#GroundedSemantics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#Assumption"/>
+        <rdfs:comment xml:lang="en">Defeat was evaluated under Dung&apos;s grounded semantics: the unique minimal complete labelling, computed as a monotone fixpoint.</rdfs:comment>
+        <rdfs:label xml:lang="en">Grounded semantics</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+        <skos:notation>GROUNDED</skos:notation>
+        <skos:prefLabel xml:lang="en">Grounded semantics</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Computed as a monotone fixpoint and deliberately NOT in topological order. A single pass in topological order is wrong wherever a cycle is attacked from outside it: the norms on the cycle are then decided after all, and a norm downstream of them has to be labelled from those decisions, which a pass that skipped the unorderable nodes never made.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Recorded instead of normad:ReinstatementNotComputed once reinstatement is actually computed. The choice of semantics is not neutral: on a cyclic fragment, preferred or stable semantics would select winners where grounded semantics reports normad:Undecided, so a consumer comparing two derived graphs must compare their assumptions first.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#Assumption"/>
+        <rdfs:comment xml:lang="en">The facts established by the constitutive rules that apply were fed back into the case, and the regulative norms were evaluated against the case so augmented.</rdfs:comment>
+        <rdfs:label xml:lang="en">Institutional facts chained</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+        <skos:notation>FACTS_CHAINED</skos:notation>
+        <skos:prefLabel xml:lang="en">Institutional facts chained</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Its absence means norma:establishesTrigger was ignored and only the brute facts of the case were used. Conclusions computed that way are wrong wherever a regulative norm is conditioned on an institutional fact, which in Regulation (EU) 2024/1689 is the central case: the obligations of Articles 16 and 26 hang on being high-risk, and that is settled by the defeat chain of Article 6.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">The alternation terminates because the set of established facts only grows. What it cannot do is undo: a fact may gate a defeater that withdraws the very rule that established it, and the fact stays in the case. A derivation that detects this reports it rather than presenting a conclusion that quietly rests on a withdrawn rule.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#Invalid -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#Invalid">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus"/>
+        <rdfs:comment xml:lang="en">The norm is not a member of the normative system being evaluated: it carries a lifecycle status that excludes it, or a temporal defeater has repealed it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Invalid</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme"/>
+        <skos:notation>INVALID</skos:notation>
+        <skos:prefLabel xml:lang="en">Invalid</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Reported rather than omitted. Leaving a repealed norm out of the evaluation would make it indistinguishable from a norm absent from the graph, and a consumer asking why a norm does not apply deserves the answer. This is the one value that concerns validity rather than applicability, and it is case-independent: a norm outside the system is outside it in every case.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#CycleKind"/>
+        <rdfs:comment xml:lang="en">The cycle involves defeat that cites no resolution principle at all, typically a loop of exception defeaters, so nothing in the annotation orients it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Irresoluble antinomy</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#CycleKindScheme"/>
+        <skos:notation>IRRESOLUBLE</skos:notation>
+        <skos:prefLabel xml:lang="en">Irresoluble antinomy</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#CycleKindScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#NotActivated -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#NotActivated">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus"/>
+        <rdfs:comment xml:lang="en">The norm is valid but the facts of the case do not trigger it: none of the trigger events that activate it fires in the described case.</rdfs:comment>
+        <rdfs:label xml:lang="en">Not activated</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme"/>
+        <skos:notation>NOT_ACTIVATED</skos:notation>
+        <skos:prefLabel xml:lang="en">Not activated</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Distinguished from normad:Defeated because the reasons differ and so do the remedies: an untriggered norm is simply silent about this case, whereas a defeated one spoke and was overridden. Collapsing the two would also report an untriggered norm as applicable merely because nothing defeats it, which is the conclusion this value exists to prevent.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Several trigger events activating one norm are read in DISJUNCTION, as elsewhere in NORMA: the norm is activated if any of them fires. A norm with no activation condition at all is unconditional and never carries this value.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#OpenCounterparty -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#OpenCounterparty">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#Assumption"/>
+        <rdfs:comment xml:lang="en">A counterparty that no annotator named is read as not disagreeing, rather than as a mismatch, when two norms or two legal positions are compared.</rdfs:comment>
+        <rdfs:label xml:lang="en">Open counterparty</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+        <skos:notation>OPEN_COUNTERPARTY</skos:notation>
+        <skos:prefLabel xml:lang="en">Open counterparty</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Needed because norma:hasCounterparty is sparse in practice: a corpus annotated without it would yield no equivalence, no contradiction and no jural opposition at all. The permissive reading lets those surface, at the cost of a relation that a later annotation may refute, which makes it non-monotonic. Producers that annotate the counterparty throughout get the strict reading for free and need not record this value.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#Assumption"/>
+        <rdfs:comment xml:lang="en">Defeat was applied one level deep: a norm was treated as withdrawn whenever an applicable defeater exists, without checking whether that defeater is itself withdrawn.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reinstatement not computed</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+        <skos:notation>NO_REINSTATEMENT</skos:notation>
+        <skos:prefLabel xml:lang="en">Reinstatement not computed</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Where a defeat chain is longer than one step, the conclusions are wrong: if A defeats B and B defeats C, then C is reinstated, and a one-level reading reports C as withdrawn. Computing reinstatement requires stratifying the prevalence digraph, which belongs to the evaluation layer, so a derivation that records this value is provisional for any case in which a defeater is itself defeated.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#AssumptionScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#SecondDegreeConflict -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#SecondDegreeConflict">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#CycleKind"/>
+        <rdfs:comment xml:lang="en">The norms on the cycle are related by conflict defeaters citing different resolution principles, so the criteria themselves are unordered for that pair.</rdfs:comment>
+        <rdfs:label xml:lang="en">Second-degree conflict</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#CycleKindScheme"/>
+        <skos:notation>SECOND_DEGREE</skos:notation>
+        <skos:prefLabel xml:lang="en">Second-degree conflict</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">A legal phenomenon in Bobbio&apos;s sense, not an annotation defect. The compilation step reports one prevalence ordering per admissible policy; normad:citesCompetingPrinciple names the criteria in competition.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#CycleKindScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/norma-o/deriv#Undecided -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/norma-o/deriv#Undecided">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatus"/>
+        <rdfs:comment xml:lang="en">The asserted defeaters do not fix a label for the norm: the grounded fixpoint leaves it neither applicable nor defeated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Undecided</rdfs:label>
+        <skos:inScheme rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme"/>
+        <skos:notation>UNDECIDED</skos:notation>
+        <skos:prefLabel xml:lang="en">Undecided</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Choosing a winner here would require a policy the ontology does not fix. Preferred or stable semantics would select one; see normad:GroundedSemantics.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Not an error value, and NOT a synonym for lying on a cycle. A cycle attacked from outside is still decided, while a norm off any cycle whose only attackers are undecided is itself undecided. What this value tracks is what the fixpoint leaves unlabelled; the cycle itself is reported separately with normad:PrevalenceCycle.</skos:scopeNote>
+        <skos:topConceptOf rdf:resource="https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

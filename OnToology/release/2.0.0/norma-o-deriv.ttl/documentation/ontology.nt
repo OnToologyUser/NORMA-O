@@ -1,0 +1,653 @@
+<https://w3id.org/def/norma-o/deriv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/def/norma-o/deriv> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/def/norma-o/deriv/1.0> .
+<https://w3id.org/def/norma-o/deriv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov-o> .
+<https://w3id.org/def/norma-o/deriv> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/def/norma-o> .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/dc/terms/bibliographicCitation> "Leyva-Sánchez, S. et al. (2026). NORMA-O Derivation module (Version 1.0) [Ontology]. https://w3id.org/def/norma-o/deriv/1.0"@en .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/dc/terms/contributor> _:genid1 .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "María Poveda-Villalón" .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/dc/terms/contributor> _:genid2 .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "Víctor Rodríguez-Doncel" .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/dc/terms/creator> _:genid3 .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Sheyla Leyva-Sánchez" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/dc/terms/description> "A companion module to the NORMA ontology for describing derived normative graphs: the activity that materialised them, the rule set and its version, and — crucially — the non-monotonic assumptions under which the conclusions hold. NORMA-O states what norms mean and how they defeat one another; this module states under what reading a particular set of conclusions was computed, so that a published derived graph is reproducible and cannot be mistaken for annotated fact."@en .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/dc/terms/issued> "2026-11-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-1/en> .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/dc/terms/modified> "2026-11-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/dc/terms/publisher> _:genid4 .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "NORMA project" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Organization> .
+<http://xmlns.com/foaf/0.1/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/dc/terms/source> <https://github.com/sheyls/NORMA-O> .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/dc/terms/title> "NORMA-O Derivation: provenance and assumptions of derived normative conclusions"@en .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.24116269" .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/ontology/bibo/status> "Published"@en .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/vocab/vann/preferredNamespacePrefix> "normad" .
+<https://w3id.org/def/norma-o/deriv> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/def/norma-o/deriv#" .
+<https://w3id.org/def/norma-o/deriv> <http://www.w3.org/2000/01/rdf-schema#comment> "Companion module to NORMA-O 2.0 that describes derived normative graphs: the derivation activity, the rule set and version applied, the assumptions the conclusions depend on, and the prevalence orderings, norm evaluations and cycles they contain."@en .
+<https://w3id.org/def/norma-o/deriv> <http://www.w3.org/2000/01/rdf-schema#label> "NORMA-O Derivation module"@en .
+<https://w3id.org/def/norma-o/deriv> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/def/norma-o> .
+<https://w3id.org/def/norma-o/deriv> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
+<https://w3id.org/def/norma-o/deriv> <http://xmlns.com/foaf/0.1/logo> <https://sheyls.github.io/NORMA-O/release/2.0.0/norma-o-deriv-v1.svg> .
+<https://w3id.org/def/norma-o/deriv> <https://schema.org/includedInDataCatalog> <https://zenodo.org/communities/norma> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/ontology/bibo/doi
+<http://purl.org/ontology/bibo/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/logo
+<http://xmlns.com/foaf/0.1/logo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/includedInDataCatalog
+<https://schema.org/includedInDataCatalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/norma-o/deriv#citesCompetingPrinciple
+<https://w3id.org/def/norma-o/deriv#citesCompetingPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/norma-o/deriv#citesCompetingPrinciple> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#PrevalenceCycle> .
+<https://w3id.org/def/norma-o/deriv#citesCompetingPrinciple> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/norma-o#ResolutionPrinciple> .
+<https://w3id.org/def/norma-o#ResolutionPrinciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv#citesCompetingPrinciple> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a reported cycle to a resolution principle cited by one of the conflict defeaters on it. Two or more values are what make the cycle a second-degree conflict rather than an annotation error."@en .
+<https://w3id.org/def/norma-o/deriv#citesCompetingPrinciple> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#citesCompetingPrinciple> <http://www.w3.org/2000/01/rdf-schema#label> "cites competing principle"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#computedUnderAssumption
+<https://w3id.org/def/norma-o/deriv#computedUnderAssumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/norma-o/deriv#computedUnderAssumption> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#DerivationActivity> .
+<https://w3id.org/def/norma-o/deriv#computedUnderAssumption> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/norma-o/deriv#Assumption> .
+<https://w3id.org/def/norma-o/deriv#computedUnderAssumption> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a derivation activity to an assumption its conclusions depend on. Not functional: a derivation typically relies on several."@en .
+<https://w3id.org/def/norma-o/deriv#computedUnderAssumption> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#computedUnderAssumption> <http://www.w3.org/2000/01/rdf-schema#label> "computed under assumption"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#evaluatedNorm
+<https://w3id.org/def/norma-o/deriv#evaluatedNorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/norma-o/deriv#evaluatedNorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/norma-o/deriv#evaluatedNorm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#NormEvaluation> .
+<https://w3id.org/def/norma-o/deriv#evaluatedNorm> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/norma-o#NormativeContent> .
+<https://w3id.org/def/norma-o#NormativeContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv#evaluatedNorm> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an evaluation to the normative content it is about."@en .
+<https://w3id.org/def/norma-o/deriv#evaluatedNorm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#evaluatedNorm> <http://www.w3.org/2000/01/rdf-schema#label> "evaluated norm"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#forFactPattern
+<https://w3id.org/def/norma-o/deriv#forFactPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/norma-o/deriv#forFactPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/norma-o/deriv#forFactPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> .
+<https://w3id.org/def/norma-o/deriv#forFactPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/norma-o#FactPattern> .
+<https://w3id.org/def/norma-o#FactPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv#forFactPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a prevalence ordering to the single described case it was computed for. Absent on the static ordering over the whole normative system."@en .
+<https://w3id.org/def/norma-o/deriv#forFactPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#forFactPattern> <http://www.w3.org/2000/01/rdf-schema#label> "for fact pattern"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus
+<https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#NormEvaluation> .
+<https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> .
+<https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an evaluation with at most one applicability status: the outcome the case yields for that norm."@en .
+<https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has applicability status"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#hasCycleKind
+<https://w3id.org/def/norma-o/deriv#hasCycleKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/norma-o/deriv#hasCycleKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/norma-o/deriv#hasCycleKind> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#PrevalenceCycle> .
+<https://w3id.org/def/norma-o/deriv#hasCycleKind> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/norma-o/deriv#CycleKind> .
+<https://w3id.org/def/norma-o/deriv#hasCycleKind> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a reported cycle with its legal reading."@en .
+<https://w3id.org/def/norma-o/deriv#hasCycleKind> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#hasCycleKind> <http://www.w3.org/2000/01/rdf-schema#label> "has cycle kind"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#inCycle
+<https://w3id.org/def/norma-o/deriv#inCycle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/norma-o/deriv#inCycle> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> .
+<https://w3id.org/def/norma-o/deriv#inCycle> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/norma-o/deriv#PrevalenceCycle> .
+<https://w3id.org/def/norma-o/deriv#inCycle> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a prevalence ordering to a cycle found while computing it."@en .
+<https://w3id.org/def/norma-o/deriv#inCycle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#inCycle> <http://www.w3.org/2000/01/rdf-schema#label> "in cycle"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#inOrdering
+<https://w3id.org/def/norma-o/deriv#inOrdering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/norma-o/deriv#inOrdering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/norma-o/deriv#inOrdering> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#NormEvaluation> .
+<https://w3id.org/def/norma-o/deriv#inOrdering> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> .
+<https://w3id.org/def/norma-o/deriv#inOrdering> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an evaluation to the prevalence ordering it belongs to."@en .
+<https://w3id.org/def/norma-o/deriv#inOrdering> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#inOrdering> <http://www.w3.org/2000/01/rdf-schema#label> "in ordering"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#involvesNorm
+<https://w3id.org/def/norma-o/deriv#involvesNorm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/norma-o/deriv#involvesNorm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#PrevalenceCycle> .
+<https://w3id.org/def/norma-o/deriv#involvesNorm> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/norma-o#NormativeContent> .
+<https://w3id.org/def/norma-o/deriv#involvesNorm> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a reported cycle to a norm lying on it."@en .
+<https://w3id.org/def/norma-o/deriv#involvesNorm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#involvesNorm> <http://www.w3.org/2000/01/rdf-schema#label> "involves norm"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#isAssumptionOf
+<https://w3id.org/def/norma-o/deriv#isAssumptionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/norma-o/deriv#isAssumptionOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/norma-o/deriv#computedUnderAssumption> .
+<https://w3id.org/def/norma-o/deriv#isAssumptionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#Assumption> .
+<https://w3id.org/def/norma-o/deriv#isAssumptionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/norma-o/deriv#DerivationActivity> .
+<https://w3id.org/def/norma-o/deriv#isAssumptionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an assumption to the derivation activities that rely on it."@en .
+<https://w3id.org/def/norma-o/deriv#isAssumptionOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#isAssumptionOf> <http://www.w3.org/2000/01/rdf-schema#label> "is assumption of"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#reachesParty
+<https://w3id.org/def/norma-o/deriv#reachesParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/norma-o/deriv#reachesParty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#NormEvaluation> .
+<https://w3id.org/def/norma-o/deriv#reachesParty> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/norma-o#LegalParty> .
+<https://w3id.org/def/norma-o#LegalParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv#reachesParty> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a norm evaluation to a concrete party the evaluated norm reaches in that case: either the norm addresses that party directly, or it addresses a role the case places the party in."@en .
+<https://w3id.org/def/norma-o/deriv#reachesParty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#reachesParty> <http://www.w3.org/2000/01/rdf-schema#label> "reaches party"@en .
+<https://w3id.org/def/norma-o/deriv#reachesParty> <http://www.w3.org/2004/02/skos/core#scopeNote> "Case-relative by construction, because norma:RoleAssignment is: the same party is reached by different norms in different cases, which is the point of a provision such as article 25(1) of Regulation (EU) 2024/1689. Computed, never annotated — asserting it would desynchronise it from the roles and the facts it follows from."@en .
+<https://w3id.org/def/norma-o/deriv#reachesParty> <http://www.w3.org/2004/02/skos/core#scopeNote> "Reach and applicability are separate questions, and both are needed to answer “what applies to this party”. This property says the norm is ADDRESSED to the party in the case; normad:hasApplicabilityStatus says whether it applies at all. A norm may reach a party and still be normad:Defeated, normad:NotActivated or normad:Invalid, so a consumer joins the two rather than reading either alone."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/norma-o/deriv#derivedGraph
+<https://w3id.org/def/norma-o/deriv#derivedGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/norma-o/deriv#derivedGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/norma-o/deriv#derivedGraph> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#DerivationActivity> .
+<https://w3id.org/def/norma-o/deriv#derivedGraph> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/def/norma-o/deriv#derivedGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the graph into which a derivation activity wrote its conclusions. Keeping derived conclusions in a named graph of their own is what allows them to be regenerated wholesale without touching the annotation graph."@en .
+<https://w3id.org/def/norma-o/deriv#derivedGraph> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#derivedGraph> <http://www.w3.org/2000/01/rdf-schema#label> "derived graph"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#isAcyclic
+<https://w3id.org/def/norma-o/deriv#isAcyclic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/norma-o/deriv#isAcyclic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/norma-o/deriv#isAcyclic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> .
+<https://w3id.org/def/norma-o/deriv#isAcyclic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/def/norma-o/deriv#isAcyclic> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether the defeat digraph of this ordering was found to be acyclic. Reported, never assumed: it is the by-product of the topological sort."@en .
+<https://w3id.org/def/norma-o/deriv#isAcyclic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#isAcyclic> <http://www.w3.org/2000/01/rdf-schema#label> "is acyclic"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#prevalenceLevel
+<https://w3id.org/def/norma-o/deriv#prevalenceLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/norma-o/deriv#prevalenceLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/norma-o/deriv#prevalenceLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#NormEvaluation> .
+<https://w3id.org/def/norma-o/deriv#prevalenceLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/def/norma-o/deriv#prevalenceLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The rung of the ladder: 0 for a norm that nothing prevails over, and otherwise one more than the highest level among the norms that prevail over it. Longest-path layering, so the level is canonical for a given digraph."@en .
+<https://w3id.org/def/norma-o/deriv#prevalenceLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#prevalenceLevel> <http://www.w3.org/2000/01/rdf-schema#label> "prevalence level"@en .
+<https://w3id.org/def/norma-o/deriv#prevalenceLevel> <http://www.w3.org/2004/02/skos/core#scopeNote> "A low level means nothing defeats the norm, not that the norm prevails: a norm at level 0 may still be invalid or untriggered, and a norm at a higher level may well apply because everything that defeats it is itself defeated. The level orders the digraph; normad:hasApplicabilityStatus says what the case yields. Computed on the CONDENSATION of the digraph into strongly connected components, so every norm in the system receives a rung: a cycle contracts to a single node and the norms on it share its level. Layering on the digraph itself would leave the acyclic DESCENDANTS of a cycle without a level, although their position in the ladder is perfectly determined by the norms above and below them."@en .
+# 
+# https://w3id.org/def/norma-o/deriv#ruleSetVersion
+<https://w3id.org/def/norma-o/deriv#ruleSetVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/norma-o/deriv#ruleSetVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/norma-o/deriv#ruleSetVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#DerivationActivity> .
+<https://w3id.org/def/norma-o/deriv#ruleSetVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/norma-o/deriv#ruleSetVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of the rule set, and of its version, applied by a derivation activity. Two runs that report the same rule set version over the same input graph must produce the same output graph."@en .
+<https://w3id.org/def/norma-o/deriv#ruleSetVersion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#ruleSetVersion> <http://www.w3.org/2000/01/rdf-schema#label> "rule set version"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#stratumCount
+<https://w3id.org/def/norma-o/deriv#stratumCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/norma-o/deriv#stratumCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/def/norma-o/deriv#stratumCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> .
+<https://w3id.org/def/norma-o/deriv#stratumCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/def/norma-o/deriv#stratumCount> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of rungs in the ladder: one more than the highest prevalence level reached."@en .
+<https://w3id.org/def/norma-o/deriv#stratumCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#stratumCount> <http://www.w3.org/2000/01/rdf-schema#label> "stratum count"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Organization
+# 
+# http://xmlns.com/foaf/0.1/Person
+# 
+# https://w3id.org/def/norma-o#FactPattern
+# 
+# https://w3id.org/def/norma-o#LegalParty
+# 
+# https://w3id.org/def/norma-o#NormativeContent
+# 
+# https://w3id.org/def/norma-o#ResolutionPrinciple
+# 
+# https://w3id.org/def/norma-o/deriv#ApplicabilityStatus
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The label assigned to a norm by evaluating a described case: whether the norm applies to it, and if not, why not."@en .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Applicability Status"@en .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> <http://www.w3.org/2004/02/skos/core#scopeNote> "Five values, and three different reasons a norm may fail to apply, which a consumer must be able to tell apart: it may have left the normative system (normad:Invalid), it may be in the system but untriggered by the facts of the case (normad:NotActivated), or it may be triggered and then set aside by a defeater (normad:Defeated). The values are assigned in that order of precedence, so that the most basic reason is the one reported: validity first, activation next, and the defeat labelling only for norms that are valid and activated."@en .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> <http://www.w3.org/2004/02/skos/core#scopeNote> "Named for APPLICABILITY and not for being in force, because NORMA-O separates the two and this evaluation settles only the second: in legal usage a norm is in force as a matter of temporal validity, which norma:TemporalDefeater and norma:NormStatus govern, whereas what a case decides is whether the norm reaches that case. Calling an excepted norm “not in force” would contradict the very distinction the defeasibility layer is built on, since an exception leaves the norm in the system."@en .
+# 
+# https://w3id.org/def/norma-o/deriv#Assumption
+<https://w3id.org/def/norma-o/deriv#Assumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv#Assumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#Assumption> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-monotonic reading adopted by a derivation activity, without which its conclusions do not follow."@en .
+<https://w3id.org/def/norma-o/deriv#Assumption> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#Assumption> <http://www.w3.org/2000/01/rdf-schema#label> "Assumption"@en .
+<https://w3id.org/def/norma-o/deriv#Assumption> <http://www.w3.org/2004/02/skos/core#scopeNote> "Extensible: add further assumptions as new derivation layers are defined. Each value names something the annotation graph does not state and the derivation nevertheless relies on."@en .
+<https://w3id.org/def/norma-o/deriv#Assumption> <http://www.w3.org/2004/02/skos/core#scopeNote> "Some values are mutually exclusive — a closed and an open reading of the case, or defeat considered and not considered — but that exclusion constrains the set of values one activity may carry, which OWL cannot express: it is a constraint on the values of normad:computedUnderAssumption for a single subject. Validate it with SHACL."@en .
+# 
+# https://w3id.org/def/norma-o/deriv#CycleKind
+<https://w3id.org/def/norma-o/deriv#CycleKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv#CycleKind> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#CycleKind> <http://www.w3.org/2000/01/rdf-schema#comment> "The legal reading of a cycle in the defeat digraph."@en .
+<https://w3id.org/def/norma-o/deriv#CycleKind> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#CycleKind> <http://www.w3.org/2000/01/rdf-schema#label> "Cycle Kind"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#DerivationActivity
+<https://w3id.org/def/norma-o/deriv#DerivationActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv#DerivationActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/def/norma-o/deriv#DerivationActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/norma-o/deriv#Assumption> .
+_:genid5 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/norma-o/deriv#computedUnderAssumption> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/norma-o/deriv#DerivationActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "A provenance activity that materialises normative conclusions from a NORMA annotation graph: deontic closure, weak permissions, typed prevalence edges, or a prevalence ordering."@en .
+<https://w3id.org/def/norma-o/deriv#DerivationActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#DerivationActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Derivation Activity"@en .
+<https://w3id.org/def/norma-o/deriv#DerivationActivity> <http://www.w3.org/2004/02/skos/core#scopeNote> "At least one assumption must be recorded. A derived graph with no stated assumptions is not interpretable: the same annotation graph yields different conclusions under different readings of silence, of defeat, and of graph completeness."@en .
+<https://w3id.org/def/norma-o/deriv#DerivationActivity> <http://www.w3.org/2004/02/skos/core#scopeNote> "Distinct from norma:AnnotationActivity, which produces annotations from legal sources. A DerivationActivity consumes an annotation graph and produces consequences of it; its output is regenerated rather than maintained, and must never be merged back into the annotation graph. Use prov:used for the input graph, prov:startedAtTime for the run, and normad:ruleSetVersion for the rule set that was applied."@en .
+# 
+# https://w3id.org/def/norma-o/deriv#NormEvaluation
+<https://w3id.org/def/norma-o/deriv#NormEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv#NormEvaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/def/norma-o/deriv#NormEvaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/norma-o#NormativeContent> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/norma-o/deriv#evaluatedNorm> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/norma-o/deriv#NormEvaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> .
+_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/norma-o/deriv#inOrdering> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/norma-o/deriv#NormEvaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> .
+_:genid8 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/norma-o/deriv#hasApplicabilityStatus> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/norma-o/deriv#NormEvaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "The outcome computed for one norm within one prevalence ordering: its level in the ladder and whether the norm applies to the case."@en .
+<https://w3id.org/def/norma-o/deriv#NormEvaluation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#NormEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Norm Evaluation"@en .
+<https://w3id.org/def/norma-o/deriv#NormEvaluation> <http://www.w3.org/2004/02/skos/core#scopeNote> "Reified following the W3C n-ary relation pattern, as norma:TriggerEvent, norma:LegalPosition, norma:Defeater and norma:WeakPermission are. Reification is not optional here: one norm has as many outcomes as there are cases evaluated, so the status cannot be a property of the norm itself."@en .
+<https://w3id.org/def/norma-o/deriv#NormEvaluation> <http://www.w3.org/2004/02/skos/core#scopeNote> "The status is optional, and its absence is meaningful: an evaluation belonging to the STATIC ordering carries a level and no status, because the static ladder orders the normative system without deciding any case. Only a case-relative ordering yields a status."@en .
+# 
+# https://w3id.org/def/norma-o/deriv#PrevalenceCycle
+<https://w3id.org/def/norma-o/deriv#PrevalenceCycle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv#PrevalenceCycle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/def/norma-o/deriv#PrevalenceCycle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/def/norma-o#NormativeContent> .
+_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/norma-o/deriv#involvesNorm> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/def/norma-o/deriv#PrevalenceCycle> <http://www.w3.org/2000/01/rdf-schema#comment> "A cycle found in a defeat digraph, reported rather than resolved. Full acyclicity is not expressible in OWL 2 DL, so it is checked by the compilation step: Kahn’s algorithm yields the stratification and the set of nodes it cannot order, while the cycles themselves are the non-trivial strongly connected components of that set."@en .
+<https://w3id.org/def/norma-o/deriv#PrevalenceCycle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#PrevalenceCycle> <http://www.w3.org/2000/01/rdf-schema#label> "Prevalence Cycle"@en .
+<https://w3id.org/def/norma-o/deriv#PrevalenceCycle> <http://www.w3.org/2004/02/skos/core#scopeNote> "A cycle is not automatically an error. Per norma:ConflictDefeater, two conflict defeaters relating the same pair in opposite directions under DIFFERENT resolution principles are a second-degree conflict in Bobbio’s sense: the criteria are genuinely unordered for that pair, and the compilation step must report one ordering per admissible policy instead of silently choosing one. The same pair asserted under the SAME principle is, by contrast, a contradiction in the annotation. normad:CycleKind records which reading applies."@en .
+<https://w3id.org/def/norma-o/deriv#PrevalenceCycle> <http://www.w3.org/2004/02/skos/core#scopeNote> "Lying on a cycle does NOT by itself leave a norm undecided, and the two must not be conflated. Grounded semantics still decides a cycle that is attacked from outside it: where a and b defeat each other and an undefeated c defeats a, the labelling is c applicable, a defeated and b applicable, because b is reinstated once its only attacker falls. Conversely a norm OFF the cycle whose only attackers lie on an undecided one is itself undecided. So normad:Undecided tracks what the fixpoint leaves unlabelled, not cycle membership, and this class reports the cycle as a finding about the annotation independently of how the norms on it end up labelled."@en .
+# 
+# https://w3id.org/def/norma-o/deriv#PrevalenceOrdering
+<https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> <http://www.w3.org/2000/01/rdf-schema#comment> "A computed stratification of a defeat digraph: the “ladder” obtained by flattening the asserted defeaters into prevalence edges and ordering the nodes topologically."@en .
+<https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> <http://www.w3.org/2000/01/rdf-schema#label> "Prevalence Ordering"@en .
+<https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> <http://www.w3.org/2004/02/skos/core#scopeNote> "NORMA-O deliberately represents no prevalence level and no defeat status: norma:FactPattern states that the resulting applicability follows from the described facts and the asserted defeaters, and norma:prevailsOver states that a compilation step may materialise the stratification in a separate derived artefact. This class is that artefact’s root, which is why it lives in the module and not in the core ontology."@en .
+<https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> <http://www.w3.org/2004/02/skos/core#scopeNote> "Temporal defeat is also applied FLATLY, where defeat inside the ordering is evaluated under grounded semantics, and the asymmetry is substantive rather than technical: repealing a repealing norm does not revive the norm it repealed, so a chain in which w1 repeals w2 and w2 repealed w3 leaves both w2 and w3 outside the system. A norm merely rendered inapplicable by an exception is reinstated when that exception falls, because it never left the system; a repealed norm has left it. The reading is a DEFAULT recorded as an assumption, not a universal claim. It follows the civil-law tradition, where article 2.2 of the Spanish Civil Code states it expressly, but interpretation acts differ across jurisdictions and nothing in the ontology settles the question: a consumer whose jurisdiction provides otherwise overrides the reading and says so in the activity’s assumptions."@en .
+<https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> <http://www.w3.org/2004/02/skos/core#scopeNote> "Temporal defeat is applied before the ordering is built, not as an edge in it. norma:TemporalDefeater bears on validity rather than applicability, so a norm it withdraws is absent from the system being stratified."@en .
+<https://w3id.org/def/norma-o/deriv#PrevalenceOrdering> <http://www.w3.org/2004/02/skos/core#scopeNote> "Without normad:forFactPattern the ordering is the STATIC one over the whole normative system, computed on the ungated projection of the defeat digraph; with it, the ordering is case-relative and only the defeaters whose gate fires in that case contribute edges. The two are different graphs and must not be mixed: norma:prevailsOver is the ungated projection, because the property chain that defines it drops norma:appliesWhen, so case evaluation has to traverse the reified norma:Defeater instead."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/def/norma-o/deriv#AnnotationContradiction
+<https://w3id.org/def/norma-o/deriv#AnnotationContradiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#AnnotationContradiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#AnnotationContradiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#CycleKind> .
+<https://w3id.org/def/norma-o/deriv#AnnotationContradiction> <http://www.w3.org/2000/01/rdf-schema#comment> "The cycle is formed by conflict defeaters citing the SAME resolution principle in opposite directions, which one principle cannot sustain."@en .
+<https://w3id.org/def/norma-o/deriv#AnnotationContradiction> <http://www.w3.org/2000/01/rdf-schema#label> "Annotation contradiction"@en .
+<https://w3id.org/def/norma-o/deriv#AnnotationContradiction> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#CycleKindScheme> .
+<https://w3id.org/def/norma-o/deriv#AnnotationContradiction> <http://www.w3.org/2004/02/skos/core#notation> "ANNOTATION_CONTRADICTION" .
+<https://w3id.org/def/norma-o/deriv#AnnotationContradiction> <http://www.w3.org/2004/02/skos/core#prefLabel> "Annotation contradiction"@en .
+<https://w3id.org/def/norma-o/deriv#AnnotationContradiction> <http://www.w3.org/2004/02/skos/core#scopeNote> "An annotation defect to be fixed at source, unlike normad:SecondDegreeConflict."@en .
+<https://w3id.org/def/norma-o/deriv#AnnotationContradiction> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#CycleKindScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> <http://www.w3.org/2004/02/skos/core#definition> "SKOS concept scheme grouping the labels a case evaluation may assign to a norm: whether it applies, and if not, whether because it is outside the system, untriggered, defeated, or left undecided."@en .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#Applicable> .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#Defeated> .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#Invalid> .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#NotActivated> .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#Undecided> .
+<https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Applicability status scheme"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#Applicable
+<https://w3id.org/def/norma-o/deriv#Applicable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#Applicable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#Applicable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> .
+<https://w3id.org/def/norma-o/deriv#Applicable> <http://www.w3.org/2000/01/rdf-schema#comment> "The norm is valid, is activated by the facts of the case, and every defeater reaching it is itself defeated — or none reaches it. It applies."@en .
+<https://w3id.org/def/norma-o/deriv#Applicable> <http://www.w3.org/2000/01/rdf-schema#label> "Applicable"@en .
+<https://w3id.org/def/norma-o/deriv#Applicable> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> .
+<https://w3id.org/def/norma-o/deriv#Applicable> <http://www.w3.org/2004/02/skos/core#notation> "APPLICABLE" .
+<https://w3id.org/def/norma-o/deriv#Applicable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Applicable"@en .
+<https://w3id.org/def/norma-o/deriv#Applicable> <http://www.w3.org/2004/02/skos/core#scopeNote> "Reinstatement lands here. A norm set aside by a defeater whose own defeating norm is defeated becomes applicable again, which is why norma:prevailsOver is deliberately not transitive."@en .
+<https://w3id.org/def/norma-o/deriv#Applicable> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#AssumptionScheme
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/2004/02/skos/core#definition> "Extensible SKOS concept scheme grouping the non-monotonic assumptions that NORMA derivation activities may rely on."@en .
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#ClosedCaseDescription> .
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#ClosedGraph> .
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#DefeatConsidered> .
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#DefeatNotConsidered> .
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#GroundedSemantics> .
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained> .
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#OpenCounterparty> .
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed> .
+<https://w3id.org/def/norma-o/deriv#AssumptionScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Assumption scheme"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#ClosedCaseDescription
+<https://w3id.org/def/norma-o/deriv#ClosedCaseDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#ClosedCaseDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#ClosedCaseDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#Assumption> .
+<https://w3id.org/def/norma-o/deriv#ClosedCaseDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Silence in a norma:FactPattern about a legal condition is read as that condition not holding, so a norm conditioned on it counts as inactive."@en .
+<https://w3id.org/def/norma-o/deriv#ClosedCaseDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Closed case description"@en .
+<https://w3id.org/def/norma-o/deriv#ClosedCaseDescription> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+<https://w3id.org/def/norma-o/deriv#ClosedCaseDescription> <http://www.w3.org/2004/02/skos/core#notation> "CLOSED_CASE" .
+<https://w3id.org/def/norma-o/deriv#ClosedCaseDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "Closed case description"@en .
+<https://w3id.org/def/norma-o/deriv#ClosedCaseDescription> <http://www.w3.org/2004/02/skos/core#scopeNote> "The description of the case is taken to be complete. This is what makes a conclusion case-relative and precise — a conditional prohibition does not block in the cases where its condition is not activated — but it also means an incompletely described case yields conclusions that are stronger than the facts warrant. Completeness of the fact pattern is a data-quality obligation on the producer, not something the derivation can check."@en .
+<https://w3id.org/def/norma-o/deriv#ClosedCaseDescription> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#ClosedGraph
+<https://w3id.org/def/norma-o/deriv#ClosedGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#ClosedGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#ClosedGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#Assumption> .
+<https://w3id.org/def/norma-o/deriv#ClosedGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "The absence of a norm from the evaluated graph is read as the absence of that norm from the normative system: negation by failure over the graph at hand."@en .
+<https://w3id.org/def/norma-o/deriv#ClosedGraph> <http://www.w3.org/2000/01/rdf-schema#label> "Closed graph"@en .
+<https://w3id.org/def/norma-o/deriv#ClosedGraph> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+<https://w3id.org/def/norma-o/deriv#ClosedGraph> <http://www.w3.org/2004/02/skos/core#notation> "CLOSED_GRAPH" .
+<https://w3id.org/def/norma-o/deriv#ClosedGraph> <http://www.w3.org/2004/02/skos/core#prefLabel> "Closed graph"@en .
+<https://w3id.org/def/norma-o/deriv#ClosedGraph> <http://www.w3.org/2004/02/skos/core#scopeNote> "Every weak permission depends on this assumption, since a weak permission is the absence of a prohibition. Pair it with a bounded completeness claim about which sources were analysed, or the conclusion is only as strong as the graph is complete."@en .
+<https://w3id.org/def/norma-o/deriv#ClosedGraph> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#CycleKindScheme
+<https://w3id.org/def/norma-o/deriv#CycleKindScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#CycleKindScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/def/norma-o/deriv#CycleKindScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/def/norma-o/deriv> .
+<https://w3id.org/def/norma-o/deriv#CycleKindScheme> <http://www.w3.org/2004/02/skos/core#definition> "SKOS concept scheme grouping the legal readings of a cycle in the defeat digraph."@en .
+<https://w3id.org/def/norma-o/deriv#CycleKindScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#AnnotationContradiction> .
+<https://w3id.org/def/norma-o/deriv#CycleKindScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy> .
+<https://w3id.org/def/norma-o/deriv#CycleKindScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/def/norma-o/deriv#SecondDegreeConflict> .
+<https://w3id.org/def/norma-o/deriv#CycleKindScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cycle kind scheme"@en .
+# 
+# https://w3id.org/def/norma-o/deriv#DefeatConsidered
+<https://w3id.org/def/norma-o/deriv#DefeatConsidered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#DefeatConsidered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#DefeatConsidered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#Assumption> .
+<https://w3id.org/def/norma-o/deriv#DefeatConsidered> <http://www.w3.org/2000/01/rdf-schema#comment> "Defeat relations were taken into account: norms withdrawn by an applicable defeater were treated as not holding for the case."@en .
+<https://w3id.org/def/norma-o/deriv#DefeatConsidered> <http://www.w3.org/2000/01/rdf-schema#label> "Defeat considered"@en .
+<https://w3id.org/def/norma-o/deriv#DefeatConsidered> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+<https://w3id.org/def/norma-o/deriv#DefeatConsidered> <http://www.w3.org/2004/02/skos/core#notation> "DEFEAT_CONSIDERED" .
+<https://w3id.org/def/norma-o/deriv#DefeatConsidered> <http://www.w3.org/2004/02/skos/core#prefLabel> "Defeat considered"@en .
+<https://w3id.org/def/norma-o/deriv#DefeatConsidered> <http://www.w3.org/2004/02/skos/core#scopeNote> "Pairs with normad:DefeatNotConsidered, which is recorded when defeat was skipped. Absence of both is not to be read as either: this is an open-world vocabulary, and inferring a reading from a missing value is the very thing the module exists to prevent. An activity recording neither has simply not stated what it did."@en .
+<https://w3id.org/def/norma-o/deriv#DefeatConsidered> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#DefeatNotConsidered
+<https://w3id.org/def/norma-o/deriv#DefeatNotConsidered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#DefeatNotConsidered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#DefeatNotConsidered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#Assumption> .
+<https://w3id.org/def/norma-o/deriv#DefeatNotConsidered> <http://www.w3.org/2000/01/rdf-schema#comment> "Defeat relations were ignored: every valid and activated norm was treated as applying, whatever defeaters reach it."@en .
+<https://w3id.org/def/norma-o/deriv#DefeatNotConsidered> <http://www.w3.org/2000/01/rdf-schema#label> "Defeat not considered"@en .
+<https://w3id.org/def/norma-o/deriv#DefeatNotConsidered> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+<https://w3id.org/def/norma-o/deriv#DefeatNotConsidered> <http://www.w3.org/2004/02/skos/core#notation> "DEFEAT_NOT_CONSIDERED" .
+<https://w3id.org/def/norma-o/deriv#DefeatNotConsidered> <http://www.w3.org/2004/02/skos/core#prefLabel> "Defeat not considered"@en .
+<https://w3id.org/def/norma-o/deriv#DefeatNotConsidered> <http://www.w3.org/2004/02/skos/core#scopeNote> "A legitimate reading for a fast or partial derivation, and the explicit complement of normad:DefeatConsidered, which exists so that no consumer has to infer the reading from a missing value. Conclusions recorded under it are wrong in exactly the cases the defeasibility layer exists to handle, such as an exception that exempts the agent, so they are provisional. Mutually exclusive with normad:DefeatConsidered; validate with SHACL."@en .
+<https://w3id.org/def/norma-o/deriv#DefeatNotConsidered> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#Defeated
+<https://w3id.org/def/norma-o/deriv#Defeated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#Defeated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#Defeated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> .
+<https://w3id.org/def/norma-o/deriv#Defeated> <http://www.w3.org/2000/01/rdf-schema#comment> "The norm is valid and activated, but at least one defeater reaching it has a defeating norm that is itself applicable. It does not apply to this case."@en .
+<https://w3id.org/def/norma-o/deriv#Defeated> <http://www.w3.org/2000/01/rdf-schema#label> "Defeated"@en .
+<https://w3id.org/def/norma-o/deriv#Defeated> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> .
+<https://w3id.org/def/norma-o/deriv#Defeated> <http://www.w3.org/2004/02/skos/core#notation> "DEFEATED" .
+<https://w3id.org/def/norma-o/deriv#Defeated> <http://www.w3.org/2004/02/skos/core#prefLabel> "Defeated"@en .
+<https://w3id.org/def/norma-o/deriv#Defeated> <http://www.w3.org/2004/02/skos/core#scopeNote> "Being defeated in a case says nothing about validity: the norm remains a member of the normative system and applies in cases where the defeater does not reach it. Contrast normad:Invalid."@en .
+<https://w3id.org/def/norma-o/deriv#Defeated> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#GroundedSemantics
+<https://w3id.org/def/norma-o/deriv#GroundedSemantics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#GroundedSemantics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#GroundedSemantics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#Assumption> .
+<https://w3id.org/def/norma-o/deriv#GroundedSemantics> <http://www.w3.org/2000/01/rdf-schema#comment> "Defeat was evaluated under Dung's grounded semantics: the unique minimal complete labelling, computed as a monotone fixpoint."@en .
+<https://w3id.org/def/norma-o/deriv#GroundedSemantics> <http://www.w3.org/2000/01/rdf-schema#label> "Grounded semantics"@en .
+<https://w3id.org/def/norma-o/deriv#GroundedSemantics> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+<https://w3id.org/def/norma-o/deriv#GroundedSemantics> <http://www.w3.org/2004/02/skos/core#notation> "GROUNDED" .
+<https://w3id.org/def/norma-o/deriv#GroundedSemantics> <http://www.w3.org/2004/02/skos/core#prefLabel> "Grounded semantics"@en .
+<https://w3id.org/def/norma-o/deriv#GroundedSemantics> <http://www.w3.org/2004/02/skos/core#scopeNote> "Computed as a monotone fixpoint and deliberately NOT in topological order. A single pass in topological order is wrong wherever a cycle is attacked from outside it: the norms on the cycle are then decided after all, and a norm downstream of them has to be labelled from those decisions, which a pass that skipped the unorderable nodes never made."@en .
+<https://w3id.org/def/norma-o/deriv#GroundedSemantics> <http://www.w3.org/2004/02/skos/core#scopeNote> "Recorded instead of normad:ReinstatementNotComputed once reinstatement is actually computed. The choice of semantics is not neutral: on a cyclic fragment, preferred or stable semantics would select winners where grounded semantics reports normad:Undecided, so a consumer comparing two derived graphs must compare their assumptions first."@en .
+<https://w3id.org/def/norma-o/deriv#GroundedSemantics> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained
+<https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#Assumption> .
+<https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained> <http://www.w3.org/2000/01/rdf-schema#comment> "The facts established by the constitutive rules that apply were fed back into the case, and the regulative norms were evaluated against the case so augmented."@en .
+<https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained> <http://www.w3.org/2000/01/rdf-schema#label> "Institutional facts chained"@en .
+<https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+<https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained> <http://www.w3.org/2004/02/skos/core#notation> "FACTS_CHAINED" .
+<https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained> <http://www.w3.org/2004/02/skos/core#prefLabel> "Institutional facts chained"@en .
+<https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained> <http://www.w3.org/2004/02/skos/core#scopeNote> "Its absence means norma:establishesTrigger was ignored and only the brute facts of the case were used. Conclusions computed that way are wrong wherever a regulative norm is conditioned on an institutional fact, which in Regulation (EU) 2024/1689 is the central case: the obligations of Articles 16 and 26 hang on being high-risk, and that is settled by the defeat chain of Article 6."@en .
+<https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained> <http://www.w3.org/2004/02/skos/core#scopeNote> "The alternation terminates because the set of established facts only grows. What it cannot do is undo: a fact may gate a defeater that withdraws the very rule that established it, and the fact stays in the case. A derivation that detects this reports it rather than presenting a conclusion that quietly rests on a withdrawn rule."@en .
+<https://w3id.org/def/norma-o/deriv#InstitutionalFactsChained> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#Invalid
+<https://w3id.org/def/norma-o/deriv#Invalid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#Invalid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#Invalid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> .
+<https://w3id.org/def/norma-o/deriv#Invalid> <http://www.w3.org/2000/01/rdf-schema#comment> "The norm is not a member of the normative system being evaluated: it carries a lifecycle status that excludes it, or a temporal defeater has repealed it."@en .
+<https://w3id.org/def/norma-o/deriv#Invalid> <http://www.w3.org/2000/01/rdf-schema#label> "Invalid"@en .
+<https://w3id.org/def/norma-o/deriv#Invalid> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> .
+<https://w3id.org/def/norma-o/deriv#Invalid> <http://www.w3.org/2004/02/skos/core#notation> "INVALID" .
+<https://w3id.org/def/norma-o/deriv#Invalid> <http://www.w3.org/2004/02/skos/core#prefLabel> "Invalid"@en .
+<https://w3id.org/def/norma-o/deriv#Invalid> <http://www.w3.org/2004/02/skos/core#scopeNote> "Reported rather than omitted. Leaving a repealed norm out of the evaluation would make it indistinguishable from a norm absent from the graph, and a consumer asking why a norm does not apply deserves the answer. This is the one value that concerns validity rather than applicability, and it is case-independent: a norm outside the system is outside it in every case."@en .
+<https://w3id.org/def/norma-o/deriv#Invalid> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy
+<https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#CycleKind> .
+<https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cycle involves defeat that cites no resolution principle at all, typically a loop of exception defeaters, so nothing in the annotation orients it."@en .
+<https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy> <http://www.w3.org/2000/01/rdf-schema#label> "Irresoluble antinomy"@en .
+<https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#CycleKindScheme> .
+<https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy> <http://www.w3.org/2004/02/skos/core#notation> "IRRESOLUBLE" .
+<https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy> <http://www.w3.org/2004/02/skos/core#prefLabel> "Irresoluble antinomy"@en .
+<https://w3id.org/def/norma-o/deriv#IrresolubleAntinomy> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#CycleKindScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#NotActivated
+<https://w3id.org/def/norma-o/deriv#NotActivated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#NotActivated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#NotActivated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> .
+<https://w3id.org/def/norma-o/deriv#NotActivated> <http://www.w3.org/2000/01/rdf-schema#comment> "The norm is valid but the facts of the case do not trigger it: none of the trigger events that activate it fires in the described case."@en .
+<https://w3id.org/def/norma-o/deriv#NotActivated> <http://www.w3.org/2000/01/rdf-schema#label> "Not activated"@en .
+<https://w3id.org/def/norma-o/deriv#NotActivated> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> .
+<https://w3id.org/def/norma-o/deriv#NotActivated> <http://www.w3.org/2004/02/skos/core#notation> "NOT_ACTIVATED" .
+<https://w3id.org/def/norma-o/deriv#NotActivated> <http://www.w3.org/2004/02/skos/core#prefLabel> "Not activated"@en .
+<https://w3id.org/def/norma-o/deriv#NotActivated> <http://www.w3.org/2004/02/skos/core#scopeNote> "Distinguished from normad:Defeated because the reasons differ and so do the remedies: an untriggered norm is simply silent about this case, whereas a defeated one spoke and was overridden. Collapsing the two would also report an untriggered norm as applicable merely because nothing defeats it, which is the conclusion this value exists to prevent."@en .
+<https://w3id.org/def/norma-o/deriv#NotActivated> <http://www.w3.org/2004/02/skos/core#scopeNote> "Several trigger events activating one norm are read in DISJUNCTION, as elsewhere in NORMA: the norm is activated if any of them fires. A norm with no activation condition at all is unconditional and never carries this value."@en .
+<https://w3id.org/def/norma-o/deriv#NotActivated> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#OpenCounterparty
+<https://w3id.org/def/norma-o/deriv#OpenCounterparty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#OpenCounterparty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#OpenCounterparty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#Assumption> .
+<https://w3id.org/def/norma-o/deriv#OpenCounterparty> <http://www.w3.org/2000/01/rdf-schema#comment> "A counterparty that no annotator named is read as not disagreeing, rather than as a mismatch, when two norms or two legal positions are compared."@en .
+<https://w3id.org/def/norma-o/deriv#OpenCounterparty> <http://www.w3.org/2000/01/rdf-schema#label> "Open counterparty"@en .
+<https://w3id.org/def/norma-o/deriv#OpenCounterparty> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+<https://w3id.org/def/norma-o/deriv#OpenCounterparty> <http://www.w3.org/2004/02/skos/core#notation> "OPEN_COUNTERPARTY" .
+<https://w3id.org/def/norma-o/deriv#OpenCounterparty> <http://www.w3.org/2004/02/skos/core#prefLabel> "Open counterparty"@en .
+<https://w3id.org/def/norma-o/deriv#OpenCounterparty> <http://www.w3.org/2004/02/skos/core#scopeNote> "Needed because norma:hasCounterparty is sparse in practice: a corpus annotated without it would yield no equivalence, no contradiction and no jural opposition at all. The permissive reading lets those surface, at the cost of a relation that a later annotation may refute, which makes it non-monotonic. Producers that annotate the counterparty throughout get the strict reading for free and need not record this value."@en .
+<https://w3id.org/def/norma-o/deriv#OpenCounterparty> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed
+<https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#Assumption> .
+<https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed> <http://www.w3.org/2000/01/rdf-schema#comment> "Defeat was applied one level deep: a norm was treated as withdrawn whenever an applicable defeater exists, without checking whether that defeater is itself withdrawn."@en .
+<https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed> <http://www.w3.org/2000/01/rdf-schema#label> "Reinstatement not computed"@en .
+<https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+<https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed> <http://www.w3.org/2004/02/skos/core#notation> "NO_REINSTATEMENT" .
+<https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed> <http://www.w3.org/2004/02/skos/core#prefLabel> "Reinstatement not computed"@en .
+<https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed> <http://www.w3.org/2004/02/skos/core#scopeNote> "Where a defeat chain is longer than one step, the conclusions are wrong: if A defeats B and B defeats C, then C is reinstated, and a one-level reading reports C as withdrawn. Computing reinstatement requires stratifying the prevalence digraph, which belongs to the evaluation layer, so a derivation that records this value is provisional for any case in which a defeater is itself defeated."@en .
+<https://w3id.org/def/norma-o/deriv#ReinstatementNotComputed> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#AssumptionScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#SecondDegreeConflict
+<https://w3id.org/def/norma-o/deriv#SecondDegreeConflict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#SecondDegreeConflict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#SecondDegreeConflict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#CycleKind> .
+<https://w3id.org/def/norma-o/deriv#SecondDegreeConflict> <http://www.w3.org/2000/01/rdf-schema#comment> "The norms on the cycle are related by conflict defeaters citing different resolution principles, so the criteria themselves are unordered for that pair."@en .
+<https://w3id.org/def/norma-o/deriv#SecondDegreeConflict> <http://www.w3.org/2000/01/rdf-schema#label> "Second-degree conflict"@en .
+<https://w3id.org/def/norma-o/deriv#SecondDegreeConflict> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#CycleKindScheme> .
+<https://w3id.org/def/norma-o/deriv#SecondDegreeConflict> <http://www.w3.org/2004/02/skos/core#notation> "SECOND_DEGREE" .
+<https://w3id.org/def/norma-o/deriv#SecondDegreeConflict> <http://www.w3.org/2004/02/skos/core#prefLabel> "Second-degree conflict"@en .
+<https://w3id.org/def/norma-o/deriv#SecondDegreeConflict> <http://www.w3.org/2004/02/skos/core#scopeNote> "A legal phenomenon in Bobbio's sense, not an annotation defect. The compilation step reports one prevalence ordering per admissible policy; normad:citesCompetingPrinciple names the criteria in competition."@en .
+<https://w3id.org/def/norma-o/deriv#SecondDegreeConflict> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#CycleKindScheme> .
+# 
+# https://w3id.org/def/norma-o/deriv#Undecided
+<https://w3id.org/def/norma-o/deriv#Undecided> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/def/norma-o/deriv#Undecided> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/def/norma-o/deriv#Undecided> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatus> .
+<https://w3id.org/def/norma-o/deriv#Undecided> <http://www.w3.org/2000/01/rdf-schema#comment> "The asserted defeaters do not fix a label for the norm: the grounded fixpoint leaves it neither applicable nor defeated."@en .
+<https://w3id.org/def/norma-o/deriv#Undecided> <http://www.w3.org/2000/01/rdf-schema#label> "Undecided"@en .
+<https://w3id.org/def/norma-o/deriv#Undecided> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> .
+<https://w3id.org/def/norma-o/deriv#Undecided> <http://www.w3.org/2004/02/skos/core#notation> "UNDECIDED" .
+<https://w3id.org/def/norma-o/deriv#Undecided> <http://www.w3.org/2004/02/skos/core#prefLabel> "Undecided"@en .
+<https://w3id.org/def/norma-o/deriv#Undecided> <http://www.w3.org/2004/02/skos/core#scopeNote> "Choosing a winner here would require a policy the ontology does not fix. Preferred or stable semantics would select one; see normad:GroundedSemantics."@en .
+<https://w3id.org/def/norma-o/deriv#Undecided> <http://www.w3.org/2004/02/skos/core#scopeNote> "Not an error value, and NOT a synonym for lying on a cycle. A cycle attacked from outside is still decided, while a norm off any cycle whose only attackers are undecided is itself undecided. What this value tracks is what the fixpoint leaves unlabelled; the cycle itself is reported separately with normad:PrevalenceCycle."@en .
+<https://w3id.org/def/norma-o/deriv#Undecided> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/def/norma-o/deriv#ApplicabilityStatusScheme> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
